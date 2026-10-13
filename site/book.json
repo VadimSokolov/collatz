@@ -27,6 +27,7 @@
  "date_released": "2026-10-13",
  "publisher": "Independently published",
  "doi": "10.5281/zenodo.23331100",
+ "concept_doi": "10.5281/zenodo.23331099",
  "language": "en",
  "keywords": [
   "Collatz conjecture",
@@ -67,6 +68,11 @@
   "repository": "https://github.com/VadimSokolov/collatz",
   "source": "https://github.com/VadimSokolov/collatz/tree/v1.0.0",
   "doi": "https://doi.org/10.5281/zenodo.23331100",
+  "concept_doi": "https://doi.org/10.5281/zenodo.23331099",
+  "zenodo": "https://zenodo.org/records/23331100",
+  "doi_badge": "https://zenodo.org/badge/DOI/10.5281/zenodo.23331100.svg",
+  "icon_pdf": "https://vsokolov.org/books/icon-pdf.svg",
+  "icon_github": "https://vsokolov.org/books/icon-github.svg",
   "cover": "https://vsokolov.org/books/collatz/cover.jpg"
  },
  "citation": {
