@@ -1,0 +1,54 @@
+\chapter*{Notation}
+\addcontentsline{toc}{chapter}{Notation}
+\markboth{Notation}{Notation}
+
+The table lists the symbols that a reader meets in more than one chapter, or that a later chapter uses without redefining. When a letter carries different meanings in different parts of the book, its row says so. Symbols local to one proof or one section are defined where they occur.
+
+\begingroup
+\linespread{1}\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.95in}>{\raggedright\arraybackslash}p{3.3in}>{\raggedright\arraybackslash}p{1.0in}@{}}
+\toprule
+Symbol & Meaning & Defined in \\
+\midrule
+\endfirsthead
+\toprule
+Symbol & Meaning & Defined in \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+$T_0$, $T_0^{(k)}$ & standard map, $n/2$ for even $n$ and $3n+1$ for odd $n$, and its $k$th iterate & \cref{def:maps} \\
+$T$, $T^{(k)}$ & accelerated map, $n/2$ for even $n$ and $(3n+1)/2$ for odd $n$, and its $k$th iterate & \cref{def:maps} \\
+$S$, $S^{(k)}$ & Syracuse map on odd $n$, $S(n)=(3n+1)/2^{\vt(3n+1)}$, and its $k$th iterate; one step of $S$ is a stride & \cref{def:maps} \\
+$\vt(m)$ & the $2$ adic valuation: the exponent of the largest power of $2$ dividing $m\neq0$ & \cref{def:maps} \\
+$k$, $k_j$, $\bar k_N$ & halving exponent $\vt(3x+1)$ of the stride from an odd $x$; $\bar k_N$ is the mean of $k_1,\dots,k_N$ along an orbit of $S$ & \cref{sec:ch2:maps}, \cref{chap:divergence} \\
+$v_k(n)$, $m_k(n)$, $\Phi_k$ & parity vector of $n$ under $T$ (first $k$ steps), its number of ones (the odd steps), and the Terras bijection $n\bmod2^k\mapsto v_k(n)$ of residue classes onto parity vectors & \cref{def:ch2:parity}, \cref{thm:terras} \\
+$c_k(n)$ & the integer in $2^kT^{(k)}(n)=3^{m_k(n)}n+c_k(n)$, determined by $v_k(n)$ & \cref{prop:ch2:affine} \\
+$\Ztwo$, $\mu$, $E$ & the $2$ adic integers, their Haar probability measure $\mu$, and the closed null set $E$ of points with infinite coefficient stopping time & \cref{sec:ch2:adic}, \cref{sec:ch10b:divergence} \\
+\addlinespace[4pt]
+$\sigma(n)$ & stopping time: least $k\geq1$ with $T^{(k)}(n)<n$; unrelated to the standard deviation $\sigma$ below & \cref{def:ch2:stopping} \\
+$\sigma_\infty(n)$ & total stopping time: least $k$ with $T_0^{(k)}(n)=1$ in \cref{chap:intro}, but with $T^{(k)}(n)=1$ in \cref{chap:stochastic,chap:samplers,chap:open} & \cref{sec:ch1:conjecture} \\
+$\tau(n)$ & coefficient stopping time: least $k\geq1$ with $3^{m_k(n)}<2^k$; in \cref{chap:stochastic,chap:lyapunov}, $\tau$ is instead a first passage time of a model walk & \cref{def:ch2:stopping} \\
+\addlinespace[4pt]
+Bernoulli, stride and renewal models & coin models of $T$ (factors $\xi_i\in\{\frac12,\frac32\}$), of $S$ (factors $3\cdot2^{-K_j}$) and of $T_0$ (parity chain $B_n$) & \cref{def:ch3:models} \\
+$\ds$, $\log\frac34$ & model drift of $\log x$: $\ds=\log(\sqrt3/2)$ per step of $T$, $\log\frac34$ per stride of $S$, $\frac13\log\frac34$ per step of $T_0$; $\ds$ is not $\delta(r)$ & \cref{thm:martingale,cor:ch2:drift,prop:ch3:standard} \\
+$\sigma^2$, $C$, $\gamma_0$ & variance $\frac14(\log3)^2$ of a log step of $T$, index of dispersion $C=\sigma^2/(\ds)^2\approx14.58$, and slope $\gamma_0=1/|\ds|\approx6.95$ of the model total stopping time of $T$ in $\log n$; in \cref{chap:noise}, $\sigma^2$ is the gradient noise variance & \cref{prop:lyapunov}, \cref{sec:ch7:model} \\
+\addlinespace[4pt]
+$\lt$, $\theta$ & $\lt=1.58496\dots$ is the Ces\`aro threshold for $\bar k_N$; $\theta$ is $\lt$ in \cref{chap:cycles}, $1/\lt$ in \cref{thm:density}, and an exponent in \cref{thm:martingale} & \cref{sec:ch1:conjecture}, \cref{chap:cycles} \\
+$r$, $s$, $M$, $\Lambda$ & cycle of $S$: $r$ odd elements, $s$ halvings (one turn is $r$ steps of $S$, $s$ of $T$, $r+s$ of $T_0$), least element $M$, $\Lambda=s\log2-r\log3$; written $m$, $k$ in \cref{chap:parity,chap:open} & \cref{lem:cycleid}, \cref{rem:ch8:bookkeeping} \\
+$\delta(r)$, $\Lambda_r$, $F(r)$ & $\delta(r)=\lceil r\theta\rceil-r\theta$, $\Lambda_r=\delta(r)\log2\le\Lambda$, $F(r)=r/(3\Lambda_r)>M$ & \cref{eq:ch8:Lambdar}, \cref{eq:ch8:maxM} \\
+$a_k$, $p_k/q_k$, $u_{k,j}$ & partial quotients, convergents $1,2,\frac32,\frac85,\frac{19}{12},\dots$ and ladder rungs $q_{k-1}+jq_k$ of $\lt=[1;1,1,2,2,3,\dots]$ & \cref{sec:ch8:cf}, \cref{tab:ch8:conv} \\
+$\nu_k$ & irrationality exponent $-\log|\theta-p_k/q_k|/\log q_k$ of the $k$th convergent; unrelated to $\nu_1,\nu_2$ in \cref{sec:ch7:multiplicative} & \cref{sec:ch8:limits} \\
+$X$ & verified range: every nontrivial cycle has all its elements at least $X$; $X=2^{71}$ is established & \cref{def:ch8:excl} \\
+\addlinespace[4pt]
+$V$ & Lyapunov function (certificate), the standard potential being $V(x)=\log x$; in \cref{chap:noise}, $V_{\mathrm{GD}}$, $V_{\mathrm{SMM}}$ and $V(\beta)$ are variances & \cref{def:ch4:lyap} \\
+$\varphi$, $G_d$ & residue correction in the potential $V(x)=\log x+\varphi(x\bmod2^d)$, and the residue graph with edge weights $\log\frac32$ (odd) and $-\log2$ (even) & \cref{sec:ch5c:residue}, \cref{thm:ch5c:residue} \\
+\addlinespace[4pt]
+$\mu$, $L$, $\kappa$, $\lambda$, $e_t$ & $f$ is $\mu$ strongly convex with $L$ Lipschitz gradient and $\kappa=L/\mu$ is its condition number; $\lambda$ is a Hessian eigenvalue and $e_t=x_t-x^\ast$ the error; $\mu$ is also the Haar measure, and $L$ an energy in \cref{chap:samplers} & \cref{sec:ch5:momentum} \\
+$L$, $\mu$, $\kappa$ (stride) & stride constants of \cref{chap:momentum}: $L=\log\frac53$ the largest ascent, $\mu=|\log\frac34|$ the mean descent, $\kappa=L/\mu\approx1.776$ a ratio of increments and not a condition number & \cref{def:nesterov} \\
+$\alpha$, $a$, $\beta$ & step size, usually $1/L$; the normalized step $a=\alpha\lambda$; momentum coefficient $\beta$, equal to $\log(3/2)/\log2=\lt-1$ in SMM; in \cref{chap:samplers}, $\beta$ is an inverse temperature & \cref{sec:ch6:problem}, \cref{sec:ch5:beta} \\
+\smmdet, \smmstate, $G_h$ & Switching MM: \smmdet\ extrapolates on odd iterations only, two steps from an even index being $G_{(1+\beta)\alpha}\circ G_\alpha$ with $G_h(x)=x-h\nabla f(x)$; \smmstate\ injects only when progress is slow & \cref{alg:smmdet}, \cref{thm:smmquad} \\
+$m_{\mathrm{SMM}}$, $V(\beta)$ & slow mode step multiplier $(2+\beta)/2$ and noise amplification $(2+2\beta+\beta^2)/(2+\beta)$ of \smmdet & \cref{cor:ch6:slow}, \cref{eq:ch7:V} \\
+\end{longtable}
+\endgroup

@@ -1,0 +1,83 @@
+\chapter{Numerical Constants}\label{app:constants}
+
+\Cref{tab:appA:constants} collects the main constants used in the book, to
+six significant figures unless stated otherwise. All were recomputed for this
+book with the scripts of \cref{app:code}.
+
+\begin{table}[ht]
+\centering\small\setlength{\tabcolsep}{4pt}
+\caption{Numerical constants.}
+\label{tab:appA:constants}
+\begin{tabular}{@{}lrl@{}}
+\toprule
+Constant & Value & Meaning \\
+\midrule
+$\log 2$ & $0.693147$ & one halving \\
+$\log(3/2)$ & $0.405465$ & asymptotic odd step of $T$ \\
+$\log(3/4)$ & $-0.287682$ & drift per stride of $S$, model \\
+$\tfrac13\log(3/4)$ & $-0.0958940$ & drift per step of $T_0$, model \\
+$\ds=\log(\sqrt3/2)$ & $-0.143841$ & drift per step of $T$ \\
+$\sigma^2$ & $0.301737$ & step variance of $T$ \\
+$2(\log2)^2$ & $0.960906$ & stride variance of $S$, model \\
+$\E[\Delta^2]$ & $1.04367$ & second moment of a stride, model \\
+$\tfrac2{27}(\log6)^2$ & $0.237808$ & long run step variance of $T_0$, model \\
+$1/|\ds|$ & $6.95212$ & total stopping time slope, $T$, model \\
+ & $6.91960$ & the same, observed for $n\le10^4$ \\
+$\sigma^2/|\ds|^3$ & $101.387$ & variance slope, $T$, model \\
+$3/|\log(3/4)|$ & $10.4282$ & total stopping time slope, $T_0$, model \\
+$1/|\log(3/4)|$ & $3.47606$ & total stopping time slope, $S$, model \\
+$C=\sigma^2/(\ds)^{2}$ & $14.5836$ & central limit constant \\
+$D$ & $0.0346882$ & Chernoff rate, density theorem \\
+$e^{-D}$ & $0.965907$ & Chernoff factor per step \\
+$1/\log_23$ & $0.630930$ & critical frequency of odd steps, $T$ \\
+$H(1/\log_23)$ in bits & $0.949956$ & residue sieve exponent $h$ \\
+$\log_2 3$ & $1.58496$ & Ces\`aro threshold \\
+$\beta=\log_23-1$ & $0.584963$ & Switching MM momentum \\
+$L=\log(5/3)$ & $0.510826$ & largest stride ascent \\
+$\log(10/3)$ & $1.20397$ & largest step ascent of $T_0$ \\
+$\kappa=L/|\log(3/4)|$ & $1.77566$ & stride ratio (an analogy) \\
+$\kappa_*=\log2/|\log(3/4)|$ & $2.40942$ & per step ratio (an analogy) \\
+$\log(10/3)/|\log(3/4)|$ & $4.18508$ & step ratio of $T_0$ (an analogy) \\
+$\rho(h)$ & $(-\tfrac12)^h$ & parity autocorrelation, model \\
+$\mathcal A$ & $1/3$ & long run variance factor \\
+$(2+2\beta+\beta^2)/(2+\beta)$ & $1.35867$ & SMM noise amplification \\
+$1/(1-\beta)$ & $2.40942$ & every step amplification \\
+$(2+\beta)/2$ & $1.29248$ & SMM effective step multiplier \\
+$(2+\beta)/(1+\beta)$ & $1.63093$ & SMM stability limit for $\alpha\lambda$ \\
+$\theta^*$ & $1$ & Wald root, accelerated model \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section*{The continued fraction of $\log_23$}
+
+To the precision of our computations ($300$ digits, with the first $60$ partial quotients confirmed at $150$),
+\begin{multline*}
+  \log_23=[1;1,1,2,2,3,1,5,2,23,2,2,1,1,\\
+  55,1,4,3,1,1,15,1,9,2,5,\dots].
+\end{multline*}
+The large partial quotients $23$ and $55$ make the convergents just before
+them, $p_8/q_8=\tfrac{1054}{665}$ and $p_{13}/q_{13}=\tfrac{301994}{190537}$, exceptionally good
+two sided approximations. Only the second lies above $\log_23$ and counts for the one sided cycle bound of \cref{chap:cycles}, which jumps from $r=190\,537$ to the next rung of the ladder, $r=10\,781\,274$; the first lies below, with $\lceil665\log_23\rceil-665\log_23=0.99994$, and is useless there (\cref{rem:ch8:false}). With the verified range
+$X=2^{n}$, the exact lower bounds on the number of odd elements $r$ and
+halvings $s$ of a nontrivial cycle are given in \cref{tab:appA:cycles}.
+The established range is $X=2^{71}$, by Ba\v{r}ina\index{Barina, D.@Ba\v{r}ina, D.}~\cite{barina2025}, and there the bound is the same as at $2^{68}$. The last row is nevertheless the current record, $r\ge137\,528\,045\,312$~\cite[\S6]{barina2025}: Hercher\index{Hercher, C.}'s sharper accounting of the cycle~\cite[Corollary~29]{hercher2023} reaches it already from $X=3\cdot2^{69}<2^{71}$.
+
+\begin{table}[ht]
+\centering\small
+\caption{Exact cycle bounds from the ladder of $\log_23$, as functions of the
+verified range $X$. Only $X\le2^{71}$ is established; the last row shows
+what a larger range would give by this method.}
+\label{tab:appA:cycles}
+\begin{tabular}{@{}rrr@{}}
+\toprule
+$X$ & $r\ge$ & $s\ge$ \\
+\midrule
+$2^{40}$ & $10\,781\,274$ & $17\,087\,915$ \\
+$2^{60}$ & $397\,573\,379$ & $630\,138\,897$ \\
+$2^{68}$ & $72\,057\,431\,991$ & $114\,208\,327\,604$ \\
+$2^{71}$ & $72\,057\,431\,991$ & $114\,208\,327\,604$ \\
+$2^{72}$ & $137\,528\,045\,312$ & $217\,976\,794\,617$ \\
+\bottomrule
+\end{tabular}
+\end{table}

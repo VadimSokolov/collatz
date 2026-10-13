@@ -1,0 +1,4 @@
+delim_r " to "
+headings_flag 1
+heading_prefix "\\par\\medskip{\\scshape "
+heading_suffix "}\\par\\nopagebreak\n"

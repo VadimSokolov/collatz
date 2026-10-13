@@ -1,0 +1,248 @@
+\chapter{Open Problems and Computational Projects}\label{chap:open}
+
+Each chapter of this book ends at a precise question. This chapter collects
+them. We separate three kinds: problems about the Collatz map itself, problems
+about Switching MM\index{Switching MM}, and computational projects that are well posed, finite and
+likely to repay effort. Where a problem is stated in an earlier chapter we
+restate it in its sharpest form and say what is already known. Several problems
+have been sharpened by results proved in this book, and we flag where a
+natural formulation turns out to be the wrong one.
+
+\section{The divergence half}\label{sec:ch11:divergence}
+
+\begin{problem*}[O1. Ces\`aro equidistribution]\designation{O1}\label{prob:ch11:o1}
+Prove \cref{conj:cesaro}: along every Syracuse orbit, $\liminf_N\bar k_N>\log_23$. Bounded orbits satisfy this automatically (\cref{sec:ch9:conj}), so the content is in the unbounded ones. Informally, prove that along no orbit can the running mean of the exponents $\vt(3y_j+1)$ have upper limit at most $\log_23=1+\beta$, which by \cref{cor:ch9:freq} is what an unbounded orbit would need.
+\end{problem*}
+
+This is the divergence half of the conjecture itself, restated
+(\cref{sec:ch9:conj}). \Cref{prop:cesaro} supplies only the converse implication, which is an
+identity, and \cref{rem:ch9:circular} explains why numerical checks of
+$\bar k_N>\log_23$ on terminating orbits carry no information. A weaker target
+that would still be new is a statement of the form: along every orbit, the
+proportion of strides with $k_j=1$ has upper density strictly less than one.
+Even this is open, and \cref{cor:ch4:multistride} shows that arbitrarily long
+runs of $k_j=1$ do occur.
+
+\begin{problem*}[O2. Trajectory mixing]\designation{O2}\label{prob:ch11:o2}
+Fix $a$ and a constant $C>1/|\log(3/4)|$, which is about $3.48$, and let $x_0$ be drawn uniformly from the odd integers up to $X$.
+Show that the empirical distribution of $y_j\bmod3^a$ over the strides before the orbit reaches $1$, stopped after $\lfloor C\log X\rfloor$ strides if the orbit has not reached $1$ by then, converges in probability, as $X\to\infty$, to the stationary law $\pi_a$ of \cref{lem:ch9:mixing}.
+In the model the cap is reached with probability tending to zero; its only role is to make the empirical distribution defined for every starting value.
+\end{problem*}
+
+The problem is posed for random starting values because no version can hold
+for every orbit: the orbit of $(4^m-1)/3$ reaches $1$ after one stride and
+stays there. As
+\cref{lem:ch9:mixing} shows, the model chain on residues modulo $3^a$, in which
+the halving exponents are independent Geometric$(\tfrac12)$ draws, mixes\index{mixing}
+\emph{exactly} in $a$ strides, with every nontrivial eigenvalue zero, so there
+is no spectral\index{spectral gap} question left
+for the model. The entire content is the transfer to the map, whose halving
+exponents are produced by the orbit itself. Tao\index{Tao, T.} proves a fine scale form of
+the transfer for the law of a single iterate of a random starting
+value~\cite[Propositions~1.9 and~1.14]{tao2022}; the problem asks for the
+empirical distribution along the whole orbit.
+
+The evidence is strong. Along orbits of up to about $25000$ strides from random starting values near $2^{10000}$, the residues modulo $3^5$ approach $\pi_5$ at the rate of independent sampling, and they scatter about that benchmark about as much as the model chain does (\cref{sec:ch9:single}).
+
+\begin{problem*}[O3. Certificates with growing horizon]\designation{O3}\label{prob:ch11:o3}
+\Cref{thm:nolyapunov} and \cref{cor:ch4:multistride} rule out certificates\index{certificate} $W(S^{(J)}(x))\le\rho\,W(x)$ with $W$ increasing, for any fixed $J$, and a decreasing $W$ fails at $x=5$ for every horizon, since $S^{(J)}(5)=1$; without monotonicity a
+certificate bounded away from zero exists exactly when the conjecture holds
+(\cref{rem:ch4:exists,rem:ch4:monotone}). Find an increasing certificate whose
+horizon $J(x)$ grows with $x$, say $J(x)=O(\log x)$, with
+$W(S^{(J(x))}(x))<W(x)$ for every odd $x\ge3$.
+\end{problem*}
+
+For increasing $W$ the condition reads $S^{(J(x))}(x)<x$, so such a certificate is equivalent to the conjecture together with a bound on
+stopping times\index{stopping time}: the problem is the conjecture in a stronger form, not a separate question. Its value
+is that it separates what is known on average from what is not. The density
+one version is already known: by the density theorem\index{density theorem} (\cref{thm:density}),
+for every $C>0$ the odd $x$ with $S^{(J)}(x)<x$ for some $J\le C\log x$ have
+density one. The corresponding statement for the total stopping time, that
+almost every $x$ reaches $1$ within $C\log x$ strides, is open for every $C$;
+it would show that almost every integer reaches $1$, and in the model it holds
+exactly when $C>1/|\log(3/4)|\approx3.48$.
+
+\begin{problem*}[O3$'$. Potentials of unbounded depth]\designation{O3$'$}\label{prob:ch11:o3p}
+\Cref{chap:mmcollatz} shows that every potential $\log x+\varphi(x)$ with
+$\varphi$ depending on boundedly many binary digits of $x$ fails, and that the
+run length potentials $\log x+c\,\vt(x+1)$ fail at a fraction at least $0.143$
+of odd integers. Determine the infimum, over potentials of depth $h$ (reading the runs of the first $h$ blocks), of the fraction of odd integers at which the potential fails to decrease, whether it tends to zero as $h\to\infty$, and if so how fast.
+The failure set of such a potential is, up to a set of density zero, a union of residue classes modulo powers of $2$, so its density is the total measure of those classes, which by \cref{thm:terras} is the probability of failure in the Bernoulli model: the problem is a question about the model, and its answer cannot reveal arithmetic structure beyond it.
+\end{problem*}
+
+\begin{problem*}[O4. The third cumulant of total stopping times]\designation{O4}\label{prob:ch11:o4}
+The census of \cref{sec:ch3:missing} locates the variance deficit: the deficit of about
+ten percent is an additive, apparently bounded term of about $2.6$ in $\log^2$
+units, concentrated in the deterministic final descent of the orbit, which
+indicates that the model is asymptotically right about the variance. The skewness is not explained:
+it is $0.67$ at $n\approx2^{29}$ against $0.96$ for the inverse Gaussian law of
+the model. Prove that the variance deficit is bounded, and explain the third
+cumulant.
+As stated, the first part contains the conjecture, since the deficit of a dyadic block $[2^k,2^{k+1})$ is finite only if every integer in it reaches $1$; the question is to prove that the deficit is bounded assuming the conjecture, or unconditionally for the integers of each block whose orbits reach $1$ within a fixed multiple of $k$ steps.
+\end{problem*}
+
+\begin{problem*}[O5. Uniform integrability]\designation{O5}\label{prob:ch11:o5}
+Settled by \cref{prop:uimartingale}: the iterate martingale\index{martingale} of the accelerated model,
+stopped when it first drops to $1$ or below, is not uniformly integrable\index{uniform integrability}, and \cref{chap:path} explains why its deterministic counterpart, the indicator of reaching $1$, leaves nothing to certify short of the conjecture itself. There is no separate open problem here.
+\end{problem*}
+
+\section{The cycle half}\label{sec:ch11:cycles}
+
+\begin{problem*}[C1. Arithmetic sharpening of the cycle identity]\designation{C1}\label{prob:ch11:c1}
+Find a function $f$, derived from the arithmetic of the parity vector\index{parity vector} rather than the size of the elements, such that every nontrivial cycle with $m$ odd steps, $k$ steps in all and least element $x_{\min}$ satisfies $x_{\min}<m/(3\Lambda f(m))$, where $\Lambda=k\log2-m\log3$ is the value at that cycle; \cref{lem:ch8:window} gives this with $f=1$. By \cref{cor:ch8:window}, $f(m)\ge\frac m3(1+\eta)$ for some fixed $\eta>0$ and all large $m$ would confine the least element of every nontrivial cycle with many odd steps below a constant of about $1/(2\eta)$ for small $\eta$, and so reduce the cycle half to a finite verification; any $f$ bounded below by a constant $b>1$ would lower every threshold of \cref{tab:ch8:thresholds} by at least the factor $b$.
+\end{problem*}
+
+An effective irrationality measure\index{irrationality measure} for
+$\log_23$ cannot do this on its own (\cref{prop:ch8:insufficient}):
+a measure with exponent $\nu$ and constant $c$ excludes only $r<(3cX\log2)^{1/\nu}$. On a cycle
+$x(2^k-3^m)=c_k(x)$, where $c_k(x)$ is a sum of terms $3^j2^i$ indexed by the
+parity word, and the window lemma\index{window lemma} shows that the least element is confined to
+an interval with ends a factor of more than $m/3$ apart.
+In the computations of \cref{chap:cycles} the primitive balanced words with $100\le m\le2000$ sit near the top of the window, at about $0.72$ of its upper end (an observation, not a theorem), so arguments that use only the size of the elements, and therefore apply equally to rational cycles, are unlikely to gain the factor there; the problem
+is really whether $2^k-3^m$ can divide $c_k(w)$ for a nontrivial word, perhaps
+attacked by a block decomposition in the style of the thinning argument that
+settled Erd\H{o}s $125$.
+
+\begin{problem*}[C2. Effective measures and the finite range]\designation{C2}\label{prob:ch11:c2}
+Find explicit $\nu$ and $c$ with $|\log_23-s/r|\ge c\,r^{-\nu}$ for all integers $s$ and $r\ge1$, with $\nu$ as close to $2$ as possible; the explicit bound of Rhin\index{Rhin, G.}~\cite{rhin1987}, in the form quoted in \cref{sec:ch8:limits}, corresponds to $\nu\approx14.3$. By \cref{rem:irrmeasure} such a pair excludes the cycle lengths $r<(3cX\log2)^{1/\nu}$ without any enumeration, but this range can never exceed the exact ladder value $r_*(X)$, and \cref{tab:ch8:insufficient} shows that even the idealized pair $\nu=2$, $c=0.01773$ falls short of it by factors from about $2$ to more than $50$. The interest of the problem is therefore Diophantine, not the cycle bound.
+\end{problem*}
+
+\begin{problem*}[C3. Sharper accountings at the next rungs]\designation{C3}\label{prob:ch11:c3}
+Hercher\index{Hercher, C.}'s record $r\ge1.375\times10^{11}$~\cite[Corollary~29]{hercher2023},
+unconditional since Ba\v{r}ina\index{Barina, D.@Ba\v{r}ina, D.}'s verification to $2^{71}$~\cite{barina2025}, uses a sharper accounting of the
+cycle structure than the inequality $\log(1+1/(3x_i))\le1/(3M)$.
+It keeps the form of the cycle inequality: his bound~\cite[Theorem~27]{hercher2023} is $0<s/r-\lt<1/(4X\log2)$, in place of $1/(3X\log2)$, so the least length it does not exclude is again a rung, by the mediant lemma\index{mediant lemma} of \cref{chap:cycles} (Hercher finds it with his lemma on the least denominator of a fraction in an interval~\cite[Lemma~22]{hercher2023}), and every threshold of \cref{tab:ch8:thresholds} falls by the factor $\frac34$; his computer assisted Corollary~29 lowers the threshold for the rung $72\,057\,431\,991$ further, to $3\cdot2^{69}$.
+Extend that computation to the later rungs: for each rung from $137\,528\,045\,312$ on, find the least verification range at which his accounting excludes it.
+\end{problem*}
+
+\section{Switching MM}\label{sec:ch11:smm}
+
+\begin{problem*}[S1. Rates beyond quadratics]\designation{S1}\label{prob:ch11:s1}
+Settled for the distance by \cref{thm:ch5b:rate}. For $\mu$ strongly convex and $L$ smooth $f$, with $\kappa=L/\mu$, the even iterates of $\smmdet$ contract the distance to the minimizer by $q=(1-1/\kappa)\max(1-(1+\beta)/\kappa,\beta)$ per period, which is the exact worst case over the class: explicit one dimensional functions attain it for every $\kappa$, and performance estimation\index{performance estimation} confirms it. The function gap contracts by $q^2$, which is exact for $\kappa\ge(1+\beta)/(1-\beta)$, where the quadratic $\frac\mu2\|x\|^2$ attains it. The remaining question is the function gap for $\kappa<(1+\beta)/(1-\beta)$, where performance estimation gives a smaller worst case, for example $0.049$ against $q^2=0.086$ at $\beta=\lt-1$ and $\kappa=2$: find it in closed form and describe the worst function.
+\end{problem*}
+
+\begin{problem*}[S2. Stochastic analysis]\designation{S2}\label{prob:ch11:s2}
+Extend \cref{thm:smmvar} from quadratics to $\mu$ strongly convex, $L$ smooth objectives under
+a bounded variance oracle: show that the stationary mean square error of
+$\smmdet$ is at most $\tfrac53$ times that of gradient descent with the same
+step, up to terms vanishing with the step size, for every $\beta<1$.
+\end{problem*}
+
+Partial progress. On quadratics the result holds for any uncorrelated noise,
+and \cref{prop:ch7:mult} extends it to multiplicative (curvature) noise: under
+the least squares scaling the slow mode ratio is unchanged, and under the
+diffusive scaling a linear periodic method satisfying the hypotheses of \cref{thm:ch7:gainweight}, with gradient gains $c_i$ (\cref{def:ch7:gains}), has the mean square stability threshold $\epsilon^*=2\sum_ic_i/\sum_ic_i^2$, which is $1.472$ for $\smmdet$ against
+$0.830$ for every step momentum\index{momentum} at $\beta=\lt-1$. What remains open is the
+nonquadratic case and large multiplicative noise\index{multiplicative noise} at large step, where the
+bound $5/3$ fails.
+
+\begin{problem*}[S3. The best period two ratio]\designation{S3}\label{prob:ch11:s3}
+Settled for quadratics by \cref{prop:ch7:pareto}. Every period two ratio $r$ between $1$ and the Chebyshev ratio $r_{\mathrm{ch}}(\kappa)$,
+correctly scaled, lies on the rate and noise frontier
+$R=1-4\kappa/((2-N)(\kappa+1)^2)$, with noise floor\index{noise floor} $N=2-1/G(r)$ and
+$G(r)=(1+r)^2/(4r)$, and larger ratios are dominated by the Chebyshev ratio in both criteria; the Chebyshev\index{Chebyshev step sizes} ratio is the fast end, gradient descent the
+quiet end, and the SMM ratio $1+\beta$ sits near the quiet end with a $5.4$
+percent gain in the rate exponent for a $5.1$ percent rise in noise. The open part is the
+choice of scale without knowledge of $\mu$: the optimal scale is
+$\alpha L\to(2+\beta)/(1+\beta)$, not $1$.
+\end{problem*}
+
+\begin{problem*}[S4. Adaptive switching]\designation{S4}\label{prob:ch11:s4}
+$\smmstate$ suppresses injection when progress is adequate. Find a principled
+switching rule, using only $L$ and observed function values, that retains the
+uniform noise bound of \cref{prop:ch7:bound} while closing the noiseless gap
+to every step momentum identified in \cref{chap:noise}.
+\end{problem*}
+
+Partial progress. On quadratics, at every parameter value computed, no switching rule is unstable or much slower than the worse of gradient descent and every step Nesterov\index{Nesterov acceleration}: the joint spectral radius of the descent and injection matrices, computed exactly by \cref{prop:ch5b:jsr}, is below one, and at $\beta=\lt-1$ and $\beta=0.9$ it exceeds the larger pure rate by at most $0.006$.
+A proof of the transient bound \cref{conj:ch5b:transient} would make the stability unconditional, at all parameter values. The noise side of the problem, a rule whose stationary variance is
+provably bounded by $\frac53$ of gradient descent, remains open.
+
+\section{Computational projects}\label{sec:ch11:projects}
+
+The following projects are finite, well specified, and suited to a
+collaborator with computing resources. Each comes with a clear success
+criterion.
+
+\paragraph{P1. A machine checked cycle bound.} Formalize the bound of
+\cref{thm:cycles} in Lean\index{Lean}. The affine identity and the inequality $3^m<2^k$ are
+already proved in Lean~4 using only its core library (\cref{sec:ch8:lean}), and
+\cref{sec:ch8:certificate} gives an exact integer certificate\index{certificate}: an enclosure of
+$\log_23$ by two convergents\index{convergent} certified with $320$ bit mantissas, an enclosure
+of $\log2$, the $44$ ladder rungs up to $72\,057\,431\,991$, and an exclusion
+inequality at each rung using integers of at most $248$ bits. What remains is
+to formalize the upper half of the cycle inequality in the logarithm free form
+$2^k(3X)^m\le3^m(3X+1)^m$, the mediant lemma\index{mediant lemma}, \cref{thm:ch8:onesided} and a verified squaring routine,
+and to replay the certificate. Success means a Lean file, with no
+\texttt{sorry}, whose main theorem states that every nontrivial cycle of the accelerated map on the positive integers has at least $72\,057\,431\,991$ odd steps, conditional only on a stated hypothesis encoding the verified range\index{verification range}: every positive integer below $2^{68}$ reaches $1$.
+
+\paragraph{P2. Thresholds and the window.} The verification thresholds at which
+the sharp bound moves are now computed for $60\le\log_2X\le90$
+(\cref{tab:ch8:thresholds}); the next step past the current range $2^{71}$~\cite{barina2025} is at $2^{71.884}$. The
+open computational question is the window of \cref{lem:ch8:window}: for the
+hypothetical cycles at the rungs, compute the largest lower bound for the least
+element that can be proved from the structure of $c_k(w)$ for words with the
+prescribed $(m,k)$ that satisfy a further restriction, for instance compatibility with the first steps of an orbit starting above $2^{71}$.
+Without a restriction nothing beyond the trivial bound $3^m-2^m$ for $c_k(w)$ is possible, since the word $1^m0^{k-m}$ attains it.
+
+\paragraph{P3. Orbits from very large starting values.} The study of
+\cref{sec:ch9:single} followed orbits from near $2^{10000}$ with residues
+modulo $3^5$. Extend it to starting values near $2^{10^5}$ and beyond, to moduli
+$3^a$ with $a\le8$, to joint statistics of consecutive residues, and to the
+dyadic digits of the iterates, and look for any systematic departure from
+the model chain of \cref{lem:ch9:mixing}.
+
+\paragraph{P4. Total stopping time cumulants at scale.} Extend the exact census of
+\cref{sec:ch3:missing} beyond $2^{30}$ (memory permitting) and the sampled
+version to $10^{15}$, test whether the additive variance deficit saturates,
+and fit the third cumulant.
+
+\paragraph{P5. Switching MM at scale.} Run $\smmdet$ against every step
+Nesterov\index{Nesterov acceleration} and heavy ball\index{heavy ball} at $\beta\in\{0.585,0.9\}$, and against Adam, on
+minibatch training of standard models where the gradient noise is genuine,
+with the base step size of gradient descent and the three momentum methods fixed at the common value $\alpha=1/L$, at which all four are stable and every eigendirection of the Hessian has $a=\alpha\lambda\le1$.
+Report final loss and its variance over seeds, and compare the measured noise floors with the prediction of \cref{thm:smmvar} evaluated on the spectrum of the Hessian at the solution, whose ratio to gradient descent lies between $1$ and $(2+2\beta+\beta^2)/(2+\beta)$ on every eigendirection (\cref{prop:ch7:uniform}). Larger common steps are possible only below $2(1+\beta)/((1+2\beta)L)$, the stability limit of every step Nesterov, where the denominator of \eqref{eq:ch7:nagvar} vanishes and which lies below the limit $(2+\beta)/((1+\beta)L)$ of $\smmdet$ (\cref{cor:ch6:stability}); above $a=1$ \cref{prop:ch7:uniform} does not apply; \eqref{eq:ch7:vavg} still holds there, since the proof of \cref{thm:smmvar} uses only $|\rho|<1$, and at $\beta=0.585$ it gives a ratio above $(2+2\beta+\beta^2)/(2+\beta)$ once $a>1.41$, reaching $1.55$ at the Nesterov limit.
+
+\paragraph{P6. Periodic schedules in general.} Settled in the slow mode by the
+gain weight\index{gain weight theorem} theorem (\cref{thm:ch7:gainweight}): no stable linear periodic
+first order method beats gradient descent at matched speed, and the penalty is
+the Cauchy and Schwarz ratio $p\sum c_i^2/(\sum c_i)^2$ of the gradient gains.
+What remains computational is the regime away from the slow mode: for a given
+spectrum and noise level, find the period $p$ schedule minimizing the summed
+stationary variance at a prescribed worst case rate, and compare it with the
+period two frontier of \cref{prop:ch7:pareto}.
+
+\paragraph{P7. Erd\H{o}s $125$ beyond $4^{13}$.} Extend the exact density
+computation of \cref{chap:cycles} to $4^{15}$ or beyond with a bit array of a
+few gigabytes, and test whether the successive minima just below powers of $3$
+track the quality of the approximations $3^m\approx4^k$ quantitatively.
+
+\paragraph{P8. Perfect samplers beyond the coefficient stopping time.} The sampler of
+\cref{thm:ch10b:perfect} is exact because the level sets of the coefficient stopping time $\tau$ are unions
+of residue classes. Find other energies with this property whose level sets admit a dynamic programme of size polynomial in the depth,
+for instance the number of descents in the first $k$ steps or the coefficient stopping time
+of $T^{(j)}$ for fixed $j$, give the dynamic programme for each, and use the
+samplers to measure the frequency with which the block potentials of
+\cref{prop:ch5c:runpot} fail at depth $k$, as a function of $k$.
+
+\paragraph{P9. Trees of slow integers.} \Cref{tab:ch10b:clusters} shows that
+the $257$ integers below $2^{26}$ with total stopping time above $400$, counted in steps of $T$ as in \cref{chap:samplers}, are $34$
+trees of merged orbits, and the $24$ above $440$ are six. \Cref{tab:ch10b:trees} counts the trees
+of $\{\sigma_\infty>m\}\cap[2,2^B)$ for $B=22$, $24$ and $26$: over this range their number grows with $B$
+roughly like $2^{cB}$ with $c$ between $1$ and $1.4$, and their mean size like
+$2^{0.4B}$.
+These exponents are local: at fixed $m$ each tree has its own root, an integer with $\sigma_\infty=m-100$, and there are only finitely many such integers, all at most $2^{m-100}$ since a step of $T$ at most halves, so the number of trees is bounded in $B$.
+Explain the exponents observed for $22\le B\le26$, or find how the number and the size of the trees grow when $m$ and $B$ increase together, for instance with $m/B$ fixed.
+The number of trees is the
+number of points at remaining depth $m-100$ reached from the box by an orbit segment of more than a hundred steps, a statistic of the merging mechanism of \cref{lem:ch10b:merge} that has not, to our knowledge, been studied; the mean size is a count on the inverse tree of \cref{chap:difference}, and whether the certified exponents of that chapter bear on it, when, at the deeper levels, the roots usually lie above the box, is part of the problem. Relate the
+roots of the trees to the delay records of \cref{chap:intro}.
+
+\section*{Notes}
+
+Problems O1, O3, C2 and the cycle formulation are restatements of questions
+going back to Terras\index{Terras, R.}~\cite{terras1976}, Steiner\index{Steiner, R. P.}~\cite{steiner1977} and
+Eliahou\index{Eliahou, S.}~\cite{eliahou1993}, sharpened by the results of this book. Problem C1
+and the Erd\H{o}s $125$ analogy come from our note on the AlphaProof Nexus\index{AlphaProof Nexus}
+system~\cite{polsonsokolov2026nexus,tsoukalas2026}. Problems S1 to S4 and P5,
+P6 grew out of the analysis of \cref{chap:smm,chap:noise}, and P8 and P9 out
+of \cref{chap:samplers}.

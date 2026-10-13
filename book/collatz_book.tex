@@ -1,0 +1,50 @@
+\documentclass[11pt,twoside,openright]{book}
+\input{preamble}
+
+\begin{document}
+
+\frontmatter
+\input{chapters/titlepages}
+\tableofcontents
+\input{chapters/preface}
+\input{chapters/notation}
+
+\mainmatter
+
+\renewcommand{\partimagehook}{\includegraphics[width=1\textwidth]{figures/art_part1}\par\vspace{8pt}{\normalsize\upshape\itshape The Collatz coral: the orbits of the first $20\,000$ integers, drawn from $1$ outward with a small turn at every step, one way at even values and the other at odd values; colour is total stopping time.\par}}
+\part{The Problem}
+\input{chapters/ch01_intro}
+\input{chapters/ch02_parity}
+\input{chapters/ch03_stochastic}
+
+\renewcommand{\partimagehook}{\includegraphics[width=1\textwidth]{figures/art_part2}\par\vspace{8pt}{\normalsize\upshape\itshape Stationary noise clouds of gradient descent, Switching MM and Nesterov ($\beta=\log_23-1$, step $1/L$) on a quadratic with condition number $20$ and noisy gradients; ellipses are two standard deviation contours of the exact stationary covariances, and the numbers give the stationary variance along the slow eigenvector relative to gradient descent ($1.36$ and $2.41$ in the limit of infinite condition number).\par}}
+\part{The Optimization Reading}
+\input{chapters/ch04_lyapunov}
+\input{chapters/ch05_momentum}
+\input{chapters/ch05c_mmcollatz}
+\input{chapters/ch06_smm}
+\input{chapters/ch07_noise}
+\input{chapters/ch05b_difference}
+
+\renewcommand{\partimagehook}{\includegraphics[width=0.92\textwidth]{figures/art_part3}\par\vspace{8pt}{\normalsize\upshape\itshape The sunflower of $r\log_23$ modulo $1$ for $r\le3000$: angle is the fractional part, radius $\sqrt r$; the gold rings are the rungs of the one sided ladder that control every cycle bound.\par}}
+\part{Cycles and Divergence}
+\input{chapters/ch08_cycles}
+\input{chapters/ch09_divergence}
+\input{chapters/ch10_path}
+\input{chapters/ch10b_computation}
+\input{chapters/ch10c_samplers}
+\input{chapters/ch11_open}
+\input{chapters/gallery}
+
+\renewcommand{\partimagehook}{}
+\appendix
+\crefalias{chapter}{appendix}
+\input{chapters/appA_constants}
+\input{chapters/appB_code}
+
+\backmatter
+\bibliographystyle{plainnatto}
+\bibliography{refs,refs_A,refs_B,refs_C,refs_D,refs_E,refs_F,refs_G}
+\printindex
+
+\end{document}

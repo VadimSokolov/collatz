@@ -1,0 +1,735 @@
+{
+ "edition": "1",
+ "pdf": {
+  "bytes": 5609863,
+  "file": "pdf/collatz.pdf",
+  "pages": 311,
+  "parts": [
+   {
+    "first_page": "i",
+    "key": "",
+    "last_page": "xviii",
+    "pages": 18,
+    "title": "Front matter"
+   },
+   {
+    "first_page": "3",
+    "key": "1",
+    "last_page": "18",
+    "pages": 16,
+    "title": "Chapter 1. The $3x+1$ Problem"
+   },
+   {
+    "first_page": "19",
+    "key": "2",
+    "last_page": "42",
+    "pages": 24,
+    "title": "Chapter 2. Parity Vectors and the Syracuse Map"
+   },
+   {
+    "first_page": "43",
+    "key": "3",
+    "last_page": "64",
+    "pages": 22,
+    "title": "Chapter 3. Stochastic Models and Martingale Duality"
+   },
+   {
+    "first_page": "67",
+    "key": "4",
+    "last_page": "84",
+    "pages": 18,
+    "title": "Chapter 4. Lyapunov Functions and the Limits of Descent"
+   },
+   {
+    "first_page": "85",
+    "key": "5",
+    "last_page": "98",
+    "pages": 14,
+    "title": "Chapter 5. Majorization and Momentum"
+   },
+   {
+    "first_page": "99",
+    "key": "6",
+    "last_page": "108",
+    "pages": 10,
+    "title": "Chapter 6. Majorization Pressed Harder"
+   },
+   {
+    "first_page": "109",
+    "key": "7",
+    "last_page": "124",
+    "pages": 16,
+    "title": "Chapter 7. Switching MM"
+   },
+   {
+    "first_page": "125",
+    "key": "8",
+    "last_page": "154",
+    "pages": 30,
+    "title": "Chapter 8. Noise, Variance and Experiments"
+   },
+   {
+    "first_page": "155",
+    "key": "9",
+    "last_page": "168",
+    "pages": 14,
+    "title": "Chapter 9. Nonlinear Difference Equations and Momentum MM"
+   },
+   {
+    "first_page": "171",
+    "key": "10",
+    "last_page": "206",
+    "pages": 36,
+    "title": "Chapter 10. Cycles and Continued Fractions"
+   },
+   {
+    "first_page": "207",
+    "key": "11",
+    "last_page": "224",
+    "pages": 18,
+    "title": "Chapter 11. The Divergence Half"
+   },
+   {
+    "first_page": "225",
+    "key": "12",
+    "last_page": "230",
+    "pages": 6,
+    "title": "Chapter 12. The Path to Collatz"
+   },
+   {
+    "first_page": "231",
+    "key": "13",
+    "last_page": "238",
+    "pages": 8,
+    "title": "Chapter 13. A Computational Path"
+   },
+   {
+    "first_page": "239",
+    "key": "14",
+    "last_page": "254",
+    "pages": 16,
+    "title": "Chapter 14. Samplers and the Horizon"
+   },
+   {
+    "first_page": "255",
+    "key": "15",
+    "last_page": "262",
+    "pages": 8,
+    "title": "Chapter 15. Open Problems and Computational Projects"
+   },
+   {
+    "first_page": "263",
+    "key": "",
+    "last_page": "270",
+    "pages": 8,
+    "title": "A Gallery of Orbits"
+   },
+   {
+    "first_page": "271",
+    "key": "A",
+    "last_page": "274",
+    "pages": 4,
+    "title": "Appendix A. Numerical Constants"
+   },
+   {
+    "first_page": "275",
+    "key": "B",
+    "last_page": "288",
+    "pages": 14,
+    "title": "Appendix B. Code"
+   },
+   {
+    "first_page": "289",
+    "key": "",
+    "last_page": "293",
+    "pages": 5,
+    "title": "Index"
+   }
+  ],
+  "sha256": "356de7c3c4f0d035378110a0d37c1278018dde8560d6e35d73178ffc0a5b10ab"
+ },
+ "results": {
+  "adaptive_switching_rule_for_switching_mm": {
+   "environment": "problem*",
+   "file": "book/chapters/ch11_open.tex",
+   "fingerprint": "bdb3b931b044",
+   "label": "prob:ch11:s4",
+   "number": "S4",
+   "page": "259",
+   "printed": "Problem S4",
+   "verified_fingerprint": "bdb3b931b044",
+   "verified_on": "2026-10-12"
+  },
+  "arithmetic_sharpening_of_the_cycle_window": {
+   "environment": "problem*",
+   "file": "book/chapters/ch11_open.tex",
+   "fingerprint": "3644e4e47137",
+   "label": "prob:ch11:c1",
+   "number": "C1",
+   "page": "257",
+   "printed": "Problem C1",
+   "verified_fingerprint": "3644e4e47137",
+   "verified_on": "2026-10-12"
+  },
+  "bounded_variance_deficit_of_total_stopping_times": {
+   "environment": "problem*",
+   "file": "book/chapters/ch11_open.tex",
+   "fingerprint": "716e5ac6119b",
+   "label": "prob:ch11:o4",
+   "number": "O4",
+   "page": "256",
+   "printed": "Problem O4",
+   "verified_fingerprint": "716e5ac6119b",
+   "verified_on": "2026-10-12"
+  },
+  "certified_growth_exponents_for_the_inverse_collatz_tree": {
+   "environment": "theorem",
+   "file": "book/chapters/ch05b_difference.tex",
+   "fingerprint": "ced4ed980670",
+   "label": "thm:ch5b:exponent",
+   "number": "9.3",
+   "page": "158",
+   "printed": "Theorem 9.3",
+   "verified_fingerprint": "ced4ed980670",
+   "verified_on": "2026-10-12"
+  },
+  "cesaro_identity": {
+   "environment": "proposition",
+   "file": "book/chapters/ch09_divergence.tex",
+   "fingerprint": "6a3d9dd307bd",
+   "label": "prop:cesaro",
+   "number": "11.3",
+   "page": "209",
+   "printed": "Proposition 11.3",
+   "verified_fingerprint": "6a3d9dd307bd",
+   "verified_on": "2026-10-12"
+  },
+  "cesaro_liminf_conjecture": {
+   "environment": "conjecture",
+   "file": "book/chapters/ch09_divergence.tex",
+   "fingerprint": "14c2af26ca33",
+   "label": "conj:cesaro",
+   "number": "11.6",
+   "page": "210",
+   "printed": "Conjecture 11.6",
+   "verified_fingerprint": "14c2af26ca33",
+   "verified_on": "2026-10-12"
+  },
+  "diophantine_insufficiency_cycle_lengths": {
+   "environment": "proposition",
+   "file": "book/chapters/ch08_cycles.tex",
+   "fingerprint": "f10fcaa208eb",
+   "label": "prop:ch8:insufficient",
+   "number": "10.20",
+   "page": "191",
+   "printed": "Proposition 10.20",
+   "verified_fingerprint": "f10fcaa208eb",
+   "verified_on": "2026-10-12"
+  },
+  "every_switching_rule_is_stable_on_quadratics": {
+   "environment": "corollary",
+   "file": "book/chapters/ch05b_difference.tex",
+   "fingerprint": "75e56983cb6f",
+   "label": "cor:ch5b:anyswitch",
+   "number": "9.8",
+   "page": "163",
+   "printed": "Corollary 9.8",
+   "verified_fingerprint": "75e56983cb6f",
+   "verified_on": "2026-10-12"
+  },
+  "exact_function_gap_rate_of_switching_mm_for_small_condition_numbers": {
+   "environment": "problem*",
+   "file": "book/chapters/ch11_open.tex",
+   "fingerprint": "8c9823562a72",
+   "label": "prob:ch11:s1",
+   "number": "S1",
+   "page": "258",
+   "printed": "Problem S1",
+   "verified_fingerprint": "8c9823562a72",
+   "verified_on": "2026-10-12"
+  },
+  "exact_two_stride_behaviour": {
+   "environment": "proposition",
+   "file": "book/chapters/ch04_lyapunov.tex",
+   "fingerprint": "c452c65fd568",
+   "label": "prop:ch4:twostride",
+   "number": "4.12",
+   "page": "74",
+   "printed": "Proposition 4.12",
+   "verified_fingerprint": "c452c65fd568",
+   "verified_on": "2026-10-12"
+  },
+  "extrapolated_point_is_a_long_gradient_step": {
+   "environment": "lemma",
+   "file": "book/chapters/ch06_smm.tex",
+   "fingerprint": "f81a509d88a4",
+   "label": "lem:ch6:ystep",
+   "number": "7.5",
+   "page": "117",
+   "printed": "Lemma 7.5",
+   "verified_fingerprint": "f81a509d88a4",
+   "verified_on": "2026-10-12"
+  },
+  "failure_fraction_of_potentials_of_growing_depth": {
+   "environment": "problem*",
+   "file": "book/chapters/ch11_open.tex",
+   "fingerprint": "7405d46c347b",
+   "label": "prob:ch11:o3p",
+   "number": "O3$'$",
+   "page": "256",
+   "printed": "Problem O3$'$",
+   "verified_fingerprint": "7405d46c347b",
+   "verified_on": "2026-10-12"
+  },
+  "failure_of_uniform_integrability": {
+   "environment": "proposition",
+   "file": "book/chapters/ch03_stochastic.tex",
+   "fingerprint": "fcc44afeda1c",
+   "label": "prop:uimartingale",
+   "number": "3.17",
+   "page": "61",
+   "printed": "Proposition 3.17",
+   "verified_fingerprint": "fcc44afeda1c",
+   "verified_on": "2026-10-12"
+  },
+  "five_thirds_noise_bound_of_switching_mm_beyond_quadratics": {
+   "environment": "problem*",
+   "file": "book/chapters/ch11_open.tex",
+   "fingerprint": "2315e6d981ee",
+   "label": "prob:ch11:s2",
+   "number": "S2",
+   "page": "258",
+   "printed": "Problem S2",
+   "verified_fingerprint": "2315e6d981ee",
+   "verified_on": "2026-10-12"
+  },
+  "gain_weight_theorem": {
+   "environment": "theorem",
+   "file": "book/chapters/ch07_noise.tex",
+   "fingerprint": "c2aacfceeeff",
+   "label": "thm:ch7:gainweight",
+   "number": "8.12",
+   "page": "135",
+   "printed": "Theorem 8.12",
+   "verified_fingerprint": "c2aacfceeeff",
+   "verified_on": "2026-10-12"
+  },
+  "linear_majorizer_cannot_certify_descent": {
+   "environment": "proposition",
+   "file": "book/chapters/ch04_lyapunov.tex",
+   "fingerprint": "8994bfa8ff00",
+   "label": "prop:mmfails",
+   "number": "4.19",
+   "page": "79",
+   "printed": "Proposition 4.19",
+   "verified_fingerprint": "8994bfa8ff00",
+   "verified_on": "2026-10-12"
+  },
+  "long_run_variance_of_the_log_path": {
+   "environment": "corollary",
+   "file": "book/chapters/ch03_stochastic.tex",
+   "fingerprint": "0d1a75704028",
+   "label": "cor:longrun",
+   "number": "3.14",
+   "page": "58",
+   "printed": "Corollary 3.14",
+   "verified_fingerprint": "0d1a75704028",
+   "verified_on": "2026-10-12"
+  },
+  "martingale_structure_of_the_standard_map": {
+   "environment": "proposition",
+   "file": "book/chapters/ch03_stochastic.tex",
+   "fingerprint": "2a360997c9e7",
+   "label": "prop:ch3:standard",
+   "number": "3.7",
+   "page": "47",
+   "printed": "Proposition 3.7",
+   "verified_fingerprint": "2a360997c9e7",
+   "verified_on": "2026-10-12"
+  },
+  "modified_equation_for_period_two_steps": {
+   "environment": "proposition",
+   "file": "book/chapters/ch05b_difference.tex",
+   "fingerprint": "69cfc88466c0",
+   "label": "prop:ch5b:modified",
+   "number": "9.11",
+   "page": "165",
+   "printed": "Proposition 9.11",
+   "verified_fingerprint": "69cfc88466c0",
+   "verified_on": "2026-10-12"
+  },
+  "no_fixed_horizon_monotone_certificate": {
+   "environment": "corollary",
+   "file": "book/chapters/ch04_lyapunov.tex",
+   "fingerprint": "3736823c5649",
+   "label": "cor:ch4:multistride",
+   "number": "4.15",
+   "page": "78",
+   "printed": "Corollary 4.15",
+   "verified_fingerprint": "3736823c5649",
+   "verified_on": "2026-10-12"
+  },
+  "no_monotone_single_stride_lyapunov": {
+   "environment": "theorem",
+   "file": "book/chapters/ch04_lyapunov.tex",
+   "fingerprint": "ff73d3bda695",
+   "label": "thm:nolyapunov",
+   "number": "4.8",
+   "page": "73",
+   "printed": "Theorem 4.8",
+   "verified_fingerprint": "ff73d3bda695",
+   "verified_on": "2026-10-12"
+  },
+  "no_residue_potential_for_any_modulus": {
+   "environment": "theorem",
+   "file": "book/chapters/ch05c_mmcollatz.tex",
+   "fingerprint": "a95f28faaefa",
+   "label": "thm:ch5c:residue",
+   "number": "6.3",
+   "page": "101",
+   "printed": "Theorem 6.3",
+   "verified_fingerprint": "a95f28faaefa",
+   "verified_on": "2026-10-12"
+  },
+  "noise_floor_at_matched_speed": {
+   "environment": "proposition",
+   "file": "book/chapters/ch07_noise.tex",
+   "fingerprint": "944a527e4bb0",
+   "label": "prop:ch7:matched",
+   "number": "8.9",
+   "page": "132",
+   "printed": "Proposition 8.9",
+   "verified_fingerprint": "944a527e4bb0",
+   "verified_on": "2026-10-12"
+  },
+  "orbit_coalescence_shifts_total_stopping_time": {
+   "environment": "proposition",
+   "file": "book/chapters/ch10c_samplers.tex",
+   "fingerprint": "61dcc0e5819c",
+   "label": "prop:ch10b:acceptance",
+   "number": "14.4",
+   "page": "245",
+   "printed": "Proposition 14.4",
+   "verified_fingerprint": "61dcc0e5819c",
+   "verified_on": "2026-10-12"
+  },
+  "parity_autocorrelation_function": {
+   "environment": "proposition",
+   "file": "book/chapters/ch03_stochastic.tex",
+   "fingerprint": "48754128428b",
+   "label": "thm:autocorr",
+   "number": "3.12",
+   "page": "56",
+   "printed": "Proposition 3.12",
+   "verified_fingerprint": "48754128428b",
+   "verified_on": "2026-10-12"
+  },
+  "perfect_split_sampling_coefficient_stopping_time": {
+   "environment": "theorem",
+   "file": "book/chapters/ch10c_samplers.tex",
+   "fingerprint": "6f96aba51608",
+   "label": "thm:ch10b:perfect",
+   "number": "14.2",
+   "page": "242",
+   "printed": "Theorem 14.2",
+   "verified_fingerprint": "6f96aba51608",
+   "verified_on": "2026-10-12"
+  },
+  "power_majorizers_of_log": {
+   "environment": "proposition",
+   "file": "book/chapters/ch04_lyapunov.tex",
+   "fingerprint": "c845d410348b",
+   "label": "prop:ch4:power",
+   "number": "4.20",
+   "page": "81",
+   "printed": "Proposition 4.20",
+   "verified_fingerprint": "c845d410348b",
+   "verified_on": "2026-10-12"
+  },
+  "rate_and_noise_for_period_two_steps": {
+   "environment": "proposition",
+   "file": "book/chapters/ch07_noise.tex",
+   "fingerprint": "94a3777bc06d",
+   "label": "prop:ch7:pareto",
+   "number": "8.14",
+   "page": "137",
+   "printed": "Proposition 8.14",
+   "verified_fingerprint": "94a3777bc06d",
+   "verified_on": "2026-10-12"
+  },
+  "residue_certificates_cannot_prove_descent_for_all_integers": {
+   "environment": "proposition",
+   "file": "book/chapters/ch10b_computation.tex",
+   "fingerprint": "8b735fc009f7",
+   "label": "prop:ch10b:residue",
+   "number": "13.1",
+   "page": "233",
+   "printed": "Proposition 13.1",
+   "verified_fingerprint": "8b735fc009f7",
+   "verified_on": "2026-10-12"
+  },
+  "run_length_potential": {
+   "environment": "proposition",
+   "file": "book/chapters/ch05c_mmcollatz.tex",
+   "fingerprint": "d3fd7d210c30",
+   "label": "prop:ch5c:runpot",
+   "number": "6.6",
+   "page": "104",
+   "printed": "Proposition 6.6",
+   "verified_fingerprint": "d3fd7d210c30",
+   "verified_on": "2026-10-12"
+  },
+  "simplified_counting_bound_for_integers_reaching_one": {
+   "environment": "corollary",
+   "file": "book/chapters/ch05b_difference.tex",
+   "fingerprint": "f23920d256e4",
+   "label": "cor:ch5b:count",
+   "number": "9.4",
+   "page": "159",
+   "printed": "Corollary 9.4",
+   "verified_fingerprint": "f23920d256e4",
+   "verified_on": "2026-10-12"
+  },
+  "smm_defect_of_cyclic_representation": {
+   "environment": "proposition",
+   "file": "book/chapters/ch06_smm.tex",
+   "fingerprint": "9954e5a80e31",
+   "label": "prop:ch6:defect",
+   "number": "7.10",
+   "page": "122",
+   "printed": "Proposition 7.10",
+   "verified_fingerprint": "9954e5a80e31",
+   "verified_on": "2026-10-12"
+  },
+  "smm_exact_joint_spectral_radius": {
+   "environment": "proposition",
+   "file": "book/chapters/ch05b_difference.tex",
+   "fingerprint": "0bc1352d7533",
+   "label": "prop:ch5b:jsr",
+   "number": "9.6",
+   "page": "162",
+   "printed": "Proposition 9.6",
+   "verified_fingerprint": "0bc1352d7533",
+   "verified_on": "2026-10-12"
+  },
+  "smm_linear_rate_on_smooth_strongly_convex_functions": {
+   "environment": "theorem",
+   "file": "book/chapters/ch05b_difference.tex",
+   "fingerprint": "0319060a4148",
+   "label": "thm:ch5b:rate",
+   "number": "9.9",
+   "page": "164",
+   "printed": "Theorem 9.9",
+   "verified_fingerprint": "0319060a4148",
+   "verified_on": "2026-10-12"
+  },
+  "smm_monotone_on_alternate_iterates": {
+   "environment": "proposition",
+   "file": "book/chapters/ch05b_difference.tex",
+   "fingerprint": "c58a7da329a2",
+   "label": "prop:ch5b:monotone",
+   "number": "9.5",
+   "page": "161",
+   "printed": "Proposition 9.5",
+   "verified_fingerprint": "c58a7da329a2",
+   "verified_on": "2026-10-12"
+  },
+  "smm_multiplicative_noise": {
+   "environment": "proposition",
+   "file": "book/chapters/ch07_noise.tex",
+   "fingerprint": "61734a6a237b",
+   "label": "prop:ch7:mult",
+   "number": "8.15",
+   "page": "141",
+   "printed": "Proposition 8.15",
+   "verified_fingerprint": "61734a6a237b",
+   "verified_on": "2026-10-12"
+  },
+  "smm_slow_mode_effective_step": {
+   "environment": "corollary",
+   "file": "book/chapters/ch06_smm.tex",
+   "fingerprint": "a89c129b046e",
+   "label": "cor:ch6:slow",
+   "number": "7.9",
+   "page": "120",
+   "printed": "Corollary 7.9",
+   "verified_fingerprint": "a89c129b046e",
+   "verified_on": "2026-10-12"
+  },
+  "smm_slow_mode_noise_amplification": {
+   "environment": "corollary",
+   "file": "book/chapters/ch07_noise.tex",
+   "fingerprint": "598abf4e5be4",
+   "label": "cor:ch7:slow",
+   "number": "8.5",
+   "page": "129",
+   "printed": "Corollary 8.5",
+   "verified_fingerprint": "598abf4e5be4",
+   "verified_on": "2026-10-12"
+  },
+  "smm_speed_relative_to_gradient_descent": {
+   "environment": "corollary",
+   "file": "book/chapters/ch05b_difference.tex",
+   "fingerprint": "428b87a776dc",
+   "label": "cor:ch5b:speed",
+   "number": "9.10",
+   "page": "165",
+   "printed": "Corollary 9.10",
+   "verified_fingerprint": "428b87a776dc",
+   "verified_on": "2026-10-12"
+  },
+  "smm_stability_range_on_quadratics": {
+   "environment": "corollary",
+   "file": "book/chapters/ch06_smm.tex",
+   "fingerprint": "94f0786bad47",
+   "label": "cor:ch6:stability",
+   "number": "7.8",
+   "page": "119",
+   "printed": "Corollary 7.8",
+   "verified_fingerprint": "94f0786bad47",
+   "verified_on": "2026-10-12"
+  },
+  "smm_stationary_variance_additive_noise": {
+   "environment": "theorem",
+   "file": "book/chapters/ch07_noise.tex",
+   "fingerprint": "3a0409aa604d",
+   "label": "thm:smmvar",
+   "number": "8.4",
+   "page": "128",
+   "printed": "Theorem 8.4",
+   "verified_fingerprint": "3a0409aa604d",
+   "verified_on": "2026-10-12"
+  },
+  "smm_transient_bound_conjecture": {
+   "environment": "conjecture",
+   "file": "book/chapters/ch05b_difference.tex",
+   "fingerprint": "e56108469f63",
+   "label": "conj:ch5b:transient",
+   "number": "9.7",
+   "page": "163",
+   "printed": "Conjecture 9.7",
+   "verified_fingerprint": "e56108469f63",
+   "verified_on": "2026-10-12"
+  },
+  "smm_two_step_equivalence_on_quadratics": {
+   "environment": "theorem",
+   "file": "book/chapters/ch06_smm.tex",
+   "fingerprint": "58962a51bd3e",
+   "label": "thm:smmquad",
+   "number": "7.6",
+   "page": "118",
+   "printed": "Theorem 7.6",
+   "verified_fingerprint": "58962a51bd3e",
+   "verified_on": "2026-10-12"
+  },
+  "smm_variance_bound_uniform_in_normalized_step": {
+   "environment": "proposition",
+   "file": "book/chapters/ch07_noise.tex",
+   "fingerprint": "66f73454b277",
+   "label": "prop:ch7:uniform",
+   "number": "8.7",
+   "page": "130",
+   "printed": "Proposition 8.7",
+   "verified_fingerprint": "66f73454b277",
+   "verified_on": "2026-10-12"
+  },
+  "stride_descent": {
+   "environment": "theorem",
+   "file": "book/chapters/ch04_lyapunov.tex",
+   "fingerprint": "442625d12ea5",
+   "label": "thm:stride",
+   "number": "4.7",
+   "page": "71",
+   "printed": "Theorem 4.7",
+   "verified_fingerprint": "442625d12ea5",
+   "verified_on": "2026-10-12"
+  },
+  "stride_model_passage_time": {
+   "environment": "proposition",
+   "file": "book/chapters/ch04_lyapunov.tex",
+   "fingerprint": "12e9439153f6",
+   "label": "prop:ch4:passage",
+   "number": "4.5",
+   "page": "70",
+   "printed": "Proposition 4.5",
+   "verified_fingerprint": "12e9439153f6",
+   "verified_on": "2026-10-12"
+  },
+  "surplus_along_chains": {
+   "environment": "proposition",
+   "file": "book/chapters/ch05c_mmcollatz.tex",
+   "fingerprint": "ec9715e88219",
+   "label": "prop:ch5c:surplus",
+   "number": "6.4",
+   "page": "102",
+   "printed": "Proposition 6.4",
+   "verified_fingerprint": "ec9715e88219",
+   "verified_on": "2026-10-12"
+  },
+  "trajectory_mixing_of_syracuse_residues": {
+   "environment": "problem*",
+   "file": "book/chapters/ch11_open.tex",
+   "fingerprint": "d02ee4a7be0e",
+   "label": "prob:ch11:o2",
+   "number": "O2",
+   "page": "255",
+   "printed": "Problem O2",
+   "verified_fingerprint": "d02ee4a7be0e",
+   "verified_on": "2026-10-12"
+  },
+  "two_energies_coefficient_and_total_stopping_time": {
+   "environment": "proposition",
+   "file": "book/chapters/ch10c_samplers.tex",
+   "fingerprint": "2d1b63da0223",
+   "label": "prop:ch10b:horizons",
+   "number": "14.1",
+   "page": "241",
+   "printed": "Proposition 14.1",
+   "verified_fingerprint": "2d1b63da0223",
+   "verified_on": "2026-10-12"
+  },
+  "verification_ranges_for_later_rungs_under_hercher_accounting": {
+   "environment": "problem*",
+   "file": "book/chapters/ch11_open.tex",
+   "fingerprint": "3afd910d70e5",
+   "label": "prob:ch11:c3",
+   "number": "C3",
+   "page": "258",
+   "printed": "Problem C3",
+   "verified_fingerprint": "3afd910d70e5",
+   "verified_on": "2026-10-12"
+  },
+  "what_arithmetic_would_suffice": {
+   "environment": "corollary",
+   "file": "book/chapters/ch08_cycles.tex",
+   "fingerprint": "59b87889b25d",
+   "label": "cor:ch8:window",
+   "number": "10.22",
+   "page": "193",
+   "printed": "Corollary 10.22",
+   "verified_fingerprint": "59b87889b25d",
+   "verified_on": "2026-10-12"
+  },
+  "window_lemma_least_cycle_element": {
+   "environment": "lemma",
+   "file": "book/chapters/ch08_cycles.tex",
+   "fingerprint": "b3c623e200db",
+   "label": "lem:ch8:window",
+   "number": "10.21",
+   "page": "192",
+   "printed": "Lemma 10.21",
+   "verified_fingerprint": "b3c623e200db",
+   "verified_on": "2026-10-12"
+  }
+ },
+ "updated": "2026-10-13",
+ "zenodo": {
+  "draft": {
+   "doi": "10.5281/zenodo.23331100",
+   "html": "https://zenodo.org/deposit/23331100",
+   "id": 23331100,
+   "reserved_on": "2026-10-13",
+   "version": "1.0.0"
+  }
+ }
+}

@@ -1,0 +1,24 @@
+## On the Collatz Conjecture: Martingales, Momentum and Continued Fractions
+
+- [On the Collatz Conjecture: Martingales, Momentum and Continued Fractions](https://vsokolov.org/books/collatz/index.html.md): by Nick Polson and Vadim Sokolov (2026). Why the Collatz (3x+1) conjecture resists proof: the map as a random walk, an optimizer and a Diophantine problem; proofs that fixed horizon monotone Lyapunov certificates and finite residue sieves cannot settle it and the cycle inequality cannot exclude all cycles; a momentum method from log2 3.
+- [Results by chapter](https://vsokolov.org/books/collatz/results.html.md): 52 results with their statements, status and numbers
+- [Catalog of results](https://raw.githubusercontent.com/VadimSokolov/collatz/v1.0.0/RESULTS.md): 52 results with their statements, status and printed numbers
+- [The book as a PDF](https://github.com/VadimSokolov/collatz/releases/download/v1.0.0/collatz.pdf): 311 pages, CC BY 4.0
+- [Source on GitHub](https://github.com/VadimSokolov/collatz/tree/v1.0.0): the LaTeX source, code and bibliography
+- [Chapter 1. The $3x+1$ Problem](https://raw.githubusercontent.com/VadimSokolov/collatz/v1.0.0/summaries/01_the_problem.md): summary of the chapter and its results
+- [Chapter 2. Parity Vectors and the Syracuse Map](https://raw.githubusercontent.com/VadimSokolov/collatz/v1.0.0/summaries/02_parity_vectors_and_the_syracuse_map.md): summary of the chapter and its results
+- [Chapter 3. Stochastic Models and Martingale Duality](https://raw.githubusercontent.com/VadimSokolov/collatz/v1.0.0/summaries/03_stochastic_models_and_martingale_duality.md): summary of the chapter and its results
+- [Chapter 4. Lyapunov Functions and the Limits of Descent](https://raw.githubusercontent.com/VadimSokolov/collatz/v1.0.0/summaries/04_lyapunov_functions_and_the_limits_of_descent.md): summary of the chapter and its results
+- [Chapter 5. Majorization and Momentum](https://raw.githubusercontent.com/VadimSokolov/collatz/v1.0.0/summaries/05_majorization_and_momentum.md): summary of the chapter and its results
+- [Chapter 6. Majorization Pressed Harder](https://raw.githubusercontent.com/VadimSokolov/collatz/v1.0.0/summaries/06_majorization_pressed_harder.md): summary of the chapter and its results
+- [Chapter 7. Switching MM](https://raw.githubusercontent.com/VadimSokolov/collatz/v1.0.0/summaries/07_switching_mm.md): summary of the chapter and its results
+- [Chapter 8. Noise, Variance and Experiments](https://raw.githubusercontent.com/VadimSokolov/collatz/v1.0.0/summaries/08_noise_variance_and_experiments.md): summary of the chapter and its results
+- [Chapter 9. Nonlinear Difference Equations and Momentum MM](https://raw.githubusercontent.com/VadimSokolov/collatz/v1.0.0/summaries/09_nonlinear_difference_equations_and_momentum_mm.md): summary of the chapter and its results
+- [Chapter 10. Cycles and Continued Fractions](https://raw.githubusercontent.com/VadimSokolov/collatz/v1.0.0/summaries/10_cycles_and_continued_fractions.md): summary of the chapter and its results
+- [Chapter 11. The Divergence Half](https://raw.githubusercontent.com/VadimSokolov/collatz/v1.0.0/summaries/11_the_divergence_half.md): summary of the chapter and its results
+- [Chapter 12. The Path to Collatz](https://raw.githubusercontent.com/VadimSokolov/collatz/v1.0.0/summaries/12_the_path_to_collatz.md): summary of the chapter and its results
+- [Chapter 13. A Computational Path](https://raw.githubusercontent.com/VadimSokolov/collatz/v1.0.0/summaries/13_a_computational_path.md): summary of the chapter and its results
+- [Chapter 14. Samplers and the Horizon](https://raw.githubusercontent.com/VadimSokolov/collatz/v1.0.0/summaries/14_samplers_and_the_horizon.md): summary of the chapter and its results
+- [Chapter 15. Open Problems and Computational Projects](https://raw.githubusercontent.com/VadimSokolov/collatz/v1.0.0/summaries/15_open_problems_and_computational_projects.md): summary of the chapter and its results
+- [Appendix A. Numerical Constants](https://raw.githubusercontent.com/VadimSokolov/collatz/v1.0.0/summaries/A_numerical_constants.md): summary of the appendix and its results
+- [Appendix B. Code](https://raw.githubusercontent.com/VadimSokolov/collatz/v1.0.0/summaries/B_code.md): summary of the appendix and its results

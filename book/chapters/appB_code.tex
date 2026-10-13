@@ -1,0 +1,228 @@
+\chapter{Code}\label{app:code}
+
+Every number computed in this book was produced by a short Python script; numbers quoted from the literature are cited where they appear.
+The scripts use the standard scientific stack (mpmath, NumPy, SciPy, SymPy and Matplotlib), with Numba for the census of \cref{sec:ch3:missing} and for the gallery, CVXPY with the Clarabel solver for the performance estimation of \cref{chap:difference}, and scikit-learn only to load the data set of \cref{sec:ch7:experiments}; they run in seconds to minutes on a laptop.
+They are in the folder \texttt{book/scripts} of the book's repository, \url{https://github.com/VadimSokolov/collatz}, and are released under the MIT License.
+The two Lean files of \cref{sec:ch8:lean} are in its folder \texttt{lean}.
+This appendix lists two of them in full and indexes the rest.
+
+\section{The exact cycle bound}
+
+The script below computes the partial quotients of $\log_23$ at eighty digits,
+builds the candidate rungs $q_{k-1}+jq_k$, keeps those that are records of the
+one sided distance $\delta(r)=\lceil r\log_23\rceil-r\log_23$, and returns the
+first rung not excluded by a verified range $X$.
+By \cref{thm:ch8:onesided} and the mediant lemma (\cref{lem:ch8:mediant}) this is the exact bound.
+Its output reproduces Eliahou's\index{Eliahou, S.} bound $s\ge17\,087\,915$~\cite{eliahou1993} at $X=2^{40}$ (with $r\ge10\,781\,274$) and gives $r\ge72\,057\,431\,991$ at $X=2^{68}$, unchanged at the current range $X=2^{71}$~\cite{barina2025}.
+
+\begin{lstlisting}
+# Exact lower bound on the number r of odd elements
+# of a nontrivial Syracuse cycle, given that every
+# n <= X reaches 1.  By the mediant lemma only rungs
+# of the one sided ladder of theta = log_2 3 need
+# to be checked.
+from mpmath import mp, mpf, log, ceil, floor
+mp.dps = 80
+theta = log(3) / log(2)
+
+def partial_quotients(x, n=40):
+    a = []
+    for _ in range(n):
+        ai = int(floor(x)); a.append(ai)
+        x = 1 / (x - ai)
+    return a
+
+a = partial_quotients(theta)
+q = [0, 1]                  # q_{-1} = 0, q_0 = 1
+for ai in a[1:]:
+    q.append(ai * q[-1] + q[-2])
+
+# candidate rungs q_{k-1} + j q_k,
+# then keep the records of delta
+cands = sorted({q[k-1] + j * q[k]
+                for k in range(1, len(q) - 1)
+                for j in range(a[k] + 1)} - {0})
+delta = lambda r: ceil(r * theta) - r * theta
+rungs, best = [], mpf(2)
+for r in cands:
+    d = delta(r)
+    if d < best:
+        best = d; rungs.append((r, d))
+
+def first_not_excluded(X):
+    eps = 1 / (3 * X * log(2))
+    return next(r for r, d in rungs if d < r * eps)
+
+for e in (40, 60, 68, 71, 72):
+    r = first_not_excluded(mpf(2) ** e)
+    s = int(ceil(r * theta))
+    print(f"X = 2^{e}:  r >= {r},  s >= {s}")
+\end{lstlisting}
+
+\section{The noise amplification of Switching MM}
+
+The second script derives the slow mode amplification factor of
+\cref{thm:smmvar} symbolically. On one eigendirection with $a=\alpha\lambda$,
+two steps of \smmdet\ starting from an even index contract the error by
+$\rho=(1-a)(1-(1+\beta)a)$ and add noise of variance
+$\alpha^2\sigma^2[(1-a)^2(1+\beta)^2+1]$.
+
+\begin{lstlisting}
+# Exact stationary variance of Switching MM on one
+# eigendirection of a quadratic, a = alpha * lambda,
+# unit noise (alpha^2 sigma^2 = 1).
+import sympy as sp
+a, b = sp.symbols('a b', positive=True)
+# two step contraction and two step noise variance
+rho = (1 - a) * (1 - (1 + b) * a)
+q = (1 - a)**2 * (1 + b)**2 + 1
+v_even = q / (1 - rho**2)
+# odd phase: one descent step after an even time
+v_odd = (1 - a)**2 * v_even + 1
+v_avg = sp.simplify((v_even + v_odd) / 2)
+# gradient descent gives 1/2
+slow = sp.simplify(sp.limit(a * v_avg, a, 0))
+print("slow mode a*Var:", slow)
+V = sp.simplify(2 * slow)
+print("amplification vs GD:", V)
+print("at beta = log2(3) - 1:",
+      float(V.subs(b, sp.log(3, 2) - 1)))
+print("limit beta -> 1:", V.subs(b, 1))
+\end{lstlisting}
+
+\noindent Its output is the factor $((1+\beta)^2+1)/(2+\beta)$, equal to $1.3587$
+at $\beta=\log_23-1$ and to $5/3$ in the limit $\beta\to1$.
+
+\section{Index of scripts}
+
+The scripts are grouped by the chapter that uses them, in the order of the book, and a script that reads the output of another is listed after it.
+In particular \texttt{ch3\_o4\_decomp.py} writes the table of total stopping times of $T$ below $2^{26}$ that \texttt{ch3\_o4\_end.py} and most scripts of \cref{chap:samplers} read.
+
+{\small
+\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{0.53\textwidth}@{}}
+\toprule
+Script & Purpose \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\multicolumn{2}{@{}l}{\itshape\Cref{chap:intro}} \\*
+\texttt{ch01\_ch02\_figures.py} & orbit of $27$, total stopping times, residue tree of \cref{chap:parity} \\
+\texttt{ch01\_ch02\_numbers.py} & worked orbits and delay records \\
+\texttt{ch1\_slopes.py} & least squares slopes of the total stopping time against $\log n$ for $T_0$ and $T$, over $n\le10^4$ and $n\le10^5$ (\cref{sec:ch1:orbits}) \\
+\addlinespace[4pt]
+\multicolumn{2}{@{}l}{\itshape\Cref{chap:parity}} \\*
+\texttt{ch02\_stopping.py} & Terras bijection, Chernoff bound \\
+\texttt{ch02\_exact.py} & exact stopping counts by dynamic programming \\
+\texttt{ch02\_extra.py} & orbit of $27$ by strides, $c_{70}(27)$, means over odd $n<2^{20}$, values of $\tau$ \\
+\texttt{ch02\_checks.py} & Geometric counts below $2^{20}$, parity words of $T_0$ \\
+\texttt{ch02\_figures.py} & Syracuse increment, sunburst, stopping heat map, $2$ adic shift \\
+\texttt{ch2\_stopdecay.py} & decay of $1-F(k)$, binomial tail and Chernoff bound (\cref{fig:ch2:stopdecay}) \\
+\addlinespace[4pt]
+\multicolumn{2}{@{}l}{\itshape\Cref{chap:stochastic}} \\*
+\texttt{ch3\_stats.py} & Lyapunov parameters, total stopping time CLT, parity autocorrelations, excursion tail \\
+\texttt{ch3\_stopping.py} & total stopping time slope and standardized histogram \\
+\texttt{ch3\_figures.py} & model paths, autocorrelations, Ville bound \\
+\texttt{ch3\_o4\_model.py} & exact law of the model passage time \\
+\texttt{ch3\_model\_means.py} & exact mean and variance of the model passage time \\
+\texttt{ch3\_o4\_decomp.py} & exact census to $2^{30}$, variance decomposition \\
+\texttt{ch3\_o4\_census.py} & exact census of total stopping times to $2^{30}$, skewness \\
+\texttt{ch3\_o4\_end.py} & where the variance deficit lives \\
+\addlinespace[4pt]
+\multicolumn{2}{@{}l}{\itshape\Cref{chap:lyapunov}} \\*
+\texttt{ch4\_ch5\_numbers.py} & two stride scans and other numbers of \cref{chap:lyapunov,chap:momentum}, crossings of the optimal coefficient \\
+\texttt{ch4\_exact.py} & multi stride ascent densities, passage time of the stride model \\
+\texttt{ch4\_figures.py} & strides, chained ascents \\
+\addlinespace[4pt]
+\multicolumn{2}{@{}l}{\itshape\Cref{chap:momentum}} \\*
+\texttt{ch5\_numbers.py} & stride constants and their sensitivity, orbit of $27$ \\
+\texttt{ch5\_parrondo.py} & capital dependent Parrondo games \\
+\texttt{ch5\_nag\_check.py} & optimal constant momentum on quadratics, numerical check \\
+\texttt{ch5\_figure.py} & optimal Nesterov coefficient against $\kappa$ (\cref{fig:ch5:nesterov}) \\
+\addlinespace[4pt]
+\multicolumn{2}{@{}l}{\itshape\Cref{chap:mmcollatz}} \\*
+\texttt{ch5c\_mm.py} & residue potentials, positive cycles of $G_5$, block maps, run length potentials \\
+\texttt{ch5c\_figures.py} & residue graph, block descent and run length potential (\cref{fig:ch5c:residue,fig:ch5c:runpot}) \\
+\addlinespace[4pt]
+\multicolumn{2}{@{}l}{\itshape\Cref{chap:smm}} \\*
+\texttt{smm\_rate.py} & rate algebra of Switching MM \\
+\texttt{ch6\_checks.py} & two step identity, defect, period two Chebyshev schedule \\
+\texttt{ch6\_contraction.py} & per step contraction factors and their crossings (\cref{fig:ch6:contraction}) \\
+\texttt{ch6\_trajectory.py} & two dimensional trajectories (\cref{fig:ch6:traj}) \\
+\texttt{ch6\_ablation.py} & frequency ablation run to convergence \\
+\addlinespace[4pt]
+\multicolumn{2}{@{}l}{\itshape\Cref{chap:noise}} \\*
+\texttt{smm\_variance\_book.py} & the second listing above \\
+\texttt{smm\_var.py} & symbolic and numerical stationary variances of SMM, NAG and HB \\
+\texttt{smm\_sim.py} & simulated slow mode variance against the leading term \\
+\texttt{ch7\_variance.py} & exact stationary variances, amplification figure, predicted noise ratios \\
+\texttt{ch7\_gainweight.py} & gain weight theorem, periodic Lyapunov checks \\
+\texttt{ch7\_gainweight\_fig.py} & gain weight figure (\cref{fig:ch7:gainweight}) \\
+\texttt{ch7\_pareto.py} & period two rate and noise frontier \\
+\texttt{ch7\_multiplicative.py} & curvature noise, stability thresholds \\
+\texttt{ch7\_experiments.py} & sweep, ablation, noise, logistic and minibatch runs \\
+\texttt{ch7\_experiments\_fig.py} & figures of the sweep, the ablation, the logistic runs and the minibatch runs \\
+\texttt{ch7\_noisefig.py} & noise experiment against theory (\cref{fig:ch7:noise}) \\
+\texttt{ch7\_reconcile.py} & observed and predicted noise ratios \\
+\texttt{ch7\_extra.py} & closed forms, bounds, logistic predictions \\
+\addlinespace[4pt]
+\multicolumn{2}{@{}l}{\itshape\Cref{chap:difference}} \\*
+\texttt{ch5b\_tree.py} & certified exponents for the inverse tree \\
+\texttt{ch5b\_tree\_exact.py} & the same certificates checked in exact integer arithmetic \\
+\texttt{ch5b\_counts.py} & exact counting functions on the tree \\
+\texttt{ch5b\_chains.py} & large scale growth of the doubling chain construction \\
+\texttt{ch5b\_jsr.py} & exact joint spectral radius \\
+\texttt{ch5b\_pep.py} & performance estimation for two steps \\
+\texttt{ch5b\_transient.py} & transient grid behind the transient bound conjecture \\
+\texttt{ch5b\_figures.py} & figures of the chapter \\
+\addlinespace[4pt]
+\multicolumn{2}{@{}l}{\itshape\Cref{chap:cycles}} \\*
+\texttt{cycle\_bound\_book.py} & the first listing above \\
+\texttt{ch08\_negative.py} & cycles on the negative integers \\
+\texttt{ch08\_compute.py} & continued fraction at $300$ digits, confirmed at $150$, and the convergents \\
+\texttt{ladder.py} & ladder rungs, exact and crude bounds \\
+\texttt{ch08\_records.py} & records of $r/(3\Lambda_r)$ in exact arithmetic, against the ladder \\
+\texttt{ch08\_bounds.py} & block bounds $B_k$ and the sharp bound at $150$ digits \\
+\texttt{ch08\_ties.py} & ties in double and $150$ digit arithmetic, exact record scan \\
+\texttt{ch08\_crude.py} & exact versus crude bound \\
+\texttt{ch08\_figures.py} & figures of the records and the one sided distances \\
+\texttt{ch08\_profile.py} & thresholds, insufficiency, irrationality profile \\
+\texttt{ch08\_window.py} & window lemma and parity word exploration \\
+\texttt{ch08\_certificate.py} & exact integer certificate at $2^{68}$ \\
+\texttt{ch08\_erdos125.py} & density of the Erd\H{o}s $125$ sumset \\
+\texttt{ch08\_erdos125\_fig.py} & figure of the Erd\H{o}s $125$ density \\
+\texttt{ch08\_misc.py} & small checks: the longest orbit of $T$ up to $10^4$, the rational cycle of $\tfrac15$ \\
+\addlinespace[4pt]
+\multicolumn{2}{@{}l}{\itshape\Cref{chap:divergence}} \\*
+\texttt{ch9\_cesaro\_scan.py} & terminal $\bar k_N$ for odd $3\le x_0\le5001$ (\cref{rem:ch9:circular}) \\
+\texttt{ch9\_figures.py} & running $\bar k_N$ and the Syracuse law modulo $9$ (\cref{fig:ch9:kbar,fig:ch9:syrlaw}) \\
+\texttt{ch9\_numbers.py} & the Ces\`aro identity along three long orbits, odd step thresholds \\
+\texttt{ch9\_spectral.py} & model chains modulo $3^a$, empirical transitions \\
+\texttt{ch9\_table.py} & restricted and full transition matrices modulo $3^a$ (\cref{tab:ch9:moduli}) \\
+\texttt{ch9\_orbits.py} & residues along single orbits from $2^{10000}$ \\
+\texttt{ch9\_orbits\_check.py} & single orbits against the model chain, chi squared checks \\
+\addlinespace[4pt]
+\multicolumn{2}{@{}l}{\itshape\Cref{chap:computation}} \\*
+\texttt{ch10b\_sieve.py} & residue sieve counts and entropy exponent \\
+\texttt{ch10b\_divsieve.py} & divisibility sieve for cycles \\
+\texttt{ch10b\_figures.py} & residue sieve counts and the uncovered classes in the $2$ adic coordinate (\cref{fig:ch10b:sieve}) \\
+\addlinespace[4pt]
+\multicolumn{2}{@{}l}{\itshape\Cref{chap:samplers}} \\*
+\texttt{ch10b\_nested.py} & exact partition function, nested sampling runs, evidence at $\beta=0.02$ \\
+\texttt{ch10b\_nested2.py} & decay of the level set volumes, nested search for the slowest integers \\
+\texttt{ch10c\_perfect.py} & perfect split sampling for the coefficient stopping time \\
+\texttt{ch10c\_ladder.py} & exact staircase, hazards, fits, partition function at $\beta=D$ \\
+\texttt{ch10c\_montecarlo.py} & nested, split and vertical likelihood samplers \\
+\texttt{ch10c\_acceptance.py} & bit flip acceptance inside level sets \\
+\texttt{ch10c\_clusters.py} & coalescence classes of the level sets \\
+\texttt{ch10c\_trees.py} & trees by box size and level \\
+\texttt{ch10c\_treerecords.py} & trunks, tributaries and delay records \\
+\texttt{ch10c\_treemodel.py} & naive model of tree sizes \\
+\texttt{ch10c\_figures.py} & staircase, perfect sampler and sampler comparison (\cref{fig:ch10b:montecarlo}) \\
+\texttt{ch10c\_acceptance\_fig.py} & acceptance and class sizes (\cref{fig:ch10b:acceptance}) \\
+\addlinespace[4pt]
+\multicolumn{2}{@{}l}{\itshape Utilities and the gallery} \\*
+\texttt{bookstyle.py} & shared style of the figures \\*
+\texttt{make\_index\_tags.py} & places index entries in the text \\*
+\texttt{art\_*.py} & cover, part openers and gallery plates \\
+\end{longtable}}

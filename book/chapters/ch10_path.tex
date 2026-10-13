@@ -1,0 +1,272 @@
+\chapter{The Path to Collatz}\label{chap:path}
+
+Over the preceding chapters we have accumulated a good deal of machinery: parity
+vectors and the $2$ adic conjugacy, martingales\index{martingale} and their failure of uniform
+integrability, Lyapunov functions\index{Lyapunov function} and the impossibility theorems for monotone ones, an
+optimizer, a cycle bound and a Ces\`aro conjecture\index{Cesaro conjecture@Ces\`aro conjecture}. This chapter steps back and
+asks what all of it says about a proof. We set out what a proof of the
+conjecture would have to contain, where each piece of the book sits relative to
+that, and which statements would close each half.
+
+\section{The conjecture splits in two}\label{sec:ch10:split}
+
+Fix an odd $n\in\N$ and follow its forward orbit under the Syracuse map\index{Syracuse map}. Exactly one of
+three things happens. The orbit reaches $1$; or it is unbounded; or it is
+eventually periodic on a cycle not containing $1$. The conjecture asserts that
+the second and third possibilities never occur, and these are genuinely
+separate problems.
+
+The \emph{divergence half} asks whether $\log y_N$ can drift\index{drift} upward forever.
+By the Ces\`aro identity\index{Cesaro identity@Ces\`aro identity} (\cref{prop:cesaro}),
+\[
+  \log y_N-\log y_0=\sum_{j=1}^N\log\Bigl(3+\frac1{y_{j-1}}\Bigr)-N\bar k_N\log2,
+\]
+so along an unbounded orbit the running mean $\bar k_N$ of the halving
+exponents satisfies $\limsup_N\bar k_N\le\log_23\approx1.585$ (\cref{cor:ch9:freq}). Under the
+Geometric$(\tfrac12)$ law of \cref{prop:geom} the mean exponent is $2$, which
+leaves a heuristic margin of $0.415$; along an unbounded orbit there is no
+margin at all, so it describes the model only. The difficulty is that the law describes the
+exponent when the argument is drawn uniformly from residue classes, whereas
+what is needed is a statement about the exponent when the argument is the
+previous iterate of the same map. This is a law of large numbers for a
+deterministic sequence.
+
+The \emph{cycle half} asks whether the orbit can close up. A cycle with $r$
+odd elements $x_1,\dots,x_r$ and $s$ halvings imposes the exact multiplicative
+constraint $\prod_i(3+1/x_i)=2^s$ of \cref{lem:cycleid}: a product of $r$
+numbers each slightly above $3$ is exactly a power of $2$. Taking logarithms,
+$s\log2-r\log3$ must be positive and smaller than $r/(3M)$, where $M$ is the
+least element. No probability is involved; the tools are Diophantine\index{Diophantine approximation},
+although Diophantine information alone bounds the length of a cycle without
+excluding one (\cref{sec:ch10:cycles}).
+
+The two halves differ in kind, not only in technique. The first is a law of
+large numbers we cannot prove. The second is a sequence of finite verifications that we can
+carry further and further but never complete by computation alone.
+
+A remark on notation joins the two halves to Part II. The threshold
+$\log_23$ that governs divergence equals $1+\beta$, where
+$\beta=\log(3/2)/\log2$ is the momentum\index{momentum} coefficient of Switching MM\index{Switching MM}
+(\cref{chap:smm}). In the language of the accelerated map\index{accelerated map}, in which one halving
+is absorbed into every odd step, the divergence half asks whether the extra
+halvings per odd step average more than $\beta$, and the cycle half asks
+whether $s/r$ can come within $1/(3M\log 2)$ of $1+\beta$ from above.
+By construction the same number sets the inertia of the optimizer; it is also the drift threshold of the orbit and the Diophantine target of the cycle problem.
+
+\section{Closing the divergence half}\label{sec:ch10:divergence}
+
+\Cref{conj:cesaro} is the precise statement required.
+It is equivalent to the divergence half, and both directions are immediate (\cref{sec:ch9:conj}): every bounded orbit satisfies it, while by the Ces\`aro identity\index{Cesaro identity@Ces\`aro identity} every unbounded orbit has $\limsup_N\bar k_N\le\log_23$ (\cref{cor:ch9:freq}), so the conjecture holds exactly when no orbit is unbounded.
+Its value lies in the mechanism it names.
+Three routes suggest themselves, and we show where each fails.
+
+\paragraph{Equidistribution.} Suppose that along an unbounded orbit the iterates were equidistributed over the odd residues modulo $2^m$, for every fixed $m$.
+Then $\liminf_N\bar k_N\ge2$ along it, which \cref{cor:ch9:freq} forbids; so if this held along every unbounded orbit there would be no unbounded orbit, and the conjecture would follow.
+The hypothesis cannot be asked of every orbit, since an orbit that reaches $1$ is eventually constant.
+What is known concerns random starting values rather than a fixed
+orbit (\cref{chap:divergence}), which is also how problem O2 of \cref{chap:open} is posed, and the passage from one to the other is the whole
+difficulty. For a starting value drawn uniformly modulo $2^m$ the parity vector\index{parity vector} of its first $m$ steps is uniformly distributed over the $2^m$ words (\cref{thm:terras}; Terras\index{Terras, R.} and Everett\index{Everett, C. J.}~\cite{terras1976,everett1977},
+see~\cite[Theorem~B]{lagarias1985}); for a random odd starting value its first halving exponents are close in
+total variation to independent Geometric$(\tfrac12)$ draws~\cite[Proposition~1.9]{tao2022},
+and the deep input in Tao\index{Tao, T.}'s theorem is a fine scale mixing estimate modulo
+powers of $3$~\cite[Proposition~1.14]{tao2022}. The finite analogue in
+\cref{chap:divergence} makes the point sharply. The model chain on residues
+modulo $3^a$, in which the halving exponents are independent draws, mixes\index{mixing} \emph{exactly} in
+$a$ strides (\cref{lem:ch9:mixing}), to a law that is far from uniform; but this,
+like the rest, is a statement about an ensemble of starting values, averaged by the residue classes, and
+none of it constrains the residues visited by one trajectory.
+
+\paragraph{A Lyapunov certificate.} One would like a function $W$ bounded away
+from zero and a
+constant $\rho<1$ with $W(S(x))\le\rho\,W(x)$ for every odd $x\ge3$, which would
+give geometric descent with no probabilistic content. Such a certificate exists
+if and only if the conjecture holds (\cref{rem:ch4:exists,rem:ch4:monotone}), so the
+question is whether one can be written down without knowing the answer, and
+the natural candidates increase with $x$. \Cref{thm:nolyapunov}
+shows that no increasing $W$ works: whenever $x\equiv3\pmod4$ the stride ascends, and
+half of all odd integers have that form. Composing strides does not help.
+\Cref{cor:ch4:multistride} shows that for every fixed horizon $J$ there are
+infinitely many $x$ (those congruent to $-1$ modulo $2^{J+1}$) whose first $J$
+strides all ascend, so no increasing certificate\index{certificate} over a fixed number of strides exists
+either, and a nonincreasing one fails at $x=5$, since $S^{(J)}(5)=1$ for every $J\ge1$.
+A certificate must therefore be nonmonotone, or let the horizon depend
+on $x$, as the stopping time\index{stopping time} does.
+
+\paragraph{Uniform integrability.} If the martingale $\{x_n\}$ of the
+accelerated model, stopped when it first drops to $1$ or below, were uniformly integrable\index{uniform integrability}, optional stopping would give
+$\E[x_\tau]=x_0$, which is false since $x_\tau\le1<x_0$. \Cref{prop:uimartingale}
+turns this into a proof that uniform integrability fails. In the model the
+conditional probability of termination is a uniformly integrable martingale,
+but it is the constant $1$ (\cref{prop:absorb}), so there is nothing to
+certify. For the deterministic map its counterpart is the indicator of
+reaching $1$, which exists trivially; showing that it equals $1$ everywhere is
+the conjecture itself (\cref{rem:ch3:cert}).
+
+The first and third routes replace a statement about
+a specific trajectory with a statement about an ensemble, and each time the
+replacement is the step that cannot be justified; the second avoids the
+ensemble, but descent at a fixed horizon fails pointwise for every monotone
+$W$. We regard this as the real content of the divergence half. It is not that the heuristic is weak: the model
+predicts the total stopping time\index{stopping time} slope to within about two percent and, as
+\cref{chap:stochastic} shows, its dispersion to within about ten percent. It is that no mechanism
+is known for transferring ensemble statistics to individual orbits in this
+setting.
+
+\section{Closing the cycle half}\label{sec:ch10:cycles}
+
+Here the mechanism is better understood, but it can only bound the length of a
+cycle, never exclude one. \Cref{lem:cycleid} converts the existence of a cycle
+with $r$ odd elements and least element $M$ into the inequality
+$M\le r/(3\Lambda_r)$, where $\Lambda_r=(\lceil r\log_23\rceil-r\log_23)\log2$
+is $\log2$ times the one sided distance from $r\log_23$ up to the next integer. Two facts then
+combine. Exhaustive computation gives a lower bound on $M$, since every integer
+below the verified range\index{verification range} reaches $1$ ($2^{68}$ in \cref{thm:cycles}, now
+$2^{71}$ by Ba\v{r}ina\index{Barina, D.@Ba\v{r}ina, D.}~\cite{barina2025}). Continued fraction theory gives
+an upper bound on $r/(3\Lambda_r)$, since $\Lambda_r$ can be small only when $r$
+is a good one sided approximation\index{one sided approximation} denominator of $\log_23$.
+
+The mediant lemma\index{mediant lemma} of \cref{chap:cycles} is what makes the second fact exact.
+The one sided distance $\delta(r)=\lceil r\lt\rceil-r\lt$ is additive
+modulo $1$, so if a smaller $r'$ has $\delta(r')<\delta(r)$ then $\delta(r)$
+splits as $\delta(r')+\delta(r-r')$ and $\delta(r)/r$ is a mediant of two
+smaller ratios.
+It follows that the first $r$ not excluded by the verified range, and every record of $r/\delta(r)$, is a record of $\delta$, and \cref{thm:ch8:onesided} identifies these records with the rungs of the semiconvergent\index{convergent}\index{semiconvergent} ladder, which is the classical description of the best one sided approximations
+(Han\v{c}l\index{Hancl, J.@Han\v{c}l, J.} and Turek\index{Turek, O.}~\cite[Theorem~4.5(ii)]{hancl2019}). There are only $53$ rungs below $2\times10^{13}$, the bound is
+evaluated at each, and \cref{thm:cycles} follows without any unverified
+proposition: every nontrivial cycle has $r\ge72\,057\,431\,991$ odd elements.
+
+The gap is that this excludes finitely many $r$ at a time. A large enough improvement in
+the verification range moves the exclusion forward to a later rung, and the
+excluded range grows roughly like the square root of the verified range:
+$2^{40}$ gives $r\ge1.08\times10^{7}$ and $2^{68}$ gives $r\ge7.2\times10^{10}$. The table in \cref{chap:cycles} shows the steps: verification
+to $2^{71}$~\cite{barina2025} gains nothing over $2^{68}$ for this inequality, because the next obstruction sits
+at $2^{71.88}$; verification to $2^{72}$ would move the bound to
+$137\,528\,045\,312$, the current record, which Hercher\index{Hercher, C.}'s sharper accounting
+of the cycle already obtains from $3\cdot2^{69}<2^{71}$~\cite[Corollary~29]{hercher2023};
+and then nothing further happens until beyond $2^{75}$.
+Can a bound on $\Lambda_r$ valid for all $r$ at once, an effective
+irrationality measure\index{irrationality measure} for $\log_23$, close the gap? It cannot.
+\Cref{rem:irrmeasure} shows that a measure $\nu$ with constant $c$ yields only
+$M\le r^{\nu}/(3c\log2)$, which grows at least like $r^2$, and
+\cref{prop:ch8:insufficient} shows more: for every verification range there
+are infinitely many $r$ that the Diophantine\index{Diophantine approximation} inequality cannot exclude, whatever
+is known about $\log_23$. Even an idealized measure with $\nu=2$ and the best
+constant consistent with the computed partial quotients is beaten by the exact
+ladder computation by a factor of twenty at $2^{68}$.
+
+So the cycle half is \emph{not} a question about one real number. What is missing is
+arithmetic information about the parity word. The window lemma\index{window lemma} of
+\cref{chap:cycles} makes this precise. The affine identity of
+\cref{chap:parity} writes every element of a cycle as $c_k(x)/(2^k-3^m)$, with
+$c_k(x)$ a sum of terms $3^j2^i$ indexed by the parity word, and the trivial
+bound $c_k\ge3^m-2^m$ gives a lower bound for the least element which, together
+with the upper bound $M<r/(3\Lambda)$, confines $M$ to a window whose ends are
+a factor of about $r/3$ apart.
+An arithmetic improvement of the upper end by a factor slightly more than $r/3$, together with a verification up to a fixed bound, would exclude every nontrivial cycle (\cref{cor:ch8:window}); raising the lower end alone empties the window only for cycles with small $\Lambda$.
+The exploration of parity words in
+\cref{chap:cycles} suggests why this is hard: for balanced words\index{balanced words} the least element
+sits, in our computations, at a nearly fixed fraction, about $0.72$, of the top of the window, and the
+residues of $c_k$ modulo $2^k-3^m$ look uniformly random. A proof must exploit
+divisibility. The Erd\H{o}s $125$ analogy suggests where to look: there the good
+approximations $3^m\approx4^k$ thin the sumset and drive its lower density to
+zero; for cycles, approximations of the same constant, $2^k$ slightly above $3^m$, are what a cycle needs, and the
+question is whether the digit structure of the word prevents
+$2^k-3^m$ from ever dividing $c_k$.
+
+\section{Where the optimization framework fits}\label{sec:ch10:fits}
+
+The framework does not prove either half. What it supplies is the vocabulary in
+which the halves separate cleanly, and it collects in one place the constants a
+proposed mechanism must reproduce: the drift\index{drift} $\ds=\log(\sqrt3/2)$, the step variance
+$\sigma^2\approx0.302$, the total stopping time\index{stopping time} slope $1/|\ds|\approx6.95$, the stride
+constants $\log(5/3)$ and $|\log(3/4)|$ of \cref{def:nesterov}, the parity autocorrelations\index{autocorrelation} $(-\tfrac12)^h$ and the long run variance factor $\tfrac13$ of the model for the standard map $T_0$ (\cref{thm:autocorr,cor:longrun}). These matter for a
+practical reason. When one proposes a mechanism for the conjecture, the first
+test is whether it reproduces the known constants. A mechanism that predicts a
+drift other than $\log(\sqrt3/2)$ per step, or a total stopping time slope other than about
+$6.95$, for the accelerated map\index{accelerated map}, can be discarded without further work.
+
+\begin{sloppypar}
+It also records negative results. \Cref{thm:nolyapunov} and
+\cref{cor:ch4:multistride} rule out monotone certificates\index{certificate} over a bounded horizon,
+\cref{prop:mmfails} rules out the natural majorization\index{majorization} scheme, and
+\cref{prop:uimartingale} rules out the naive martingale\index{martingale} argument. The pitfall remarks scattered through the book
+rule out a further collection of arguments that look like progress. The
+Collatz iteration is not a descent method, and no monotone reparametrization
+makes it one.
+\end{sloppypar}
+
+And the framework gave something back. The arithmetic of the map, read as an
+optimizer, produced Switching MM\index{Switching MM}, a method whose structure (cyclic step\index{cyclic step sizes}s of
+sizes $\alpha$ and $(1+\beta)\alpha$ on quadratics, \cref{thm:smmquad}) and
+whose noise behaviour (amplification bounded by $5/3$ for every $\beta<1$,
+\cref{thm:smmvar,prop:ch7:bound,prop:ch7:uniform}) can be analysed exactly. The constant $\beta$ does not prove
+anything about Collatz orbits; it is simply a well motivated, tuning free
+default, and \cref{chap:noise} is careful about how much that is worth.
+
+\section{Verification as a partner}\label{sec:ch10:verification}
+
+A last theme runs through Part III. The cycle bound is assembled from three
+steps: the affine identity, the cycle inequality $3^m<2^k$ with its upper
+companion, and a finite computation with continued fractions\index{continued fraction}. The first step
+and the lower half $3^m<2^k$ of the second are now machine checked in Lean\index{Lean}
+(\cref{chap:cycles}); the upper half is an inequality between natural numbers
+within reach of the same tools; and the mediant lemma\index{mediant lemma} and \cref{thm:ch8:onesided} reduce the third to a
+short certificate\index{certificate}: a list of ladder rungs $u$ and numerators $\lceil u\lt\rceil$ together with
+rational bounds on $\log_23$ that verify each inequality by interval
+arithmetic. Formalizing the upper half, the mediant lemma, \cref{thm:ch8:onesided} and a verified squaring routine, and replaying that certificate in Lean, would make the cycle bound machine checked, conditional only on the verification below $2^{68}$ (project P1 of \cref{chap:open}). The
+divergence half offers no such target, and the contrast is itself informative:
+every finite part of the cycle half is within reach of verification, while the
+divergence half, which requires a law of large numbers for one orbit, is not.
+
+The next chapter takes up the computational side of this accounting: which
+parts of the programme computation can finish, which it provably cannot, and
+what the optimization reading says about where to look.
+
+\section*{Notes}
+
+The split into a divergence half and a cycle half is classical; see the surveys
+of Lagarias\index{Lagarias, J. C.}~\cite{lagarias1985,lagarias2010overview}. The observation that the probabilistic attacks
+on the divergence half replace an orbit by an ensemble is implicit in the
+parity heuristic of Crandall\index{Crandall, R. E.}~\cite{crandall1978} and the stochastic models of Lagarias and Weiss\index{Weiss, A.}~\cite{lagarias1992} and explicit in the
+discussion surrounding Tao\index{Tao, T.}'s theorem~\cite{tao2022}. The reduction of the cycle
+half to Diophantine\index{Diophantine approximation} approximation of $\log_23$ goes back to the work of
+Crandall~\cite{crandall1978}, Steiner\index{Steiner, R. P.}~\cite{steiner1977} and Eliahou\index{Eliahou, S.}~\cite{eliahou1993}. That it
+cannot suffice is a point Halbeisen\index{Halbeisen, L.} and Hungerb\"uhler\index{Hungerbuhler, N.@Hungerb\"uhler, N.}~\cite[\S5]{halbeisen1997}
+made in another form, since rational cycles satisfy the same inequalities; the
+proof of \cref{prop:ch8:insufficient}, and the window corollary, are ours.
+
+\section*{Exercises}
+
+\begin{exercise}
+Show that the three possibilities for a Syracuse orbit (reaching $1$, being
+unbounded, being eventually periodic on a cycle not containing $1$) are
+mutually exclusive and exhaustive.
+\end{exercise}
+
+\begin{exercise}
+Show that along a cycle with $r$ odd elements and $s$ halvings the averages
+$\bar k_N$ converge to $s/r$, and that $0<s/r-\log_23<1/(3M\log2)$. Conclude that
+the Ces\`aro condition is satisfied by every cycle, so that no argument based on
+Ces\`aro averages alone can exclude cycles.
+\end{exercise}
+
+\begin{exercise}
+Suppose an effective irrationality measure\index{irrationality measure} $\nu=3$ with constant $c=10^{-3}$
+were known for $\log_23$. Combine \cref{rem:irrmeasure} with the verified range\index{verification range}
+$X=2^{68}$ to show that it excludes exactly the cycle lengths
+$r<(3cX\log2)^{1/3}$, about $8.5\times10^{5}$, far fewer than
+\cref{thm:cycles}. Explain why no choice of $(\nu,c)$ can exclude all $r$.
+\end{exercise}
+
+\begin{exercise}
+Show that if $\liminf_N y_N<\infty$ along a Syracuse orbit then the orbit is
+eventually periodic. Deduce that an orbit is unbounded if and only if
+$y_N\to\infty$, so that the divergence half concerns orbits that escape to
+infinity, not merely orbits that are unbounded along a subsequence.
+\end{exercise}
+
+\begin{exercise}
+List the constants of \cref{sec:ch10:fits} and, for each, state one proposed
+mechanism for the conjecture that it would falsify if the mechanism predicted a
+different value.
+\end{exercise}
