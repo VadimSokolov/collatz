@@ -10,9 +10,9 @@ authors:
   given-names: Vadim
   orcid: https://orcid.org/0000-0002-6618-2965
   affiliation: George Mason University
-version: 1.0.0
-doi: 10.5281/zenodo.23331100
-date-released: '2026-10-13'
+version: 1.1.0
+doi: 10.5281/zenodo.23421852
+date-released: '2026-10-16'
 license: CC-BY-4.0
 repository-code: https://github.com/VadimSokolov/collatz
 url: https://vsokolov.org/books/collatz/
@@ -51,7 +51,7 @@ preferred-citation:
     orcid: https://orcid.org/0000-0002-6618-2965
     affiliation: George Mason University
   year: 2026
-  doi: 10.5281/zenodo.23331100
+  doi: 10.5281/zenodo.23421852
   url: https://vsokolov.org/books/collatz/
   publisher:
     name: Independently published

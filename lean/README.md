@@ -1,6 +1,6 @@
 # Lean files
 
-The two files of the section "Machine checked statements" of the book (chapter 10), in Lean 4 with the core library only (no Mathlib):
+The two files of the section "Machine checked statements" of the book (chapter 11), in Lean 4 with the core library only (no Mathlib):
 
 - `CollatzProved.lean`: the accelerated map `T`, its iterates `Tn` and the number of odd steps `odd`, and the theorems B1 (the affine identity), B2 (the cycle inequality $3^m<2^k$), B3 (every starting value from 1 to 10^4 reaches 1 within 400 steps) and B4 (the trivial cycle).
 - `CollatzOpen.lean`: the open statements O1 (the conjecture), O3 (its descent form) and O4 (no nontrivial cycles), each closed by `sorry`.

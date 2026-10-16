@@ -405,7 +405,7 @@ the Collatz graph modulo powers of $3$, that $\pi_1(x)\geq x^{0.84}$ for all
 sufficiently large $x$. This is far from density $1$, but it is a statement
 about orbits that actually reach $1$, not merely orbits that descend.
 
-\paragraph{Tao.} The strongest result to date is due to Tao. For the smallest
+\paragraph{Tao.} The strongest result about almost all orbits is due to Tao. For the smallest
 value attained by the orbit of $n$ under the standard map\index{standard map} we write
 \[
   \mathrm{Col}_{\min}(n)=\min_{k\geq0}T_0^{(k)}(n).
@@ -445,6 +445,8 @@ it is a statement about almost all starting values, and like every density
 theorem it is silent about any individual orbit. The conjecture asserts
 something about every integer, and no density statement, however strong,
 reaches every integer.
+
+\paragraph{Positive density.} Preprints of September and October 2026 by Mazur\index{Mazur, L.}, Shaik\index{Shaik, I. A.} and Lau\index{Lau, K.}~\cite{mazur2026pred,mazur2026time,shaik2026,lau2026} prove that the integers whose orbit reaches $1$ within about $10.46\log n$ steps have positive lower natural density, which raises the bound of Krasikov and Lagarias from $x^{0.84}$ to a positive proportion of all integers. They also prove that for every $t$ not divisible by $3$ the integers whose orbit reaches $t$ have positive lower density, and this qualifies the last point above: if the orbit of some $t$ missed $1$, so would the orbits of a positive proportion of integers, so convergence on a set of density one, natural or logarithmic, would already give the conjecture. These results are recent and unrefereed, and they come with Lean formalizations; \cref{chap:backward} describes them.
 
 \section{The two halves and the heuristic}\label{sec:ch1:heuristic}
 
@@ -589,7 +591,7 @@ noise exactly. Its noise amplification relative to gradient descent at the same 
 by $5/3$ for every $\beta<1$, whereas in the slow modes every step momentum amplifies noise by
 $1/(1-\beta)$. Nothing in these two chapters bears on the conjecture; they are
 an instance of number theory suggesting a design.
-\Cref{chap:difference} closes Part II by treating both the Collatz recursion and the momentum methods as nonlinear difference equations: it derives certified growth exponents for the inverse tree\index{inverse tree} from difference inequalities\index{difference inequality} in the style of Krasikov\index{Krasikov, I.} and Lagarias\index{Lagarias, J. C.}, computes the joint spectral radius\index{joint spectral radius} that governs the stability of Switching MM under arbitrary switching, which is below one at every parameter value computed, and proves a linear rate for Switching MM on smooth strongly convex functions that is the exact worst case for the distance to the minimizer.
+\Cref{chap:difference} treats both the Collatz recursion and the momentum methods as nonlinear difference equations: it derives certified growth exponents for the inverse tree\index{inverse tree} from difference inequalities\index{difference inequality} in the style of Krasikov\index{Krasikov, I.} and Lagarias\index{Lagarias, J. C.}, computes the joint spectral radius\index{joint spectral radius} that governs the stability of Switching MM under arbitrary switching, which is below one at every parameter value computed, and proves a linear rate for Switching MM on smooth strongly convex functions that is the exact worst case for the distance to the minimizer. \Cref{chap:threepoint} closes Part II with the three point inequality and Nesterov's similar triangles, the engine of every convergence proof in convex optimization. It gives Switching MM a convex rate a factor $1+\beta/2$ better than gradient descent, and on the Collatz map it finds an exact three point identity with a uniform dissipation but no counterpart of the optimality that makes the inequality work.
 
 Part III, \emph{Cycles and Divergence}, returns to the conjecture.
 \cref{chap:cycles} treats the cycle half through the continued fraction\index{continued fraction} of
@@ -612,8 +614,8 @@ conjecture that would close this half, and shows that the model chain on
 the units modulo $3^a$, in which the halving exponents are independent
 Geometric$(\tfrac12)$ draws, is exactly stationary after $a$ strides, a
 restatement in Markov chain form of an identity of
-Tao\index{Tao, T.}~\cite[eq.~(1.21)]{tao2022}. \cref{chap:path} assembles what a proof would have
-to contain, \cref{chap:computation} sets out what computation can and cannot contribute, with the guidance the optimization reading gives it, \cref{chap:samplers} tests level set samplers against the map and finds the horizon at which they fail, and \cref{chap:open} collects open problems and computational
+Tao\index{Tao, T.}~\cite[eq.~(1.21)]{tao2022}. \cref{chap:backward} describes the positive density theorems of 2026, which run the stride model backwards through the inverse tree and show that convergence on a set of density one would imply the conjecture. \cref{chap:path} assembles what a proof would have
+to contain, \cref{chap:computation} sets out what computation can and cannot contribute, with the guidance the optimization reading gives it, \cref{chap:samplers} tests level set samplers against the map and finds the horizon at which they fail, \cref{chap:progress} reports progress on six of the open problems, \cref{chap:synthesis} summarizes the contributions of the book and lays out a computational road map, and \cref{chap:open} collects open problems and computational
 projects.
 A gallery of computed pictures, \emph{A Gallery of Orbits}, follows Part III, and the appendices tabulate the constants and describe the code.
 

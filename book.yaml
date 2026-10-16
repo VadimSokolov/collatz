@@ -17,12 +17,12 @@ authors:
 credit_names: ""                 # how a citation names the authors, e.g. "Polson and Sokolov"; empty: built from the family names
 year: 2026
 edition: "1"
-version: "1.0.0"                 # the release tag is v<version>
-date_released: "2026-10-13"      # YYYY-MM-DD, set at release
+version: "1.1.0"                 # the release tag is v<version>
+date_released: "2026-10-16"      # YYYY-MM-DD, set at release
 publisher: "Independently published"                    # "Independently published" (the imprint KDP shows for a free KDP ISBN)
 # no isbn: a free KDP ISBN may be used only on KDP, so it goes on the ISBN line of kdp.md (private) and is printed
 # only in the print edition (kdp.py interior); this file is published (references/publishing.md)
-doi: "10.5281/zenodo.23331100" # this edition's DOI; zenodo.py reserve writes it before the final build
+doi: "10.5281/zenodo.23421852" # this edition's DOI; zenodo.py reserve writes it before the final build
 license_text: CC-BY-4.0          # text, figures and PDF
 license_code: MIT
 repository: https://github.com/VadimSokolov/collatz   # the public repository; its name is the slug
@@ -102,23 +102,35 @@ chapters:
     title: "Nonlinear Difference Equations and Momentum MM"
     stem: 09_nonlinear_difference_equations_and_momentum_mm
   - key: "10"
-    title: "Cycles and Continued Fractions"
-    stem: 10_cycles_and_continued_fractions
+    title: "Three Point Inequalities and Similar Triangles"
+    stem: 10_three_point_inequalities_and_similar_triangles
   - key: "11"
-    title: "The Divergence Half"
-    stem: 11_the_divergence_half
+    title: "Cycles and Continued Fractions"
+    stem: 11_cycles_and_continued_fractions
   - key: "12"
-    title: "The Path to Collatz"
-    stem: 12_the_path_to_collatz
+    title: "The Divergence Half"
+    stem: 12_the_divergence_half
   - key: "13"
-    title: "A Computational Path"
-    stem: 13_a_computational_path
+    title: "Positive Density from the Backward Tree"
+    stem: 13_positive_density_from_the_backward_tree
   - key: "14"
-    title: "Samplers and the Horizon"
-    stem: 14_samplers_and_the_horizon
+    title: "The Path to Collatz"
+    stem: 14_the_path_to_collatz
   - key: "15"
+    title: "A Computational Path"
+    stem: 15_a_computational_path
+  - key: "16"
+    title: "Samplers and the Horizon"
+    stem: 16_samplers_and_the_horizon
+  - key: "17"
+    title: "Progress on the Open Problems"
+    stem: 17_progress_on_the_open_problems
+  - key: "18"
+    title: "Contributions and a Computational Road Map"
+    stem: 18_contributions_and_a_computational_road_map
+  - key: "19"
     title: "Open Problems and Computational Projects"
-    stem: 15_open_problems_and_computational_projects
+    stem: 19_open_problems_and_computational_projects
   - key: "A"
     title: "Numerical Constants"
     stem: A_numerical_constants

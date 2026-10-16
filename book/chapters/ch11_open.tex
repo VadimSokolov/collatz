@@ -6,7 +6,7 @@ about Switching MM\index{Switching MM}, and computational projects that are well
 likely to repay effort. Where a problem is stated in an earlier chapter we
 restate it in its sharpest form and say what is already known. Several problems
 have been sharpened by results proved in this book, and we flag where a
-natural formulation turns out to be the wrong one.
+natural formulation turns out to be the wrong one. Progress on six of them is reported in \cref{chap:progress}.
 
 \section{The divergence half}\label{sec:ch11:divergence}
 
@@ -81,6 +81,11 @@ cumulant.
 As stated, the first part contains the conjecture, since the deficit of a dyadic block $[2^k,2^{k+1})$ is finite only if every integer in it reaches $1$; the question is to prove that the deficit is bounded assuming the conjecture, or unconditionally for the integers of each block whose orbits reach $1$ within a fixed multiple of $k$ steps.
 \end{problem*}
 
+Progress. \Cref{sec:ch16:o4} explains the third cumulant: its deficit behaves as an
+additive constant, about $34\,000$ cubed steps against the fitted line, located mostly in the final descent,
+and the resulting fit predicts the skewness out of sample up to $n\approx2^{49}$.
+The boundedness of the deficits remains to be proved.
+
 \begin{problem*}[O5. Uniform integrability]\designation{O5}\label{prob:ch11:o5}
 Settled by \cref{prop:uimartingale}: the iterate martingale\index{martingale} of the accelerated model,
 stopped when it first drops to $1$ or below, is not uniformly integrable\index{uniform integrability}, and \cref{chap:path} explains why its deterministic counterpart, the indicator of reaching $1$, leaves nothing to certify short of the conjecture itself. There is no separate open problem here.
@@ -115,6 +120,28 @@ It keeps the form of the cycle inequality: his bound~\cite[Theorem~27]{hercher20
 Extend that computation to the later rungs: for each rung from $137\,528\,045\,312$ on, find the least verification range at which his accounting excludes it.
 \end{problem*}
 
+\section{The backward tree}\label{sec:ch11:backward}
+
+The positive density theorems of \cref{chap:backward} reframe the divergence problems: if they are right, a density statement about convergence reaches every integer. Three problems come out of them.
+
+\begin{problem*}[B1. Bounded Tao]\designation{B1}\label{prob:ch11:b1}
+Show that $\mathrm{Col}_{\min}(n)\le2^{71}$ for all $n$ in a set of logarithmic density one.
+\end{problem*}
+
+By the verification up to $2^{71}$~\cite{barina2025} and \cref{prop:ch9b:bounded}, this implies the conjecture if the positive density theorems are right, and the conjecture implies it. \Cref{thm:ch1:tao} proves it with $2^{71}$ replaced by any $f(n)\to\infty$.
+
+\begin{problem*}[B2. The true mixing rate]\designation{B2}\label{prob:ch11:b2}
+Determine how fast $\max_{3\nmid\xi}|\widehat\pi_d(\xi)|$ tends to zero, where $\pi_d$ is the law of the Syracuse random variable modulo $3^d$. Is it $\exp(-c(\log d)^2)$, $\exp(-cd^{\gamma})$ for some $\gamma<1$, or eventually geometric?
+\end{problem*}
+
+Through $d=18$, with every frequency prime to $3$ scanned, the maximum stays between $3.6\,d^{-2}$ and $3.9\,d^{-2}$ from $d=7$ on and sits at $\xi=\pm2^k$ with $d\le k\le1.28\,d$ (\cref{sec:ch9b:offsets}); Tao proves that it eventually decays faster than any power of $d$~\cite[Proposition~1.17]{tao2022}. Any rate beyond a fixed power would lower the constants $C$ and $j_0$ on which the towers of \cref{thm:ch9b:lau} rest, and a first step is to bound the frequencies $\pm2^k$ separately. Levels $19$ and $20$, with $1.2\times10^9$ and $3.5\times10^9$ residues, remain to be computed.
+
+\begin{problem*}[B3. The sharp rate]\designation{B3}\label{prob:ch11:b3}
+Show that for every $c<3/\log(4/3)$ the set of $n$ with $\sigma_0(n)\le c\log n$ has natural density zero, so that Shaik's threshold~\cite{shaik2026} is sharp.
+\end{problem*}
+
+The renewal calculation of \cref{sec:ch9b:steps} makes this plausible: below the threshold the predicted share of $n$ meeting the bound tends to zero. A proof would show that the forward and backward views agree on the constant.
+
 \section{Switching MM}\label{sec:ch11:smm}
 
 \begin{problem*}[S1. Rates beyond quadratics]\designation{S1}\label{prob:ch11:s1}
@@ -135,6 +162,9 @@ diffusive scaling a linear periodic method satisfying the hypotheses of \cref{th
 $0.830$ for every step momentum\index{momentum} at $\beta=\lt-1$. What remains open is the
 nonquadratic case and large multiplicative noise\index{multiplicative noise} at large step, where the
 bound $5/3$ fails.
+\Cref{prop:ch16:correlated} removes the assumption of uncorrelated noise on
+quadratics, and \cref{sec:ch16:s2} tests the bound on a real stochastic problem,
+where it holds with room to spare.
 
 \begin{problem*}[S3. The best period two ratio]\designation{S3}\label{prob:ch11:s3}
 Settled for quadratics by \cref{prop:ch7:pareto}. Every period two ratio $r$ between $1$ and the Chebyshev ratio $r_{\mathrm{ch}}(\kappa)$,
@@ -191,17 +221,20 @@ modulo $3^5$. Extend it to starting values near $2^{10^5}$ and beyond, to moduli
 $3^a$ with $a\le8$, to joint statistics of consecutive residues, and to the
 dyadic digits of the iterates, and look for any systematic departure from
 the model chain of \cref{lem:ch9:mixing}.
+Done to $2^{300000}$ in \cref{sec:ch16:p3}; no departure was found.
 
 \paragraph{P4. Total stopping time cumulants at scale.} Extend the exact census of
 \cref{sec:ch3:missing} beyond $2^{30}$ (memory permitting) and the sampled
 version to $10^{15}$, test whether the additive variance deficit saturates,
 and fit the third cumulant.
+Done by sampling to $n\approx2^{49}$ in \cref{sec:ch16:o4}; the deficits behave as constants.
 
 \paragraph{P5. Switching MM at scale.} Run $\smmdet$ against every step
 Nesterov\index{Nesterov acceleration} and heavy ball\index{heavy ball} at $\beta\in\{0.585,0.9\}$, and against Adam, on
 minibatch training of standard models where the gradient noise is genuine,
 with the base step size of gradient descent and the three momentum methods fixed at the common value $\alpha=1/L$, at which all four are stable and every eigendirection of the Hessian has $a=\alpha\lambda\le1$.
 Report final loss and its variance over seeds, and compare the measured noise floors with the prediction of \cref{thm:smmvar} evaluated on the spectrum of the Hessian at the solution, whose ratio to gradient descent lies between $1$ and $(2+2\beta+\beta^2)/(2+\beta)$ on every eigendirection (\cref{prop:ch7:uniform}). Larger common steps are possible only below $2(1+\beta)/((1+2\beta)L)$, the stability limit of every step Nesterov, where the denominator of \eqref{eq:ch7:nagvar} vanishes and which lies below the limit $(2+\beta)/((1+\beta)L)$ of $\smmdet$ (\cref{cor:ch6:stability}); above $a=1$ \cref{prop:ch7:uniform} does not apply; \eqref{eq:ch7:vavg} still holds there, since the proof of \cref{thm:smmvar} uses only $|\rho|<1$, and at $\beta=0.585$ it gives a ratio above $(2+2\beta+\beta^2)/(2+\beta)$ once $a>1.41$, reaching $1.55$ at the Nesterov limit.
+A first test on a real problem is in \cref{sec:ch16:s2}.
 
 \paragraph{P6. Periodic schedules in general.} Settled in the slow mode by the
 gain weight\index{gain weight theorem} theorem (\cref{thm:ch7:gainweight}): no stable linear periodic
@@ -216,6 +249,8 @@ period two frontier of \cref{prop:ch7:pareto}.
 computation of \cref{chap:cycles} to $4^{15}$ or beyond with a bit array of a
 few gigabytes, and test whether the successive minima just below powers of $3$
 track the quality of the approximations $3^m\approx4^k$ quantitatively.
+Done to $4^{17}$ in \cref{sec:ch16:p7}: the depth of the minima is a function of the
+fractional part of $m\log_43$, with no drift up to $3^{21}$.
 
 \paragraph{P8. Perfect samplers beyond the coefficient stopping time.} The sampler of
 \cref{thm:ch10b:perfect} is exact because the level sets of the coefficient stopping time $\tau$ are unions
@@ -237,6 +272,27 @@ The number of trees is the
 number of points at remaining depth $m-100$ reached from the box by an orbit segment of more than a hundred steps, a statistic of the merging mechanism of \cref{lem:ch10b:merge} that has not, to our knowledge, been studied; the mean size is a count on the inverse tree of \cref{chap:difference}, and whether the certified exponents of that chapter bear on it, when, at the deeper levels, the roots usually lie above the box, is part of the problem. Relate the
 roots of the trees to the delay records of \cref{chap:intro}.
 
+\paragraph{P10. A pilot for the divergence lane.} Implement stages D1 to D3 of
+\cref{sec:ch10d:path} on the weakened rewriting systems that Yolcu, Aaronson and
+Heule proved terminating, where the answer is known. Generate hard instances
+with the perfect sampler and the census, run the counterexample guided loop
+around a SAT search for matrix interpretations, and measure how many solver
+calls the loop saves against the plain search, as a function of the dimension
+of the interpretation. Then run the same loop on the full system with the
+largest dimension the pilot shows to be feasible.
+
+\paragraph{P11. The exact convex rate of Switching MM.} Prove
+\cref{conj:ch7b:tight}: for $0\le\beta\le\beta_2$ and even $N$ the worst case of
+\smmdet\ on smooth convex functions is $LR^2/((4+2\beta)N+2)$. The dual
+multipliers of the performance estimation programs give the weights of a
+combination of interpolation inequalities, and for $\beta=0$ the pattern is the
+one of Drori and Teboulle; find it for $\beta>0$, and determine the threshold
+$\beta_N$ at which the formula fails for each even $N$ (we find
+$\beta_2=0.686$, $\beta_4=0.838$, $\beta_6=0.891$).
+\Cref{sec:ch16:p11} gives the complete two branch conjecture with exact thresholds
+$\beta_N$, rigorous lower bounds from explicit functions, and a proof of the upper
+bound for $N=4$, and for $N=2$ when $\beta\le0.6446$.
+
 \section*{Notes}
 
 Problems O1, O3, C2 and the cycle formulation are restatements of questions
@@ -244,5 +300,6 @@ going back to Terras\index{Terras, R.}~\cite{terras1976}, Steiner\index{Steiner,
 Eliahou\index{Eliahou, S.}~\cite{eliahou1993}, sharpened by the results of this book. Problem C1
 and the Erd\H{o}s $125$ analogy come from our note on the AlphaProof Nexus\index{AlphaProof Nexus}
 system~\cite{polsonsokolov2026nexus,tsoukalas2026}. Problems S1 to S4 and P5,
-P6 grew out of the analysis of \cref{chap:smm,chap:noise}, and P8 and P9 out
-of \cref{chap:samplers}.
+P6 grew out of the analysis of \cref{chap:smm,chap:noise}, P8 and P9 out
+of \cref{chap:samplers}, P10 out of \cref{chap:synthesis}, and P11 out of
+\cref{chap:threepoint}. Problems B1 to B3 come from the positive density preprints read in \cref{chap:backward}.

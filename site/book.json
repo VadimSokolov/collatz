@@ -23,10 +23,10 @@
  "credit_names": "Polson and Sokolov",
  "year": "2026",
  "edition": "1",
- "version": "1.0.0",
- "date_released": "2026-10-13",
+ "version": "1.1.0",
+ "date_released": "2026-10-16",
  "publisher": "Independently published",
- "doi": "10.5281/zenodo.23331100",
+ "doi": "10.5281/zenodo.23421852",
  "concept_doi": "10.5281/zenodo.23331099",
  "language": "en",
  "keywords": [
@@ -56,36 +56,34 @@
   "url": "https://opensource.org/license/mit"
  },
  "release": {
-  "tag": "v1.0.0",
-  "url": "https://github.com/VadimSokolov/collatz/releases/tag/v1.0.0"
+  "tag": "v1.1.0",
+  "url": "https://github.com/VadimSokolov/collatz/releases/tag/v1.1.0"
  },
  "links": {
   "page": "https://vsokolov.org/books/collatz/",
   "page_markdown": "https://vsokolov.org/books/collatz/index.html.md",
   "results": "https://vsokolov.org/books/collatz/results.html",
   "results_markdown": "https://vsokolov.org/books/collatz/results.html.md",
-  "pdf": "https://github.com/VadimSokolov/collatz/releases/download/v1.0.0/collatz.pdf",
+  "pdf": "https://github.com/VadimSokolov/collatz/releases/download/v1.1.0/collatz.pdf",
   "repository": "https://github.com/VadimSokolov/collatz",
-  "source": "https://github.com/VadimSokolov/collatz/tree/v1.0.0",
-  "doi": "https://doi.org/10.5281/zenodo.23331100",
+  "source": "https://github.com/VadimSokolov/collatz/tree/v1.1.0",
+  "doi": "https://doi.org/10.5281/zenodo.23421852",
   "concept_doi": "https://doi.org/10.5281/zenodo.23331099",
-  "zenodo": "https://zenodo.org/records/23331100",
-  "doi_badge": "https://zenodo.org/badge/DOI/10.5281/zenodo.23331100.svg",
   "icon_pdf": "https://vsokolov.org/books/icon-pdf.svg",
   "icon_github": "https://vsokolov.org/books/icon-github.svg",
   "cover": "https://vsokolov.org/books/collatz/cover.jpg"
  },
  "citation": {
-  "text": "Polson and Sokolov (2026), On the Collatz Conjecture: Martingales, Momentum and Continued Fractions, edition 1, https://doi.org/10.5281/zenodo.23331100.",
-  "bibtex": "@book{polsonsokolov2026collatz,\n  author = {Polson, Nick and Sokolov, Vadim},\n  title = {{On the Collatz Conjecture: Martingales, Momentum and Continued Fractions}},\n  year = {2026},\n  publisher = {Independently published},\n  doi = {10.5281/zenodo.23331100},\n  url = {https://vsokolov.org/books/collatz/}\n}",
+  "text": "Polson and Sokolov (2026), On the Collatz Conjecture: Martingales, Momentum and Continued Fractions, edition 1, https://doi.org/10.5281/zenodo.23421852.",
+  "bibtex": "@book{polsonsokolov2026collatz,\n  author = {Polson, Nick and Sokolov, Vadim},\n  title = {{On the Collatz Conjecture: Martingales, Momentum and Continued Fractions}},\n  year = {2026},\n  publisher = {Independently published},\n  doi = {10.5281/zenodo.23421852},\n  url = {https://vsokolov.org/books/collatz/}\n}",
   "bibkey": "polsonsokolov2026collatz",
   "example": "Polson and Sokolov (2026), Corollary 4.15"
  },
  "pdf": {
   "file": "collatz.pdf",
-  "pages": 311,
-  "bytes": 5609863,
-  "sha256": "356de7c3c4f0d035378110a0d37c1278018dde8560d6e35d73178ffc0a5b10ab"
+  "pages": 379,
+  "bytes": 6104045,
+  "sha256": "40674ec007fe33c42c4527df4e43729ede5f9bc3aa00143841bae61da4779f73"
  },
  "bundle": {
   "page": "site/index.md",
@@ -97,7 +95,7 @@
  "serve": [
   {
    "path": "cover.jpg",
-   "url": "https://raw.githubusercontent.com/VadimSokolov/collatz/v1.0.0/pdf/cover.jpg"
+   "url": "https://raw.githubusercontent.com/VadimSokolov/collatz/v1.1.0/pdf/cover.jpg"
   }
  ],
  "chapters": [
@@ -110,7 +108,7 @@
    "last_page": "18",
    "pages": 16,
    "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/collatz/main/summaries/01_the_problem.md",
-   "summary": "This chapter states the 3x+1 problem, also called the Collatz conjecture, the Syracuse problem, Kakutani's problem, Ulam's problem and Hasse's algorithm: halve an even integer, replace an odd integer n by 3n+1, and ask whether every positive integer reaches 1. It separates the two ways the conjecture can fail, a divergent orbit and a nontrivial cycle (the divergence half and the cycle half), introduces the standard, accelerated and Syracuse maps and stopping times, and works examples such as the orbit of 27, which takes 111 steps and peaks at 9232. It surveys computer verification up to 2^71 and the lower bounds on the length of a nontrivial cycle that it gives through the continued fraction of log base 2 of 3, the undecidability of generalized Collatz maps (Conway, FRACTRAN), and density theorems for stopping times, from Terras and Everett to Tao's almost bounded values. It explains the parity heuristic, a random walk for log x with drift log(sqrt(3)/2), and why it is not a proof: the parities along one orbit are deterministic. It describes the Lean statements of the conjecture, of its descent form and of the cycle problem written by the authors. It ends with the plan of the book, which does not prove the conjecture but reads it through martingales, optimization and Diophantine approximation.\n\n#### From the literature\n\nThe survey of Lagarias (1985) and the volume he edited (2010); the density theorem for stopping times of Terras (1976, 1979) and Everett (1977); the exponent log 3 over log 4 of Korec (1994); the x to the power 0.84 bound of Krasikov and Lagarias (2003); the almost bounded values theorem of Tao (2022); the undecidability results of Conway (1972, 1987) and Kurtz and Simon (2007); computer verification by Oliveira e Silva (2010) and Bařina (2021, 2025); cycle length bounds from the continued fraction of log base 2 of 3 by Crandall (1978), Eliahou (1993) and Hercher (2023); the parity heuristic of Crandall (1978) and Lagarias and Weiss (1992).\n\n#### New results\n\nThis chapter is an introduction and survey, and its labeled statements are the conjecture itself and a theorem of Tao (2022).\n\nNo new results of this chapter are catalogued.\n\n#### Key terms\n\n3x+1 problem, 3n+1 problem, Collatz problem, Collatz conjecture, Syracuse problem, Kakutani's problem, Ulam's problem, Hasse's algorithm, standard map, accelerated map, orbit, trajectory, total stopping time, delay record, divergent orbit, nontrivial cycle, verified range, logarithmic density, FRACTRAN, Lean, proof assistant, machine checked proof, Erdős, Erdos, Bařina, Barina"
+   "summary": "This chapter states the 3x+1 problem, also called the Collatz conjecture, the Syracuse problem, Kakutani's problem, Ulam's problem and Hasse's algorithm: halve an even integer, replace an odd integer n by 3n+1, and ask whether every positive integer reaches 1. It separates the two ways the conjecture can fail, a divergent orbit and a nontrivial cycle (the divergence half and the cycle half), introduces the standard, accelerated and Syracuse maps and stopping times, and works examples such as the orbit of 27, which takes 111 steps and peaks at 9232. It surveys computer verification up to 2^71 and the lower bounds on the length of a nontrivial cycle that it gives through the continued fraction of log base 2 of 3, the undecidability of generalized Collatz maps (Conway, FRACTRAN), and density theorems for stopping times, from Terras and Everett to Tao's almost bounded values and the positive density theorems of 2026. It explains the parity heuristic, a random walk for log x with drift log(sqrt(3)/2), and why it is not a proof: the parities along one orbit are deterministic. It describes the Lean statements of the conjecture, of its descent form and of the cycle problem written by the authors. It ends with the plan of the book, which does not prove the conjecture but reads it through martingales, optimization and Diophantine approximation.\n\n#### From the literature\n\nThe survey of Lagarias (1985) and the volume he edited (2010); the density theorem for stopping times of Terras (1976, 1979) and Everett (1977); the exponent log 3 over log 4 of Korec (1994); the x to the power 0.84 bound of Krasikov and Lagarias (2003); the almost bounded values theorem of Tao (2022); the positive density theorems of the preprints of Mazur (2026), Shaik (2026) and Lau (2026), not yet refereed; the undecidability results of Conway (1972, 1987) and Kurtz and Simon (2007); computer verification by Oliveira e Silva (2010) and Bařina (2021, 2025); cycle length bounds from the continued fraction of log base 2 of 3 by Crandall (1978), Eliahou (1993) and Hercher (2023); the parity heuristic of Crandall (1978) and Lagarias and Weiss (1992).\n\n#### New results\n\nThis chapter is an introduction and survey, and its labeled statements are the conjecture itself and a theorem of Tao (2022).\n\nNo new results of this chapter are catalogued.\n\n#### Key terms\n\n3x+1 problem, 3n+1 problem, Collatz problem, Collatz conjecture, Syracuse problem, Kakutani's problem, Ulam's problem, Hasse's algorithm, standard map, accelerated map, orbit, trajectory, total stopping time, delay record, divergent orbit, nontrivial cycle, verified range, logarithmic density, positive lower density, FRACTRAN, Lean, proof assistant, machine checked proof, Erdős, Erdos, Bařina, Barina"
   },
   {
    "key": "2",
@@ -132,7 +130,7 @@
    "last_page": "64",
    "pages": 22,
    "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/collatz/main/summaries/03_stochastic_models_and_martingale_duality.md",
-   "summary": "This chapter asks what the probabilistic heuristic for the 3x+1 problem predicts and what martingale theory can prove about it. It defines three stochastic models of the Collatz iteration: the Bernoulli fair coin model for the accelerated map, the Geometric stride model for the Syracuse map, and a renewal (Markov chain) model for the standard map, where an odd step is always followed by a halving. In the Bernoulli model the iterates form a multiplicative martingale, because one half times one half plus one half times three halves equals one, while their logarithms form a supermartingale with drift log(sqrt(3)/2), about minus 0.1438, which is the Jensen gap (martingale duality). Wald's identity gives the slope 1/|drift|, about 6.952, of the expected passage time, the model's prediction for total stopping times, classical first passage results give its dispersion, Ville's maximal inequality bounds an excursion by a factor K with probability at most 1/K, and the model is absorbed almost surely. In the renewal model for the standard map the parity autocorrelation is exactly (minus one half) to the power h. The stopped martingale is not uniformly integrable, which shows why it cannot be used to settle absorption, even in the model. The predictions are compared with orbits, a census of all n below 2^30 places most of the ten percent variance deficit of total stopping times at the end of the orbit, and the chapter asks what a certificate for individual orbits would need.\n\n#### From the literature\n\nThe fair coin picture of Terras (1976) and Everett (1977); the parity heuristic of Crandall (1978) and its drift log(sqrt(3)/2), recorded by Lagarias (1985); the random walk models of Lagarias and Weiss (1992); the structure theorem of Kontorovich and Sinai (2002) and the survey of Kontorovich and Lagarias (2010); the first passage asymptotics of Heyde (1967) and Siegmund (1969) and the normal limit for this model of Borovkov and Pfeifer (2001); Wald's identity (Wald 1944); the maximal inequality for nonnegative supermartingales of Ville (1939); the Lundberg inequality of risk theory, as treated by Asmussen and Albrecher (2010).\n\n#### New results\n\nThe Bernoulli drift is classical; the authors' statements are elementary closed forms for the renewal model and the failure of uniform integrability.\n\n- [Martingale structure of the renewal model for the standard Collatz map](https://vsokolov.org/books/collatz/results.html#martingale_structure_of_the_standard_map) (Proposition 3.7, page 47; proved): In the renewal model of the standard Collatz map, where every tripling is followed by a halving, the iterates are not a martingale, but they become one once each coming tripling is booked in advance. New in this book.\n- [Exact parity autocorrelation function of the renewal model for the standard Collatz map](https://vsokolov.org/books/collatz/results.html#parity_autocorrelation_function) (Proposition 3.12, page 56; proved): In the renewal model of the standard Collatz map one step in three is odd and the parity autocorrelation at lag h is minus one half raised to the power h. New in this book.\n- [Long run variance of the log path in the renewal model for the standard Collatz map](https://vsokolov.org/books/collatz/results.html#long_run_variance_of_the_log_path) (Corollary 3.14, page 58; proved): The negative parity correlations of the renewal model cut the long run variance of the log path to one third of its value for independent parities with the same frequency, one in three, of odd steps. New in this book.\n- [The stopped martingale of the Bernoulli model is not uniformly integrable](https://vsokolov.org/books/collatz/results.html#failure_of_uniform_integrability) (Proposition 3.17, page 61; proved): The martingale of the Bernoulli model, stopped when the iterate first drops to 1 or below, is not uniformly integrable, because the unabsorbed paths keep expected value at least the starting value minus 1 while their probability tends to zero. New in this book.\n\n#### Key terms\n\nstochastic model, fair coin heuristic, parity heuristic, Bernoulli model, stride model, renewal model, martingale duality, supermartingale, Jensen gap, Wald identity, Lundberg inequality, Ville inequality, first passage time, parity autocorrelation, long run variance, variance deficit, absorption, uniform integrability"
+   "summary": "This chapter asks what the probabilistic heuristic for the 3x+1 problem predicts and what martingale theory can prove about it. It defines three stochastic models of the Collatz iteration: the Bernoulli fair coin model for the accelerated map, the Geometric stride model for the Syracuse map, and a renewal (Markov chain) model for the standard map, where an odd step is always followed by a halving. In the Bernoulli model the iterates form a multiplicative martingale, because one half times one half plus one half times three halves equals one, while their logarithms form a supermartingale with drift log(sqrt(3)/2), about minus 0.1438, which is the Jensen gap (martingale duality). Wald's identity gives the slope 1/|drift|, about 6.952, of the expected passage time, the model's prediction for total stopping times, classical first passage results give its dispersion, Ville's maximal inequality bounds an excursion by a factor K with probability at most 1/K, and the model is absorbed almost surely. In the renewal model for the standard map the parity autocorrelation is exactly (minus one half) to the power h. The stopped martingale is not uniformly integrable, which shows why it cannot be used to settle absorption, even in the model. The predictions are compared with orbits, a census of all n below 2^30 places most of the ten percent variance deficit of total stopping times at the end of the orbit, and the chapter asks what a certificate for individual orbits would need.\n\n#### From the literature\n\nThe fair coin picture of Terras (1976) and Everett (1977); the parity heuristic of Crandall (1978) and its drift log(sqrt(3)/2), recorded by Lagarias (1985); the random walk models of Lagarias and Weiss (1992); the structure theorem of Kontorovich and Sinai (2002) and the survey of Kontorovich and Lagarias (2010); the first passage asymptotics of Heyde (1967) and Siegmund (1969) and the normal limit for this model of Borovkov and Pfeifer (2001); Wald's identity (Wald 1944); the maximal inequality for nonnegative supermartingales of Ville (1939); the Lundberg inequality of risk theory, as treated by Asmussen and Albrecher (2010).\n\n#### New results\n\nThe Bernoulli drift is classical; the authors' statements are elementary closed forms for the renewal model and the failure of uniform integrability.\n\n- [Martingale structure of the renewal model for the standard Collatz map](https://vsokolov.org/books/collatz/results.html#martingale_structure_of_the_standard_map) (Proposition 3.7, page 48; proved): In the renewal model of the standard Collatz map, where every tripling is followed by a halving, the iterates are not a martingale, but they become one once each coming tripling is booked in advance. New in this book.\n- [Exact parity autocorrelation function of the renewal model for the standard Collatz map](https://vsokolov.org/books/collatz/results.html#parity_autocorrelation_function) (Proposition 3.12, page 56; proved): In the renewal model of the standard Collatz map one step in three is odd and the parity autocorrelation at lag h is minus one half raised to the power h. New in this book.\n- [Long run variance of the log path in the renewal model for the standard Collatz map](https://vsokolov.org/books/collatz/results.html#long_run_variance_of_the_log_path) (Corollary 3.14, page 58; proved): The negative parity correlations of the renewal model cut the long run variance of the log path to one third of its value for independent parities with the same frequency, one in three, of odd steps. New in this book.\n- [The stopped martingale of the Bernoulli model is not uniformly integrable](https://vsokolov.org/books/collatz/results.html#failure_of_uniform_integrability) (Proposition 3.17, page 61; proved): The martingale of the Bernoulli model, stopped when the iterate first drops to 1 or below, is not uniformly integrable, because the unabsorbed paths keep expected value at least the starting value minus 1 while their probability tends to zero. New in this book.\n\n#### Key terms\n\nstochastic model, fair coin heuristic, parity heuristic, Bernoulli model, stride model, renewal model, martingale duality, supermartingale, Jensen gap, Wald identity, Lundberg inequality, Ville inequality, first passage time, parity autocorrelation, long run variance, variance deficit, absorption, uniform integrability"
   },
   {
    "key": "4",
@@ -202,77 +200,121 @@
   },
   {
    "key": "10",
-   "title": "Cycles and Continued Fractions",
-   "stem": "10_cycles_and_continued_fractions",
-   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/10_cycles_and_continued_fractions.md",
-   "first_page": "171",
-   "last_page": "206",
-   "pages": 36,
-   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/collatz/main/summaries/10_cycles_and_continued_fractions.md",
-   "summary": "This chapter studies the cycle half of the Collatz conjecture (the 3x+1 problem): can the orbit of a positive integer close up into a nontrivial cycle? A cycle with r odd elements and s halvings satisfies the cycle identity, which puts s/r above log_2 3 and bounds the least element through the one sided distance from r log_2 3 up to the next integer. Continued fractions and a mediant lemma give a self contained proof of the classical fact that the first value of r not excluded by a verification range is a best one sided approximation. With Bařina's verification up to 2^68 or 2^71 this gives at least 72,057,431,991 odd elements for every nontrivial cycle, a bound the authors do not claim as new. The chapter also proves Diophantine insufficiency (infinitely many r survive every verification range), a window lemma and what arithmetic information would suffice, and covers an exact integer certificate, negative and rational cycles, Erdős problem 125, Lean 4 and a refined open problem.\n\n#### From the literature\n\n- the cycle identity and the bound on the least element, classical since the 1970s (Böhm and Sontacchi 1978, Steiner 1978)\n- the criterion of Crandall (1978) and the bound of at least 17,087,915 elements under the accelerated map of Eliahou (1993)\n- the exclusion of m cycles (m ascending runs) for m = 1 (Steiner 1978), up to 68 (Simons and de Weger 2005) and up to 91 (Hercher 2023)\n- the length bounds of Hercher (2018), Puchert (2018) and Hercher (2023), the last at least 137,528,045,312 odd elements, conditional on verification to 3·2^69 and so unconditional since Bařina (2025)\n- the verification up to 2^68 and 2^71 of Bařina (2021, 2025)\n- the optimal criterion of Halbeisen and Hungerbühler (1997) and the rational cycles of Lagarias (1990)\n- the classical description of the best one sided approximations by intermediate fractions, stated and proved in Hančl and Turek (2019)\n- Erdős problem 125 of Burr, Erdős, Graham and Li (1996), settled by AlphaProof Nexus (Tsoukalas and collaborators 2026)\n\n#### New results\n\nOnly statements that are the authors' own are catalogued.\n\n- [Diophantine insufficiency, infinitely many cycle lengths survive any verification range](https://vsokolov.org/books/collatz/results.html#diophantine_insufficiency_cycle_lengths) (Proposition 10.20, page 191; proved): However far the verification of the Collatz conjecture is pushed, infinitely many cycle lengths survive the cycle inequality, so information about the approximation of log2 3 alone cannot exclude all nontrivial cycles, a point Halbeisen and Hungerbühler (1997) made earlier in another form. New in this book.\n- [Window lemma, the least element of a cycle lies in an explicit window](https://vsokolov.org/books/collatz/results.html#window_lemma_least_cycle_element) (Lemma 10.21, page 192; proved): Every element of a hypothetical Collatz cycle with m odd steps is at least an explicit lower bound and the least element is below the standard upper bound, so it lies in a window whose endpoints differ by a factor of about m over 3. New in this book.\n- [What arithmetic would suffice to exclude all Collatz cycles](https://vsokolov.org/books/collatz/results.html#what_arithmetic_would_suffice) (Corollary 10.22, page 193; conditional on the hypothesis that, for the function $f$ of the statement, every nontrivial cycle of the accelerated map with $m$ odd steps and $k$ steps in all has least element $M<m/(3\\Lambda f(m))$, where $\\Lambda=k\\log2-m\\log3$; no such bound is proved in the book): If an argument using the arithmetic of the parity word improved the standard upper bound on the least element of a cycle by a factor slightly above m over 3 for all large m, a finite verification would exclude every nontrivial cycle. New in this book.\n\n#### Key terms\n\nCollatz conjecture, 3x+1 problem, nontrivial cycle, cycle length bound, cycle identity, continued fraction, convergents, semiconvergents, best one sided approximation, mediant lemma, Diophantine approximation, irrationality measure, linear forms in logarithms, Baker's method, verification range, rational cycles, negative cycles, window lemma, Erdos problem 125, AlphaProof Nexus, Lean 4, Barina, Hancl"
+   "title": "Three Point Inequalities and Similar Triangles",
+   "stem": "10_three_point_inequalities_and_similar_triangles",
+   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/10_three_point_inequalities_and_similar_triangles.md",
+   "first_page": "169",
+   "last_page": "182",
+   "pages": 14,
+   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/collatz/main/summaries/10_three_point_inequalities_and_similar_triangles.md",
+   "summary": "This chapter asks what the three point inequality for Bregman divergences, the core of convergence proofs for majorization minimization (MM) and accelerated gradient methods, says about Switching MM (the authors' method) and the Collatz map (the 3x+1 problem). It uses relative smoothness, the method of similar triangles and performance estimation. For convex L smooth functions it proves that Switching MM with momentum beta, whose long step 1+beta is at most the golden ratio, has function value error at most L R^2/((2+beta) N) at even N (R the initial distance to a minimizer), and that the 1/J^2 rate in J similar triangles steps survives any switching with plain gradient steps. It conjectures the exact worst case L R^2/((4+2 beta) N+2) at even N for beta up to 0.68614. For the Syracuse map it proves an exact Bregman decomposition of log y_N minus log y_0 into a martingale term (in the stochastic model) and an Itakura Saito dissipation, bounded below by 0.029092 at every odd y at least 3, and explains why the optimality of the step is missing.\n\n#### From the literature\n\n- the three point identity for Bregman divergences (Chen and Teboulle 1993) and the classical three point inequality\n- relative smoothness (Bauschke, Bolte and Teboulle 2017; Lu, Freund and Nesterov 2018) and the classical 1/k rate of the MM step\n- Nesterov's accelerated method (Nesterov 1983, 2004), the accelerated proximal method (Beck and Teboulle 2009), and the method of similar triangles with its classical energy proof (Gasnikov and Nesterov 2018)\n- the exact worst case L R^2/(4N+2) of gradient descent (Drori and Teboulle 2014) and the interpolation conditions behind performance estimation (Taylor, Hendrickx and Glineur 2017)\n- long step schedules that beat gradient descent (Grimmer 2024; Altschuler and Parrilo 2025)\n- the Itakura Saito divergence as a Bregman divergence (Banerjee, Merugu, Dhillon and Ghosh 2005)\n\n#### New results\n\nOnly statements that are the authors' own are catalogued.\n\n- [Convex rate for Switching MM when the long step is at most the golden ratio](https://vsokolov.org/books/collatz/results.html#switching_mm_convex_rate_by_three_point_inequality) (Theorem 10.5, page 173; proved): On smooth convex functions the bound for Switching MM after N steps is L R^2/((2+beta) N), against L R^2/(2N) for gradient descent by the same argument, provided the long step 1+beta is at most the golden ratio, as it is for the book's beta = log_2 3 minus 1. New in this book.\n- [Exact convex worst case of Switching MM (conjecture)](https://vsokolov.org/books/collatz/results.html#switching_mm_exact_worst_case_conjecture) (Conjecture 10.6, page 174; open): Conjectured exact worst case L R^2/((4+2 beta) N+2) of Switching MM on smooth convex functions for even N and beta up to about 0.686, supported by performance estimation computations and proved in a later chapter for N = 4, and for N = 2 when beta is at most 0.6446. New in this book.\n- [Acceleration by similar triangles survives every switching rule](https://vsokolov.org/books/collatz/results.html#acceleration_survives_every_switching_rule) (Proposition 10.7, page 176; proved): Mixing similar triangles steps with plain gradient steps in any order, even one that depends on the iterates, never increases the energy, so the 1/J^2 rate in the number J of similar triangles steps is kept. New in this book.\n- [Bregman decomposition of the logarithmic change along a Syracuse orbit](https://vsokolov.org/books/collatz/results.html#bregman_decomposition_of_a_syracuse_orbit) (Proposition 10.8, page 177; proved): Along any Syracuse orbit the change of the logarithm is exactly a linear term minus a sum of Itakura Saito divergences, and in the stochastic model the linear term is a martingale and the dissipation has mean log(4/3) per step, the size of the drift. New in this book.\n- [Uniform lower bound on the Bregman dissipation of the Syracuse map](https://vsokolov.org/books/collatz/results.html#uniform_dissipation_of_the_syracuse_map) (Proposition 10.9, page 179; proved): At every odd y at least 3 the Itakura Saito divergence of the Syracuse multiplier S(y)/y from 1 is at least 0.029092, with equality only at y = 9, and its limit inferior as y grows is 0.037682. New in this book.\n\n#### Key terms\n\nthree point inequality, three point identity, Bregman divergence, Itakura Saito divergence, majorization minimization, MM algorithm, relative smoothness, Nesterov acceleration, accelerated gradient method, method of similar triangles, performance estimation, semidefinite programming, long step gradient descent, golden ratio, Switching MM, Syracuse map, Collatz conjecture, 3x+1 problem"
   },
   {
    "key": "11",
-   "title": "The Divergence Half",
-   "stem": "11_the_divergence_half",
-   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/11_the_divergence_half.md",
-   "first_page": "207",
-   "last_page": "224",
-   "pages": 18,
-   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/collatz/main/summaries/11_the_divergence_half.md",
-   "summary": "This chapter treats the divergence half of the Collatz conjecture (the 3x+1 problem): can the Syracuse orbit of a positive integer grow without bound? It proves a Cesàro identity linking the logarithmic growth of an orbit to the running mean of the halving exponents (the 2 adic valuations of 3y+1), and deduces that along a divergent orbit this mean has limit superior at most log_2 3, so the lower limit of its fraction of odd steps under the accelerated map is at least 1/log_2 3, about 0.631. The Cesàro liminf conjecture is shown equivalent to the divergence half, and the obvious empirical test is shown to be circular. The model chain on residues modulo 3^a, with independent Geometric(1/2) halving exponents, has a one step law that is the exact limit for random starting values and is exactly stationary after a strides. The chapter also describes Tao's theorem, the Krasikov and Lagarias counting bound, equidistribution along single orbits, and three failed routes (equidistribution, Lyapunov certificates, uniform integrability).\n\n#### From the literature\n\n- the density theorem of Terras (1976, 1979) and Everett (1977): almost every integer falls below its starting value\n- the exponent log 3/log 4 of Korec (1994) for almost every orbit\n- the theorem of Tao (2022): almost all orbits attain almost bounded values in logarithmic density, with Syracuse random variables, a fine scale mixing estimate modulo powers of 3, and the identities behind the model chain (loss of memory modulo 3^a, the one step recursion and the stationary law)\n- the counting bound of Krasikov and Lagarias (2003): at least x^0.84 integers up to x reach 1\n- the branching random walk model of preimages of Lagarias and Weiss (1992)\n- the verification up to 2^71 of Bařina (2025)\n- the elementary fact, noted many times, that a divergent orbit needs at least a fraction 1/log_2 3 of odd steps\n\n#### New results\n\nOnly statements that are the authors' own are catalogued.\n\n- [Cesàro identity for the halving exponents of a Syracuse orbit](https://vsokolov.org/books/collatz/results.html#cesaro_identity) (Proposition 11.3, page 209; proved): Over N strides of the Syracuse map, the logarithmic change of the orbit equals a sum of logarithms minus N times the running mean of the halving exponents times log 2, which ties growth of the orbit to that running mean. New in this book.\n- [Cesàro liminf conjecture on the running mean of the halving exponents](https://vsokolov.org/books/collatz/results.html#cesaro_liminf_conjecture) (Conjecture 11.6, page 210; open): Along every Syracuse orbit the lower limit of the running average of the halving exponents is strictly above log2 3, a statement the book shows is equivalent to the divergence half of the Collatz conjecture. New in this book.\n\n#### Key terms\n\nCollatz conjecture, 3x+1 problem, divergence half, divergent orbit, Syracuse map, halving exponent, 2 adic valuation, Cesàro identity, Cesaro identity, Cesàro liminf conjecture, running mean, Terras density theorem, Tao theorem, almost all orbits, logarithmic density, Syracuse random variable, model chain, stationary law, equidistribution, total variation, Krasikov and Lagarias, branching random walk, Lyapunov certificate, uniform integrability"
+   "title": "Cycles and Continued Fractions",
+   "stem": "11_cycles_and_continued_fractions",
+   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/11_cycles_and_continued_fractions.md",
+   "first_page": "185",
+   "last_page": "220",
+   "pages": 36,
+   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/collatz/main/summaries/11_cycles_and_continued_fractions.md",
+   "summary": "This chapter studies the cycle half of the Collatz conjecture (the 3x+1 problem): can the orbit of a positive integer close up into a nontrivial cycle? A cycle with r odd elements and s halvings satisfies the cycle identity, which puts s/r above log_2 3 and bounds the least element through the one sided distance from r log_2 3 up to the next integer. Continued fractions and a mediant lemma give a self contained proof of the classical fact that the first value of r not excluded by a verification range is a best one sided approximation. With Bařina's verification up to 2^68 or 2^71 this gives at least 72,057,431,991 odd elements for every nontrivial cycle, a bound the authors do not claim as new. The chapter also proves Diophantine insufficiency (infinitely many r survive every verification range), a window lemma and what arithmetic information would suffice, and covers an exact integer certificate, negative and rational cycles, Erdős problem 125, Lean 4 and a refined open problem.\n\n#### From the literature\n\n- the cycle identity and the bound on the least element, classical since the 1970s (Böhm and Sontacchi 1978, Steiner 1978)\n- the criterion of Crandall (1978) and the bound of at least 17,087,915 elements under the accelerated map of Eliahou (1993)\n- the exclusion of m cycles (m ascending runs) for m = 1 (Steiner 1978), up to 68 (Simons and de Weger 2005) and up to 91 (Hercher 2023)\n- the length bounds of Hercher (2018), Puchert (2018) and Hercher (2023), the last at least 137,528,045,312 odd elements, conditional on verification to 3·2^69 and so unconditional since Bařina (2025)\n- the verification up to 2^68 and 2^71 of Bařina (2021, 2025)\n- the optimal criterion of Halbeisen and Hungerbühler (1997) and the rational cycles of Lagarias (1990)\n- the classical description of the best one sided approximations by intermediate fractions, stated and proved in Hančl and Turek (2019)\n- Erdős problem 125 of Burr, Erdős, Graham and Li (1996), settled by AlphaProof Nexus (Tsoukalas and collaborators 2026)\n\n#### New results\n\nOnly statements that are the authors' own are catalogued.\n\n- [Diophantine insufficiency, infinitely many cycle lengths survive any verification range](https://vsokolov.org/books/collatz/results.html#diophantine_insufficiency_cycle_lengths) (Proposition 11.20, page 205; proved): However far the verification of the Collatz conjecture is pushed, infinitely many cycle lengths survive the cycle inequality, so information about the approximation of log2 3 alone cannot exclude all nontrivial cycles, a point Halbeisen and Hungerbühler (1997) made earlier in another form. New in this book.\n- [Window lemma, the least element of a cycle lies in an explicit window](https://vsokolov.org/books/collatz/results.html#window_lemma_least_cycle_element) (Lemma 11.21, page 206; proved): Every element of a hypothetical Collatz cycle with m odd steps is at least an explicit lower bound and the least element is below the standard upper bound, so it lies in a window whose endpoints differ by a factor of about m over 3. New in this book.\n- [What arithmetic would suffice to exclude all Collatz cycles](https://vsokolov.org/books/collatz/results.html#what_arithmetic_would_suffice) (Corollary 11.22, page 207; conditional on the hypothesis that, for the function $f$ of the statement, every nontrivial cycle of the accelerated map with $m$ odd steps and $k$ steps in all has least element $M<m/(3\\Lambda f(m))$, where $\\Lambda=k\\log2-m\\log3$; no such bound is proved in the book): If an argument using the arithmetic of the parity word improved the standard upper bound on the least element of a cycle by a factor slightly above m over 3 for all large m, a finite verification would exclude every nontrivial cycle. New in this book.\n\n#### Key terms\n\nCollatz conjecture, 3x+1 problem, nontrivial cycle, cycle length bound, cycle identity, continued fraction, convergents, semiconvergents, best one sided approximation, mediant lemma, Diophantine approximation, irrationality measure, linear forms in logarithms, Baker's method, verification range, rational cycles, negative cycles, window lemma, Erdos problem 125, AlphaProof Nexus, Lean 4, Barina, Hancl"
   },
   {
    "key": "12",
-   "title": "The Path to Collatz",
-   "stem": "12_the_path_to_collatz",
-   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/12_the_path_to_collatz.md",
-   "first_page": "225",
-   "last_page": "230",
-   "pages": 6,
-   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/collatz/main/summaries/12_the_path_to_collatz.md",
-   "summary": "What would a proof of the Collatz conjecture (the 3x+1 problem) have to contain, and where does each part of the book sit relative to it? The chapter splits the conjecture for the Syracuse map into a divergence half, whether an orbit can be unbounded, equivalent to the Cesàro conjecture on the running mean of the halving exponents relative to log_2 3, and a cycle half, whether a nontrivial cycle exists, governed by the cycle identity and one sided Diophantine approximation of log_2 3. For the divergence half it examines equidistribution modulo powers of 2, Lyapunov certificates of descent and uniform integrability of the iterate martingale, and shows where each fails: statistics over random starting values do not transfer to one orbit, and monotone certificates and optional stopping are blocked. For the cycle half the verified range (2^68, now 2^71) and the semiconvergent ladder of log_2 3 give at least 72,057,431,991 odd elements in a nontrivial cycle, no irrationality measure can close the gap, and the window lemma shows that what is missing is arithmetic information about the parity word, such as whether 2^k minus 3^m can divide c_k. It lists the constants a mechanism must reproduce and the role of Lean verification.\n\n#### From the literature\n\nThe split into a divergence half and a cycle half (Lagarias 1985, 2010); the density theorem and uniform distribution of parity vectors of Terras (1976) and Everett (1977); the parity heuristic of Crandall (1978) and the stochastic models of Lagarias and Weiss (1992); the theorem of Tao (2022) on almost bounded values of almost all orbits; the reduction of cycles to Diophantine approximation of log_2 3 by Crandall (1978), Steiner (1978) and Eliahou (1993); best one sided approximations of Hančl and Turek (2019); rational cycles in Halbeisen and Hungerbühler (1997); verification to 2^71 by Bařina (2025); the cycle length record of Hercher (2023).\n\n#### New results\n\nThe chapter states no theorem of its own; its Notes credit the proof that Diophantine information cannot exclude all cycles, and the window corollary, to the authors (Chapter 10).\n\nNo new results of this chapter are catalogued.\n\n#### Key terms\n\nCollatz conjecture, 3x+1 problem, Syracuse map, accelerated map, divergence half, cycle half, nontrivial cycle, cycle identity, Cesàro conjecture, Cesaro conjecture, unbounded orbit, Lyapunov certificate, uniform integrability, optional stopping, mediant lemma, semiconvergent ladder, one sided Diophantine approximation, irrationality measure of log_2 3, window lemma, verification range, Lean formalization, Barina, Hancl, Hungerbuhler"
+   "title": "The Divergence Half",
+   "stem": "12_the_divergence_half",
+   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/12_the_divergence_half.md",
+   "first_page": "221",
+   "last_page": "238",
+   "pages": 18,
+   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/collatz/main/summaries/12_the_divergence_half.md",
+   "summary": "This chapter treats the divergence half of the Collatz conjecture (the 3x+1 problem): can the Syracuse orbit of a positive integer grow without bound? It proves a Cesàro identity linking the logarithmic growth of an orbit to the running mean of the halving exponents (the 2 adic valuations of 3y+1), and deduces that along a divergent orbit this mean has limit superior at most log_2 3, so the lower limit of its fraction of odd steps under the accelerated map is at least 1/log_2 3, about 0.631. The Cesàro liminf conjecture is shown equivalent to the divergence half, and the obvious empirical test is shown to be circular. The model chain on residues modulo 3^a, with independent Geometric(1/2) halving exponents, has a one step law that is the exact limit for random starting values and is exactly stationary after a strides. The chapter also describes Tao's theorem, the Krasikov and Lagarias counting bound, equidistribution along single orbits, and three failed routes (equidistribution, Lyapunov certificates, uniform integrability), and it notes that if the positive density theorems of 2026 described in Chapter 13 hold, convergence to 1 on a set of logarithmic density one would already imply the conjecture.\n\n#### From the literature\n\n- the density theorem of Terras (1976, 1979) and Everett (1977): almost every integer falls below its starting value\n- the exponent log 3/log 4 of Korec (1994) for almost every orbit\n- the theorem of Tao (2022): almost all orbits attain almost bounded values in logarithmic density, with Syracuse random variables, a fine scale mixing estimate modulo powers of 3, and the identities behind the model chain (loss of memory modulo 3^a, the one step recursion and the stationary law)\n- the counting bound of Krasikov and Lagarias (2003): at least x^0.84 integers up to x reach 1\n- the branching random walk model of preimages of Lagarias and Weiss (1992)\n- the verification up to 2^71 of Bařina (2025)\n- the elementary fact, noted many times, that a divergent orbit needs at least a fraction 1/log_2 3 of odd steps\n\n#### New results\n\nOnly statements that are the authors' own are catalogued.\n\n- [Cesàro identity for the halving exponents of a Syracuse orbit](https://vsokolov.org/books/collatz/results.html#cesaro_identity) (Proposition 12.3, page 223; proved): Over N strides of the Syracuse map, the logarithmic change of the orbit equals a sum of logarithms minus N times the running mean of the halving exponents times log 2, which ties growth of the orbit to that running mean. New in this book.\n- [Cesàro liminf conjecture on the running mean of the halving exponents](https://vsokolov.org/books/collatz/results.html#cesaro_liminf_conjecture) (Conjecture 12.6, page 224; open): Along every Syracuse orbit the lower limit of the running average of the halving exponents is strictly above log2 3, a statement the book shows is equivalent to the divergence half of the Collatz conjecture. New in this book.\n\n#### Key terms\n\nCollatz conjecture, 3x+1 problem, divergence half, divergent orbit, Syracuse map, halving exponent, 2 adic valuation, Cesàro identity, Cesaro identity, Cesàro liminf conjecture, running mean, Terras density theorem, Tao theorem, almost all orbits, logarithmic density, Syracuse random variable, model chain, stationary law, equidistribution, total variation, Krasikov and Lagarias, branching random walk, Lyapunov certificate, uniform integrability"
   },
   {
    "key": "13",
-   "title": "A Computational Path",
-   "stem": "13_a_computational_path",
-   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/13_a_computational_path.md",
-   "first_page": "231",
-   "last_page": "238",
-   "pages": 8,
-   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/collatz/main/summaries/13_a_computational_path.md",
-   "summary": "What can computation contribute to a proof of the Collatz conjecture, and does the majorization minimization (MM) reading say where to point it? The chapter separates verification, certificates and evidence. For the cycle half it lays out a five step programme: verification beyond 2^71.88, a Lean proof of the bound of 72,057,431,991 odd elements, a modular sieve on the numbers c_k(w) of the parity word (in runs up to m = 40 and primes below 3000 it excludes 16 shapes, all with m at most 8, of which only eight are not already excluded by size), window sharpening, and a divisibility theorem. For the divergence half it studies residue certificates and the residue sieve, whose uncovered classes grow like 2^(0.95 k), and proves that the exceptional set of 2 adic integers with infinite coefficient stopping time is closed, null and contains one point of each known negative cycle, and that every uncovered class contains infinitely many positive integers, so no finite residue computation closes the divergence half. It discusses the automated termination prover of Yolcu, Aaronson and Heule, reads Lyapunov potentials, the horizon, Switching MM and potentials with memory as constraints on any certificate, and shows why Polyak's heavy ball, gradient dominance and averaging do not transfer to the conjecture.\n\n#### From the literature\n\nThe density theorem and parity vectors of Terras (1976) and Everett (1977), with its exponential form in Lagarias (1985); the 2 adic formulation of the stopping time problem by Terras (1976) and Lagarias (1985) and the noniterative form of Bernstein (1994); the rewriting and matrix interpretation prover of Yolcu, Aaronson and Heule (2023); the verification to 2^71 of Bařina (2025) and the cycle accounting of Hercher (2023); the heavy ball of Polyak (1964), gradient dominance and the step size of Polyak (1987), and averaging of Ruppert (1988), Polyak (1990) and Polyak and Juditsky (1992).\n\n#### New results\n\nThe proposition on residue certificates is the authors' in the form stated, although each ingredient is classical; the residue sieve counts to depth 400 and the divisibility sieve experiment are also the authors'.\n\n- [Residue certificates cannot prove descent for all integers (the exceptional 2 adic set)](https://vsokolov.org/books/collatz/results.html#residue_certificates_cannot_prove_descent_for_all_integers) (Proposition 13.1, page 233; proved): No residue certificate of finite level can certify descent for every integer, because every residue class it leaves uncovered contains infinitely many positive integers, while the 2 adic integers with infinite coefficient stopping time form a closed null set that contains a point of each known negative cycle. New in this book.\n\n#### Key terms\n\ncomputational path, residue sieve, residue certificate, coefficient stopping time, exceptional 2 adic set, Haar measure, binary entropy, divisibility sieve, window sharpening, Lean proof of the cycle bound, termination prover, string rewriting, matrix interpretation, joint spectral radius, switched system, potential with memory, heavy ball, Polyak and Łojasiewicz inequality, Lojasiewicz, Foster drift condition, Barina"
+   "title": "Positive Density from the Backward Tree",
+   "stem": "13_positive_density_from_the_backward_tree",
+   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/13_positive_density_from_the_backward_tree.md",
+   "first_page": "239",
+   "last_page": "258",
+   "pages": 20,
+   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/collatz/main/summaries/13_positive_density_from_the_backward_tree.md",
+   "summary": "This chapter asks what recent positive density theorems say about the Collatz conjecture (the 3x+1 problem). It presents four unrefereed preprints of 2026 by Mazur, Shaik and Lau, those of Mazur and Lau with Lean formalizations: the integers whose orbit under the Collatz map reaches any target t not divisible by 3 have positive lower density, and a positive proportion of integers n reach 1 within 10.46 log n steps. The proof runs the Syracuse map backwards: it counts predecessors in the inverse tree, weighs backward words by a power of 3 over a power of 2, and uses fine scale mixing of the Syracuse random variable modulo powers of 3. The chapter explains the argument, with Lau's propagation step and the seeds it starts from, and the corollary that upper natural density one for the integers reaching 1 would force every orbit to reach 1. It shows that the forward model of the book is 2 adic and the backward model 3 adic, so that the forward walk of log x and the backward walk of the word weights are one random walk run in two directions. It adds a proposition that, granting the preprints and the verification up to 2^71, a bounded form of Tao's theorem would imply the conjecture. Its computations give the exact backward tree from 1 below 2^24, the step counts below 3 million, the first crossings of random words, and the exact offset law to level 18, where the largest Fourier coefficient stays between 3.6/d^2 and 3.9/d^2 from level 7 on and sits at a power of 2. The book compared the statements with the preprints but has not checked the proofs. It poses problems B1 (bounded Tao), B2 (the mixing rate) and B3 (the sharp rate).\n\n#### From the literature\n\n- the bound of Krasikov and Lagarias (2003): about x^0.84 integers up to x provably reach 1\n- the almost bounded values theorem (Tao 2022), with fine scale mixing and Fourier decay of the Syracuse random variable\n- the positive lower density theorems of Mazur (2026), with his almost bounded theorem in natural density (2026)\n- the step constant 3/log(4/3), about 10.428, of Shaik (2026)\n- the explicit constants and Fourier decay of Lau (2026), whose mathematics and Lean formalization were produced by the AxiomProver system\n- the propagation of positive density from a seed, Mazur (2026), made explicit by Lau (2026)\n- the density one corollary of Mazur (2026, upper density) and Lau (2026, natural density)\n- the verification up to 2^71 of Bařina (2025)\n\n#### New results\n\nOnly statements that are the authors' own are catalogued, not the theorems of Mazur, Shaik and Lau.\n\n- [A bounded form of Tao's theorem would imply the Collatz conjecture, given the positive density theorems](https://vsokolov.org/books/collatz/results.html#bounded_tao_would_imply_collatz_given_positive_density) (Proposition 13.3, page 241; conditional on the positive density theorem of Mazur (2026) or of Lau (2026), recent unrefereed preprints with Lean formalizations whose proofs the book does not check: for every integer $t\\ge1$ not divisible by $3$, the set of positive integers whose orbit under the Collatz map reaches $t$ has positive lower natural density; the computer verification of Bařina (2025) that every positive integer up to $2^{71}$ has an orbit that reaches $1$, which the book cites and does not repeat): If the positive density theorems of Mazur and Lau are right, the Collatz conjecture would follow from a bounded form of Tao's theorem, namely that the least value on the orbit of n is at most 2 to the power 71 for all n in a set of logarithmic density one. New in this book.\n\n#### Key terms\n\nCollatz conjecture, 3x+1 problem, Syracuse problem, positive density, positive lower density, logarithmic density, upper natural density, backward tree, inverse tree, backward word, offset, Syracuse random variable, fine scale mixing, total stopping time, first crossing, propagation, seed, residue density, 2 adic, 3 adic, bounded Tao, Mazur, Shaik, Lau, AxiomProver, Lean formalization, unrefereed preprint"
   },
   {
    "key": "14",
-   "title": "Samplers and the Horizon",
-   "stem": "14_samplers_and_the_horizon",
-   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/14_samplers_and_the_horizon.md",
-   "first_page": "239",
-   "last_page": "254",
-   "pages": 16,
-   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/collatz/main/summaries/14_samplers_and_the_horizon.md",
-   "summary": "Can simulation, in the form of nested sampling, vertical likelihood Monte Carlo or split sampling, say anything about the Collatz conjecture in polynomial time? The chapter treats the question as rare event simulation: put an energy on the integers, declare the high energy ones interesting, and estimate the prior volume of level sets through the layer cake identity and a weighted slice sampler. The prior is Haar measure on the 2 adic integers and the two energies are the coefficient stopping time and the total stopping time. It proves that level sets of the coefficient stopping time are unions of residue classes of exactly computable volume (Chernoff rate D = 0.0347, hazard staircase, partition function finite exactly for beta up to D), that the total stopping time is almost surely infinite under Haar measure so a finite box is needed, and that a perfect split sampler for the coefficient stopping time, with no inner Markov chain, costs O(K) per draw after an O(K^2) table and reaches residues of prior mass about one in 860 million at depth 400. Beyond the horizon set by bit length, orbits of nearby integers merge, deep level sets are a few trees of merged orbits, and local samplers rarely leave the tree where they start, as a census of total stopping times below 2^26 shows. Simulation cannot decide the conjecture.\n\n#### From the literature\n\nNested sampling of Skilling (2006); vertical likelihood Monte Carlo and the weighted slice sampler of Polson and Scott (2015); split sampling, with its Rao Blackwellized volume curve and product estimator, of Birge, Chang and Polson (2013); the slice sampler of Neal (2003); the recursive method of uniform generation from counts of Nijenhuis and Wilf (1978), the backward step of the exact sampler; the Terras bijection and density theorem (Terras 1976, Everett 1977); the merging of consecutive integers under the map, called classical in the book, as in Garner (1985) on consecutive integers with the same total stopping time.\n\n#### New results\n\nThe perfect sampler is the authors' as a sampler (its backward step is the method of Nijenhuis and Wilf), and so are the two energies proposition, the coalescence heuristic and the tree decomposition.\n\n- [Two energies under Haar measure, the coefficient stopping time and the total stopping time](https://vsokolov.org/books/collatz/results.html#two_energies_coefficient_and_total_stopping_time) (Proposition 14.1, page 241; proved): The level sets of the coefficient stopping time are unions of residue classes with exactly computable volume, while the total stopping time is almost surely infinite under Haar measure, which separates what a sampler can reach from what the conjecture is about. New in this book.\n- [Perfect split sampling for the coefficient stopping time](https://vsokolov.org/books/collatz/results.html#perfect_split_sampling_coefficient_stopping_time) (Theorem 14.2, page 242; proved): An exact sampler with no inner Markov chain draws residues whose coefficient stopping time exceeds a given depth, in time linear in the depth after a quadratic table, even when their prior mass is exponentially small. New in this book.\n- [Coalescence of orbits shifts the total stopping time](https://vsokolov.org/books/collatz/results.html#orbit_coalescence_shifts_total_stopping_time) (Proposition 14.4, page 245; proved): If the orbits of two positive integers meet at a point other than 1 or 2, their total stopping times differ by exactly the difference of the numbers of steps each takes to reach it. New in this book.\n\n#### Key terms\n\nnested sampling, vertical likelihood, split sampling, weighted slice sampler, layer cake identity, rare event simulation, level sets, prior volume, perfect sampling, exact sampling, Gibbs sampler, coefficient stopping time, total stopping time, Haar measure, Chernoff rate, partition function, coalescence, trees of slow integers"
+   "title": "The Path to Collatz",
+   "stem": "14_the_path_to_collatz",
+   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/14_the_path_to_collatz.md",
+   "first_page": "259",
+   "last_page": "264",
+   "pages": 6,
+   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/collatz/main/summaries/14_the_path_to_collatz.md",
+   "summary": "What would a proof of the Collatz conjecture (the 3x+1 problem) have to contain, and where does each part of the book sit relative to it? The chapter splits the conjecture for the Syracuse map into a divergence half, whether an orbit can be unbounded, equivalent to the Cesàro conjecture on the running mean of the halving exponents relative to log_2 3, and a cycle half, whether a nontrivial cycle exists, governed by the cycle identity and one sided Diophantine approximation of log_2 3. For the divergence half it examines equidistribution modulo powers of 2, Lyapunov certificates of descent and uniform integrability of the iterate martingale, and shows where each fails: statistics over random starting values do not transfer to one orbit, and monotone certificates and optional stopping are blocked. For the cycle half the verified range (2^68, now 2^71) and the semiconvergent ladder of log_2 3 give at least 72,057,431,991 odd elements in a nontrivial cycle, no irrationality measure can close the gap, and the window lemma shows that what is missing is arithmetic information about the parity word, such as whether 2^k minus 3^m can divide c_k. It lists the constants a mechanism must reproduce and the role of Lean verification.\n\n#### From the literature\n\nThe split into a divergence half and a cycle half (Lagarias 1985, 2010); the density theorem and uniform distribution of parity vectors of Terras (1976) and Everett (1977); the parity heuristic of Crandall (1978) and the stochastic models of Lagarias and Weiss (1992); the theorem of Tao (2022) on almost bounded values of almost all orbits; the reduction of cycles to Diophantine approximation of log_2 3 by Crandall (1978), Steiner (1978) and Eliahou (1993); best one sided approximations of Hančl and Turek (2019); rational cycles in Halbeisen and Hungerbühler (1997); verification to 2^71 by Bařina (2025); the cycle length record of Hercher (2023).\n\n#### New results\n\nThe chapter states no theorem of its own; its Notes credit the proof that Diophantine information cannot exclude all cycles, and the window corollary, to the authors (Chapter 11).\n\nNo new results of this chapter are catalogued.\n\n#### Key terms\n\nCollatz conjecture, 3x+1 problem, Syracuse map, accelerated map, divergence half, cycle half, nontrivial cycle, cycle identity, Cesàro conjecture, Cesaro conjecture, unbounded orbit, Lyapunov certificate, uniform integrability, optional stopping, mediant lemma, semiconvergent ladder, one sided Diophantine approximation, irrationality measure of log_2 3, window lemma, verification range, Lean formalization, Barina, Hancl, Hungerbuhler"
   },
   {
    "key": "15",
-   "title": "Open Problems and Computational Projects",
-   "stem": "15_open_problems_and_computational_projects",
-   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/15_open_problems_and_computational_projects.md",
-   "first_page": "255",
-   "last_page": "262",
+   "title": "A Computational Path",
+   "stem": "15_a_computational_path",
+   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/15_a_computational_path.md",
+   "first_page": "265",
+   "last_page": "272",
    "pages": 8,
-   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/collatz/main/summaries/15_open_problems_and_computational_projects.md",
-   "summary": "Which questions does the book leave open, and which finite computations are worth doing? The chapter restates the open problems of the book in their sharpest form, for the divergence half of the Collatz conjecture (O1 Cesàro equidistribution, O2 trajectory mixing modulo powers of 3, O3 and O3' certificates with growing horizon and potentials of unbounded depth, O4 the third cumulant of total stopping times and the variance deficit, O5 uniform integrability, which is settled), for the cycle half (C1 an arithmetic sharpening of the cycle identity, C2 effective irrationality measures for log_2 3, C3 sharper accountings at the next rungs of the ladder), and for Switching MM (S1 rates beyond quadratics and S3 the best period two ratio, both partly settled, S2 stochastic analysis, S4 adaptive switching). It says what is known for each and flags formulations that turn out to be wrong. It then lists nine computational projects, P1 to P9, each with a success criterion: a machine checked cycle bound in Lean 4, thresholds and the window lemma, orbits from very large starting values, total stopping time cumulants at scale, Switching MM against Nesterov, heavy ball and Adam, periodic schedules, Erdős 125 beyond 4^13, perfect samplers beyond the coefficient stopping time, and trees of slow integers. The unnumbered Gallery of Orbits that follows shows seven computed plates.\n\n#### From the literature\n\nQuestions going back to Terras (1976), Steiner (1978) and Eliahou (1993), restated as O1, O3, C2 and the cycle formulation; the fine scale mixing results of Tao (2022) behind O2; the explicit irrationality measure of log_2 3 of Rhin (1987); the cycle length record of Hercher (2023) and the verification to 2^71 of Bařina (2025); the note of Polson and Sokolov (2026) on the AlphaProof Nexus system of Tsoukalas and others (2026), the source of C1 and of the Erdős 125 analogy; in the gallery, the density bound of Hasler and Melfi (2024) and the branching random walk model of Lagarias and Weiss (1992).\n\n#### New results\n\nThis chapter poses problems and projects and proves no theorem of its own.\n\n- [Trajectory mixing of Syracuse residues modulo powers of 3](https://vsokolov.org/books/collatz/results.html#trajectory_mixing_of_syracuse_residues) (Problem O2, page 255; open): Asks for a proof that, from a random starting value, the residues modulo a power of 3 along a Syracuse orbit are distributed as in the random model of the book, whose Markov chain mixes exactly; numerically, modulo 243, they approach the model law at the rate of independent sampling. New in this book.\n- [Failure fraction of Lyapunov potentials of growing depth for the Syracuse map](https://vsokolov.org/books/collatz/results.html#failure_fraction_of_potentials_of_growing_depth) (Problem O3$'$, page 256; open): Asks how small the fraction of odd integers at which a Lyapunov potential fails can be made when the potential may read further ahead along the orbit, and whether it can be driven to zero; the answer is a question about the random model of the book, not about the arithmetic of the map. New in this book.\n- [Boundedness of the variance deficit and the third cumulant of total stopping times](https://vsokolov.org/books/collatz/results.html#bounded_variance_deficit_of_total_stopping_times) (Problem O4, page 256; open): Asks for a proof that the shortfall of the variance of total stopping times against the random model, which an exact census finds to be an additive and apparently bounded term concentrated in the final descent of the orbit, stays bounded as the starting values grow, and for an explanation of their skewness, which is smaller than the model predicts. New in this book.\n- [Arithmetic sharpening of the window bound on the least element of a Collatz cycle](https://vsokolov.org/books/collatz/results.html#arithmetic_sharpening_of_the_cycle_window) (Problem C1, page 257; open): Asks for an improvement, drawn from the arithmetic of the parity vector, of the bound on the least element of a hypothetical Collatz cycle; a strong enough improvement would reduce the cycle half of the conjecture to a finite computation. First stated in Polson and Sokolov (2026), Five Bayesian problems raised by AlphaProof Nexus, manuscript.\n- [Verification ranges that exclude the later rungs under Hercher's sharper accounting](https://vsokolov.org/books/collatz/results.html#verification_ranges_for_later_rungs_under_hercher_accounting) (Problem C3, page 258; open): Asks for the computation that would extend Hercher's computer assisted exclusion of Collatz cycles of a given length to the next lengths in line, the rungs of the one sided continued fraction ladder of log2 3. New in this book.\n- [Exact worst case function gap rate of Switching MM for small condition numbers](https://vsokolov.org/books/collatz/results.html#exact_function_gap_rate_of_switching_mm_for_small_condition_numbers) (Problem S1, page 258; open): The worst case rate of Switching MM is known exactly for the distance to the minimizer, and for the function gap on ill conditioned problems; the problem asks for the exact function gap rate, and the function that attains it, on well conditioned problems, where numerical performance estimation shows that the known bound is not tight. New in this book.\n- [Five thirds noise bound of Switching MM beyond quadratics](https://vsokolov.org/books/collatz/results.html#five_thirds_noise_bound_of_switching_mm_beyond_quadratics) (Problem S2, page 258; open): Asks to extend the proven robustness of Switching MM to gradient noise, a stationary error at most five thirds of that of gradient descent for every momentum coefficient below one, from quadratic objectives to all smooth strongly convex objectives. New in this book.\n- [A principled adaptive switching rule for Switching MM](https://vsokolov.org/books/collatz/results.html#adaptive_switching_rule_for_switching_mm) (Problem S4, page 259; open): Asks for a rule, using only the smoothness constant and observed function values, that decides when Switching MM injects momentum, keeping its proven robustness to gradient noise while matching the speed of momentum applied at every step on noiseless problems. New in this book.\n\n#### Key terms\n\nopen problems, Cesàro equidistribution, trajectory mixing, certificates with growing horizon, potentials of unbounded depth, third cumulant, variance deficit, arithmetic sharpening of the cycle identity, effective irrationality measure, adaptive switching, computational projects, Lean formalization, Erdős 125, Erdos 125, perfect samplers, trees of slow integers, gallery of orbits"
+   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/collatz/main/summaries/15_a_computational_path.md",
+   "summary": "What can computation contribute to a proof of the Collatz conjecture, and does the majorization minimization (MM) reading say where to point it? The chapter separates verification, certificates and evidence. For the cycle half it lays out a five step programme: verification beyond 2^71.88, a Lean proof of the bound of 72,057,431,991 odd elements, a modular sieve on the numbers c_k(w) of the parity word (in runs up to m = 40 and primes below 3000 it excludes 16 shapes, all with m at most 8, of which only eight are not already excluded by size), window sharpening, and a divisibility theorem. For the divergence half it studies residue certificates and the residue sieve, whose uncovered classes grow like 2^(0.95 k), and proves that the exceptional set of 2 adic integers with infinite coefficient stopping time is closed, null and contains one point of each known negative cycle, and that every uncovered class contains infinitely many positive integers, so no finite residue computation closes the divergence half. It discusses the automated termination prover of Yolcu, Aaronson and Heule, reads Lyapunov potentials, the horizon, Switching MM and potentials with memory as constraints on any certificate, and shows why Polyak's heavy ball, gradient dominance and averaging do not transfer to the conjecture.\n\n#### From the literature\n\nThe density theorem and parity vectors of Terras (1976) and Everett (1977), with its exponential form in Lagarias (1985); the 2 adic formulation of the stopping time problem by Terras (1976) and Lagarias (1985) and the noniterative form of Bernstein (1994); the rewriting and matrix interpretation prover of Yolcu, Aaronson and Heule (2023); the verification to 2^71 of Bařina (2025) and the cycle accounting of Hercher (2023); the heavy ball of Polyak (1964), gradient dominance and the step size of Polyak (1987), and averaging of Ruppert (1988), Polyak (1990) and Polyak and Juditsky (1992).\n\n#### New results\n\nThe proposition on residue certificates is the authors' in the form stated, although each ingredient is classical; the residue sieve counts to depth 400 and the divisibility sieve experiment are also the authors'.\n\n- [Residue certificates cannot prove descent for all integers (the exceptional 2 adic set)](https://vsokolov.org/books/collatz/results.html#residue_certificates_cannot_prove_descent_for_all_integers) (Proposition 15.1, page 267; proved): No residue certificate of finite level can certify descent for every integer, because every residue class it leaves uncovered contains infinitely many positive integers, while the 2 adic integers with infinite coefficient stopping time form a closed null set that contains a point of each known negative cycle. New in this book.\n\n#### Key terms\n\ncomputational path, residue sieve, residue certificate, coefficient stopping time, exceptional 2 adic set, Haar measure, binary entropy, divisibility sieve, window sharpening, Lean proof of the cycle bound, termination prover, string rewriting, matrix interpretation, joint spectral radius, switched system, potential with memory, heavy ball, Polyak and Łojasiewicz inequality, Lojasiewicz, Foster drift condition, Barina"
+  },
+  {
+   "key": "16",
+   "title": "Samplers and the Horizon",
+   "stem": "16_samplers_and_the_horizon",
+   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/16_samplers_and_the_horizon.md",
+   "first_page": "273",
+   "last_page": "288",
+   "pages": 16,
+   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/collatz/main/summaries/16_samplers_and_the_horizon.md",
+   "summary": "Can simulation, in the form of nested sampling, vertical likelihood Monte Carlo or split sampling, say anything about the Collatz conjecture in polynomial time? The chapter treats the question as rare event simulation: put an energy on the integers, declare the high energy ones interesting, and estimate the prior volume of level sets through the layer cake identity and a weighted slice sampler. The prior is Haar measure on the 2 adic integers and the two energies are the coefficient stopping time and the total stopping time. It proves that level sets of the coefficient stopping time are unions of residue classes of exactly computable volume (Chernoff rate D = 0.0347, hazard staircase, partition function finite exactly for beta up to D), that the total stopping time is almost surely infinite under Haar measure so a finite box is needed, and that a perfect split sampler for the coefficient stopping time, with no inner Markov chain, costs O(K) per draw after an O(K^2) table and reaches residues of prior mass about one in 860 million at depth 400. Beyond the horizon set by bit length, orbits of nearby integers merge, deep level sets are a few trees of merged orbits, and local samplers rarely leave the tree where they start, as a census of total stopping times below 2^26 shows. Simulation cannot decide the conjecture.\n\n#### From the literature\n\nNested sampling of Skilling (2006); vertical likelihood Monte Carlo and the weighted slice sampler of Polson and Scott (2015); split sampling, with its Rao Blackwellized volume curve and product estimator, of Birge, Chang and Polson (2013); the slice sampler of Neal (2003); the recursive method of uniform generation from counts of Nijenhuis and Wilf (1978), the backward step of the exact sampler; the Terras bijection and density theorem (Terras 1976, Everett 1977); the merging of consecutive integers under the map, called classical in the book, as in Garner (1985) on consecutive integers with the same total stopping time.\n\n#### New results\n\nThe perfect sampler is the authors' as a sampler (its backward step is the method of Nijenhuis and Wilf), and so are the two energies proposition, the coalescence heuristic and the tree decomposition.\n\n- [Two energies under Haar measure, the coefficient stopping time and the total stopping time](https://vsokolov.org/books/collatz/results.html#two_energies_coefficient_and_total_stopping_time) (Proposition 16.1, page 275; proved): The level sets of the coefficient stopping time are unions of residue classes with exactly computable volume, while the total stopping time is almost surely infinite under Haar measure, which separates what a sampler can reach from what the conjecture is about. New in this book.\n- [Perfect split sampling for the coefficient stopping time](https://vsokolov.org/books/collatz/results.html#perfect_split_sampling_coefficient_stopping_time) (Theorem 16.2, page 276; proved): An exact sampler with no inner Markov chain draws residues whose coefficient stopping time exceeds a given depth, in time linear in the depth after a quadratic table, even when their prior mass is exponentially small. New in this book.\n- [Coalescence of orbits shifts the total stopping time](https://vsokolov.org/books/collatz/results.html#orbit_coalescence_shifts_total_stopping_time) (Proposition 16.4, page 279; proved): If the orbits of two positive integers meet at a point other than 1 or 2, their total stopping times differ by exactly the difference of the numbers of steps each takes to reach it. New in this book.\n\n#### Key terms\n\nnested sampling, vertical likelihood, split sampling, weighted slice sampler, layer cake identity, rare event simulation, level sets, prior volume, perfect sampling, exact sampling, Gibbs sampler, coefficient stopping time, total stopping time, Haar measure, Chernoff rate, partition function, coalescence, trees of slow integers"
+  },
+  {
+   "key": "17",
+   "title": "Progress on the Open Problems",
+   "stem": "17_progress_on_the_open_problems",
+   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/17_progress_on_the_open_problems.md",
+   "first_page": "289",
+   "last_page": "300",
+   "pages": 12,
+   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/collatz/main/summaries/17_progress_on_the_open_problems.md",
+   "summary": "This chapter reports progress on problems O4, S2, P3, P4, P5, P7 and P11 of chapter 19, by proof where possible, otherwise by computation. For the Collatz map it studies the cumulants of total stopping times of the accelerated map (O4, P4) and single Syracuse orbits from near 2^100000 and 2^300000 (P3). For Switching MM, the momentum method that alternates a long and a unit gradient step, it treats the exact worst case rate on smooth convex functions (P11) and the noise floor under stochastic gradients (S2, P5). It also extends the exact density of the Erdős 125 sumset A+B to 4^17 (P7). Proved: explicit worst functions bounding the convex rate below for every even N and momentum coefficient below 1; the matching upper bound for N = 2 and 4, by a performance estimation certificate, on ranges containing the Collatz momentum; and the 5/3 noise floor bound, relative to gradient descent, for arbitrary noise covariance on quadratics. Conjectured: the two branch closed form of the convex rate. Numerical evidence only: constant deficits in the cumulants of stopping times (boundedness is open), the 5/3 bound on a logistic regression problem, and no departure from independent sampling along single orbits.\n\n#### From the literature\n\n- the worst case LR^2/(4N+2) of gradient descent on smooth convex functions, by performance estimation (Drori and Teboulle 2014), whose proof structure the chapter follows\n- the interpolation conditions for smooth convex functions (Taylor, Hendrickx and Glineur 2017)\n- the Huber function, the classical worst case function for gradient descent\n- cumulants of first passage times from Wald's identities (Feller 1971, Gut 1988)\n- the theorem of Terras (1976), which makes the Bernoulli model exact in the head of an orbit\n- Erdős problem 125 (Burr, Erdős, Graham and Li 1996), solved by AlphaProof Nexus (Tsoukalas and others 2026): the lower density of A+B is zero\n\n#### New results\n\nAll five labeled statements are the authors' own: one conjecture, one theorem and three propositions, one of them a computed fit.\n\n- [Additive deficits of the second and third cumulants of total stopping times, fitted to the exact census](https://vsokolov.org/books/collatz/results.html#stopping_time_cumulant_deficits_census_fit) (Proposition 17.1, page 290; proved): A fit to the exact census of total stopping times shows that their second and third cumulants grow at the rate of the Bernoulli model up to constant additive deficits, which accounts for the observed skewness; it is a computation on the blocks from 2^20 to 2^30, not a proof for all starting values. New in this book.\n- [Conjectured exact worst case rate of Switching MM on smooth convex functions, both branches](https://vsokolov.org/books/collatz/results.html#switching_mm_exact_convex_rate_conjecture) (Conjecture 17.2, page 292; open): A conjectured closed form for the exact worst case of Switching MM on smooth convex functions, for every even number of steps and every momentum coefficient below one, with a main branch and an overshoot branch that cross at an explicit threshold. New in this book.\n- [Explicit worst case functions for Switching MM on smooth convex functions](https://vsokolov.org/books/collatz/results.html#switching_mm_explicit_worst_functions) (Proposition 17.3, page 293; proved): Two explicit one dimensional functions, a Huber function and an overshoot function, show that the worst case of Switching MM on smooth convex functions is at least the larger of the two branches of the conjectured exact rate, for every even number of steps and every momentum coefficient below one. New in this book.\n- [Exact worst case rate of Switching MM after two and four steps, by an explicit certificate](https://vsokolov.org/books/collatz/results.html#switching_mm_exact_rate_two_and_four_steps) (Theorem 17.4, page 294; proved): For two and four steps and momentum coefficients up to about 0.64 and 0.70, an explicit certificate built from interpolation inequalities proves the conjectured exact rate of Switching MM on smooth convex functions, in ranges that contain the Collatz momentum. New in this book.\n- [The five thirds noise floor bound for Switching MM under correlated gradient noise on quadratics](https://vsokolov.org/books/collatz/results.html#switching_mm_noise_bound_correlated_noise) (Proposition 17.5, page 295; proved): On a quadratic with gradient noise of arbitrary covariance, independent from call to call, the stationary excess loss of Switching MM is at most five thirds of that of gradient descent with the same step, for every step up to one over the largest curvature and every momentum coefficient below one. New in this book.\n\n#### Key terms\n\nCollatz conjecture, 3x+1 problem, total stopping time, accelerated map, Syracuse orbit, third cumulant, skewness, census, Switching MM, worst case rate, smooth convex functions, performance estimation, Huber function, noise floor, stochastic gradient, correlated noise, Erdős 125, Erdos 125, sumset, lower density, trajectory mixing"
+  },
+  {
+   "key": "18",
+   "title": "Contributions and a Computational Road Map",
+   "stem": "18_contributions_and_a_computational_road_map",
+   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/18_contributions_and_a_computational_road_map.md",
+   "first_page": "301",
+   "last_page": "314",
+   "pages": 14,
+   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/collatz/main/summaries/18_contributions_and_a_computational_road_map.md",
+   "summary": "What does the book establish about the Collatz conjecture (the 3x+1 problem), which proof strategies does it rule out, and what computational road map remains? The chapter does not prove the conjecture. It collects the book's contributions in a table, a ledger of obstructions listing each strategy shown to fail and what survives it, and four corrections. Its organizing idea is the integrality principle: an argument that uses only a bounded number of binary digits of the starting value holds unchanged on the 2 adic integers, where the map has a fixed point and further cycles, so it cannot prove the conjecture. The road map has a shared kernel and two lanes: a cycle lane that ends at a gate needing a divisibility theorem about 2^k minus 3^m and c_k(w), and a divergence lane that searches a string rewriting formulation for a termination certificate, which would settle both halves but may not exist. One further route goes through density: given the unrefereed positive density preprints of Mazur and Lau presented in Chapter 13, a bounded form of Tao's theorem (problem B1) would also settle the whole conjecture.\n\n#### From the literature\n\nThe theorem of Tao (2022) that almost every orbit attains almost bounded values in logarithmic density; the counting exponent 0.84 of Krasikov and Lagarias (2003); verification up to 2^71 (Bařina 2025); the cycle length bound from the continued fraction of log_2 3 (Eliahou 1993, sharpened by Hercher 2023); the exclusion of cycles with m ascending runs (Simons and de Weger 2005 for small m, Hercher 2023 up to m = 91); least denominator fractions in an interval (Hercher 2023) and the best one sided approximations (Hančl and Turek 2019); the equivalence of the conjecture with termination of a string rewriting system, and the matrix interpretation search (Yolcu, Aaronson and Heule 2023); the undecidability theorem of Conway (1972); the integrality principle as folklore of the 2 adic literature (Lagarias 1985); the unrefereed positive density preprints of Mazur (2026) and Lau (2026).\n\n#### New results\n\nThe chapter collects the book's contributions and states no new theorem; its table points to the chapters that state and credit each result.\n\nNo new results of this chapter are catalogued.\n\n#### Key terms\n\nCollatz conjecture, 3x+1 problem, Syracuse map, computational road map, computational roadmap, ledger of obstructions, integrality principle, 2 adic integers, divergence half, cycle half, nontrivial cycle, Cesàro identity, Cesaro identity, Lyapunov function, residue certificate, optional stopping, Diophantine approximation, continued fraction of log_2 3, mediant lemma, string rewriting, matrix interpretation, termination certificate, SAT solver, positive density, bounded Tao, Lean, Switching MM, Barina, Hancl"
+  },
+  {
+   "key": "19",
+   "title": "Open Problems and Computational Projects",
+   "stem": "19_open_problems_and_computational_projects",
+   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/19_open_problems_and_computational_projects.md",
+   "first_page": "315",
+   "last_page": "324",
+   "pages": 10,
+   "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/collatz/main/summaries/19_open_problems_and_computational_projects.md",
+   "summary": "Which questions does the book leave open, and which finite computations are worth doing? The chapter restates the open problems of the book in their sharpest form, for the divergence half of the Collatz conjecture (O1 Cesàro equidistribution, O2 trajectory mixing modulo powers of 3, O3 and O3' certificates with growing horizon and potentials of unbounded depth, O4 the third cumulant of total stopping times and the variance deficit, O5 uniform integrability, which is settled), for the cycle half (C1 an arithmetic sharpening of the cycle identity, C2 effective irrationality measures for log_2 3, C3 sharper accountings at the next rungs of the ladder), for the backward tree of the positive density theorems (B1 a bounded form of Tao's theorem, B2 the true mixing rate of the 3 adic offset law, B3 the sharpness of the threshold 3/log(4/3)), and for Switching MM (S1 rates beyond quadratics and S3 the best period two ratio, both partly settled, S2 stochastic analysis, S4 adaptive switching). It says what is known for each, points to the progress reported in Chapter 17, and flags formulations that turn out to be wrong. It then lists eleven computational projects, P1 to P11, each with a success criterion: a machine checked cycle bound in Lean 4, thresholds and the window lemma, orbits from very large starting values, total stopping time cumulants at scale, Switching MM against Nesterov, heavy ball and Adam, periodic schedules, Erdős 125 beyond 4^13, perfect samplers beyond the coefficient stopping time, trees of slow integers, a pilot for the divergence lane of Chapter 18, and the exact convex rate of Switching MM. The unnumbered Gallery of Orbits that follows shows seven computed plates.\n\n#### From the literature\n\nQuestions going back to Terras (1976), Steiner (1978) and Eliahou (1993), restated as O1, O3, C2 and the cycle formulation; the fine scale mixing results of Tao (2022) behind O2; the explicit irrationality measure of log_2 3 of Rhin (1987); the cycle length record of Hercher (2023) and the verification to 2^71 of Bařina (2025); the note of Polson and Sokolov (2026) on the AlphaProof Nexus system of Tsoukalas and others (2026), the source of C1 and of the Erdős 125 analogy; the positive density preprints of Mazur, Shaik and Lau (2026) behind B1 to B3; the terminating rewriting systems of Yolcu, Aaronson and Heule (2023) behind P10; the performance estimation of Drori and Teboulle (2014) behind P11; in the gallery, the density bound of Hasler and Melfi (2024) and the branching random walk model of Lagarias and Weiss (1992).\n\n#### New results\n\nThis chapter poses problems and projects and proves no theorem of its own.\n\n- [Trajectory mixing of Syracuse residues modulo powers of 3](https://vsokolov.org/books/collatz/results.html#trajectory_mixing_of_syracuse_residues) (Problem O2, page 315; open): Asks for a proof that, from a random starting value, the residues modulo a power of 3 along a Syracuse orbit are distributed as in the random model of the book, whose Markov chain mixes exactly; numerically, modulo 243, they approach the model law at the rate of independent sampling. New in this book.\n- [Failure fraction of Lyapunov potentials of growing depth for the Syracuse map](https://vsokolov.org/books/collatz/results.html#failure_fraction_of_potentials_of_growing_depth) (Problem O3$'$, page 316; open): Asks how small the fraction of odd integers at which a Lyapunov potential fails can be made when the potential may read further ahead along the orbit, and whether it can be driven to zero; the answer is a question about the random model of the book, not about the arithmetic of the map. New in this book.\n- [Boundedness of the variance deficit and the third cumulant of total stopping times](https://vsokolov.org/books/collatz/results.html#bounded_variance_deficit_of_total_stopping_times) (Problem O4, page 316; open): Asks for a proof that the shortfall of the variance of total stopping times against the random model, which an exact census finds to be an additive and apparently bounded term concentrated in the final descent of the orbit, stays bounded as the starting values grow, and for an explanation of their skewness, which is smaller than the model predicts. New in this book.\n- [Arithmetic sharpening of the window bound on the least element of a Collatz cycle](https://vsokolov.org/books/collatz/results.html#arithmetic_sharpening_of_the_cycle_window) (Problem C1, page 317; open): Asks for an improvement, drawn from the arithmetic of the parity vector, of the bound on the least element of a hypothetical Collatz cycle; a strong enough improvement would reduce the cycle half of the conjecture to a finite computation. First stated in Polson and Sokolov (2026), Five Bayesian problems raised by AlphaProof Nexus, manuscript.\n- [Verification ranges that exclude the later rungs under Hercher's sharper accounting](https://vsokolov.org/books/collatz/results.html#verification_ranges_for_later_rungs_under_hercher_accounting) (Problem C3, page 318; open): Asks for the computation that would extend Hercher's computer assisted exclusion of Collatz cycles of a given length to the next lengths in line, the rungs of the one sided continued fraction ladder of log2 3. New in this book.\n- [Bounded form of Tao's theorem: orbit minimum at most 2^71 on a set of logarithmic density one](https://vsokolov.org/books/collatz/results.html#bounded_form_of_tao_theorem) (Problem B1, page 318; open): Asks for a proof that the least value on the orbit of n is at most 2 to the power 71 for all n in a set of logarithmic density one, a bounded form of Tao's theorem that, given the positive density theorems of Mazur and Lau, would imply the Collatz conjecture, and which the conjecture implies. New in this book.\n- [True decay rate of the Fourier coefficients of the Syracuse random variable modulo powers of 3](https://vsokolov.org/books/collatz/results.html#true_decay_rate_of_syracuse_fourier_coefficients) (Problem B2, page 318; open): Asks how fast the largest Fourier coefficient of the Syracuse random variable modulo 3 to the power d, over frequencies prime to 3, tends to zero, choosing between decay like exp of minus c times the square of log d, like exp of minus c times d to a power gamma below 1, and eventually geometric decay. New in this book.\n- [Sharpness of Shaik's threshold 3/log(4/3) for total stopping times](https://vsokolov.org/books/collatz/results.html#sharpness_of_shaik_threshold_for_stopping_times) (Problem B3, page 319; open): Asks for a proof that, for every constant c below 3 over log(4/3), the integers n whose total stopping time is at most c log n have natural density zero, so that the threshold of Shaik for positive density is sharp. New in this book.\n- [Exact worst case function gap rate of Switching MM for small condition numbers](https://vsokolov.org/books/collatz/results.html#exact_function_gap_rate_of_switching_mm_for_small_condition_numbers) (Problem S1, page 319; open): The worst case rate of Switching MM is known exactly for the distance to the minimizer, and for the function gap on ill conditioned problems; the problem asks for the exact function gap rate, and the function that attains it, on well conditioned problems, where numerical performance estimation shows that the known bound is not tight. New in this book.\n- [Five thirds noise bound of Switching MM beyond quadratics](https://vsokolov.org/books/collatz/results.html#five_thirds_noise_bound_of_switching_mm_beyond_quadratics) (Problem S2, page 319; open): Asks to extend the proven robustness of Switching MM to gradient noise, a stationary error at most five thirds of that of gradient descent for every momentum coefficient below one, from quadratic objectives to all smooth strongly convex objectives. New in this book.\n- [A principled adaptive switching rule for Switching MM](https://vsokolov.org/books/collatz/results.html#adaptive_switching_rule_for_switching_mm) (Problem S4, page 320; open): Asks for a rule, using only the smoothness constant and observed function values, that decides when Switching MM injects momentum, keeping its proven robustness to gradient noise while matching the speed of momentum applied at every step on noiseless problems. New in this book.\n\n#### Key terms\n\nopen problems, Cesàro equidistribution, trajectory mixing, backward tree, positive density, bounded Tao, offset law, certificates with growing horizon, potentials of unbounded depth, third cumulant, variance deficit, arithmetic sharpening of the cycle identity, effective irrationality measure, adaptive switching, computational projects, Lean formalization, Erdős 125, Erdos 125, perfect samplers, trees of slow integers, gallery of orbits"
   },
   {
    "key": "A",
    "title": "Numerical Constants",
    "stem": "A_numerical_constants",
    "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/A_numerical_constants.md",
-   "first_page": "271",
-   "last_page": "274",
+   "first_page": "333",
+   "last_page": "336",
    "pages": 4,
    "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/collatz/main/summaries/A_numerical_constants.md",
    "summary": "Reference table of the numerical constants of the book, to six significant figures unless stated otherwise, all recomputed with the book's scripts: the drift log(sqrt(3)/2) and the step variance of the accelerated map, the model drift and variance per stride of the Syracuse map, total stopping time slopes in the model and observed, the central limit constant, the Chernoff rate D of the density theorem, the residue sieve exponent h, the Cesàro threshold log_2 3, the Switching MM momentum beta = log_2 3 minus 1 with its noise amplification, effective step multiplier and stability limit, and the parity autocorrelations of the model. It also gives the continued fraction of log_2 3, computed at 300 digit precision, whose large partial quotients 23 and 55 make the convergents 1054/665 and 301994/190537 exceptionally good two sided approximations; only the second lies above log_2 3 and counts for the one sided cycle bound, which jumps from 190,537 to the next rung, 10,781,274. A final table gives exact lower bounds on the number of odd elements and of halvings of a nontrivial cycle for the verified ranges 2^40, 2^60, 2^68, 2^71 and 2^72; every range up to 2^71 is established, and the 2^72 row shows what a larger range would give.\n\n#### From the literature\n\nVerified range 2^71 of Bařina (2025); sharper cycle accounting of Hercher (2023), with the record 137,528,045,312 odd elements.\n\n#### New results\n\nThis appendix records numerical values and proves nothing.\n\nNo new results of this appendix are catalogued.\n\n#### Key terms\n\nnumerical constants, total stopping time slope, Chernoff rate, residue sieve exponent, Cesàro threshold, momentum coefficient, noise amplification, continued fraction of log_2 3, convergents, Barina"
@@ -282,11 +324,11 @@
    "title": "Code",
    "stem": "B_code",
    "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/B_code.md",
-   "first_page": "275",
-   "last_page": "288",
-   "pages": 14,
+   "first_page": "337",
+   "last_page": "354",
+   "pages": 18,
    "summary_markdown": "https://raw.githubusercontent.com/VadimSokolov/collatz/main/summaries/B_code.md",
-   "summary": "Where the code of the book is. Every number computed in the book was produced by a short Python script, and numbers quoted from the literature are cited where they appear. The scripts use mpmath, NumPy, SciPy, SymPy and Matplotlib, with Numba for the census of total stopping times and for the gallery, CVXPY with the Clarabel solver for performance estimation, and scikit-learn only to load one data set; they run in seconds to minutes on a laptop and are in the folder book/scripts of the public repository, released under the MIT License. The appendix lists two scripts in full. The first computes the partial quotients of log_2 3, builds the candidate rungs of the semiconvergent ladder, keeps the records of the one sided distance and returns the first rung not excluded by a verified range, which by the one sided ladder theorem of Chapter 10 and the mediant lemma is the exact cycle bound. The second derives symbolically the slow mode noise amplification factor of Switching MM. An index lists all other scripts by chapter, including the script that writes the table of total stopping times below 2^26 that most scripts of Chapter 14 read.\n\n#### From the literature\n\nThe script reproduces the cycle bound of Eliahou (1993) at verified range 2^40; its bound at 2^68 is unchanged at the range 2^71 of Bařina (2025).\n\n#### New results\n\nThis appendix lists code and proves nothing.\n\nNo new results of this appendix are catalogued.\n\n#### Key terms\n\ncode, Python scripts, reproducibility, exact cycle bound script, ladder rungs, mpmath, SymPy, noise amplification derivation, script index, MIT License, GitHub repository, Barina"
+   "summary": "Where the code of the book is. Every number computed in the book was produced by a short Python script, and numbers quoted from the literature are cited where they appear. The scripts use mpmath, NumPy, SciPy, SymPy and Matplotlib, with Numba for the census of total stopping times and for the gallery, CVXPY with the Clarabel solver for performance estimation, and scikit-learn only to load one data set; they run in seconds to minutes on a laptop and are in the folder book/scripts of the public repository, released under the MIT License. The appendix lists two scripts in full. The first computes the partial quotients of log_2 3, builds the candidate rungs of the semiconvergent ladder, keeps the records of the one sided distance and returns the first rung not excluded by a verified range, which by the one sided ladder theorem of Chapter 11 and the mediant lemma is the exact cycle bound. The second derives symbolically the slow mode noise amplification factor of Switching MM. An index lists all other scripts by chapter, including the script that writes the table of total stopping times below 2^26 that most scripts of Chapter 16 read.\n\n#### From the literature\n\nThe script reproduces the cycle bound of Eliahou (1993) at verified range 2^40; its bound at 2^68 is unchanged at the range 2^71 of Bařina (2025).\n\n#### New results\n\nThis appendix lists code and proves nothing.\n\nNo new results of this appendix are catalogued.\n\n#### Key terms\n\ncode, Python scripts, reproducibility, exact cycle bound script, ladder rungs, mpmath, SymPy, noise amplification derivation, script index, MIT License, GitHub repository, Barina"
   }
  ],
  "results": [
@@ -294,7 +336,7 @@
    "id": "martingale_structure_of_the_standard_map",
    "name": "Martingale structure of the renewal model for the standard Collatz map",
    "printed": "Proposition 3.7",
-   "page": "47",
+   "page": "48",
    "chapter": "3",
    "status": "proved",
    "status_text": "proved",
@@ -306,7 +348,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#martingale_structure_of_the_standard_map",
    "source": "book/chapters/ch03_stochastic.tex",
    "label": "prop:ch3:standard",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch03_stochastic.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch03_stochastic.tex"
   },
   {
    "id": "parity_autocorrelation_function",
@@ -324,7 +366,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#parity_autocorrelation_function",
    "source": "book/chapters/ch03_stochastic.tex",
    "label": "thm:autocorr",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch03_stochastic.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch03_stochastic.tex"
   },
   {
    "id": "long_run_variance_of_the_log_path",
@@ -342,7 +384,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#long_run_variance_of_the_log_path",
    "source": "book/chapters/ch03_stochastic.tex",
    "label": "cor:longrun",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch03_stochastic.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch03_stochastic.tex"
   },
   {
    "id": "failure_of_uniform_integrability",
@@ -360,7 +402,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#failure_of_uniform_integrability",
    "source": "book/chapters/ch03_stochastic.tex",
    "label": "prop:uimartingale",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch03_stochastic.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch03_stochastic.tex"
   },
   {
    "id": "stride_model_passage_time",
@@ -378,7 +420,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#stride_model_passage_time",
    "source": "book/chapters/ch04_lyapunov.tex",
    "label": "prop:ch4:passage",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch04_lyapunov.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch04_lyapunov.tex"
   },
   {
    "id": "stride_descent",
@@ -396,7 +438,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#stride_descent",
    "source": "book/chapters/ch04_lyapunov.tex",
    "label": "thm:stride",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch04_lyapunov.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch04_lyapunov.tex"
   },
   {
    "id": "no_monotone_single_stride_lyapunov",
@@ -414,7 +456,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#no_monotone_single_stride_lyapunov",
    "source": "book/chapters/ch04_lyapunov.tex",
    "label": "thm:nolyapunov",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch04_lyapunov.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch04_lyapunov.tex"
   },
   {
    "id": "exact_two_stride_behaviour",
@@ -432,7 +474,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#exact_two_stride_behaviour",
    "source": "book/chapters/ch04_lyapunov.tex",
    "label": "prop:ch4:twostride",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch04_lyapunov.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch04_lyapunov.tex"
   },
   {
    "id": "no_fixed_horizon_monotone_certificate",
@@ -450,7 +492,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#no_fixed_horizon_monotone_certificate",
    "source": "book/chapters/ch04_lyapunov.tex",
    "label": "cor:ch4:multistride",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch04_lyapunov.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch04_lyapunov.tex"
   },
   {
    "id": "linear_majorizer_cannot_certify_descent",
@@ -468,7 +510,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#linear_majorizer_cannot_certify_descent",
    "source": "book/chapters/ch04_lyapunov.tex",
    "label": "prop:mmfails",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch04_lyapunov.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch04_lyapunov.tex"
   },
   {
    "id": "power_majorizers_of_log",
@@ -486,7 +528,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#power_majorizers_of_log",
    "source": "book/chapters/ch04_lyapunov.tex",
    "label": "prop:ch4:power",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch04_lyapunov.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch04_lyapunov.tex"
   },
   {
    "id": "no_residue_potential_for_any_modulus",
@@ -504,7 +546,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#no_residue_potential_for_any_modulus",
    "source": "book/chapters/ch05c_mmcollatz.tex",
    "label": "thm:ch5c:residue",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch05c_mmcollatz.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch05c_mmcollatz.tex"
   },
   {
    "id": "surplus_along_chains",
@@ -522,7 +564,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#surplus_along_chains",
    "source": "book/chapters/ch05c_mmcollatz.tex",
    "label": "prop:ch5c:surplus",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch05c_mmcollatz.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch05c_mmcollatz.tex"
   },
   {
    "id": "run_length_potential",
@@ -540,7 +582,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#run_length_potential",
    "source": "book/chapters/ch05c_mmcollatz.tex",
    "label": "prop:ch5c:runpot",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch05c_mmcollatz.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch05c_mmcollatz.tex"
   },
   {
    "id": "extrapolated_point_is_a_long_gradient_step",
@@ -558,7 +600,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#extrapolated_point_is_a_long_gradient_step",
    "source": "book/chapters/ch06_smm.tex",
    "label": "lem:ch6:ystep",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch06_smm.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch06_smm.tex"
   },
   {
    "id": "smm_two_step_equivalence_on_quadratics",
@@ -576,7 +618,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#smm_two_step_equivalence_on_quadratics",
    "source": "book/chapters/ch06_smm.tex",
    "label": "thm:smmquad",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch06_smm.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch06_smm.tex"
   },
   {
    "id": "smm_stability_range_on_quadratics",
@@ -594,7 +636,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#smm_stability_range_on_quadratics",
    "source": "book/chapters/ch06_smm.tex",
    "label": "cor:ch6:stability",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch06_smm.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch06_smm.tex"
   },
   {
    "id": "smm_slow_mode_effective_step",
@@ -612,7 +654,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#smm_slow_mode_effective_step",
    "source": "book/chapters/ch06_smm.tex",
    "label": "cor:ch6:slow",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch06_smm.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch06_smm.tex"
   },
   {
    "id": "smm_defect_of_cyclic_representation",
@@ -630,7 +672,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#smm_defect_of_cyclic_representation",
    "source": "book/chapters/ch06_smm.tex",
    "label": "prop:ch6:defect",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch06_smm.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch06_smm.tex"
   },
   {
    "id": "smm_stationary_variance_additive_noise",
@@ -648,7 +690,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#smm_stationary_variance_additive_noise",
    "source": "book/chapters/ch07_noise.tex",
    "label": "thm:smmvar",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch07_noise.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch07_noise.tex"
   },
   {
    "id": "smm_slow_mode_noise_amplification",
@@ -666,7 +708,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#smm_slow_mode_noise_amplification",
    "source": "book/chapters/ch07_noise.tex",
    "label": "cor:ch7:slow",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch07_noise.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch07_noise.tex"
   },
   {
    "id": "smm_variance_bound_uniform_in_normalized_step",
@@ -684,7 +726,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#smm_variance_bound_uniform_in_normalized_step",
    "source": "book/chapters/ch07_noise.tex",
    "label": "prop:ch7:uniform",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch07_noise.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch07_noise.tex"
   },
   {
    "id": "noise_floor_at_matched_speed",
@@ -702,7 +744,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#noise_floor_at_matched_speed",
    "source": "book/chapters/ch07_noise.tex",
    "label": "prop:ch7:matched",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch07_noise.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch07_noise.tex"
   },
   {
    "id": "gain_weight_theorem",
@@ -720,7 +762,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#gain_weight_theorem",
    "source": "book/chapters/ch07_noise.tex",
    "label": "thm:ch7:gainweight",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch07_noise.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch07_noise.tex"
   },
   {
    "id": "rate_and_noise_for_period_two_steps",
@@ -738,7 +780,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#rate_and_noise_for_period_two_steps",
    "source": "book/chapters/ch07_noise.tex",
    "label": "prop:ch7:pareto",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch07_noise.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch07_noise.tex"
   },
   {
    "id": "smm_multiplicative_noise",
@@ -756,7 +798,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#smm_multiplicative_noise",
    "source": "book/chapters/ch07_noise.tex",
    "label": "prop:ch7:mult",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch07_noise.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch07_noise.tex"
   },
   {
    "id": "certified_growth_exponents_for_the_inverse_collatz_tree",
@@ -774,7 +816,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#certified_growth_exponents_for_the_inverse_collatz_tree",
    "source": "book/chapters/ch05b_difference.tex",
    "label": "thm:ch5b:exponent",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch05b_difference.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch05b_difference.tex"
   },
   {
    "id": "simplified_counting_bound_for_integers_reaching_one",
@@ -792,7 +834,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#simplified_counting_bound_for_integers_reaching_one",
    "source": "book/chapters/ch05b_difference.tex",
    "label": "cor:ch5b:count",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch05b_difference.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch05b_difference.tex"
   },
   {
    "id": "smm_monotone_on_alternate_iterates",
@@ -810,7 +852,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#smm_monotone_on_alternate_iterates",
    "source": "book/chapters/ch05b_difference.tex",
    "label": "prop:ch5b:monotone",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch05b_difference.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch05b_difference.tex"
   },
   {
    "id": "smm_exact_joint_spectral_radius",
@@ -828,7 +870,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#smm_exact_joint_spectral_radius",
    "source": "book/chapters/ch05b_difference.tex",
    "label": "prop:ch5b:jsr",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch05b_difference.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch05b_difference.tex"
   },
   {
    "id": "smm_transient_bound_conjecture",
@@ -846,7 +888,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#smm_transient_bound_conjecture",
    "source": "book/chapters/ch05b_difference.tex",
    "label": "conj:ch5b:transient",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch05b_difference.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch05b_difference.tex"
   },
   {
    "id": "every_switching_rule_is_stable_on_quadratics",
@@ -865,7 +907,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#every_switching_rule_is_stable_on_quadratics",
    "source": "book/chapters/ch05b_difference.tex",
    "label": "cor:ch5b:anyswitch",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch05b_difference.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch05b_difference.tex"
   },
   {
    "id": "smm_linear_rate_on_smooth_strongly_convex_functions",
@@ -883,7 +925,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#smm_linear_rate_on_smooth_strongly_convex_functions",
    "source": "book/chapters/ch05b_difference.tex",
    "label": "thm:ch5b:rate",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch05b_difference.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch05b_difference.tex"
   },
   {
    "id": "smm_speed_relative_to_gradient_descent",
@@ -901,7 +943,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#smm_speed_relative_to_gradient_descent",
    "source": "book/chapters/ch05b_difference.tex",
    "label": "cor:ch5b:speed",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch05b_difference.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch05b_difference.tex"
   },
   {
    "id": "modified_equation_for_period_two_steps",
@@ -919,14 +961,104 @@
    "url": "https://vsokolov.org/books/collatz/results.html#modified_equation_for_period_two_steps",
    "source": "book/chapters/ch05b_difference.tex",
    "label": "prop:ch5b:modified",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch05b_difference.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch05b_difference.tex"
+  },
+  {
+   "id": "switching_mm_convex_rate_by_three_point_inequality",
+   "name": "Convex rate for Switching MM when the long step is at most the golden ratio",
+   "printed": "Theorem 10.5",
+   "page": "173",
+   "chapter": "10",
+   "status": "proved",
+   "status_text": "proved",
+   "origin": "book",
+   "origin_text": "New in this book.",
+   "highlight": false,
+   "summary": "On smooth convex functions the bound for Switching MM after N steps is L R^2/((2+beta) N), against L R^2/(2N) for gradient descent by the same argument, provided the long step 1+beta is at most the golden ratio, as it is for the book's beta = log_2 3 minus 1.",
+   "statement": "Let $f:\\mathbb{R}^d\\to\\mathbb{R}$ be convex and differentiable with an $L$ Lipschitz gradient ($f$ is $L$ smooth), let $x_*$ be a minimizer of $f$ and $f_*=f(x_*)$, let $\\varphi=(1+\\sqrt5)/2$ be the golden ratio, and let $0\\le\\beta\\le\\varphi-1$. Let $x_0,x_1,x_2,\\ldots$ be the iterates of Switching MM with step size $1/L$ and momentum $\\beta$ started at $x_0$: put $x_{-1}=x_0$, and for $t\\ge0$ let $x_{t+1}=x_t-\\frac{1}{L}\\nabla f(x_t)$ if $t$ is even, and $x_{t+1}=y_t-\\frac{1}{L}\\nabla f(y_t)$ with $y_t=x_t+\\beta(x_t-x_{t-1})$ if $t$ is odd. Let $R=\\|x_0-x_*\\|$ (Euclidean norm). Then for every $j\\ge0$, $(2+\\beta)\\bigl(f(x_{2j+2})-f_*\\bigr)\\le\\frac{L}{2}\\bigl(\\|x_{2j}-x_*\\|^2-\\|x_{2j+2}-x_*\\|^2\\bigr)$, and consequently, for every even $N$, $f(x_N)-f_*\\le\\frac{LR^2}{(2+\\beta)N}$.",
+   "url": "https://vsokolov.org/books/collatz/results.html#switching_mm_convex_rate_by_three_point_inequality",
+   "source": "book/chapters/ch07b_threepoint.tex",
+   "label": "thm:ch7b:smmrate",
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch07b_threepoint.tex"
+  },
+  {
+   "id": "switching_mm_exact_worst_case_conjecture",
+   "name": "Exact convex worst case of Switching MM (conjecture)",
+   "printed": "Conjecture 10.6",
+   "page": "174",
+   "chapter": "10",
+   "status": "open",
+   "status_text": "open",
+   "origin": "book",
+   "origin_text": "New in this book.",
+   "highlight": false,
+   "summary": "Conjectured exact worst case L R^2/((4+2 beta) N+2) of Switching MM on smooth convex functions for even N and beta up to about 0.686, supported by performance estimation computations and proved in a later chapter for N = 4, and for N = 2 when beta is at most 0.6446.",
+   "statement": "Let $\\beta_2=0.68614\\ldots$ be the positive real root of $2\\beta^3+5\\beta^2-3=0$. Let $f:\\mathbb{R}^d\\to\\mathbb{R}$ be convex and differentiable with an $L$ Lipschitz gradient ($f$ is $L$ smooth) and a minimizer $x_*$ (with $f_*=f(x_*)$), and let $x_0,x_1,x_2,\\ldots$ be the iterates of Switching MM with step size $1/L$ and momentum $\\beta$ started at $x_0$: put $x_{-1}=x_0$, and for $t\\ge0$ let $x_{t+1}=x_t-\\frac{1}{L}\\nabla f(x_t)$ if $t$ is even, and $x_{t+1}=y_t-\\frac{1}{L}\\nabla f(y_t)$ with $y_t=x_t+\\beta(x_t-x_{t-1})$ if $t$ is odd. Conjecture: for $0\\le\\beta\\le\\beta_2$ and every even $N$, the worst case of Switching MM over convex $L$ smooth functions with $\\|x_0-x_*\\|\\le R$ (the supremum over all dimensions $d$, all such $f$ and all such $x_0$) is $\\sup\\bigl(f(x_N)-f_*\\bigr)=\\frac{LR^2}{(4+2\\beta)N+2}$.",
+   "url": "https://vsokolov.org/books/collatz/results.html#switching_mm_exact_worst_case_conjecture",
+   "source": "book/chapters/ch07b_threepoint.tex",
+   "label": "conj:ch7b:tight",
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch07b_threepoint.tex"
+  },
+  {
+   "id": "acceleration_survives_every_switching_rule",
+   "name": "Acceleration by similar triangles survives every switching rule",
+   "printed": "Proposition 10.7",
+   "page": "176",
+   "chapter": "10",
+   "status": "proved",
+   "status_text": "proved",
+   "origin": "book",
+   "origin_text": "New in this book.",
+   "highlight": false,
+   "summary": "Mixing similar triangles steps with plain gradient steps in any order, even one that depends on the iterates, never increases the energy, so the 1/J^2 rate in the number J of similar triangles steps is kept.",
+   "statement": "Let $f:\\mathbb{R}^d\\to\\mathbb{R}$ be convex and differentiable with an $L$ Lipschitz gradient ($f$ is $L$ smooth), let $x_*$ be a minimizer of $f$ and $f_*=f(x_*)$. A similar triangles step acts on a state $(x,z,A)$ with $A\\ge0$: it chooses $a>0$ with $La^2=A+a$, sets $A^+=A+a$, $y=(Ax+az)/A^+$, $z^+=z-a\\nabla f(y)$ and $x^+=(Ax+az^+)/A^+$ (which equals $y-\\frac{1}{L}\\nabla f(y)$), and takes $(x^+,z^+,A^+)$ as the new state. A plain gradient step is $x^+=x-\\frac{s}{L}\\nabla f(x)$ with $0<s<2$, and leaves $z$ and $A$ unchanged. Start from $x=z=x_0$ and $A=0$ and apply any sequence of iterations, each of which is a similar triangles step or a plain gradient step; the order of the two kinds of step may be arbitrary and may depend on the iterates. Then the energy $E=A\\bigl(f(x)-f_*\\bigr)+\\frac{1}{2}\\|z-x_*\\|^2$ never increases, and after $J$ similar triangles steps $f(x)-f_*\\le\\frac{2L\\|x_0-x_*\\|^2}{J^2}$. In particular the switched method that alternates the two kinds of step, beginning with a similar triangles step, satisfies $f(x_N)-f_*\\le\\frac{8L\\|x_0-x_*\\|^2}{N^2}$ after $N$ iterations.",
+   "url": "https://vsokolov.org/books/collatz/results.html#acceleration_survives_every_switching_rule",
+   "source": "book/chapters/ch07b_threepoint.tex",
+   "label": "prop:ch7b:switch",
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch07b_threepoint.tex"
+  },
+  {
+   "id": "bregman_decomposition_of_a_syracuse_orbit",
+   "name": "Bregman decomposition of the logarithmic change along a Syracuse orbit",
+   "printed": "Proposition 10.8",
+   "page": "177",
+   "chapter": "10",
+   "status": "proved",
+   "status_text": "proved",
+   "origin": "book",
+   "origin_text": "New in this book.",
+   "highlight": false,
+   "summary": "Along any Syracuse orbit the change of the logarithm is exactly a linear term minus a sum of Itakura Saito divergences, and in the stochastic model the linear term is a martingale and the dissipation has mean log(4/3) per step, the size of the drift.",
+   "statement": "Let $S(y)=(3y+1)/2^{v_2(3y+1)}$ be the Syracuse map on odd positive integers, where $v_2$ is the $2$ adic valuation, and let $D(t)=t-1-\\log t\\ge0$ for $t>0$ (the Itakura and Saito divergence of $t$ from $1$). For an odd positive integer $y_0$ let $y_{i+1}=S(y_i)$, $k_i=v_2(3y_i+1)$ and $M_i=y_{i+1}/y_i=(3+1/y_i)/2^{k_i}$. Then for every odd $y_0$ and every $N$, $\\log y_N-\\log y_0=\\sum_{i<N}(M_i-1)-\\sum_{i<N}D(M_i)$. In the stochastic model in which the $M_i$ are independent copies of $M=3/2^k$ with $k$ geometric, $\\mathbb{P}(k=j)=2^{-j}$ for $j\\ge1$, the partial sums $\\sum_{i<N}(M_i-1)$ form a martingale in $N$, $\\mathbb{E}M=1$, and the expected dissipation per step equals the drift exactly, $\\mathbb{E}D(M)=-\\mathbb{E}\\log M=\\log(4/3)$.",
+   "url": "https://vsokolov.org/books/collatz/results.html#bregman_decomposition_of_a_syracuse_orbit",
+   "source": "book/chapters/ch07b_threepoint.tex",
+   "label": "prop:ch7b:bregman",
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch07b_threepoint.tex"
+  },
+  {
+   "id": "uniform_dissipation_of_the_syracuse_map",
+   "name": "Uniform lower bound on the Bregman dissipation of the Syracuse map",
+   "printed": "Proposition 10.9",
+   "page": "179",
+   "chapter": "10",
+   "status": "proved",
+   "status_text": "proved",
+   "origin": "book",
+   "origin_text": "New in this book.",
+   "highlight": false,
+   "summary": "At every odd y at least 3 the Itakura Saito divergence of the Syracuse multiplier S(y)/y from 1 is at least 0.029092, with equality only at y = 9, and its limit inferior as y grows is 0.037682.",
+   "statement": "Let $S(y)=(3y+1)/2^{v_2(3y+1)}$ be the Syracuse map on odd positive integers, where $v_2$ is the $2$ adic valuation, and let $D(t)=t-1-\\log t$ for $t>0$. Then for every odd $y\\ge3$, $D\\bigl(S(y)/y\\bigr)\\ge c_*=D\\bigl(\\tfrac{7}{9}\\bigr)=\\log\\tfrac{9}{7}-\\tfrac{2}{9}=0.029092\\ldots$, with equality only at $y=9$, and $\\liminf_{y\\to\\infty}D\\bigl(S(y)/y\\bigr)=D\\bigl(\\tfrac{3}{4}\\bigr)=\\log\\tfrac{4}{3}-\\tfrac{1}{4}=0.037682\\ldots$, where $y$ runs over odd integers.",
+   "url": "https://vsokolov.org/books/collatz/results.html#uniform_dissipation_of_the_syracuse_map",
+   "source": "book/chapters/ch07b_threepoint.tex",
+   "label": "prop:ch7b:dissipation",
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch07b_threepoint.tex"
   },
   {
    "id": "diophantine_insufficiency_cycle_lengths",
    "name": "Diophantine insufficiency, infinitely many cycle lengths survive any verification range",
-   "printed": "Proposition 10.20",
-   "page": "191",
-   "chapter": "10",
+   "printed": "Proposition 11.20",
+   "page": "205",
+   "chapter": "11",
    "status": "proved",
    "status_text": "proved",
    "origin": "book",
@@ -937,14 +1069,14 @@
    "url": "https://vsokolov.org/books/collatz/results.html#diophantine_insufficiency_cycle_lengths",
    "source": "book/chapters/ch08_cycles.tex",
    "label": "prop:ch8:insufficient",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch08_cycles.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch08_cycles.tex"
   },
   {
    "id": "window_lemma_least_cycle_element",
    "name": "Window lemma, the least element of a cycle lies in an explicit window",
-   "printed": "Lemma 10.21",
-   "page": "192",
-   "chapter": "10",
+   "printed": "Lemma 11.21",
+   "page": "206",
+   "chapter": "11",
    "status": "proved",
    "status_text": "proved",
    "origin": "book",
@@ -955,14 +1087,14 @@
    "url": "https://vsokolov.org/books/collatz/results.html#window_lemma_least_cycle_element",
    "source": "book/chapters/ch08_cycles.tex",
    "label": "lem:ch8:window",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch08_cycles.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch08_cycles.tex"
   },
   {
    "id": "what_arithmetic_would_suffice",
    "name": "What arithmetic would suffice to exclude all Collatz cycles",
-   "printed": "Corollary 10.22",
-   "page": "193",
-   "chapter": "10",
+   "printed": "Corollary 11.22",
+   "page": "207",
+   "chapter": "11",
    "status": "conditional",
    "status_text": "conditional on the hypothesis that, for the function $f$ of the statement, every nontrivial cycle of the accelerated map with $m$ odd steps and $k$ steps in all has least element $M<m/(3\\Lambda f(m))$, where $\\Lambda=k\\log2-m\\log3$; no such bound is proved in the book",
    "conditions": "the hypothesis that, for the function $f$ of the statement, every nontrivial cycle of the accelerated map with $m$ odd steps and $k$ steps in all has least element $M<m/(3\\Lambda f(m))$, where $\\Lambda=k\\log2-m\\log3$; no such bound is proved in the book.",
@@ -974,14 +1106,14 @@
    "url": "https://vsokolov.org/books/collatz/results.html#what_arithmetic_would_suffice",
    "source": "book/chapters/ch08_cycles.tex",
    "label": "cor:ch8:window",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch08_cycles.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch08_cycles.tex"
   },
   {
    "id": "cesaro_identity",
    "name": "Cesàro identity for the halving exponents of a Syracuse orbit",
-   "printed": "Proposition 11.3",
-   "page": "209",
-   "chapter": "11",
+   "printed": "Proposition 12.3",
+   "page": "223",
+   "chapter": "12",
    "status": "proved",
    "status_text": "proved",
    "origin": "book",
@@ -992,14 +1124,14 @@
    "url": "https://vsokolov.org/books/collatz/results.html#cesaro_identity",
    "source": "book/chapters/ch09_divergence.tex",
    "label": "prop:cesaro",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch09_divergence.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch09_divergence.tex"
   },
   {
    "id": "cesaro_liminf_conjecture",
    "name": "Cesàro liminf conjecture on the running mean of the halving exponents",
-   "printed": "Conjecture 11.6",
-   "page": "210",
-   "chapter": "11",
+   "printed": "Conjecture 12.6",
+   "page": "224",
+   "chapter": "12",
    "status": "open",
    "status_text": "open",
    "origin": "book",
@@ -1010,14 +1142,33 @@
    "url": "https://vsokolov.org/books/collatz/results.html#cesaro_liminf_conjecture",
    "source": "book/chapters/ch09_divergence.tex",
    "label": "conj:cesaro",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch09_divergence.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch09_divergence.tex"
+  },
+  {
+   "id": "bounded_tao_would_imply_collatz_given_positive_density",
+   "name": "A bounded form of Tao's theorem would imply the Collatz conjecture, given the positive density theorems",
+   "printed": "Proposition 13.3",
+   "page": "241",
+   "chapter": "13",
+   "status": "conditional",
+   "status_text": "conditional on the positive density theorem of Mazur (2026) or of Lau (2026), recent unrefereed preprints with Lean formalizations whose proofs the book does not check: for every integer $t\\ge1$ not divisible by $3$, the set of positive integers whose orbit under the Collatz map reaches $t$ has positive lower natural density; the computer verification of Bařina (2025) that every positive integer up to $2^{71}$ has an orbit that reaches $1$, which the book cites and does not repeat",
+   "conditions": "the positive density theorem of Mazur (2026) or of Lau (2026), recent unrefereed preprints with Lean formalizations whose proofs the book does not check: for every integer $t\\ge1$ not divisible by $3$, the set of positive integers whose orbit under the Collatz map reaches $t$ has positive lower natural density; the computer verification of Bařina (2025) that every positive integer up to $2^{71}$ has an orbit that reaches $1$, which the book cites and does not repeat",
+   "origin": "book",
+   "origin_text": "New in this book.",
+   "highlight": false,
+   "summary": "If the positive density theorems of Mazur and Lau are right, the Collatz conjecture would follow from a bounded form of Tao's theorem, namely that the least value on the orbit of n is at most 2 to the power 71 for all n in a set of logarithmic density one.",
+   "statement": "Let $T_0$ be the Collatz map on the positive integers, $T_0(n)=n/2$ for even $n$ and $T_0(n)=3n+1$ for odd $n$. The orbit of $n$ reaches $1$ if $T_0^{(k)}(n)=1$ for some $k\\ge0$, and $\\mathrm{Col}_{\\min}(n)=\\min_{k\\ge0}T_0^{(k)}(n)$ is the least value on the orbit of $n$. For a set $A$ of positive integers, the lower and upper natural densities are the $\\liminf$ and $\\limsup$ as $x\\to\\infty$ of $x^{-1}\\#\\{n\\le x:n\\in A\\}$, the lower and upper logarithmic densities are the $\\liminf$ and $\\limsup$ of $(\\log x)^{-1}\\sum_{n\\le x,\\,n\\in A}1/n$, and $A$ has logarithmic density one if both of the latter equal $1$. Assume the positive density theorem of Mazur or of Lau: for every integer $t\\ge1$ not divisible by $3$, the set of positive integers whose orbit under $T_0$ reaches $t$ has positive lower natural density. Then (a) if the set of $n$ whose orbit reaches $1$ has logarithmic density one, every orbit reaches $1$: the positive density theorem gives this when the set has upper natural density one (the corollary of Mazur and of Lau), and for every set the lower natural density is at most the lower logarithmic density, which is at most the upper logarithmic density, which is at most the upper natural density, so logarithmic density one implies upper natural density one. And (b) since every positive integer up to $2^{71}$ reaches $1$ (verified by Bařina), if $\\mathrm{Col}_{\\min}(n)\\le2^{71}$ for all $n$ in a set of logarithmic density one, then the set of $n$ whose orbit reaches $1$ has logarithmic density one, so every orbit reaches $1$ and the Collatz conjecture holds. Tao's theorem proves the hypothesis of (b) with $2^{71}$ replaced by any function $f(n)$ that tends to infinity.",
+   "url": "https://vsokolov.org/books/collatz/results.html#bounded_tao_would_imply_collatz_given_positive_density",
+   "source": "book/chapters/ch09b_backward.tex",
+   "label": "prop:ch9b:bounded",
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch09b_backward.tex"
   },
   {
    "id": "residue_certificates_cannot_prove_descent_for_all_integers",
    "name": "Residue certificates cannot prove descent for all integers (the exceptional 2 adic set)",
-   "printed": "Proposition 13.1",
-   "page": "233",
-   "chapter": "13",
+   "printed": "Proposition 15.1",
+   "page": "267",
+   "chapter": "15",
    "status": "proved",
    "status_text": "proved",
    "origin": "book",
@@ -1028,14 +1179,14 @@
    "url": "https://vsokolov.org/books/collatz/results.html#residue_certificates_cannot_prove_descent_for_all_integers",
    "source": "book/chapters/ch10b_computation.tex",
    "label": "prop:ch10b:residue",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch10b_computation.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch10b_computation.tex"
   },
   {
    "id": "two_energies_coefficient_and_total_stopping_time",
    "name": "Two energies under Haar measure, the coefficient stopping time and the total stopping time",
-   "printed": "Proposition 14.1",
-   "page": "241",
-   "chapter": "14",
+   "printed": "Proposition 16.1",
+   "page": "275",
+   "chapter": "16",
    "status": "proved",
    "status_text": "proved",
    "origin": "book",
@@ -1046,14 +1197,14 @@
    "url": "https://vsokolov.org/books/collatz/results.html#two_energies_coefficient_and_total_stopping_time",
    "source": "book/chapters/ch10c_samplers.tex",
    "label": "prop:ch10b:horizons",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch10c_samplers.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch10c_samplers.tex"
   },
   {
    "id": "perfect_split_sampling_coefficient_stopping_time",
    "name": "Perfect split sampling for the coefficient stopping time",
-   "printed": "Theorem 14.2",
-   "page": "242",
-   "chapter": "14",
+   "printed": "Theorem 16.2",
+   "page": "276",
+   "chapter": "16",
    "status": "proved",
    "status_text": "proved",
    "origin": "book",
@@ -1064,14 +1215,14 @@
    "url": "https://vsokolov.org/books/collatz/results.html#perfect_split_sampling_coefficient_stopping_time",
    "source": "book/chapters/ch10c_samplers.tex",
    "label": "thm:ch10b:perfect",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch10c_samplers.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch10c_samplers.tex"
   },
   {
    "id": "orbit_coalescence_shifts_total_stopping_time",
    "name": "Coalescence of orbits shifts the total stopping time",
-   "printed": "Proposition 14.4",
-   "page": "245",
-   "chapter": "14",
+   "printed": "Proposition 16.4",
+   "page": "279",
+   "chapter": "16",
    "status": "proved",
    "status_text": "proved",
    "origin": "book",
@@ -1082,14 +1233,104 @@
    "url": "https://vsokolov.org/books/collatz/results.html#orbit_coalescence_shifts_total_stopping_time",
    "source": "book/chapters/ch10c_samplers.tex",
    "label": "prop:ch10b:acceptance",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch10c_samplers.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch10c_samplers.tex"
+  },
+  {
+   "id": "stopping_time_cumulant_deficits_census_fit",
+   "name": "Additive deficits of the second and third cumulants of total stopping times, fitted to the exact census",
+   "printed": "Proposition 17.1",
+   "page": "290",
+   "chapter": "17",
+   "status": "proved",
+   "status_text": "proved",
+   "origin": "book",
+   "origin_text": "New in this book.",
+   "highlight": false,
+   "summary": "A fit to the exact census of total stopping times shows that their second and third cumulants grow at the rate of the Bernoulli model up to constant additive deficits, which accounts for the observed skewness; it is a computation on the blocks from 2^20 to 2^30, not a proof for all starting values.",
+   "statement": "Let $T$ be the accelerated Collatz map, $T(m)=m/2$ for even $m$ and $T(m)=(3m+1)/2$ for odd $m$, and let $\\sigma_\\infty(n)$ be the total stopping time of $n$, the number of steps of $T$ from $n$ to $1$ (the census computes it for every $n<2^{30}$). For each $k$ with $20\\le k\\le29$ let $n$ be uniform in the dyadic block $[2^k,2^{k+1})$, let $\\kappa_2(\\sigma_\\infty)$ and $\\kappa_3(\\sigma_\\infty)$ be the exact second and third cumulants of $\\sigma_\\infty(n)$, and let $\\mathbb{E}\\log n$ be the mean of $\\log n$ over the block. Fitting $\\kappa_2(\\sigma_\\infty)=a_2\\,\\mathbb{E}\\log n-D_2$ and $\\kappa_3(\\sigma_\\infty)=a_3\\,\\mathbb{E}\\log n-D_3$ over these ten blocks gives slopes $a_2=101.06$ and $a_3=4430.2$, within $0.32$ and $0.13$ percent of the model values $A_2=\\sigma^2/|\\mu|^3=101.39$ and $A_3=3\\sigma^4/|\\mu|^5=4435.7$ of the Bernoulli model (drift $\\mu=\\log(\\sqrt3/2)$ and step variance $\\sigma^2=(\\tfrac12\\log3)^2$), and constant deficits $D_2=133.3$ and $D_3=34\\,060$, in units of squared and cubed steps. The largest residuals of the fits over the ten blocks are $1.1$ and $89$.",
+   "url": "https://vsokolov.org/books/collatz/results.html#stopping_time_cumulant_deficits_census_fit",
+   "source": "book/chapters/ch10e_progress.tex",
+   "label": "prop:ch16:deficit",
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch10e_progress.tex"
+  },
+  {
+   "id": "switching_mm_exact_convex_rate_conjecture",
+   "name": "Conjectured exact worst case rate of Switching MM on smooth convex functions, both branches",
+   "printed": "Conjecture 17.2",
+   "page": "292",
+   "chapter": "17",
+   "status": "open",
+   "status_text": "open",
+   "origin": "book",
+   "origin_text": "New in this book.",
+   "highlight": false,
+   "summary": "A conjectured closed form for the exact worst case of Switching MM on smooth convex functions, for every even number of steps and every momentum coefficient below one, with a main branch and an overshoot branch that cross at an explicit threshold.",
+   "statement": "Let $0\\le\\beta<1$, let $N\\ge2$ be even, and run Switching MM with step $1/L$ and momentum coefficient $\\beta$ from $x_0$ (from each even iterate $x_{2j}$ it takes a gradient step of length $(1+\\beta)/L$ to a point $y$, then a gradient step of length $1/L$ from $y$ to $x_{2j+2}$). Put $D_N=(4+2\\beta)N+2$ and $D'_N=4N-2+2(N-2)\\beta$. Conjecture: over all convex $L$ smooth functions $f$ with a minimizer $x_*$, $f_*=f(x_*)$, and $\\|x_0-x_*\\|\\le R$, the worst case is $\\sup\\bigl(f(x_N)-f_*\\bigr)=LR^2\\max\\bigl\\{1/D_N,\\ \\beta^2/D'_N\\bigr\\}$. The two branches cross at $\\beta_N=\\bigl(\\sqrt{9N^2-2N+1}-N-1\\bigr)/(2N)$, the positive root of $N\\beta^2+(N+1)\\beta-(2N-1)=0$, so that the main branch $LR^2/D_N$ is exact for all even $N$ exactly when $\\beta\\le\\beta_2=(\\sqrt{33}-3)/4=0.68614$.",
+   "url": "https://vsokolov.org/books/collatz/results.html#switching_mm_exact_convex_rate_conjecture",
+   "source": "book/chapters/ch10e_progress.tex",
+   "label": "conj:ch16:full",
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch10e_progress.tex"
+  },
+  {
+   "id": "switching_mm_explicit_worst_functions",
+   "name": "Explicit worst case functions for Switching MM on smooth convex functions",
+   "printed": "Proposition 17.3",
+   "page": "293",
+   "chapter": "17",
+   "status": "proved",
+   "status_text": "proved",
+   "origin": "book",
+   "origin_text": "New in this book.",
+   "highlight": false,
+   "summary": "Two explicit one dimensional functions, a Huber function and an overshoot function, show that the worst case of Switching MM on smooth convex functions is at least the larger of the two branches of the conjectured exact rate, for every even number of steps and every momentum coefficient below one.",
+   "statement": "Let $0\\le\\beta<1$, let $N\\ge2$ be even, and run Switching MM with step $1/L$ and momentum coefficient $\\beta$ from $x_0$ (from each even iterate $x_{2j}$ it takes a gradient step of length $(1+\\beta)/L$ to a point $y$, then a gradient step of length $1/L$ from $y$ to $x_{2j+2}$). Put $D_N=(4+2\\beta)N+2$ and $D'_N=4N-2+2(N-2)\\beta$. Then the supremum of $f(x_N)-f_*$ over all convex $L$ smooth functions $f$ with a minimizer $x_*$, $f_*=f(x_*)$, and $\\|x_0-x_*\\|\\le R$ satisfies $\\sup\\bigl(f(x_N)-f_*\\bigr)\\ge LR^2\\max\\bigl\\{1/D_N,\\ \\beta^2/D'_N\\bigr\\}$.",
+   "url": "https://vsokolov.org/books/collatz/results.html#switching_mm_explicit_worst_functions",
+   "source": "book/chapters/ch10e_progress.tex",
+   "label": "prop:ch16:lower",
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch10e_progress.tex"
+  },
+  {
+   "id": "switching_mm_exact_rate_two_and_four_steps",
+   "name": "Exact worst case rate of Switching MM after two and four steps, by an explicit certificate",
+   "printed": "Theorem 17.4",
+   "page": "294",
+   "chapter": "17",
+   "status": "proved",
+   "status_text": "proved",
+   "origin": "book",
+   "origin_text": "New in this book.",
+   "highlight": false,
+   "summary": "For two and four steps and momentum coefficients up to about 0.64 and 0.70, an explicit certificate built from interpolation inequalities proves the conjectured exact rate of Switching MM on smooth convex functions, in ranges that contain the Collatz momentum.",
+   "statement": "Let $N\\in\\{2,4\\}$ and $0\\le\\beta<1$. Run Switching MM with step $1/L$ and momentum coefficient $\\beta$ in its gradient step form, $x_{k+1}=x_k-(s_k/L)\\nabla f(x_k)$ for $0\\le k<N$, with $s_k=1+\\beta$ for even $k$ and $s_k=1$ for odd $k$ (a gradient step of length $(1+\\beta)/L$ followed by one of length $1/L$, repeated; $x_N$ is the $N$th iterate of Switching MM). Let $f$ be convex and $L$ smooth with a minimizer $x_*$, $f_*=f(x_*)$, and $\\|x_0-x_*\\|\\le R$. Put $D_N=(4+2\\beta)N+2$, $W_k=2(s_0+\\dots+s_k)$, $\\lambda_k=W_k/\\bigl(D_N-W_k+2\\beta\\,[k\\text{ even}]\\bigr)$ for $0\\le k<N$ (where $[k\\text{ even}]$ is $1$ for even $k$ and $0$ for odd $k$), $\\mu_0=\\lambda_0$, $\\mu_k=\\lambda_k-\\lambda_{k-1}$ for $0<k<N$, and $\\mu_N=1-\\lambda_{N-1}$. Multiplying the smooth convex interpolation inequality between the points $x_k$ and $x_{k+1}$ by $\\lambda_k$ and the one between the minimizer and $x_k$ by $\\mu_k$, and summing, gives $f(x_N)-f_*\\le LR^2/D_N-q$, where $q$ is a quadratic form in $x_0-x_*$ and $\\nabla f(x_0),\\dots,\\nabla f(x_N)$. The form $q$ is nonnegative identically when $N=2$ and $0\\le\\beta\\le b_2=0.64461$, or $N=4$ and $0\\le\\beta\\le b_4=0.70438$, where $b_2$ and $b_4$ are the positive roots of $2\\beta^4+11\\beta^3+17\\beta^2+\\beta-11$ and $4\\beta^4+21\\beta^3+31\\beta^2-\\beta-23$. In these ranges, which contain the Collatz value $\\beta=\\log_2 3-1$, the exact worst case of $f(x_N)-f_*$ over this class is therefore $LR^2/D_N$, the main branch of the conjectured exact rate $LR^2\\max\\{1/D_N,\\beta^2/D'_N\\}$ with $D'_N=4N-2+2(N-2)\\beta$.",
+   "url": "https://vsokolov.org/books/collatz/results.html#switching_mm_exact_rate_two_and_four_steps",
+   "source": "book/chapters/ch10e_progress.tex",
+   "label": "thm:ch16:cert",
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch10e_progress.tex"
+  },
+  {
+   "id": "switching_mm_noise_bound_correlated_noise",
+   "name": "The five thirds noise floor bound for Switching MM under correlated gradient noise on quadratics",
+   "printed": "Proposition 17.5",
+   "page": "295",
+   "chapter": "17",
+   "status": "proved",
+   "status_text": "proved",
+   "origin": "book",
+   "origin_text": "New in this book.",
+   "highlight": false,
+   "summary": "On a quadratic with gradient noise of arbitrary covariance, independent from call to call, the stationary excess loss of Switching MM is at most five thirds of that of gradient descent with the same step, for every step up to one over the largest curvature and every momentum coefficient below one.",
+   "statement": "Let $f(x)=\\tfrac12x^\\top Ax-b^\\top x$ with $A$ symmetric positive definite with largest eigenvalue $L$ and minimizer $x_*$, and suppose the algorithm sees the noisy gradient $g(x)=\\nabla f(x)+\\xi$, where a fresh $\\xi$ is drawn at every call, independent of the past, with mean zero and an arbitrary covariance matrix $Q$ (instead of $\\sigma^2I$). Run gradient descent $x_{t+1}=x_t-\\alpha g(x_t)$ and Switching MM with momentum coefficient $\\beta$, both with $g$ in place of $\\nabla f$ and the same step $\\alpha$ (Switching MM starts from $x_{-1}=x_0$, takes the plain step $x_{t+1}=x_t-\\alpha g(x_t)$ at even $t$, and at odd $t$ takes the extrapolated step $x_{t+1}=y_t-\\alpha g(y_t)$ with $y_t=x_t+\\beta(x_t-x_{t-1})$). Then for every step $0<\\alpha\\le1/L$ and every $0\\le\\beta<1$, the stationary excess loss $\\lim\\mathbb{E}\\bigl[f(x_t)-f(x_*)\\bigr]$ of Switching MM, phase averaged over even and odd $t$, is at most $\\tfrac53$ times that of gradient descent with the same step.",
+   "url": "https://vsokolov.org/books/collatz/results.html#switching_mm_noise_bound_correlated_noise",
+   "source": "book/chapters/ch10e_progress.tex",
+   "label": "prop:ch16:correlated",
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch10e_progress.tex"
   },
   {
    "id": "trajectory_mixing_of_syracuse_residues",
    "name": "Trajectory mixing of Syracuse residues modulo powers of 3",
    "printed": "Problem O2",
-   "page": "255",
-   "chapter": "15",
+   "page": "315",
+   "chapter": "19",
    "status": "open",
    "status_text": "open",
    "origin": "book",
@@ -1100,14 +1341,14 @@
    "url": "https://vsokolov.org/books/collatz/results.html#trajectory_mixing_of_syracuse_residues",
    "source": "book/chapters/ch11_open.tex",
    "label": "prob:ch11:o2",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch11_open.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch11_open.tex"
   },
   {
    "id": "failure_fraction_of_potentials_of_growing_depth",
    "name": "Failure fraction of Lyapunov potentials of growing depth for the Syracuse map",
    "printed": "Problem O3$'$",
-   "page": "256",
-   "chapter": "15",
+   "page": "316",
+   "chapter": "19",
    "status": "open",
    "status_text": "open",
    "origin": "book",
@@ -1118,14 +1359,14 @@
    "url": "https://vsokolov.org/books/collatz/results.html#failure_fraction_of_potentials_of_growing_depth",
    "source": "book/chapters/ch11_open.tex",
    "label": "prob:ch11:o3p",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch11_open.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch11_open.tex"
   },
   {
    "id": "bounded_variance_deficit_of_total_stopping_times",
    "name": "Boundedness of the variance deficit and the third cumulant of total stopping times",
    "printed": "Problem O4",
-   "page": "256",
-   "chapter": "15",
+   "page": "316",
+   "chapter": "19",
    "status": "open",
    "status_text": "open",
    "origin": "book",
@@ -1136,14 +1377,14 @@
    "url": "https://vsokolov.org/books/collatz/results.html#bounded_variance_deficit_of_total_stopping_times",
    "source": "book/chapters/ch11_open.tex",
    "label": "prob:ch11:o4",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch11_open.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch11_open.tex"
   },
   {
    "id": "arithmetic_sharpening_of_the_cycle_window",
    "name": "Arithmetic sharpening of the window bound on the least element of a Collatz cycle",
    "printed": "Problem C1",
-   "page": "257",
-   "chapter": "15",
+   "page": "317",
+   "chapter": "19",
    "status": "open",
    "status_text": "open",
    "origin": "paper:polsonsokolov2026nexus",
@@ -1154,14 +1395,14 @@
    "url": "https://vsokolov.org/books/collatz/results.html#arithmetic_sharpening_of_the_cycle_window",
    "source": "book/chapters/ch11_open.tex",
    "label": "prob:ch11:c1",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch11_open.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch11_open.tex"
   },
   {
    "id": "verification_ranges_for_later_rungs_under_hercher_accounting",
    "name": "Verification ranges that exclude the later rungs under Hercher's sharper accounting",
    "printed": "Problem C3",
-   "page": "258",
-   "chapter": "15",
+   "page": "318",
+   "chapter": "19",
    "status": "open",
    "status_text": "open",
    "origin": "book",
@@ -1172,14 +1413,68 @@
    "url": "https://vsokolov.org/books/collatz/results.html#verification_ranges_for_later_rungs_under_hercher_accounting",
    "source": "book/chapters/ch11_open.tex",
    "label": "prob:ch11:c3",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch11_open.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch11_open.tex"
+  },
+  {
+   "id": "bounded_form_of_tao_theorem",
+   "name": "Bounded form of Tao's theorem: orbit minimum at most 2^71 on a set of logarithmic density one",
+   "printed": "Problem B1",
+   "page": "318",
+   "chapter": "19",
+   "status": "open",
+   "status_text": "open",
+   "origin": "book",
+   "origin_text": "New in this book.",
+   "highlight": false,
+   "summary": "Asks for a proof that the least value on the orbit of n is at most 2 to the power 71 for all n in a set of logarithmic density one, a bounded form of Tao's theorem that, given the positive density theorems of Mazur and Lau, would imply the Collatz conjecture, and which the conjecture implies.",
+   "statement": "Let $T_0$ be the Collatz map on the positive integers, $T_0(n)=n/2$ for even $n$ and $T_0(n)=3n+1$ for odd $n$, and let $\\mathrm{Col}_{\\min}(n)=\\min_{k\\ge0}T_0^{(k)}(n)$ be the least value on the orbit of $n$. A set $A$ of positive integers has logarithmic density one if $(\\log x)^{-1}\\sum_{n\\le x,\\,n\\in A}1/n\\to1$ as $x\\to\\infty$. Tao proved that for every function $f$ with $f(n)\\to\\infty$ one has $\\mathrm{Col}_{\\min}(n)<f(n)$ for all $n$ in a set of logarithmic density one, and every positive integer up to $2^{71}$ is known to reach $1$ (verification of Bařina). Problem: show that $\\mathrm{Col}_{\\min}(n)\\le2^{71}$ for all $n$ in a set of logarithmic density one. By the verification up to $2^{71}$, if the positive density theorems of Mazur and Lau are right, this implies the Collatz conjecture, and the conjecture implies it.",
+   "url": "https://vsokolov.org/books/collatz/results.html#bounded_form_of_tao_theorem",
+   "source": "book/chapters/ch11_open.tex",
+   "label": "prob:ch11:b1",
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch11_open.tex"
+  },
+  {
+   "id": "true_decay_rate_of_syracuse_fourier_coefficients",
+   "name": "True decay rate of the Fourier coefficients of the Syracuse random variable modulo powers of 3",
+   "printed": "Problem B2",
+   "page": "318",
+   "chapter": "19",
+   "status": "open",
+   "status_text": "open",
+   "origin": "book",
+   "origin_text": "New in this book.",
+   "highlight": false,
+   "summary": "Asks how fast the largest Fourier coefficient of the Syracuse random variable modulo 3 to the power d, over frequencies prime to 3, tends to zero, choosing between decay like exp of minus c times the square of log d, like exp of minus c times d to a power gamma below 1, and eventually geometric decay.",
+   "statement": "Let $a_1,a_2,\\ldots$ be independent random variables with $\\mathbb{P}(a_i=k)=2^{-k}$ for $k\\ge1$, and let $\\pi_d$ be the law on $\\mathbb{Z}/3^d\\mathbb{Z}$ of $\\sum_{i=1}^{d}3^{i-1}2^{-(a_1+\\cdots+a_i)}$, with $2$ inverted modulo $3^d$ (the law of Tao's Syracuse random variable modulo $3^d$). Its Fourier coefficient at the frequency $\\xi$ is $\\widehat\\pi_d(\\xi)=\\sum_{y\\bmod3^d}\\pi_d(y)e^{-2\\pi i\\xi y/3^d}$. Tao proved that $\\max_{3\\nmid\\xi}|\\widehat\\pi_d(\\xi)|$ eventually decays faster than any power of $d$, and the exact computation of the book shows that through $d=18$ it stays between $3.6\\,d^{-2}$ and $3.9\\,d^{-2}$ from $d=7$ on and sits at $\\xi=\\pm2^k$ with $d\\le k\\le1.28\\,d$. Problem: determine how fast $\\max_{3\\nmid\\xi}|\\widehat\\pi_d(\\xi)|$ tends to zero as $d\\to\\infty$. Is it $\\exp(-c(\\log d)^2)$, $\\exp(-cd^{\\gamma})$ for some $\\gamma<1$, or eventually geometric?",
+   "url": "https://vsokolov.org/books/collatz/results.html#true_decay_rate_of_syracuse_fourier_coefficients",
+   "source": "book/chapters/ch11_open.tex",
+   "label": "prob:ch11:b2",
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch11_open.tex"
+  },
+  {
+   "id": "sharpness_of_shaik_threshold_for_stopping_times",
+   "name": "Sharpness of Shaik's threshold 3/log(4/3) for total stopping times",
+   "printed": "Problem B3",
+   "page": "319",
+   "chapter": "19",
+   "status": "open",
+   "status_text": "open",
+   "origin": "book",
+   "origin_text": "New in this book.",
+   "highlight": false,
+   "summary": "Asks for a proof that, for every constant c below 3 over log(4/3), the integers n whose total stopping time is at most c log n have natural density zero, so that the threshold of Shaik for positive density is sharp.",
+   "statement": "Let $T_0$ be the Collatz map on the positive integers, $T_0(n)=n/2$ for even $n$ and $T_0(n)=3n+1$ for odd $n$, and let $\\sigma_0(n)$ be the total stopping time of $n$, the least $k\\ge0$ with $T_0^{(k)}(n)=1$ (infinite if there is none). Shaik's preprint (2026) obtains positive lower density for convergence within $c\\log x$ steps of $T_0$, for the integers below $x$, for every $c>3/\\log(4/3)\\approx10.428$. Problem: show that for every $c<3/\\log(4/3)$ the set of $n$ with $\\sigma_0(n)\\le c\\log n$ has natural density zero, so that Shaik's threshold is sharp. A renewal calculation in the book predicts that below the threshold the share of $n$ meeting the bound tends to zero.",
+   "url": "https://vsokolov.org/books/collatz/results.html#sharpness_of_shaik_threshold_for_stopping_times",
+   "source": "book/chapters/ch11_open.tex",
+   "label": "prob:ch11:b3",
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch11_open.tex"
   },
   {
    "id": "exact_function_gap_rate_of_switching_mm_for_small_condition_numbers",
    "name": "Exact worst case function gap rate of Switching MM for small condition numbers",
    "printed": "Problem S1",
-   "page": "258",
-   "chapter": "15",
+   "page": "319",
+   "chapter": "19",
    "status": "open",
    "status_text": "open",
    "origin": "book",
@@ -1190,14 +1485,14 @@
    "url": "https://vsokolov.org/books/collatz/results.html#exact_function_gap_rate_of_switching_mm_for_small_condition_numbers",
    "source": "book/chapters/ch11_open.tex",
    "label": "prob:ch11:s1",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch11_open.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch11_open.tex"
   },
   {
    "id": "five_thirds_noise_bound_of_switching_mm_beyond_quadratics",
    "name": "Five thirds noise bound of Switching MM beyond quadratics",
    "printed": "Problem S2",
-   "page": "258",
-   "chapter": "15",
+   "page": "319",
+   "chapter": "19",
    "status": "open",
    "status_text": "open",
    "origin": "book",
@@ -1208,14 +1503,14 @@
    "url": "https://vsokolov.org/books/collatz/results.html#five_thirds_noise_bound_of_switching_mm_beyond_quadratics",
    "source": "book/chapters/ch11_open.tex",
    "label": "prob:ch11:s2",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch11_open.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch11_open.tex"
   },
   {
    "id": "adaptive_switching_rule_for_switching_mm",
    "name": "A principled adaptive switching rule for Switching MM",
    "printed": "Problem S4",
-   "page": "259",
-   "chapter": "15",
+   "page": "320",
+   "chapter": "19",
    "status": "open",
    "status_text": "open",
    "origin": "book",
@@ -1226,7 +1521,7 @@
    "url": "https://vsokolov.org/books/collatz/results.html#adaptive_switching_rule_for_switching_mm",
    "source": "book/chapters/ch11_open.tex",
    "label": "prob:ch11:s4",
-   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.0.0/book/chapters/ch11_open.tex"
+   "source_url": "https://github.com/VadimSokolov/collatz/blob/v1.1.0/book/chapters/ch11_open.tex"
   }
  ]
 }

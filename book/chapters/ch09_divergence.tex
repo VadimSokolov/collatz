@@ -517,6 +517,8 @@ They reflect the same gap between ensemble and orbit
 that the Ces\`aro identity isolates: a density statement, however strong, is a
 statement about a measure, and the conjecture is a statement about every point.
 
+If the positive density theorems of \cref{chap:backward} are right, this needs one qualification. A version of Tao's theorem with the constant bound $2^{71}$ in place of $f(n)\to\infty$ would give convergence to $1$ on a set of logarithmic density one, and that would imply convergence everywhere (\cref{prop:ch9b:bounded}), because the predecessors of any orbit that missed $1$ would form a set of positive density. The gap between ensemble and orbit is then exactly the gap between a slowly growing $f$ and a constant.
+
 \section{The Krasikov and Lagarias counting bound}\label{sec:ch9:krasikov}
 
 A different line of attack counts integers from below. Let $\pi_1(x)$ be the
@@ -527,7 +529,7 @@ every $m$ has the preimage $2m$, and also $(m-1)/3$ when $m\equiv4\pmod6$, and
 the growth of this tree can be bounded below by a system of difference
 inequalities indexed by residue classes modulo a power of $3$, which is then
 solved numerically. The method gives an exponent strictly less than one, so the
-bound does not give the integers that reach $1$ a positive density. \Cref{chap:difference} develops a
+bound does not give the integers that reach $1$ a positive density; that was proved in 2026 by a different method, which weighs the inverse tree by the stride model (\cref{chap:backward}). \Cref{chap:difference} develops a
 simplified version of the method in full, with certified exponents up to
 $0.477$.
 
