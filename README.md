@@ -67,6 +67,7 @@ All 66 catalogued results, with statements and status, are in [RESULTS.md](RESUL
 - `RESULTS.md` and `summaries/`: the catalog of results and one summary per chapter.
 - `site/`: what the book's web pages are built from: `book.json` with every fact and result, the book page and the page of the results by chapter in Markdown, their head tags and the book's `llms.txt` section.
 - Book page: https://vsokolov.org/books/collatz/
+- Printed edition: https://www.amazon.com/dp/B0HN8TS5N8
 
 ## License
 
