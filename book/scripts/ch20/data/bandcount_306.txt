@@ -1,0 +1,8 @@
+
+band b = 1: log10 of the number of admissible words with at least f r indices in band, divided by r
+      r  total/r f=0.084 f=0.2   f=0.3   f=0.39  f=0.477 f=0.55  f=0.65  f=0.75  f=0.9  
+    306   0.4398  0.4268  0.4015  0.3775  0.3526  0.3268  0.3012  0.2631  0.2157  0.1182
+
+band b = 3: log10 of the number of admissible words with at least f r indices in band, divided by r
+      r  total/r f=0.084 f=0.2   f=0.3   f=0.39  f=0.477 f=0.55  f=0.65  f=0.75  f=0.9  
+    306   0.4398  0.4387  0.4347  0.4306  0.4261  0.4213  0.4164  0.4089  0.3992  0.3766

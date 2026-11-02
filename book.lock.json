@@ -1,9 +1,9 @@
 {
  "edition": "1",
  "pdf": {
-  "bytes": 6104045,
+  "bytes": 6360023,
   "file": "pdf/collatz.pdf",
-  "pages": 379,
+  "pages": 393,
   "parts": [
    {
     "first_page": "i",
@@ -22,159 +22,166 @@
    {
     "first_page": "19",
     "key": "2",
-    "last_page": "42",
-    "pages": 24,
+    "last_page": "40",
+    "pages": 22,
     "title": "Chapter 2. Parity Vectors and the Syracuse Map"
    },
    {
-    "first_page": "43",
+    "first_page": "41",
     "key": "3",
-    "last_page": "64",
+    "last_page": "62",
     "pages": 22,
     "title": "Chapter 3. Stochastic Models and Martingale Duality"
    },
    {
-    "first_page": "67",
+    "first_page": "65",
     "key": "4",
-    "last_page": "84",
+    "last_page": "82",
     "pages": 18,
     "title": "Chapter 4. Lyapunov Functions and the Limits of Descent"
    },
    {
-    "first_page": "85",
+    "first_page": "83",
     "key": "5",
-    "last_page": "98",
+    "last_page": "96",
     "pages": 14,
     "title": "Chapter 5. Majorization and Momentum"
    },
    {
-    "first_page": "99",
+    "first_page": "97",
     "key": "6",
-    "last_page": "108",
+    "last_page": "106",
     "pages": 10,
     "title": "Chapter 6. Majorization Pressed Harder"
    },
    {
-    "first_page": "109",
+    "first_page": "107",
     "key": "7",
-    "last_page": "124",
+    "last_page": "122",
     "pages": 16,
     "title": "Chapter 7. Switching MM"
    },
    {
-    "first_page": "125",
+    "first_page": "123",
     "key": "8",
-    "last_page": "154",
+    "last_page": "152",
     "pages": 30,
     "title": "Chapter 8. Noise, Variance and Experiments"
    },
    {
-    "first_page": "155",
+    "first_page": "153",
     "key": "9",
-    "last_page": "168",
+    "last_page": "166",
     "pages": 14,
     "title": "Chapter 9. Nonlinear Difference Equations and Momentum MM"
    },
    {
-    "first_page": "169",
+    "first_page": "167",
     "key": "10",
-    "last_page": "182",
+    "last_page": "180",
     "pages": 14,
     "title": "Chapter 10. Three Point Inequalities and Similar Triangles"
    },
    {
-    "first_page": "185",
+    "first_page": "183",
     "key": "11",
-    "last_page": "220",
+    "last_page": "218",
     "pages": 36,
     "title": "Chapter 11. Cycles and Continued Fractions"
    },
    {
-    "first_page": "221",
+    "first_page": "219",
     "key": "12",
-    "last_page": "238",
+    "last_page": "236",
     "pages": 18,
     "title": "Chapter 12. The Divergence Half"
    },
    {
-    "first_page": "239",
+    "first_page": "237",
     "key": "13",
-    "last_page": "258",
+    "last_page": "256",
     "pages": 20,
     "title": "Chapter 13. Positive Density from the Backward Tree"
    },
    {
-    "first_page": "259",
+    "first_page": "257",
     "key": "14",
-    "last_page": "264",
+    "last_page": "262",
     "pages": 6,
     "title": "Chapter 14. The Path to Collatz"
    },
    {
-    "first_page": "265",
+    "first_page": "263",
     "key": "15",
-    "last_page": "272",
+    "last_page": "270",
     "pages": 8,
     "title": "Chapter 15. A Computational Path"
    },
    {
-    "first_page": "273",
+    "first_page": "271",
     "key": "16",
-    "last_page": "288",
+    "last_page": "286",
     "pages": 16,
     "title": "Chapter 16. Samplers and the Horizon"
    },
    {
-    "first_page": "289",
+    "first_page": "287",
     "key": "17",
-    "last_page": "300",
+    "last_page": "298",
     "pages": 12,
     "title": "Chapter 17. Progress on the Open Problems"
    },
    {
-    "first_page": "301",
+    "first_page": "299",
     "key": "18",
     "last_page": "314",
-    "pages": 14,
-    "title": "Chapter 18. Contributions and a Computational Road Map"
+    "pages": 16,
+    "title": "Chapter 18. What the Book Missed"
    },
    {
     "first_page": "315",
     "key": "19",
-    "last_page": "324",
-    "pages": 10,
-    "title": "Chapter 19. Open Problems and Computational Projects"
+    "last_page": "328",
+    "pages": 14,
+    "title": "Chapter 19. Contributions and a Computational Road Map"
    },
    {
-    "first_page": "325",
+    "first_page": "329",
+    "key": "20",
+    "last_page": "338",
+    "pages": 10,
+    "title": "Chapter 20. Open Problems and Computational Projects"
+   },
+   {
+    "first_page": "339",
     "key": "",
-    "last_page": "332",
+    "last_page": "346",
     "pages": 8,
     "title": "A Gallery of Orbits"
    },
    {
-    "first_page": "333",
+    "first_page": "347",
     "key": "A",
-    "last_page": "336",
+    "last_page": "350",
     "pages": 4,
     "title": "Appendix A. Numerical Constants"
    },
    {
-    "first_page": "337",
+    "first_page": "351",
     "key": "B",
-    "last_page": "354",
+    "last_page": "368",
     "pages": 18,
     "title": "Appendix B. Code"
    },
    {
-    "first_page": "355",
+    "first_page": "369",
     "key": "",
-    "last_page": "359",
+    "last_page": "373",
     "pages": 5,
     "title": "Index"
    }
   ],
-  "sha256": "40674ec007fe33c42c4527df4e43729ede5f9bc3aa00143841bae61da4779f73"
+  "sha256": "7d6050d52c7856a51cc78993ed92bc18f86d532b97d33710ddea1759c91eef2c"
  },
  "results": {
   "acceleration_survives_every_switching_rule": {
@@ -183,7 +190,7 @@
    "fingerprint": "71678cd13f30",
    "label": "prop:ch7b:switch",
    "number": "10.7",
-   "page": "176",
+   "page": "174",
    "printed": "Proposition 10.7",
    "verified_fingerprint": "71678cd13f30",
    "verified_on": "2026-10-16"
@@ -194,10 +201,21 @@
    "fingerprint": "bdb3b931b044",
    "label": "prob:ch11:s4",
    "number": "S4",
-   "page": "320",
+   "page": "334",
    "printed": "Problem S4",
    "verified_fingerprint": "bdb3b931b044",
    "verified_on": "2026-10-12"
+  },
+  "arithmetic_gap_at_the_current_record_rung": {
+   "environment": "corollary",
+   "file": "book/chapters/ch10f_missed.tex",
+   "fingerprint": "79b6d604400a",
+   "label": "cor:ch20:gap",
+   "number": "18.8",
+   "page": "305",
+   "printed": "Corollary 18.8",
+   "verified_fingerprint": "79b6d604400a",
+   "verified_on": "2026-10-28"
   },
   "arithmetic_sharpening_of_the_cycle_window": {
    "environment": "problem*",
@@ -205,10 +223,21 @@
    "fingerprint": "3644e4e47137",
    "label": "prob:ch11:c1",
    "number": "C1",
-   "page": "317",
+   "page": "331",
    "printed": "Problem C1",
    "verified_fingerprint": "3644e4e47137",
    "verified_on": "2026-10-12"
+  },
+  "band_for_the_word_of_a_cycle": {
+   "environment": "proposition",
+   "file": "book/chapters/ch10f_missed.tex",
+   "fingerprint": "bb62e366cbe4",
+   "label": "prop:ch20:band",
+   "number": "18.9",
+   "page": "306",
+   "printed": "Proposition 18.9",
+   "verified_fingerprint": "bb62e366cbe4",
+   "verified_on": "2026-10-28"
   },
   "bounded_form_of_tao_theorem": {
    "environment": "problem*",
@@ -216,7 +245,7 @@
    "fingerprint": "25d97fa07b3c",
    "label": "prob:ch11:b1",
    "number": "B1",
-   "page": "318",
+   "page": "332",
    "printed": "Problem B1",
    "verified_fingerprint": "25d97fa07b3c",
    "verified_on": "2026-10-16"
@@ -227,7 +256,7 @@
    "fingerprint": "d7caa0a31850",
    "label": "prop:ch9b:bounded",
    "number": "13.3",
-   "page": "241",
+   "page": "239",
    "printed": "Proposition 13.3",
    "verified_fingerprint": "d7caa0a31850",
    "verified_on": "2026-10-16"
@@ -238,10 +267,21 @@
    "fingerprint": "716e5ac6119b",
    "label": "prob:ch11:o4",
    "number": "O4",
-   "page": "316",
+   "page": "330",
    "printed": "Problem O4",
    "verified_fingerprint": "716e5ac6119b",
    "verified_on": "2026-10-12"
+  },
+  "branch_and_bound_at_q23_problem": {
+   "environment": "problem*",
+   "file": "book/chapters/ch10f_missed.tex",
+   "fingerprint": "25352e899bfe",
+   "label": "prob:ch20:branch",
+   "number": "M2",
+   "page": "313",
+   "printed": "Problem M2",
+   "verified_fingerprint": "25352e899bfe",
+   "verified_on": "2026-10-28"
   },
   "bregman_decomposition_of_a_syracuse_orbit": {
    "environment": "proposition",
@@ -249,7 +289,7 @@
    "fingerprint": "7f015fb7fe7c",
    "label": "prop:ch7b:bregman",
    "number": "10.8",
-   "page": "177",
+   "page": "175",
    "printed": "Proposition 10.8",
    "verified_fingerprint": "7f015fb7fe7c",
    "verified_on": "2026-10-16"
@@ -260,7 +300,7 @@
    "fingerprint": "ced4ed980670",
    "label": "thm:ch5b:exponent",
    "number": "9.3",
-   "page": "158",
+   "page": "156",
    "printed": "Theorem 9.3",
    "verified_fingerprint": "ced4ed980670",
    "verified_on": "2026-10-12"
@@ -271,7 +311,7 @@
    "fingerprint": "6a3d9dd307bd",
    "label": "prop:cesaro",
    "number": "12.3",
-   "page": "223",
+   "page": "221",
    "printed": "Proposition 12.3",
    "verified_fingerprint": "6a3d9dd307bd",
    "verified_on": "2026-10-12"
@@ -282,10 +322,21 @@
    "fingerprint": "14c2af26ca33",
    "label": "conj:cesaro",
    "number": "12.6",
-   "page": "224",
+   "page": "222",
    "printed": "Conjecture 12.6",
    "verified_fingerprint": "14c2af26ca33",
    "verified_on": "2026-10-12"
+  },
+  "christoffel_cycles_are_extremal": {
+   "environment": "theorem",
+   "file": "book/chapters/ch10f_missed.tex",
+   "fingerprint": "c385f2c13218",
+   "label": "thm:ch20:christoffel",
+   "number": "18.5",
+   "page": "302",
+   "printed": "Theorem 18.5",
+   "verified_fingerprint": "c385f2c13218",
+   "verified_on": "2026-10-28"
   },
   "diophantine_insufficiency_cycle_lengths": {
    "environment": "proposition",
@@ -293,10 +344,21 @@
    "fingerprint": "f10fcaa208eb",
    "label": "prop:ch8:insufficient",
    "number": "11.20",
-   "page": "205",
+   "page": "202",
    "printed": "Proposition 11.20",
    "verified_fingerprint": "f10fcaa208eb",
    "verified_on": "2026-10-12"
+  },
+  "divergence_as_an_invariant_measure": {
+   "environment": "theorem",
+   "file": "book/chapters/ch10f_missed.tex",
+   "fingerprint": "1dcdd0b90605",
+   "label": "thm:ch20:measure",
+   "number": "18.10",
+   "page": "308",
+   "printed": "Theorem 18.10",
+   "verified_fingerprint": "1dcdd0b90605",
+   "verified_on": "2026-10-28"
   },
   "every_switching_rule_is_stable_on_quadratics": {
    "environment": "corollary",
@@ -304,10 +366,21 @@
    "fingerprint": "75e56983cb6f",
    "label": "cor:ch5b:anyswitch",
    "number": "9.8",
-   "page": "163",
+   "page": "161",
    "printed": "Corollary 9.8",
    "verified_fingerprint": "75e56983cb6f",
    "verified_on": "2026-10-12"
+  },
+  "exact_form_of_the_cycle_identity": {
+   "environment": "theorem",
+   "file": "book/chapters/ch10f_missed.tex",
+   "fingerprint": "5514a87da49c",
+   "label": "thm:ch20:exact",
+   "number": "18.2",
+   "page": "301",
+   "printed": "Theorem 18.2",
+   "verified_fingerprint": "5514a87da49c",
+   "verified_on": "2026-10-28"
   },
   "exact_function_gap_rate_of_switching_mm_for_small_condition_numbers": {
    "environment": "problem*",
@@ -315,7 +388,7 @@
    "fingerprint": "8c9823562a72",
    "label": "prob:ch11:s1",
    "number": "S1",
-   "page": "319",
+   "page": "333",
    "printed": "Problem S1",
    "verified_fingerprint": "8c9823562a72",
    "verified_on": "2026-10-12"
@@ -326,10 +399,21 @@
    "fingerprint": "c452c65fd568",
    "label": "prop:ch4:twostride",
    "number": "4.12",
-   "page": "74",
+   "page": "72",
    "printed": "Proposition 4.12",
    "verified_fingerprint": "c452c65fd568",
    "verified_on": "2026-10-12"
+  },
+  "exponential_tail_in_the_stride_model": {
+   "environment": "proposition",
+   "file": "book/chapters/ch10f_missed.tex",
+   "fingerprint": "efbf8acf17f5",
+   "label": "prop:ch20:tail",
+   "number": "18.13",
+   "page": "311",
+   "printed": "Proposition 18.13",
+   "verified_fingerprint": "efbf8acf17f5",
+   "verified_on": "2026-10-28"
   },
   "extrapolated_point_is_a_long_gradient_step": {
    "environment": "lemma",
@@ -337,7 +421,7 @@
    "fingerprint": "f81a509d88a4",
    "label": "lem:ch6:ystep",
    "number": "7.5",
-   "page": "117",
+   "page": "115",
    "printed": "Lemma 7.5",
    "verified_fingerprint": "f81a509d88a4",
    "verified_on": "2026-10-12"
@@ -348,7 +432,7 @@
    "fingerprint": "7405d46c347b",
    "label": "prob:ch11:o3p",
    "number": "O3$'$",
-   "page": "316",
+   "page": "330",
    "printed": "Problem O3$'$",
    "verified_fingerprint": "7405d46c347b",
    "verified_on": "2026-10-12"
@@ -359,10 +443,21 @@
    "fingerprint": "fcc44afeda1c",
    "label": "prop:uimartingale",
    "number": "3.17",
-   "page": "61",
+   "page": "59",
    "printed": "Proposition 3.17",
    "verified_fingerprint": "fcc44afeda1c",
    "verified_on": "2026-10-12"
+  },
+  "finite_modulus_criterion_for_bounded_orbits": {
+   "environment": "proposition",
+   "file": "book/chapters/ch10f_missed.tex",
+   "fingerprint": "e0cf75474c61",
+   "label": "prop:ch20:mod8",
+   "number": "18.11",
+   "page": "309",
+   "printed": "Proposition 18.11",
+   "verified_fingerprint": "e0cf75474c61",
+   "verified_on": "2026-10-28"
   },
   "five_thirds_noise_bound_of_switching_mm_beyond_quadratics": {
    "environment": "problem*",
@@ -370,7 +465,7 @@
    "fingerprint": "2315e6d981ee",
    "label": "prob:ch11:s2",
    "number": "S2",
-   "page": "319",
+   "page": "333",
    "printed": "Problem S2",
    "verified_fingerprint": "2315e6d981ee",
    "verified_on": "2026-10-12"
@@ -381,10 +476,32 @@
    "fingerprint": "c2aacfceeeff",
    "label": "thm:ch7:gainweight",
    "number": "8.12",
-   "page": "135",
+   "page": "133",
    "printed": "Theorem 8.12",
    "verified_fingerprint": "c2aacfceeeff",
    "verified_on": "2026-10-12"
+  },
+  "integer_cycle_inequality_problem": {
+   "environment": "problem*",
+   "file": "book/chapters/ch10f_missed.tex",
+   "fingerprint": "310a563541ad",
+   "label": "prob:ch20:integer",
+   "number": "M3",
+   "page": "313",
+   "printed": "Problem M3",
+   "verified_fingerprint": "310a563541ad",
+   "verified_on": "2026-10-28"
+  },
+  "limsup_version_problem": {
+   "environment": "problem*",
+   "file": "book/chapters/ch10f_missed.tex",
+   "fingerprint": "bcbe0154e347",
+   "label": "prob:ch20:limsup",
+   "number": "M5",
+   "page": "313",
+   "printed": "Problem M5",
+   "verified_fingerprint": "bcbe0154e347",
+   "verified_on": "2026-10-28"
   },
   "linear_majorizer_cannot_certify_descent": {
    "environment": "proposition",
@@ -392,7 +509,7 @@
    "fingerprint": "8994bfa8ff00",
    "label": "prop:mmfails",
    "number": "4.19",
-   "page": "79",
+   "page": "78",
    "printed": "Proposition 4.19",
    "verified_fingerprint": "8994bfa8ff00",
    "verified_on": "2026-10-12"
@@ -403,7 +520,7 @@
    "fingerprint": "0d1a75704028",
    "label": "cor:longrun",
    "number": "3.14",
-   "page": "58",
+   "page": "55",
    "printed": "Corollary 3.14",
    "verified_fingerprint": "0d1a75704028",
    "verified_on": "2026-10-12"
@@ -414,10 +531,21 @@
    "fingerprint": "2a360997c9e7",
    "label": "prop:ch3:standard",
    "number": "3.7",
-   "page": "48",
+   "page": "45",
    "printed": "Proposition 3.7",
    "verified_fingerprint": "2a360997c9e7",
    "verified_on": "2026-10-12"
+  },
+  "minimum_inequality_on_the_ladder": {
+   "environment": "corollary",
+   "file": "book/chapters/ch10f_missed.tex",
+   "fingerprint": "b008b2f8859d",
+   "label": "cor:ch20:ladder",
+   "number": "18.4",
+   "page": "301",
+   "printed": "Corollary 18.4",
+   "verified_fingerprint": "b008b2f8859d",
+   "verified_on": "2026-10-28"
   },
   "modified_equation_for_period_two_steps": {
    "environment": "proposition",
@@ -425,7 +553,7 @@
    "fingerprint": "69cfc88466c0",
    "label": "prop:ch5b:modified",
    "number": "9.11",
-   "page": "165",
+   "page": "163",
    "printed": "Proposition 9.11",
    "verified_fingerprint": "69cfc88466c0",
    "verified_on": "2026-10-12"
@@ -436,7 +564,7 @@
    "fingerprint": "3736823c5649",
    "label": "cor:ch4:multistride",
    "number": "4.15",
-   "page": "78",
+   "page": "76",
    "printed": "Corollary 4.15",
    "verified_fingerprint": "3736823c5649",
    "verified_on": "2026-10-12"
@@ -447,7 +575,7 @@
    "fingerprint": "ff73d3bda695",
    "label": "thm:nolyapunov",
    "number": "4.8",
-   "page": "73",
+   "page": "71",
    "printed": "Theorem 4.8",
    "verified_fingerprint": "ff73d3bda695",
    "verified_on": "2026-10-12"
@@ -458,7 +586,7 @@
    "fingerprint": "a95f28faaefa",
    "label": "thm:ch5c:residue",
    "number": "6.3",
-   "page": "101",
+   "page": "99",
    "printed": "Theorem 6.3",
    "verified_fingerprint": "a95f28faaefa",
    "verified_on": "2026-10-12"
@@ -469,7 +597,7 @@
    "fingerprint": "944a527e4bb0",
    "label": "prop:ch7:matched",
    "number": "8.9",
-   "page": "132",
+   "page": "130",
    "printed": "Proposition 8.9",
    "verified_fingerprint": "944a527e4bb0",
    "verified_on": "2026-10-12"
@@ -480,7 +608,7 @@
    "fingerprint": "61dcc0e5819c",
    "label": "prop:ch10b:acceptance",
    "number": "16.4",
-   "page": "279",
+   "page": "277",
    "printed": "Proposition 16.4",
    "verified_fingerprint": "61dcc0e5819c",
    "verified_on": "2026-10-12"
@@ -491,7 +619,7 @@
    "fingerprint": "48754128428b",
    "label": "thm:autocorr",
    "number": "3.12",
-   "page": "56",
+   "page": "54",
    "printed": "Proposition 3.12",
    "verified_fingerprint": "48754128428b",
    "verified_on": "2026-10-12"
@@ -502,7 +630,7 @@
    "fingerprint": "6f96aba51608",
    "label": "thm:ch10b:perfect",
    "number": "16.2",
-   "page": "276",
+   "page": "274",
    "printed": "Theorem 16.2",
    "verified_fingerprint": "6f96aba51608",
    "verified_on": "2026-10-12"
@@ -513,7 +641,7 @@
    "fingerprint": "c845d410348b",
    "label": "prop:ch4:power",
    "number": "4.20",
-   "page": "81",
+   "page": "79",
    "printed": "Proposition 4.20",
    "verified_fingerprint": "c845d410348b",
    "verified_on": "2026-10-12"
@@ -524,10 +652,21 @@
    "fingerprint": "94a3777bc06d",
    "label": "prop:ch7:pareto",
    "number": "8.14",
-   "page": "137",
+   "page": "136",
    "printed": "Proposition 8.14",
    "verified_fingerprint": "94a3777bc06d",
    "verified_on": "2026-10-12"
+  },
+  "records_of_the_ladder_problem": {
+   "environment": "problem*",
+   "file": "book/chapters/ch10f_missed.tex",
+   "fingerprint": "f09e2f9ac2bc",
+   "label": "prob:ch20:records",
+   "number": "M1",
+   "page": "313",
+   "printed": "Problem M1",
+   "verified_fingerprint": "f09e2f9ac2bc",
+   "verified_on": "2026-10-28"
   },
   "residue_certificates_cannot_prove_descent_for_all_integers": {
    "environment": "proposition",
@@ -535,7 +674,7 @@
    "fingerprint": "8b735fc009f7",
    "label": "prop:ch10b:residue",
    "number": "15.1",
-   "page": "267",
+   "page": "265",
    "printed": "Proposition 15.1",
    "verified_fingerprint": "8b735fc009f7",
    "verified_on": "2026-10-12"
@@ -546,10 +685,32 @@
    "fingerprint": "d3fd7d210c30",
    "label": "prop:ch5c:runpot",
    "number": "6.6",
-   "page": "104",
+   "page": "102",
    "printed": "Proposition 6.6",
    "verified_fingerprint": "d3fd7d210c30",
    "verified_on": "2026-10-12"
+  },
+  "sharp_maximum_inequality": {
+   "environment": "theorem",
+   "file": "book/chapters/ch10f_missed.tex",
+   "fingerprint": "d779694f990c",
+   "label": "thm:ch20:max",
+   "number": "18.6",
+   "page": "303",
+   "printed": "Theorem 18.6",
+   "verified_fingerprint": "d779694f990c",
+   "verified_on": "2026-10-28"
+  },
+  "sharp_minimum_inequality": {
+   "environment": "theorem",
+   "file": "book/chapters/ch10f_missed.tex",
+   "fingerprint": "4049e6515d02",
+   "label": "thm:ch20:min",
+   "number": "18.3",
+   "page": "301",
+   "printed": "Theorem 18.3",
+   "verified_fingerprint": "4049e6515d02",
+   "verified_on": "2026-10-28"
   },
   "sharpness_of_shaik_threshold_for_stopping_times": {
    "environment": "problem*",
@@ -557,7 +718,7 @@
    "fingerprint": "03ae757b1fe8",
    "label": "prob:ch11:b3",
    "number": "B3",
-   "page": "319",
+   "page": "332",
    "printed": "Problem B3",
    "verified_fingerprint": "03ae757b1fe8",
    "verified_on": "2026-10-16"
@@ -568,7 +729,7 @@
    "fingerprint": "f23920d256e4",
    "label": "cor:ch5b:count",
    "number": "9.4",
-   "page": "159",
+   "page": "157",
    "printed": "Corollary 9.4",
    "verified_fingerprint": "f23920d256e4",
    "verified_on": "2026-10-12"
@@ -579,7 +740,7 @@
    "fingerprint": "9954e5a80e31",
    "label": "prop:ch6:defect",
    "number": "7.10",
-   "page": "122",
+   "page": "120",
    "printed": "Proposition 7.10",
    "verified_fingerprint": "9954e5a80e31",
    "verified_on": "2026-10-12"
@@ -590,7 +751,7 @@
    "fingerprint": "0bc1352d7533",
    "label": "prop:ch5b:jsr",
    "number": "9.6",
-   "page": "162",
+   "page": "160",
    "printed": "Proposition 9.6",
    "verified_fingerprint": "0bc1352d7533",
    "verified_on": "2026-10-12"
@@ -601,7 +762,7 @@
    "fingerprint": "0319060a4148",
    "label": "thm:ch5b:rate",
    "number": "9.9",
-   "page": "164",
+   "page": "161",
    "printed": "Theorem 9.9",
    "verified_fingerprint": "0319060a4148",
    "verified_on": "2026-10-12"
@@ -612,7 +773,7 @@
    "fingerprint": "c58a7da329a2",
    "label": "prop:ch5b:monotone",
    "number": "9.5",
-   "page": "161",
+   "page": "159",
    "printed": "Proposition 9.5",
    "verified_fingerprint": "c58a7da329a2",
    "verified_on": "2026-10-12"
@@ -623,7 +784,7 @@
    "fingerprint": "61734a6a237b",
    "label": "prop:ch7:mult",
    "number": "8.15",
-   "page": "141",
+   "page": "139",
    "printed": "Proposition 8.15",
    "verified_fingerprint": "61734a6a237b",
    "verified_on": "2026-10-12"
@@ -634,7 +795,7 @@
    "fingerprint": "a89c129b046e",
    "label": "cor:ch6:slow",
    "number": "7.9",
-   "page": "120",
+   "page": "118",
    "printed": "Corollary 7.9",
    "verified_fingerprint": "a89c129b046e",
    "verified_on": "2026-10-12"
@@ -645,7 +806,7 @@
    "fingerprint": "598abf4e5be4",
    "label": "cor:ch7:slow",
    "number": "8.5",
-   "page": "129",
+   "page": "127",
    "printed": "Corollary 8.5",
    "verified_fingerprint": "598abf4e5be4",
    "verified_on": "2026-10-12"
@@ -656,7 +817,7 @@
    "fingerprint": "428b87a776dc",
    "label": "cor:ch5b:speed",
    "number": "9.10",
-   "page": "165",
+   "page": "163",
    "printed": "Corollary 9.10",
    "verified_fingerprint": "428b87a776dc",
    "verified_on": "2026-10-12"
@@ -667,7 +828,7 @@
    "fingerprint": "94f0786bad47",
    "label": "cor:ch6:stability",
    "number": "7.8",
-   "page": "119",
+   "page": "117",
    "printed": "Corollary 7.8",
    "verified_fingerprint": "94f0786bad47",
    "verified_on": "2026-10-12"
@@ -678,7 +839,7 @@
    "fingerprint": "3a0409aa604d",
    "label": "thm:smmvar",
    "number": "8.4",
-   "page": "128",
+   "page": "126",
    "printed": "Theorem 8.4",
    "verified_fingerprint": "3a0409aa604d",
    "verified_on": "2026-10-12"
@@ -689,7 +850,7 @@
    "fingerprint": "e56108469f63",
    "label": "conj:ch5b:transient",
    "number": "9.7",
-   "page": "163",
+   "page": "161",
    "printed": "Conjecture 9.7",
    "verified_fingerprint": "e56108469f63",
    "verified_on": "2026-10-12"
@@ -700,7 +861,7 @@
    "fingerprint": "58962a51bd3e",
    "label": "thm:smmquad",
    "number": "7.6",
-   "page": "118",
+   "page": "116",
    "printed": "Theorem 7.6",
    "verified_fingerprint": "58962a51bd3e",
    "verified_on": "2026-10-12"
@@ -711,10 +872,21 @@
    "fingerprint": "66f73454b277",
    "label": "prop:ch7:uniform",
    "number": "8.7",
-   "page": "130",
+   "page": "128",
    "printed": "Proposition 8.7",
    "verified_fingerprint": "66f73454b277",
    "verified_on": "2026-10-12"
+  },
+  "spread_of_a_long_cycle": {
+   "environment": "corollary",
+   "file": "book/chapters/ch10f_missed.tex",
+   "fingerprint": "72385b6d05d5",
+   "label": "cor:ch20:spread",
+   "number": "18.7",
+   "page": "304",
+   "printed": "Corollary 18.7",
+   "verified_fingerprint": "72385b6d05d5",
+   "verified_on": "2026-10-28"
   },
   "stopping_time_cumulant_deficits_census_fit": {
    "environment": "proposition",
@@ -722,7 +894,7 @@
    "fingerprint": "dee76cce1687",
    "label": "prop:ch16:deficit",
    "number": "17.1",
-   "page": "290",
+   "page": "288",
    "printed": "Proposition 17.1",
    "verified_fingerprint": "dee76cce1687",
    "verified_on": "2026-10-16"
@@ -733,7 +905,7 @@
    "fingerprint": "442625d12ea5",
    "label": "thm:stride",
    "number": "4.7",
-   "page": "71",
+   "page": "69",
    "printed": "Theorem 4.7",
    "verified_fingerprint": "442625d12ea5",
    "verified_on": "2026-10-12"
@@ -744,7 +916,7 @@
    "fingerprint": "12e9439153f6",
    "label": "prop:ch4:passage",
    "number": "4.5",
-   "page": "70",
+   "page": "67",
    "printed": "Proposition 4.5",
    "verified_fingerprint": "12e9439153f6",
    "verified_on": "2026-10-12"
@@ -755,7 +927,7 @@
    "fingerprint": "ec9715e88219",
    "label": "prop:ch5c:surplus",
    "number": "6.4",
-   "page": "102",
+   "page": "101",
    "printed": "Proposition 6.4",
    "verified_fingerprint": "ec9715e88219",
    "verified_on": "2026-10-12"
@@ -766,7 +938,7 @@
    "fingerprint": "e804fa305c31",
    "label": "thm:ch7b:smmrate",
    "number": "10.5",
-   "page": "173",
+   "page": "171",
    "printed": "Theorem 10.5",
    "verified_fingerprint": "e804fa305c31",
    "verified_on": "2026-10-16"
@@ -777,7 +949,7 @@
    "fingerprint": "2f9a206e5c01",
    "label": "conj:ch16:full",
    "number": "17.2",
-   "page": "292",
+   "page": "290",
    "printed": "Conjecture 17.2",
    "verified_fingerprint": "2f9a206e5c01",
    "verified_on": "2026-10-16"
@@ -788,7 +960,7 @@
    "fingerprint": "60dc0dac01ce",
    "label": "thm:ch16:cert",
    "number": "17.4",
-   "page": "294",
+   "page": "292",
    "printed": "Theorem 17.4",
    "verified_fingerprint": "60dc0dac01ce",
    "verified_on": "2026-10-16"
@@ -799,7 +971,7 @@
    "fingerprint": "857c71e6ec95",
    "label": "conj:ch7b:tight",
    "number": "10.6",
-   "page": "174",
+   "page": "172",
    "printed": "Conjecture 10.6",
    "verified_fingerprint": "857c71e6ec95",
    "verified_on": "2026-10-16"
@@ -810,7 +982,7 @@
    "fingerprint": "07a5ff573529",
    "label": "prop:ch16:lower",
    "number": "17.3",
-   "page": "293",
+   "page": "291",
    "printed": "Proposition 17.3",
    "verified_fingerprint": "07a5ff573529",
    "verified_on": "2026-10-16"
@@ -821,7 +993,7 @@
    "fingerprint": "e828a3f66b10",
    "label": "prop:ch16:correlated",
    "number": "17.5",
-   "page": "295",
+   "page": "293",
    "printed": "Proposition 17.5",
    "verified_fingerprint": "e828a3f66b10",
    "verified_on": "2026-10-16"
@@ -832,7 +1004,7 @@
    "fingerprint": "d02ee4a7be0e",
    "label": "prob:ch11:o2",
    "number": "O2",
-   "page": "315",
+   "page": "329",
    "printed": "Problem O2",
    "verified_fingerprint": "d02ee4a7be0e",
    "verified_on": "2026-10-12"
@@ -843,7 +1015,7 @@
    "fingerprint": "7f55c35f4699",
    "label": "prob:ch11:b2",
    "number": "B2",
-   "page": "318",
+   "page": "332",
    "printed": "Problem B2",
    "verified_fingerprint": "7f55c35f4699",
    "verified_on": "2026-10-16"
@@ -854,7 +1026,7 @@
    "fingerprint": "2d1b63da0223",
    "label": "prop:ch10b:horizons",
    "number": "16.1",
-   "page": "275",
+   "page": "273",
    "printed": "Proposition 16.1",
    "verified_fingerprint": "2d1b63da0223",
    "verified_on": "2026-10-12"
@@ -865,10 +1037,21 @@
    "fingerprint": "52f4e830fbe0",
    "label": "prop:ch7b:dissipation",
    "number": "10.9",
-   "page": "179",
+   "page": "177",
    "printed": "Proposition 10.9",
    "verified_fingerprint": "52f4e830fbe0",
    "verified_on": "2026-10-16"
+  },
+  "variance_on_the_t0_clock": {
+   "environment": "proposition",
+   "file": "book/chapters/ch10f_missed.tex",
+   "fingerprint": "e81207043d70",
+   "label": "prop:ch20:var",
+   "number": "18.14",
+   "page": "311",
+   "printed": "Proposition 18.14",
+   "verified_fingerprint": "e81207043d70",
+   "verified_on": "2026-10-28"
   },
   "verification_ranges_for_later_rungs_under_hercher_accounting": {
    "environment": "problem*",
@@ -876,10 +1059,21 @@
    "fingerprint": "3afd910d70e5",
    "label": "prob:ch11:c3",
    "number": "C3",
-   "page": "318",
+   "page": "332",
    "printed": "Problem C3",
    "verified_fingerprint": "3afd910d70e5",
    "verified_on": "2026-10-12"
+  },
+  "walk_of_halvings_seen_from_the_extremes": {
+   "environment": "lemma",
+   "file": "book/chapters/ch10f_missed.tex",
+   "fingerprint": "55a1d03311f7",
+   "label": "lem:ch20:walk",
+   "number": "18.1",
+   "page": "300",
+   "printed": "Lemma 18.1",
+   "verified_fingerprint": "55a1d03311f7",
+   "verified_on": "2026-10-28"
   },
   "what_arithmetic_would_suffice": {
    "environment": "corollary",
@@ -887,7 +1081,7 @@
    "fingerprint": "59b87889b25d",
    "label": "cor:ch8:window",
    "number": "11.22",
-   "page": "207",
+   "page": "205",
    "printed": "Corollary 11.22",
    "verified_fingerprint": "59b87889b25d",
    "verified_on": "2026-10-12"
@@ -898,16 +1092,34 @@
    "fingerprint": "b3c623e200db",
    "label": "lem:ch8:window",
    "number": "11.21",
-   "page": "206",
+   "page": "203",
    "printed": "Lemma 11.21",
    "verified_fingerprint": "b3c623e200db",
    "verified_on": "2026-10-12"
+  },
+  "words_with_large_phi_problem": {
+   "environment": "problem*",
+   "file": "book/chapters/ch10f_missed.tex",
+   "fingerprint": "be6fca0bcc51",
+   "label": "prob:ch20:band",
+   "number": "M4",
+   "page": "313",
+   "printed": "Problem M4",
+   "verified_fingerprint": "be6fca0bcc51",
+   "verified_on": "2026-10-28"
   }
  },
- "updated": "2026-10-16",
+ "updated": "2026-11-01",
  "zenodo": {
   "concept_doi": "10.5281/zenodo.23331099",
   "doi": "10.5281/zenodo.23421852",
+  "draft": {
+   "doi": "10.5281/zenodo.23874304",
+   "html": "https://zenodo.org/deposit/23874304",
+   "id": 23874304,
+   "reserved_on": "2026-11-01",
+   "version": "1.2.0"
+  },
   "html": "https://zenodo.org/records/23421852",
   "latest_id": 23421852,
   "tag": "v1.1.0",

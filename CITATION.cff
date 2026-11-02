@@ -10,9 +10,9 @@ authors:
   given-names: Vadim
   orcid: https://orcid.org/0000-0002-6618-2965
   affiliation: George Mason University
-version: 1.1.0
-doi: 10.5281/zenodo.23421852
-date-released: '2026-10-16'
+version: 1.2.0
+doi: 10.5281/zenodo.23874304
+date-released: '2026-11-01'
 license: CC-BY-4.0
 repository-code: https://github.com/VadimSokolov/collatz
 url: https://vsokolov.org/books/collatz/
@@ -29,10 +29,10 @@ keywords:
 - Collatz cycles
 - Diophantine approximation
 - first order optimization methods
-abstract: 'The Collatz conjecture says that, from any positive integer, repeatedly halving an even number and sending an odd number n to 3n+1 always reaches 1. This book explains why the problem has resisted proof. It reads the map as a random walk, as an optimization algorithm and as a problem in Diophantine approximation, and it makes each obstruction precise.
+abstract: 'The Collatz conjecture says that, from any positive integer, repeatedly halving an even number and sending an odd number n to 3n+1 always reaches 1. This book explains why the problem has resisted proof. It reads the map as a random walk, as an optimization algorithm and as a problem in Diophantine approximation.
 
 
-  The conjecture splits into a divergence half, a law of large numbers along a single deterministic orbit, and a cycle half, a question about rational approximation of log2 3 that Diophantine information alone cannot finish. The book proves that no Lyapunov function increasing in the number certifies descent over any fixed number of steps, and that no finite residue sieve certifies descent for every integer. It proves that however far the computer verification is pushed, infinitely many cycle lengths survive the cycle inequality, so the inequality and the verification alone cannot exclude all cycles, a point Halbeisen and Hungerbühler made earlier in another form.
+  The conjecture splits into a divergence half, a law of large numbers along a single deterministic orbit, and a cycle half, a question about rational approximation of log2 3 that Diophantine information alone cannot finish. The book proves that no Lyapunov function increasing in the number certifies descent over any fixed number of steps, and that no finite residue sieve certifies descent for every integer. However far the computer verification is pushed, infinitely many cycle lengths survive the cycle inequality, a point Halbeisen and Hungerbühler made earlier in another form; a sharp minimum inequality for rational cycles, nearly attained by Christoffel cycles, measures what a property of integers must add to exclude them.
 
 
   The arithmetic of the map also yields an algorithm. Switching MM, a first order method that applies the momentum log2 3 minus 1 on alternate steps, has an explicit linear rate at step 1/L on smooth strongly convex functions, and on quadratics with additive gradient noise, at steps up to 1/L, its noise variance stays below 5/3 times that of gradient descent for every momentum coefficient below one. The gain weight theorem shows that on quadratics with small steps no stable linear periodic first order method has a lower slow mode noise floor than gradient descent at matched speed.
@@ -51,7 +51,7 @@ preferred-citation:
     orcid: https://orcid.org/0000-0002-6618-2965
     affiliation: George Mason University
   year: 2026
-  doi: 10.5281/zenodo.23421852
+  doi: 10.5281/zenodo.23874304
   url: https://vsokolov.org/books/collatz/
   publisher:
     name: Independently published
