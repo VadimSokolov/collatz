@@ -7,9 +7,9 @@
 <meta name="citation_author_institution" content="University of Chicago Booth School of Business">
 <meta name="citation_author" content="Sokolov, Vadim">
 <meta name="citation_author_institution" content="George Mason University">
-<meta name="citation_publication_date" content="2026/11/01">
+<meta name="citation_publication_date" content="2026/11/02">
 <meta name="citation_publisher" content="Independently published">
-<meta name="citation_doi" content="10.5281/zenodo.23874304">
+<meta name="citation_doi" content="10.5281/zenodo.23905381">
 <meta name="citation_abstract_html_url" content="https://vsokolov.org/books/collatz/">
 <meta name="citation_language" content="en">
 <meta name="citation_keywords" content="Collatz conjecture; 3x+1 problem; Syracuse map; parity vectors; Lyapunov functions; majorization minimization; Nesterov momentum; martingales; continued fractions; Collatz cycles; Diophantine approximation; first order optimization methods">
@@ -18,7 +18,7 @@
 <meta property="og:description" content="Why the Collatz (3x+1) conjecture resists proof: the map as a random walk, an optimizer and a Diophantine problem; proofs that fixed horizon monotone Lyapunov certificates and finite residue sieves cannot settle it and the cycle inequality cannot exclude all cycles; a momentum method from log2 3.">
 <meta property="og:url" content="https://vsokolov.org/books/collatz/">
 <meta property="og:image" content="https://vsokolov.org/books/collatz/cover.jpg">
-<meta property="book:release_date" content="2026-11-01">
+<meta property="book:release_date" content="2026-11-02">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -26,7 +26,7 @@
  "name": "On the Collatz Conjecture",
  "alternativeHeadline": "Martingales, Momentum and Continued Fractions",
  "url": "https://vsokolov.org/books/collatz/",
- "description": "The Collatz conjecture says that, from any positive integer, repeatedly halving an even number and sending an odd number n to 3n+1 always reaches 1. This book explains why the problem has resisted proof. It reads the map as a random walk, as an optimization algorithm and as a problem in Diophantine approximation.\n\nThe conjecture splits into a divergence half, a law of large numbers along a single deterministic orbit, and a cycle half, a question about rational approximation of log2 3 that Diophantine information alone cannot finish. The book proves that no Lyapunov function increasing in the number certifies descent over any fixed number of steps, and that no finite residue sieve certifies descent for every integer. However far the computer verification is pushed, infinitely many cycle lengths survive the cycle inequality, a point Halbeisen and Hungerbühler made earlier in another form; a sharp minimum inequality for rational cycles, nearly attained by Christoffel cycles, measures what a property of integers must add to exclude them.\n\nThe arithmetic of the map also yields an algorithm. Switching MM, a first order method that applies the momentum log2 3 minus 1 on alternate steps, has an explicit linear rate at step 1/L on smooth strongly convex functions, and on quadratics with additive gradient noise, at steps up to 1/L, its noise variance stays below 5/3 times that of gradient descent for every momentum coefficient below one. The gain weight theorem shows that on quadratics with small steps no stable linear periodic first order method has a lower slow mode noise floor than gradient descent at matched speed.\n\nEvery result is proved in full or marked as conditional, the open problems are collected in the closing chapter, and the Python scripts behind every computed number, figure and table are in the repository.",
+ "description": "The Collatz conjecture says that, from any positive integer, repeatedly halving an even number and sending an odd number n to 3n+1 always reaches 1. This book explains why the problem has resisted proof.\n\nThe conjecture splits into a divergence half, a law of large numbers along a single deterministic orbit, and a cycle half, a question about rational approximation of log2 3 that Diophantine information alone cannot finish. The book proves that no Lyapunov function increasing in the number certifies descent over any fixed number of steps, and that no finite residue sieve certifies descent for every integer. However far the computer verification is pushed, infinitely many cycle lengths survive the cycle inequality, a point Halbeisen and Hungerbühler made earlier in another form; a sharp minimum inequality for rational cycles, nearly attained by Christoffel cycles, measures what a property of integers must add to exclude them. A seventeen state Turing machine that beeps forever exactly when the conjecture holds shows what one more quantifier costs.\n\nThe arithmetic of the map also yields an algorithm. Switching MM, a first order method that applies the momentum log2 3 minus 1 on alternate steps, has an explicit linear rate at step 1/L on smooth strongly convex functions, and on quadratics with additive gradient noise, at steps up to 1/L, its noise variance stays below 5/3 times that of gradient descent for every momentum coefficient below one. The gain weight theorem shows that on quadratics with small steps no stable linear periodic first order method has a lower slow mode noise floor than gradient descent at matched speed.\n\nEvery result is proved in full or marked as conditional, the open problems are collected in the closing chapter, and the Python scripts behind every computed number, figure and table are in the repository.",
  "author": [
   {
    "@type": "Person",
@@ -50,9 +50,9 @@
    }
   }
  ],
- "datePublished": "2026-11-01",
+ "datePublished": "2026-11-02",
  "bookEdition": "1",
- "version": "1.2.0",
+ "version": "1.3.0",
  "publisher": {
   "@type": "Organization",
   "name": "Independently published"
@@ -61,13 +61,13 @@
  "keywords": "Collatz conjecture, 3x+1 problem, Syracuse map, parity vectors, Lyapunov functions, majorization minimization, Nesterov momentum, martingales, continued fractions, Collatz cycles, Diophantine approximation, first order optimization methods",
  "isAccessibleForFree": true,
  "license": "https://creativecommons.org/licenses/by/4.0/",
- "numberOfPages": 393,
+ "numberOfPages": 405,
  "image": "https://vsokolov.org/books/collatz/cover.jpg",
  "identifier": [
   {
    "@type": "PropertyValue",
    "propertyID": "DOI",
-   "value": "10.5281/zenodo.23874304"
+   "value": "10.5281/zenodo.23905381"
   },
   {
    "@type": "PropertyValue",
@@ -76,13 +76,12 @@
   }
  ],
  "sameAs": [
-  "https://doi.org/10.5281/zenodo.23874304",
-  "https://github.com/VadimSokolov/collatz",
-  "https://zenodo.org/records/23874304"
+  "https://doi.org/10.5281/zenodo.23905381",
+  "https://github.com/VadimSokolov/collatz"
  ],
  "encoding": {
   "@type": "MediaObject",
-  "contentUrl": "https://github.com/VadimSokolov/collatz/releases/download/v1.2.0/collatz.pdf",
+  "contentUrl": "https://github.com/VadimSokolov/collatz/releases/download/v1.3.0/collatz.pdf",
   "encodingFormat": "application/pdf"
  },
  "workExample": {
@@ -238,34 +237,42 @@
   {
    "@type": "Chapter",
    "position": 19,
-   "name": "Chapter 19. Contributions and a Computational Road Map",
-   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/19_contributions_and_a_computational_road_map.md",
+   "name": "Chapter 19. The Price of a Quantifier",
+   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/19_the_price_of_a_quantifier.md",
    "pageStart": "315",
-   "pageEnd": "328"
+   "pageEnd": "326"
   },
   {
    "@type": "Chapter",
    "position": 20,
-   "name": "Chapter 20. Open Problems and Computational Projects",
-   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/20_open_problems_and_computational_projects.md",
-   "pageStart": "329",
-   "pageEnd": "338"
+   "name": "Chapter 20. Contributions and a Computational Road Map",
+   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/20_contributions_and_a_computational_road_map.md",
+   "pageStart": "327",
+   "pageEnd": "340"
   },
   {
    "@type": "Chapter",
    "position": 21,
-   "name": "Appendix A. Numerical Constants",
-   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/A_numerical_constants.md",
-   "pageStart": "347",
+   "name": "Chapter 21. Open Problems and Computational Projects",
+   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/21_open_problems_and_computational_projects.md",
+   "pageStart": "341",
    "pageEnd": "350"
   },
   {
    "@type": "Chapter",
    "position": 22,
+   "name": "Appendix A. Numerical Constants",
+   "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/A_numerical_constants.md",
+   "pageStart": "359",
+   "pageEnd": "362"
+  },
+  {
+   "@type": "Chapter",
+   "position": 23,
    "name": "Appendix B. Code",
    "url": "https://github.com/VadimSokolov/collatz/blob/main/summaries/B_code.md",
-   "pageStart": "351",
-   "pageEnd": "368"
+   "pageStart": "363",
+   "pageEnd": "380"
   }
  ]
 }

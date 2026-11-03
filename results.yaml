@@ -645,10 +645,10 @@
   statement: >-
     Let $f(x)=\tfrac12x^\top Ax-b^\top x$ with $A$ symmetric positive definite with largest eigenvalue $L$ and minimizer $x_*$, and suppose the algorithm sees the noisy gradient $g(x)=\nabla f(x)+\xi$, where a fresh $\xi$ is drawn at every call, independent of the past, with mean zero and an arbitrary covariance matrix $Q$ (instead of $\sigma^2I$). Run gradient descent $x_{t+1}=x_t-\alpha g(x_t)$ and Switching MM with momentum coefficient $\beta$, both with $g$ in place of $\nabla f$ and the same step $\alpha$ (Switching MM starts from $x_{-1}=x_0$, takes the plain step $x_{t+1}=x_t-\alpha g(x_t)$ at even $t$, and at odd $t$ takes the extrapolated step $x_{t+1}=y_t-\alpha g(y_t)$ with $y_t=x_t+\beta(x_t-x_{t-1})$). Then for every step $0<\alpha\le1/L$ and every $0\le\beta<1$, the stationary excess loss $\lim\mathbb{E}\bigl[f(x_t)-f(x_*)\bigr]$ of Switching MM, phase averaged over even and odd $t$, is at most $\tfrac53$ times that of gradient descent with the same step.
 
-- id: trajectory_mixing_of_syracuse_residues   # Problem O2, chapter 20
+- id: trajectory_mixing_of_syracuse_residues   # Problem O2, chapter 21
   name: "Trajectory mixing of Syracuse residues modulo powers of 3"
   label: "prob:ch11:o2"
-  chapter: "20"
+  chapter: "21"
   origin: book
   status: open
   highlight: false
@@ -656,10 +656,10 @@
   statement: >-
     Let $S$ be the Syracuse map on the odd positive integers, $S(y)=(3y+1)/2^{v_2(3y+1)}$, where $v_2(m)$ is the exponent of the largest power of $2$ dividing $m$, and for an odd $x_0$ let $y_j=S^{(j)}(x_0)$. Fix $a\ge1$, let $U_a$ be the residues modulo $3^a$ prime to $3$, and let $\pi_a$ be the stationary law of the Markov chain on $U_a$ that moves from $r$ to $(3r+1)2^{-K}\bmod3^a$, with $K$ an independent Geometric$(\tfrac12)$ variable, $\mathbb{P}(K=k)=2^{-k}$ for $k\ge1$. Fix a constant $C>1/|\log(3/4)|\approx3.48$ and let $x_0$ be drawn uniformly from the odd integers up to $X$. Problem: show that the empirical distribution of $y_j\bmod3^a$ over the strides before the orbit reaches $1$, stopped after $\lfloor C\log X\rfloor$ strides if the orbit has not reached $1$ by then, converges in probability to $\pi_a$ as $X\to\infty$.
 
-- id: failure_fraction_of_potentials_of_growing_depth   # Problem O3', chapter 20
+- id: failure_fraction_of_potentials_of_growing_depth   # Problem O3', chapter 21
   name: "Failure fraction of Lyapunov potentials of growing depth for the Syracuse map"
   label: "prob:ch11:o3p"
-  chapter: "20"
+  chapter: "21"
   origin: book
   status: open
   highlight: false
@@ -667,10 +667,10 @@
   statement: >-
     Let $S$ be the Syracuse map on the odd positive integers, $S(x)=(3x+1)/2^{v_2(3x+1)}$, where $v_2(m)$ is the exponent of the largest power of $2$ dividing $m$. A potential is a function $V(x)=\log x+\varphi(x)$ on the odd positive integers, and it fails at $x$ if $V(S(x))\ge V(x)$. Group the strides of an orbit into blocks, each a maximal run of strides $y\mapsto S(y)$ with $v_2(3y+1)=1$ followed by one stride with $v_2(3y+1)\ge2$; the block that starts at $x$ has $v_2(x+1)$ strides, its run length. No potential whose correction $\varphi$ depends on boundedly many binary digits of $x$ decreases at every stride, and the run length potentials $\log x+c\,v_2(x+1)$ fail at a fraction at least $0.143$ of the odd integers. Problem: for $h\ge1$, determine the infimum, over the potentials of depth $h$, whose correction reads the run lengths of the first $h$ blocks of the orbit of $x$, of the density of the odd integers at which the potential fails; decide whether it tends to $0$ as $h\to\infty$, and if so, how fast.
 
-- id: bounded_variance_deficit_of_total_stopping_times   # Problem O4, chapter 20
+- id: bounded_variance_deficit_of_total_stopping_times   # Problem O4, chapter 21
   name: "Boundedness of the variance deficit and the third cumulant of total stopping times"
   label: "prob:ch11:o4"
-  chapter: "20"
+  chapter: "21"
   origin: book
   status: open
   highlight: false
@@ -678,10 +678,10 @@
   statement: >-
     Let $T$ be the accelerated Collatz map, $T(n)=n/2$ for even $n$ and $T(n)=(3n+1)/2$ for odd $n$, and for $n\ge2$ whose orbit reaches $1$ let $\sigma_\infty(n)$ be the number of steps of $T$ from $n$ to $1$. For $k\ge1$ and $n$ in the dyadic block $[2^k,2^{k+1})$, let $a_{\mathrm t}(n)$ be the number of odd values among $T^{(k)}(n),\ldots,T^{(\sigma_\infty(n)-1)}(n)$ and $Z_{\mathrm t}(n)=\tfrac12\log3\,\bigl(2a_{\mathrm t}(n)-(\sigma_\infty(n)-k)\bigr)$, the centred parity sum over the steps after the first $k$. Put $\sigma^2=\tfrac14(\log3)^2$ and, with $n$ uniform on the block, define the additive variance deficit $D_{\mathrm v}(k)=\sigma^2\,\mathbb{E}(\sigma_\infty-k)-\operatorname{Var}Z_{\mathrm t}$. Problem: prove that $D_{\mathrm v}(k)$ is bounded in $k$, either assuming that every orbit reaches $1$, or unconditionally for the integers of each block whose orbits reach $1$ within a fixed multiple of $k$ steps; and explain the third cumulant: the skewness of $\sigma_\infty$ on the block is $0.67$ at $k=29$, against $0.96$ for the inverse Gaussian first passage law of the model.
 
-- id: arithmetic_sharpening_of_the_cycle_window   # Problem C1, chapter 20
+- id: arithmetic_sharpening_of_the_cycle_window   # Problem C1, chapter 21
   name: "Arithmetic sharpening of the window bound on the least element of a Collatz cycle"
   label: "prob:ch11:c1"
-  chapter: "20"
+  chapter: "21"
   origin: paper:polsonsokolov2026nexus
   status: open
   highlight: false
@@ -689,10 +689,10 @@
   statement: >-
     Let $T$ be the accelerated Collatz map, $T(n)=n/2$ for even $n$ and $T(n)=(3n+1)/2$ for odd $n$. For a cycle of $T$ on the positive integers with $m$ odd steps, $k$ steps in all and least element $x_{\min}$, put $\Lambda=k\log2-m\log3>0$. Every nontrivial cycle satisfies $x_{\min}<m/(3\Lambda)$ (the window lemma of the book). Problem: find a function $f$, derived from the arithmetic of the parity vector of the cycle rather than from the size of its elements, such that every nontrivial cycle satisfies $x_{\min}<m/(3\Lambda f(m))$. A function with $f(m)\ge\frac m3(1+\eta)$ for a fixed $\eta>0$ and all large $m$ would confine the least element of every nontrivial cycle with many odd steps below a constant, about $1/(2\eta)$ for small $\eta$, and so reduce the cycle half of the Collatz conjecture to a finite verification.
 
-- id: verification_ranges_for_later_rungs_under_hercher_accounting   # Problem C3, chapter 20
+- id: verification_ranges_for_later_rungs_under_hercher_accounting   # Problem C3, chapter 21
   name: "Verification ranges that exclude the later rungs under Hercher's sharper accounting"
   label: "prob:ch11:c3"
-  chapter: "20"
+  chapter: "21"
   origin: book
   status: open
   highlight: false
@@ -700,10 +700,10 @@
   statement: >-
     Let $\theta=\log_23$ and, for an integer $r\ge1$, $\delta(r)=\lceil r\theta\rceil-r\theta$; the rungs of the one sided ladder of $\theta$ are the $r$ with $\delta(r)<\delta(r')$ for every $1\le r'<r$, the best one sided approximations of $\theta$ from above. Let $T$ be the accelerated Collatz map, $T(n)=n/2$ for even $n$ and $T(n)=(3n+1)/2$ for odd $n$, and call $X$ a verification range if every positive integer below $X$ reaches $1$ under $T$. Hercher (2023, Theorem 27) shows that if $X$ is a verification range, a nontrivial cycle of $T$ with $r$ odd elements and $s$ elements in all satisfies $0<s/r-\theta<1/(4X\log2)$, so that the least cycle length it does not exclude is a rung, and his computer assisted Corollary 29 shows that the verification range $3\cdot2^{69}$ already excludes cycles whose length is the rung $72\,057\,431\,991$. Problem: extend that computation to the later rungs: for each rung from $137\,528\,045\,312$ on, find the least verification range at which Hercher's accounting excludes it.
 
-- id: bounded_form_of_tao_theorem   # Problem B1, chapter 20
+- id: bounded_form_of_tao_theorem   # Problem B1, chapter 21
   name: "Bounded form of Tao's theorem: orbit minimum at most 2^71 on a set of logarithmic density one"
   label: "prob:ch11:b1"
-  chapter: "20"
+  chapter: "21"
   origin: book
   status: open
   highlight: false
@@ -711,10 +711,10 @@
   statement: >-
     Let $T_0$ be the Collatz map on the positive integers, $T_0(n)=n/2$ for even $n$ and $T_0(n)=3n+1$ for odd $n$, and let $\mathrm{Col}_{\min}(n)=\min_{k\ge0}T_0^{(k)}(n)$ be the least value on the orbit of $n$. A set $A$ of positive integers has logarithmic density one if $(\log x)^{-1}\sum_{n\le x,\,n\in A}1/n\to1$ as $x\to\infty$. Tao proved that for every function $f$ with $f(n)\to\infty$ one has $\mathrm{Col}_{\min}(n)<f(n)$ for all $n$ in a set of logarithmic density one, and every positive integer up to $2^{71}$ is known to reach $1$ (verification of Bařina). Problem: show that $\mathrm{Col}_{\min}(n)\le2^{71}$ for all $n$ in a set of logarithmic density one. By the verification up to $2^{71}$, if the positive density theorems of Mazur and Lau are right, this implies the Collatz conjecture, and the conjecture implies it.
 
-- id: true_decay_rate_of_syracuse_fourier_coefficients   # Problem B2, chapter 20
+- id: true_decay_rate_of_syracuse_fourier_coefficients   # Problem B2, chapter 21
   name: "True decay rate of the Fourier coefficients of the Syracuse random variable modulo powers of 3"
   label: "prob:ch11:b2"
-  chapter: "20"
+  chapter: "21"
   origin: book
   status: open
   highlight: false
@@ -722,10 +722,10 @@
   statement: >-
     Let $a_1,a_2,\ldots$ be independent random variables with $\mathbb{P}(a_i=k)=2^{-k}$ for $k\ge1$, and let $\pi_d$ be the law on $\mathbb{Z}/3^d\mathbb{Z}$ of $\sum_{i=1}^{d}3^{i-1}2^{-(a_1+\cdots+a_i)}$, with $2$ inverted modulo $3^d$ (the law of Tao's Syracuse random variable modulo $3^d$). Its Fourier coefficient at the frequency $\xi$ is $\widehat\pi_d(\xi)=\sum_{y\bmod3^d}\pi_d(y)e^{-2\pi i\xi y/3^d}$. Tao proved that $\max_{3\nmid\xi}|\widehat\pi_d(\xi)|$ eventually decays faster than any power of $d$, and the exact computation of the book shows that through $d=18$ it stays between $3.6\,d^{-2}$ and $3.9\,d^{-2}$ from $d=7$ on and sits at $\xi=\pm2^k$ with $d\le k\le1.28\,d$. Problem: determine how fast $\max_{3\nmid\xi}|\widehat\pi_d(\xi)|$ tends to zero as $d\to\infty$. Is it $\exp(-c(\log d)^2)$, $\exp(-cd^{\gamma})$ for some $\gamma<1$, or eventually geometric?
 
-- id: sharpness_of_shaik_threshold_for_stopping_times   # Problem B3, chapter 20
+- id: sharpness_of_shaik_threshold_for_stopping_times   # Problem B3, chapter 21
   name: "Sharpness of Shaik's threshold 3/log(4/3) for total stopping times"
   label: "prob:ch11:b3"
-  chapter: "20"
+  chapter: "21"
   origin: book
   status: open
   highlight: false
@@ -733,10 +733,10 @@
   statement: >-
     Let $T_0$ be the Collatz map on the positive integers, $T_0(n)=n/2$ for even $n$ and $T_0(n)=3n+1$ for odd $n$, and let $\sigma_0(n)$ be the total stopping time of $n$, the least $k\ge0$ with $T_0^{(k)}(n)=1$ (infinite if there is none). Shaik's preprint (2026) obtains positive lower density for convergence within $c\log x$ steps of $T_0$, for the integers below $x$, for every $c>3/\log(4/3)\approx10.428$. Problem: show that for every $c<3/\log(4/3)$ the set of $n$ with $\sigma_0(n)\le c\log n$ has natural density zero, so that Shaik's threshold is sharp. A renewal calculation in the book predicts that below the threshold the share of $n$ meeting the bound tends to zero.
 
-- id: exact_function_gap_rate_of_switching_mm_for_small_condition_numbers   # Problem S1, chapter 20
+- id: exact_function_gap_rate_of_switching_mm_for_small_condition_numbers   # Problem S1, chapter 21
   name: "Exact worst case function gap rate of Switching MM for small condition numbers"
   label: "prob:ch11:s1"
-  chapter: "20"
+  chapter: "21"
   origin: book
   status: open
   highlight: false
@@ -744,10 +744,10 @@
   statement: >-
     Let $f:\mathbb{R}^d\to\mathbb{R}$ be $\mu$ strongly convex and $L$ smooth, with $\kappa=L/\mu$, let $0\le\beta<1$, and let $G=\nabla f$. Switching MM with deterministic parity injection and step $\alpha$, started at $x_{-1}=x_0$, takes the gradient step $x_{t+1}=x_t-\alpha G(x_t)$ at even $t$ and, at odd $t$, $y_t=x_t+\beta(x_t-x_{t-1})$ and $x_{t+1}=y_t-\alpha G(y_t)$, here with $\alpha=1/L$. Its even iterates contract the distance to the minimizer by $q=(1-1/\kappa)\max\bigl(1-(1+\beta)/\kappa,\beta\bigr)$ per period of two steps, which is the exact worst case over the class, and the function gap contracts by $q^2$ per period, which is exact for $\kappa\ge(1+\beta)/(1-\beta)$. Problem: for $\kappa<(1+\beta)/(1-\beta)$, where performance estimation gives a smaller worst case (for example $0.049$ against $q^2=0.086$ at $\beta=\log_23-1$ and $\kappa=2$), find the exact worst case contraction of the function gap per period in closed form and describe the function that attains it.
 
-- id: five_thirds_noise_bound_of_switching_mm_beyond_quadratics   # Problem S2, chapter 20
+- id: five_thirds_noise_bound_of_switching_mm_beyond_quadratics   # Problem S2, chapter 21
   name: "Five thirds noise bound of Switching MM beyond quadratics"
   label: "prob:ch11:s2"
-  chapter: "20"
+  chapter: "21"
   origin: book
   status: open
   highlight: false
@@ -755,10 +755,10 @@
   statement: >-
     Let $f:\mathbb{R}^d\to\mathbb{R}$ be $\mu$ strongly convex and $L$ smooth, accessed through a stochastic gradient oracle $G(x)=\nabla f(x)+\xi$ whose noise $\xi$ is fresh at every call, has mean zero and bounded variance, and let $0\le\beta<1$. Switching MM with deterministic parity injection and step $\alpha$, started at $x_{-1}=x_0$, takes the gradient step $x_{t+1}=x_t-\alpha G(x_t)$ at even $t$ and, at odd $t$, $y_t=x_t+\beta(x_t-x_{t-1})$ and $x_{t+1}=y_t-\alpha G(y_t)$. For quadratic objectives with additive noise of covariance $\sigma^2I$, the book proves that on every eigendirection with normalized step at most $1$ the stationary variance of this method is at most $\beta+2/(2+\beta)<\tfrac53$ times that of gradient descent with the same step. Problem: show that for every such $f$ and every $\beta<1$, the stationary mean square error of this method is at most $\tfrac53$ times that of gradient descent with the same step, up to terms that vanish with the step size.
 
-- id: adaptive_switching_rule_for_switching_mm   # Problem S4, chapter 20
+- id: adaptive_switching_rule_for_switching_mm   # Problem S4, chapter 21
   name: "A principled adaptive switching rule for Switching MM"
   label: "prob:ch11:s4"
-  chapter: "20"
+  chapter: "21"
   origin: book
   status: open
   highlight: false
@@ -963,3 +963,91 @@
   summary: "Prove that along every Syracuse orbit the limsup of f_1 + 2 f_5 exceeds log_2(3/2), a weaker statement than the liminf criterion that would still imply that no orbit is unbounded."
   statement: >-
     Prove that along every Syracuse orbit of a positive integer, $\limsup_{N\to\infty}\bigl(f_1(N)+2f_5(N)\bigr)>\log_2\tfrac32$, where $f_c(N)$ is the frequency of the class $c\bmod8$ among the first $N$ odd iterates. (This is weaker than the liminf statement of the finite modulus criterion and would still imply that no orbit is unbounded.)
+
+- id: collapse_of_a_computable_stopping_time_bound   # Theorem 19.2, page 0
+  name: "A computable bound on the total stopping time makes the Collatz conjecture a Pi_1 sentence"
+  label: "thm:ch21:collapse"
+  chapter: "19"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "Assuming a computable bound S on the total stopping time turns the Collatz conjecture into a Pi_1 sentence, equivalent to the non halting of an ordinary Turing machine and to the unsolvability of one Diophantine equation, and the sentence implies the conjecture."
+  statement: >-
+    Let $S:\mathbb{N}\to\mathbb{N}$ be computable and let $\Phi_S$ be the sentence $\forall n\ T^{(S(n))}(n)\in\{1,2\}$. Then: (i) $\Phi_S$ is $\Pi_1$. It is equivalent to the non halting of an ordinary Turing machine on blank tape, and by the MRDP theorem to the unsolvability in $\mathbb{N}$ of a single polynomial Diophantine equation. (ii) $\Phi_S$ implies the Collatz conjecture. (iii) If $\sigma_\infty(n)\le S(n)$ for every $n$ then $\Phi_S$ holds, and if $\Phi_S$ holds then $\sigma_\infty(n)\le S(n)+1$ for every $n$.
+
+- id: tail_of_the_clock_in_the_bernoulli_model   # Theorem 19.3, page 0
+  name: "Tail of the quadratic clock in the Bernoulli model: index one half, infinite mean, tight"
+  label: "thm:ch21:tail"
+  chapter: "19"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "In the Bernoulli model the quadratic clock of the machine, scaled by n squared, has a tail of index one half with explicit lower constant, so its mean is infinite for every n at least 2 while the scaled family is tight."
+  statement: >-
+    In the Bernoulli model $x_{k+1}=\xi_{k+1}x_k$ with $\xi\in\{\tfrac12,\tfrac32\}$ with probability one half each and $x_0=n$, let $\nu=\inf\{k:x_k\le1\}$ and $\bar\tau(n)=\sum_{k<\nu}x_k^2$. There is a constant $C$ such that for every integer $n\ge2$ and every $x\ge1$, $\frac{2(n-1)}{3n}\cdot\frac1{\sqrt x}\le\mathbb{P}\bigl(\bar\tau(n)\ge xn^2\bigr)\le\frac{C}{\sqrt x}$. In particular $\mathbb{E}[\bar\tau(n)]=\infty$ for every $n\ge2$, and the family $\bar\tau(n)/n^2$, $n\ge2$, is tight, with medians bounded by a constant free of $n$.
+
+- id: no_supermartingale_majorant_of_the_clock   # Proposition 19.4, page 0
+  name: "No supermartingale majorizes half the square in the Bernoulli model"
+  label: "prop:ch21:nomaj"
+  chapter: "19"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "In the Bernoulli model no nonnegative function above half the square of the value is a supermartingale from some start, so a Lyapunov function bounding the clock's per step cost cannot decrease in expectation."
+  statement: >-
+    In the Bernoulli model there is no nonnegative function $F$ with $F(x)\ge\tfrac12x^2$ for all $x>1$ for which $(F(x_{k\wedge\nu}))_k$ is a supermartingale from some start $x_0=n\ge2$.
+
+- id: minimality_of_seventeen_states_problem   # Problem Q1, page 0
+  name: "Problem Q1: is seventeen states minimal for a beeping machine equivalent to the full Collatz conjecture"
+  label: "prob:ch21:minimal"
+  chapter: "19"
+  origin: book
+  status: open
+  highlight: false
+  summary: "Decide whether seventeen states is minimal for a beeping machine equivalent to the full Collatz conjecture; the authors conjecture that the three state difference from the weak conjecture is close to the price of the Pi_2 quantifier in this encoding."
+  statement: >-
+    Is seventeen states minimal for a beeping machine equivalent to the full Collatz conjecture? There are $(4\cdot17)^{34}$ tables for a fixed beep state, and minimality is a statement about all smaller machines, including other cryptids. Structurally the full conjecture needs a separator, an increment and a copy that the cycle search does not, and the accounting $14-3+6=17$ relative to Reams's machine is explanatory rather than a proof. We conjecture the three state difference is close to the intrinsic price of the $\Pi_2$ quantifier in this encoding, and would be surprised by thirteen.
+
+- id: halting_machine_under_the_stopping_time_conjecture_problem   # Problem Q2, page 0
+  name: "Problem Q2: a halting machine under the stopping time conjecture"
+  label: "prob:ch21:halting"
+  chapter: "19"
+  origin: book
+  status: open
+  highlight: false
+  summary: "Give an explicit formally proved BB(m) machine that halts exactly when the stopping time bound with a logarithmic budget fails, by adding a budget to the arithmetic core."
+  statement: >-
+    Give an explicit BB($m$) machine, with a formal proof, that halts iff $\Phi_S$ fails for $S(n)=30\lceil\log_2n\rceil+C$ with an explicit $C$, by adding a logarithmic budget to the arithmetic core.
+
+- id: explicit_constants_for_the_clock_problem   # Problem Q3, page 0
+  name: "Problem Q3: explicit constants and the deterministic tail of the clock"
+  label: "prob:ch21:clock"
+  chapter: "19"
+  origin: book
+  status: open
+  highlight: false
+  summary: "Give explicit constants in the tail theorem and the perpetuity constant, and decide whether the deterministic clock has the same tail and whether the empirical index 0.513 converges to one half."
+  statement: >-
+    Give explicit constants in Theorem 19.3 and the constant $c$ of Remark 19.4. Does the deterministic $\tau(n)/n^2$ have the same tail, and is the empirical index $0.513$ converging to $\tfrac12$?
+
+- id: deterministic_excursion_density_problem   # Problem Q4, page 0
+  name: "Problem Q4: a deterministic density version of the excursion bound"
+  label: "prob:ch21:excursions"
+  chapter: "19"
+  origin: book
+  status: open
+  highlight: false
+  summary: "Prove that the set of n up to N whose maximal excursion is at least K n has size at most C N over K, and decide whether it follows from the methods of the backward tree chapter."
+  statement: >-
+    The excursion bound of the Bernoulli model is a statement about the model. Is there a deterministic density version, that the set of $n\le N$ with $t(n)\ge Ln$ has size at most $CN/L$, and does it follow from the methods of the chapter on the backward tree?
+
+- id: binary_encodings_problem   # Problem Q5, page 0
+  name: "Problem Q5: the state count at which the clock turns logarithmic"
+  label: "prob:ch21:binary"
+  chapter: "19"
+  origin: book
+  status: open
+  highlight: false
+  summary: "Find the state count at which a binary encoding changes the clock from quadratic to logarithmic per step, and decide whether the tail of the clock then becomes light."
+  statement: >-
+    A binary encoding of the value would make the clock $O(\log v)$ per step at the cost of many more states. Where is the state count at which the clock changes from quadratic to logarithmic, and does the tail of the clock then become light?

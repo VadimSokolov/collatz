@@ -1,9 +1,9 @@
 {
  "edition": "1",
  "pdf": {
-  "bytes": 6360023,
+  "bytes": 6433660,
   "file": "pdf/collatz.pdf",
-  "pages": 393,
+  "pages": 405,
   "parts": [
    {
     "first_page": "i",
@@ -141,47 +141,54 @@
    {
     "first_page": "315",
     "key": "19",
-    "last_page": "328",
-    "pages": 14,
-    "title": "Chapter 19. Contributions and a Computational Road Map"
+    "last_page": "326",
+    "pages": 12,
+    "title": "Chapter 19. The Price of a Quantifier"
    },
    {
-    "first_page": "329",
+    "first_page": "327",
     "key": "20",
-    "last_page": "338",
-    "pages": 10,
-    "title": "Chapter 20. Open Problems and Computational Projects"
+    "last_page": "340",
+    "pages": 14,
+    "title": "Chapter 20. Contributions and a Computational Road Map"
    },
    {
-    "first_page": "339",
+    "first_page": "341",
+    "key": "21",
+    "last_page": "350",
+    "pages": 10,
+    "title": "Chapter 21. Open Problems and Computational Projects"
+   },
+   {
+    "first_page": "351",
     "key": "",
-    "last_page": "346",
+    "last_page": "358",
     "pages": 8,
     "title": "A Gallery of Orbits"
    },
    {
-    "first_page": "347",
+    "first_page": "359",
     "key": "A",
-    "last_page": "350",
+    "last_page": "362",
     "pages": 4,
     "title": "Appendix A. Numerical Constants"
    },
    {
-    "first_page": "351",
+    "first_page": "363",
     "key": "B",
-    "last_page": "368",
+    "last_page": "380",
     "pages": 18,
     "title": "Appendix B. Code"
    },
    {
-    "first_page": "369",
+    "first_page": "381",
     "key": "",
-    "last_page": "373",
+    "last_page": "385",
     "pages": 5,
     "title": "Index"
    }
   ],
-  "sha256": "7d6050d52c7856a51cc78993ed92bc18f86d532b97d33710ddea1759c91eef2c"
+  "sha256": "12862cc08a4b90198c609236dd295cda7ff0efcd0503b5874c54b989745901a1"
  },
  "results": {
   "acceleration_survives_every_switching_rule": {
@@ -201,7 +208,7 @@
    "fingerprint": "bdb3b931b044",
    "label": "prob:ch11:s4",
    "number": "S4",
-   "page": "334",
+   "page": "346",
    "printed": "Problem S4",
    "verified_fingerprint": "bdb3b931b044",
    "verified_on": "2026-10-12"
@@ -223,7 +230,7 @@
    "fingerprint": "3644e4e47137",
    "label": "prob:ch11:c1",
    "number": "C1",
-   "page": "331",
+   "page": "343",
    "printed": "Problem C1",
    "verified_fingerprint": "3644e4e47137",
    "verified_on": "2026-10-12"
@@ -239,13 +246,24 @@
    "verified_fingerprint": "bb62e366cbe4",
    "verified_on": "2026-10-28"
   },
+  "binary_encodings_problem": {
+   "environment": "problem*",
+   "file": "book/chapters/ch10g_quantifier.tex",
+   "fingerprint": "0ce8a21c221a",
+   "label": "prob:ch21:binary",
+   "number": "Q5",
+   "page": "325",
+   "printed": "Problem Q5",
+   "verified_fingerprint": "0ce8a21c221a",
+   "verified_on": "2026-11-02"
+  },
   "bounded_form_of_tao_theorem": {
    "environment": "problem*",
    "file": "book/chapters/ch11_open.tex",
    "fingerprint": "25d97fa07b3c",
    "label": "prob:ch11:b1",
    "number": "B1",
-   "page": "332",
+   "page": "344",
    "printed": "Problem B1",
    "verified_fingerprint": "25d97fa07b3c",
    "verified_on": "2026-10-16"
@@ -267,7 +285,7 @@
    "fingerprint": "716e5ac6119b",
    "label": "prob:ch11:o4",
    "number": "O4",
-   "page": "330",
+   "page": "342",
    "printed": "Problem O4",
    "verified_fingerprint": "716e5ac6119b",
    "verified_on": "2026-10-12"
@@ -338,6 +356,28 @@
    "verified_fingerprint": "c385f2c13218",
    "verified_on": "2026-10-28"
   },
+  "collapse_of_a_computable_stopping_time_bound": {
+   "environment": "theorem",
+   "file": "book/chapters/ch10g_quantifier.tex",
+   "fingerprint": "2c910d745f99",
+   "label": "thm:ch21:collapse",
+   "number": "19.2",
+   "page": "319",
+   "printed": "Theorem 19.2",
+   "verified_fingerprint": "2c910d745f99",
+   "verified_on": "2026-11-02"
+  },
+  "deterministic_excursion_density_problem": {
+   "environment": "problem*",
+   "file": "book/chapters/ch10g_quantifier.tex",
+   "fingerprint": "ea8e317fcaa0",
+   "label": "prob:ch21:excursions",
+   "number": "Q4",
+   "page": "325",
+   "printed": "Problem Q4",
+   "verified_fingerprint": "ea8e317fcaa0",
+   "verified_on": "2026-11-02"
+  },
   "diophantine_insufficiency_cycle_lengths": {
    "environment": "proposition",
    "file": "book/chapters/ch08_cycles.tex",
@@ -388,7 +428,7 @@
    "fingerprint": "8c9823562a72",
    "label": "prob:ch11:s1",
    "number": "S1",
-   "page": "333",
+   "page": "345",
    "printed": "Problem S1",
    "verified_fingerprint": "8c9823562a72",
    "verified_on": "2026-10-12"
@@ -403,6 +443,17 @@
    "printed": "Proposition 4.12",
    "verified_fingerprint": "c452c65fd568",
    "verified_on": "2026-10-12"
+  },
+  "explicit_constants_for_the_clock_problem": {
+   "environment": "problem*",
+   "file": "book/chapters/ch10g_quantifier.tex",
+   "fingerprint": "3337298972dd",
+   "label": "prob:ch21:clock",
+   "number": "Q3",
+   "page": "325",
+   "printed": "Problem Q3",
+   "verified_fingerprint": "3337298972dd",
+   "verified_on": "2026-11-02"
   },
   "exponential_tail_in_the_stride_model": {
    "environment": "proposition",
@@ -432,7 +483,7 @@
    "fingerprint": "7405d46c347b",
    "label": "prob:ch11:o3p",
    "number": "O3$'$",
-   "page": "330",
+   "page": "342",
    "printed": "Problem O3$'$",
    "verified_fingerprint": "7405d46c347b",
    "verified_on": "2026-10-12"
@@ -465,7 +516,7 @@
    "fingerprint": "2315e6d981ee",
    "label": "prob:ch11:s2",
    "number": "S2",
-   "page": "333",
+   "page": "345",
    "printed": "Problem S2",
    "verified_fingerprint": "2315e6d981ee",
    "verified_on": "2026-10-12"
@@ -480,6 +531,17 @@
    "printed": "Theorem 8.12",
    "verified_fingerprint": "c2aacfceeeff",
    "verified_on": "2026-10-12"
+  },
+  "halting_machine_under_the_stopping_time_conjecture_problem": {
+   "environment": "problem*",
+   "file": "book/chapters/ch10g_quantifier.tex",
+   "fingerprint": "a322f9a4ad05",
+   "label": "prob:ch21:halting",
+   "number": "Q2",
+   "page": "325",
+   "printed": "Problem Q2",
+   "verified_fingerprint": "a322f9a4ad05",
+   "verified_on": "2026-11-02"
   },
   "integer_cycle_inequality_problem": {
    "environment": "problem*",
@@ -536,6 +598,17 @@
    "verified_fingerprint": "2a360997c9e7",
    "verified_on": "2026-10-12"
   },
+  "minimality_of_seventeen_states_problem": {
+   "environment": "problem*",
+   "file": "book/chapters/ch10g_quantifier.tex",
+   "fingerprint": "ad1455499d22",
+   "label": "prob:ch21:minimal",
+   "number": "Q1",
+   "page": "325",
+   "printed": "Problem Q1",
+   "verified_fingerprint": "ad1455499d22",
+   "verified_on": "2026-11-02"
+  },
   "minimum_inequality_on_the_ladder": {
    "environment": "corollary",
    "file": "book/chapters/ch10f_missed.tex",
@@ -590,6 +663,17 @@
    "printed": "Theorem 6.3",
    "verified_fingerprint": "a95f28faaefa",
    "verified_on": "2026-10-12"
+  },
+  "no_supermartingale_majorant_of_the_clock": {
+   "environment": "proposition",
+   "file": "book/chapters/ch10g_quantifier.tex",
+   "fingerprint": "8793df74d201",
+   "label": "prop:ch21:nomaj",
+   "number": "19.5",
+   "page": "324",
+   "printed": "Proposition 19.5",
+   "verified_fingerprint": "8793df74d201",
+   "verified_on": "2026-11-02"
   },
   "noise_floor_at_matched_speed": {
    "environment": "proposition",
@@ -718,7 +802,7 @@
    "fingerprint": "03ae757b1fe8",
    "label": "prob:ch11:b3",
    "number": "B3",
-   "page": "332",
+   "page": "344",
    "printed": "Problem B3",
    "verified_fingerprint": "03ae757b1fe8",
    "verified_on": "2026-10-16"
@@ -998,13 +1082,24 @@
    "verified_fingerprint": "e828a3f66b10",
    "verified_on": "2026-10-16"
   },
+  "tail_of_the_clock_in_the_bernoulli_model": {
+   "environment": "theorem",
+   "file": "book/chapters/ch10g_quantifier.tex",
+   "fingerprint": "13e6b93d8f2b",
+   "label": "thm:ch21:tail",
+   "number": "19.3",
+   "page": "322",
+   "printed": "Theorem 19.3",
+   "verified_fingerprint": "13e6b93d8f2b",
+   "verified_on": "2026-11-02"
+  },
   "trajectory_mixing_of_syracuse_residues": {
    "environment": "problem*",
    "file": "book/chapters/ch11_open.tex",
    "fingerprint": "d02ee4a7be0e",
    "label": "prob:ch11:o2",
    "number": "O2",
-   "page": "329",
+   "page": "341",
    "printed": "Problem O2",
    "verified_fingerprint": "d02ee4a7be0e",
    "verified_on": "2026-10-12"
@@ -1015,7 +1110,7 @@
    "fingerprint": "7f55c35f4699",
    "label": "prob:ch11:b2",
    "number": "B2",
-   "page": "332",
+   "page": "344",
    "printed": "Problem B2",
    "verified_fingerprint": "7f55c35f4699",
    "verified_on": "2026-10-16"
@@ -1059,7 +1154,7 @@
    "fingerprint": "3afd910d70e5",
    "label": "prob:ch11:c3",
    "number": "C3",
-   "page": "332",
+   "page": "344",
    "printed": "Problem C3",
    "verified_fingerprint": "3afd910d70e5",
    "verified_on": "2026-10-12"
@@ -1109,10 +1204,17 @@
    "verified_on": "2026-10-28"
   }
  },
- "updated": "2026-11-01",
+ "updated": "2026-11-02",
  "zenodo": {
   "concept_doi": "10.5281/zenodo.23331099",
   "doi": "10.5281/zenodo.23874304",
+  "draft": {
+   "doi": "10.5281/zenodo.23905381",
+   "html": "https://zenodo.org/deposit/23905381",
+   "id": 23905381,
+   "reserved_on": "2026-11-02",
+   "version": "1.3.0"
+  },
   "html": "https://zenodo.org/records/23874304",
   "latest_id": 23874304,
   "tag": "v1.2.0",

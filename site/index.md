@@ -2,13 +2,13 @@
 
 By Nick Polson and [Vadim Sokolov](https://orcid.org/0000-0002-6618-2965).
 
-[![PDF](https://vsokolov.org/books/icon-pdf.svg)](https://github.com/VadimSokolov/collatz/releases/download/v1.2.0/collatz.pdf "PDF") [![Source on GitHub](https://vsokolov.org/books/icon-github.svg)](https://github.com/VadimSokolov/collatz/tree/v1.2.0 "Source on GitHub") [![DOI 10.5281/zenodo.23874304](https://zenodo.org/badge/DOI/10.5281/zenodo.23874304.svg)](https://doi.org/10.5281/zenodo.23874304) [![Paperback, available at Amazon](https://vsokolov.org/books/available-at-amazon.png)](https://www.amazon.com/dp/B0HN8TS5N8 "Paperback on Amazon")
+[![PDF](https://vsokolov.org/books/icon-pdf.svg)](https://github.com/VadimSokolov/collatz/releases/download/v1.3.0/collatz.pdf "PDF") [![Source on GitHub](https://vsokolov.org/books/icon-github.svg)](https://github.com/VadimSokolov/collatz/tree/v1.3.0 "Source on GitHub") [![Paperback, available at Amazon](https://vsokolov.org/books/available-at-amazon.png)](https://www.amazon.com/dp/B0HN8TS5N8 "Paperback on Amazon")
 
 ## Description
 
-The Collatz conjecture says that, from any positive integer, repeatedly halving an even number and sending an odd number n to 3n+1 always reaches 1. This book explains why the problem has resisted proof. It reads the map as a random walk, as an optimization algorithm and as a problem in Diophantine approximation.
+The Collatz conjecture says that, from any positive integer, repeatedly halving an even number and sending an odd number n to 3n+1 always reaches 1. This book explains why the problem has resisted proof.
 
-The conjecture splits into a divergence half, a law of large numbers along a single deterministic orbit, and a cycle half, a question about rational approximation of log2 3 that Diophantine information alone cannot finish. The book proves that no Lyapunov function increasing in the number certifies descent over any fixed number of steps, and that no finite residue sieve certifies descent for every integer. However far the computer verification is pushed, infinitely many cycle lengths survive the cycle inequality, a point Halbeisen and Hungerbühler made earlier in another form; a sharp minimum inequality for rational cycles, nearly attained by Christoffel cycles, measures what a property of integers must add to exclude them.
+The conjecture splits into a divergence half, a law of large numbers along a single deterministic orbit, and a cycle half, a question about rational approximation of log2 3 that Diophantine information alone cannot finish. The book proves that no Lyapunov function increasing in the number certifies descent over any fixed number of steps, and that no finite residue sieve certifies descent for every integer. However far the computer verification is pushed, infinitely many cycle lengths survive the cycle inequality, a point Halbeisen and Hungerbühler made earlier in another form; a sharp minimum inequality for rational cycles, nearly attained by Christoffel cycles, measures what a property of integers must add to exclude them. A seventeen state Turing machine that beeps forever exactly when the conjecture holds shows what one more quantifier costs.
 
 The arithmetic of the map also yields an algorithm. Switching MM, a first order method that applies the momentum log2 3 minus 1 on alternate steps, has an explicit linear rate at step 1/L on smooth strongly convex functions, and on quadratics with additive gradient noise, at steps up to 1/L, its noise variance stays below 5/3 times that of gradient descent for every momentum coefficient below one. The gain weight theorem shows that on quadratics with small steps no stable linear periodic first order method has a lower slow mode noise floor than gradient descent at matched speed.
 
@@ -16,7 +16,7 @@ Every result is proved in full or marked as conditional, the open problems are c
 
 ## How to cite
 
-Polson and Sokolov (2026), *On the Collatz Conjecture: Martingales, Momentum and Continued Fractions*, edition 1, https://doi.org/10.5281/zenodo.23874304.
+Polson and Sokolov (2026), *On the Collatz Conjecture: Martingales, Momentum and Continued Fractions*, edition 1, https://doi.org/10.5281/zenodo.23905381.
 
 ```bibtex
 @book{polsonsokolov2026collatz,
@@ -24,7 +24,7 @@ Polson and Sokolov (2026), *On the Collatz Conjecture: Martingales, Momentum and
   title = {{On the Collatz Conjecture: Martingales, Momentum and Continued Fractions}},
   year = {2026},
   publisher = {Independently published},
-  doi = {10.5281/zenodo.23874304},
+  doi = {10.5281/zenodo.23905381},
   url = {https://vsokolov.org/books/collatz/}
 }
 ```
@@ -40,12 +40,12 @@ Polson and Sokolov (2026), *On the Collatz Conjecture: Martingales, Momentum and
 - [Sharp minimum inequality for cycles of the Syracuse map](https://vsokolov.org/books/collatz/results.html#sharp_minimum_inequality) (Theorem 18.3, page 301): The smallest element of a cycle is below a bound that depends only on the number of odd elements and the closing defect, with constant 1/(2 log 2) in place of 1, uniformly in the word.
 - [Christoffel cycles attain the sharp minimum inequality](https://vsokolov.org/books/collatz/results.html#christoffel_cycles_are_extremal) (Theorem 18.5, page 302): The positive rational cycle of the lower Christoffel word of slope s/r has 3 M_w Lambda between 2 to the minus 2 delta times beta_r = r/(2 log 2) + 1/4 + O(1/r) and the sharp bound B_r(delta), and along the rungs the ratio to the sharp bound tends to 1, so no inequality in r, s and the minimum alone can improve the constant 1/(2 log 2).
 
-All 84 results of the book (59 proved, 2 computed, 3 conditional, 20 open) are on the page [Results by chapter](https://vsokolov.org/books/collatz/results.html), each with its statement, status and number.
+All 92 results of the book (62 proved, 2 computed, 3 conditional, 25 open) are on the page [Results by chapter](https://vsokolov.org/books/collatz/results.html), each with its statement, status and number.
 
 ***
 
 <small>License: Text, figures and PDF: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Code: [MIT](https://opensource.org/license/mit).</small>
 
-<small>This page is generated from the book's repository ([main](https://github.com/VadimSokolov/collatz/tree/main)). The numbers and pages are those of the PDF, [version 1.2.0](https://github.com/VadimSokolov/collatz/releases/tag/v1.2.0).</small>
+<small>This page is generated from the book's repository ([main](https://github.com/VadimSokolov/collatz/tree/main)). The numbers and pages are those of the PDF, [version 1.3.0](https://github.com/VadimSokolov/collatz/releases/tag/v1.3.0).</small>
 
 <!-- Generated by bookrepo.py from book.yaml and results.yaml. Edit those files, not this one. -->
