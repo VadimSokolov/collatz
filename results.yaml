@@ -315,6 +315,72 @@
   statement: >-
     Consider on one eigendirection of a quadratic with eigenvalue $\lambda$ and normalized step $a=\alpha\lambda$ the oracle $g(y)=(\lambda+\eta_t)\,e_y+\xi_t$ for the gradient at a point with error $e_y$ along that eigenvector, where $\eta_t,\xi_t$ are independent of the past, with mean zero, uncorrelated with each other, $\operatorname{Var}(\alpha\eta_t)=\omega^2$ and $\operatorname{Var}(\xi_t)=\sigma^2$. For Switching MM with step $\alpha$ and momentum coefficient $0\le\beta<1$ the second moments of the error obey a closed linear recursion: with $\nu_1=(1-a)^2+\omega^2$ and $\nu_2=\bigl(1-(1+\beta)a\bigr)^2+(1+\beta)^2\omega^2$, the stationary second moment at even times is $\alpha^2\sigma^2\bigl(\nu_1(1+\beta)^2+1\bigr)/(1-\nu_1\nu_2)$, finite if and only if $\nu_1\nu_2<1$. As $a\to0$: (i) under the least squares scaling $\omega^2=\vartheta a^2$ with $\vartheta$ fixed (the relative curvature noise, $\vartheta=2$ for a Gaussian regressor), the slow mode ratio of the stationary second moment of Switching MM to that of gradient descent with the same step and noise is unchanged, equal to $(2+2\beta+\beta^2)/(2+\beta)$ for every $\vartheta$; (ii) under the diffusive scaling $\omega^2=\epsilon a$, for any linear periodic first order method of period $p$ on this eigendirection (with state $z_t=(e_t,\dots,e_{t-K+1})$ and residue $j=t\bmod p$ it sets $e_{t+1}=\delta_j\cdot z_t-h_j\alpha\bigl((\lambda+\eta_t)y_t+\xi_t\bigr)$ with $y_t=\gamma_j\cdot z_t$, where $\gamma_j,\delta_j\in\mathbb{R}^K$ with $\gamma_j\cdot\iota=\delta_j\cdot\iota=1$ for $\iota=(1,\dots,1)$ and $h_j>0$ are fixed) that is stable at $a=0$ (the product $B_0$ of its step matrices over one period at $a=0$ has the simple eigenvalue $1$ and all its other eigenvalues strictly inside the unit disc) and has $M>0$, where $c_i=h_i\,w\cdot\Pi_iu_1$ is the gain of step $i$ ($w$ the left eigenvector of $B_0$ for the eigenvalue $1$ with $w\cdot\iota=1$, $u_1$ the first unit vector, $\Pi_i$ the product at $a=0$ of the step matrices of steps $i+1,\dots,p$) and $M=\sum_ic_i$, the stationary second moment of the error satisfies $a\,\mathbb{E}[e^2]\to\alpha^2\sigma^2\sum_ic_i^2\big/\bigl(2M-\epsilon\sum_ic_i^2\bigr)$, so that the method is mean square stable for small $a$ exactly when $\epsilon<\epsilon^\ast=2M/\sum_ic_i^2$.
 
+- id: worst_case_noise_floor_of_smm_over_the_class   # Theorem 8.18, page 0
+  name: "Worst case stationary error of Switching MM over the class of strongly convex smooth functions"
+  label: "thm:ch7:class"
+  chapter: "8"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "Stationary mean square errors of Switching MM on the class of mu strongly convex L smooth functions are bounded by closed forms; when (1+beta) alpha (L+mu) is at most 2 the bounds are attained by the quadratic, and the worst case is below five thirds of that of gradient descent."
+  statement: >-
+    Let $m_{\mathrm{even}}$ and $m_{\mathrm{odd}}$ be the stationary values of $\mathbb{E}|x_t-x^\ast|^2$ along even and odd $t$. Then \begin{equation} m_{\mathrm{even}}\le\frac{\alpha^2\sigma^2d\,\bigl[(1+\beta)^2c_1^2+1\bigr]}{1-q^2},\qquad m_{\mathrm{odd}}\le c_1^2\,m_{\mathrm{even}}+\alpha^2\sigma^2d . \end{equation} If $(1+\beta)\alpha(L+\mu)\le2$, which for $\alpha=1/L$ reads $\kappa\ge(1+\beta)/(1-\beta)$, the right sides are $d\,V_{\mathrm{even}}(\alpha\mu)$ and $d\,V_{\mathrm{odd}}(\alpha\mu)$ of Theorem 8.4, and they are attained by $f(x)=\tfrac\mu2|x-x^\ast|^2$. In that case the largest stationary mean square error over the class satisfies \begin{align*} \sup_f\,\tfrac12\bigl(m_{\mathrm{even}}+m_{\mathrm{odd}}\bigr)&=d\,V_{\mathrm{SMM}}(\alpha\mu)\le V(\beta)\,d\,V_{\mathrm{GD}}(\alpha\mu)\\ &=V(\beta)\,\sup_f m_{\mathrm{GD}}<\tfrac53\,\sup_f m_{\mathrm{GD}} . \end{align*}
+
+- id: five_thirds_for_small_fluctuations   # Theorem 8.19, page 0
+  name: "Five thirds for small fluctuations"
+  label: "thm:ch7:local"
+  chapter: "8"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "For mu strongly convex L smooth functions with Lipschitz Hessian, and i.i.d. shocks with bounded fourth moment, the stationary covariances of Switching MM and gradient descent are within a first order error of the quadratic formulas, so their ratio is below five thirds when the fluctuations are small."
+  statement: >-
+    Assume in addition that $\nabla^2f$ is Lipschitz with constant $M$ and that $\mathbb{E}|\xi|^4\le K\sigma^4d^2$. Let $H=\nabla^2f(x^\ast)$ and \[ \varepsilon=\frac{\sqrt\alpha\,\sigma M}{\mu^{3/2}} . \] Let $\Sigma_{\mathrm{SMM}}$ be the stationary value of $\mathbb{E}(x_t-x^\ast)(x_t-x^\ast)^\top$ for $\mathrm{SMM}_{\mathrm{det}}$, averaged over the two phases, and $\Sigma_{\mathrm{GD}}$ the same matrix for gradient descent. There is a constant $C$ depending only on $\beta$, $d$ and $K$ such that \[ \Bigl\|\Sigma_{\mathrm{SMM}}-V_{\mathrm{SMM}}(\alpha H)\Bigr\|\le C\varepsilon\,\frac{\alpha\sigma^2}{\mu},\qquad \Bigl\|\Sigma_{\mathrm{GD}}-V_{\mathrm{GD}}(\alpha H)\Bigr\|\le C\varepsilon\,\frac{\alpha\sigma^2}{\mu}, \] where $V_{\mathrm{SMM}}(\alpha H)$ and $V_{\mathrm{GD}}(\alpha H)$ are the functions of Theorem 8.4 and (8.3) applied to the matrix $\alpha H$. Consequently, for every eigenvector $v$ of $H$, \[ v^\top\Sigma_{\mathrm{SMM}}v\le V(\beta)\,v^\top\Sigma_{\mathrm{GD}}v+3C\varepsilon\,\frac{\alpha\sigma^2}{\mu}, \qquad \frac{\operatorname{tr}\Sigma_{\mathrm{SMM}}}{\operatorname{tr}\Sigma_{\mathrm{GD}}}\le V(\beta)+8C\kappa\,\varepsilon , \] the second for $6C\kappa\varepsilon\le1$. In particular the ratio of the stationary mean square errors is below $\tfrac53$ as soon as $\kappa\varepsilon$ is small, and it tends to a limit at most $V(\beta)$ as $\alpha\to0$ with $\sigma$ fixed, or as $\sigma\to0$ with $\alpha$ fixed.
+
+- id: temperature_law_of_switching_mm   # Theorem 8.20, page 0
+  name: "The temperature law: Gibbs limit of Switching MM at small steps"
+  label: "thm:ch7:temperature"
+  chapter: "8"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "For mu strongly convex L smooth f and i.i.d. shocks with finite fourth moment, at fixed temperature the stationary laws of Switching MM converge, in the limit of small steps, to the Gibbs law at temperature V(beta) T, and those of gradient descent to that at T, so the error ratio converges to an explicit ratio of Gibbs second moments."
+  statement: >-
+    Let $f$ be $\mu$ strongly convex and $L$ smooth, fix $T>0$ and $0\le\beta<1$, and let the shocks be $\xi=\sigma\zeta$ with $\zeta$ independent and identically distributed, of mean zero, covariance $I$ and finite fourth moment, where $\alpha\sigma^2=2T$. As $\alpha\to0$ the stationary laws of $\mathrm{SMM}_{\mathrm{det}}$, along even and along odd iterates, converge weakly and in second moment to the Gibbs law \[ G_{V(\beta)T}(dx)\ \propto\ \exp\Bigl(-\frac{f(x)}{V(\beta)\,T}\Bigr)dx , \] and those of gradient descent converge to $G_T$. Consequently the ratio of the stationary mean square errors about $x^\ast$ converges to \[ R_f(T)=\frac{\int|x-x^\ast|^2\,dG_{V(\beta)T}}{\int|x-x^\ast|^2\,dG_T} . \]
+
+- id: bounds_in_one_dimension_on_the_temperature_law   # Proposition 8.21, page 0
+  name: "Bounds on the temperature law in one dimension"
+  label: "prop:ch7:onedim"
+  chapter: "8"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "In one dimension, for convex f, the second moment of the Gibbs law satisfies m(sT) at most s^3 m(T) for every s at least 1, and at most s^2 m(T) for symmetric f, so the error ratio is at most V(beta)^3, and at most V(beta)^2 for symmetric f."
+  statement: >-
+    Let $d=1$, let $f$ be convex with minimizer $x^\ast$ and such that the Gibbs laws exist, and let $m(T)=\int(x-x^\ast)^2dG_T$. Then $m(sT)\le s^3\,m(T)$ for every $s\ge1$, and $m(sT)\le s^2\,m(T)$ if $f$ is symmetric about $x^\ast$. Hence $R_f(T)\le V(\beta)^3$ always and $R_f(T)\le V(\beta)^2$ for symmetric $f$.
+
+- id: ten_ninths_under_averaging   # Proposition 8.23, page 0
+  name: "Ten ninths under averaging"
+  label: "prop:ch7:averaging"
+  chapter: "8"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "The asymptotic variance of the time average of Switching MM on a quadratic eigendirection exceeds that of gradient descent by the factor W(a,beta), which lies in [1, 10/9)."
+  statement: >-
+    In the quadratic model of Section 8.1, fix an eigendirection with eigenvalue $\lambda$ and $a=\alpha\lambda\in(0,1]$, and let $\bar e_n=n^{-1}\sum_{t<n}e_t$. For gradient descent $n\operatorname{Var}(\bar e_n)\to\sigma^2/\lambda^2$, and for $\mathrm{SMM}_{\mathrm{det}}$ with $0\le\beta<1$ \[ n\operatorname{Var}(\bar e_n)\longrightarrow W(a,\beta)\,\frac{\sigma^2}{\lambda^2},\qquad W(a,\beta)=1+\Bigl(\frac{\beta\,(1-a)}{2+\beta-(1+\beta)a}\Bigr)^{2} . \] The factor $W$ is constant at $\beta=0$ and, for $0<\beta<1$, decreases in $a$ from $1+\beta^2/(2+\beta)^2$ at $a=0$ to $1$ at $a=1$, so $1\le W<\tfrac{10}9$ for every $\beta<1$, and $W\le1.0512$ for $\beta=\log_2 3-1$.
+
+- id: beyond_the_temperature_law_problem   # Problem S5, page 0
+  name: "Problem S5: Beyond the temperature law"
+  label: "prob:ch7:temperature"
+  chapter: "8"
+  origin: book
+  status: open
+  highlight: false
+  summary: "Find the supremum over the class of the ratio of stationary mean square errors of Switching MM to gradient descent, in the diffusion limit and at the step 1/L, and extend the one dimensional bounds to several dimensions."
+  statement: >-
+    Theorem 8.20 gives the limit of small steps at a fixed temperature. Find the supremum over the class of the ratio of stationary mean square errors, first in the diffusion limit, where for $\beta=\log_2 3-1$ it lies between $1.880$ and $V(\beta)^3=2.508$ in one dimension, and then at the step $1/L$. Extend Proposition 8.21 to several dimensions.
+
 - id: certified_growth_exponents_for_the_inverse_collatz_tree   # Theorem 9.3, page 158
   name: "Certified growth exponents for the inverse Collatz tree from a simplified difference inequality method"
   label: "thm:ch5b:exponent"
@@ -645,10 +711,10 @@
   statement: >-
     Let $f(x)=\tfrac12x^\top Ax-b^\top x$ with $A$ symmetric positive definite with largest eigenvalue $L$ and minimizer $x_*$, and suppose the algorithm sees the noisy gradient $g(x)=\nabla f(x)+\xi$, where a fresh $\xi$ is drawn at every call, independent of the past, with mean zero and an arbitrary covariance matrix $Q$ (instead of $\sigma^2I$). Run gradient descent $x_{t+1}=x_t-\alpha g(x_t)$ and Switching MM with momentum coefficient $\beta$, both with $g$ in place of $\nabla f$ and the same step $\alpha$ (Switching MM starts from $x_{-1}=x_0$, takes the plain step $x_{t+1}=x_t-\alpha g(x_t)$ at even $t$, and at odd $t$ takes the extrapolated step $x_{t+1}=y_t-\alpha g(y_t)$ with $y_t=x_t+\beta(x_t-x_{t-1})$). Then for every step $0<\alpha\le1/L$ and every $0\le\beta<1$, the stationary excess loss $\lim\mathbb{E}\bigl[f(x_t)-f(x_*)\bigr]$ of Switching MM, phase averaged over even and odd $t$, is at most $\tfrac53$ times that of gradient descent with the same step.
 
-- id: trajectory_mixing_of_syracuse_residues   # Problem O2, chapter 21
+- id: trajectory_mixing_of_syracuse_residues   # Problem O2, chapter 22
   name: "Trajectory mixing of Syracuse residues modulo powers of 3"
   label: "prob:ch11:o2"
-  chapter: "21"
+  chapter: "22"
   origin: book
   status: open
   highlight: false
@@ -656,10 +722,10 @@
   statement: >-
     Let $S$ be the Syracuse map on the odd positive integers, $S(y)=(3y+1)/2^{v_2(3y+1)}$, where $v_2(m)$ is the exponent of the largest power of $2$ dividing $m$, and for an odd $x_0$ let $y_j=S^{(j)}(x_0)$. Fix $a\ge1$, let $U_a$ be the residues modulo $3^a$ prime to $3$, and let $\pi_a$ be the stationary law of the Markov chain on $U_a$ that moves from $r$ to $(3r+1)2^{-K}\bmod3^a$, with $K$ an independent Geometric$(\tfrac12)$ variable, $\mathbb{P}(K=k)=2^{-k}$ for $k\ge1$. Fix a constant $C>1/|\log(3/4)|\approx3.48$ and let $x_0$ be drawn uniformly from the odd integers up to $X$. Problem: show that the empirical distribution of $y_j\bmod3^a$ over the strides before the orbit reaches $1$, stopped after $\lfloor C\log X\rfloor$ strides if the orbit has not reached $1$ by then, converges in probability to $\pi_a$ as $X\to\infty$.
 
-- id: failure_fraction_of_potentials_of_growing_depth   # Problem O3', chapter 21
+- id: failure_fraction_of_potentials_of_growing_depth   # Problem O3', chapter 22
   name: "Failure fraction of Lyapunov potentials of growing depth for the Syracuse map"
   label: "prob:ch11:o3p"
-  chapter: "21"
+  chapter: "22"
   origin: book
   status: open
   highlight: false
@@ -667,10 +733,10 @@
   statement: >-
     Let $S$ be the Syracuse map on the odd positive integers, $S(x)=(3x+1)/2^{v_2(3x+1)}$, where $v_2(m)$ is the exponent of the largest power of $2$ dividing $m$. A potential is a function $V(x)=\log x+\varphi(x)$ on the odd positive integers, and it fails at $x$ if $V(S(x))\ge V(x)$. Group the strides of an orbit into blocks, each a maximal run of strides $y\mapsto S(y)$ with $v_2(3y+1)=1$ followed by one stride with $v_2(3y+1)\ge2$; the block that starts at $x$ has $v_2(x+1)$ strides, its run length. No potential whose correction $\varphi$ depends on boundedly many binary digits of $x$ decreases at every stride, and the run length potentials $\log x+c\,v_2(x+1)$ fail at a fraction at least $0.143$ of the odd integers. Problem: for $h\ge1$, determine the infimum, over the potentials of depth $h$, whose correction reads the run lengths of the first $h$ blocks of the orbit of $x$, of the density of the odd integers at which the potential fails; decide whether it tends to $0$ as $h\to\infty$, and if so, how fast.
 
-- id: bounded_variance_deficit_of_total_stopping_times   # Problem O4, chapter 21
+- id: bounded_variance_deficit_of_total_stopping_times   # Problem O4, chapter 22
   name: "Boundedness of the variance deficit and the third cumulant of total stopping times"
   label: "prob:ch11:o4"
-  chapter: "21"
+  chapter: "22"
   origin: book
   status: open
   highlight: false
@@ -678,10 +744,10 @@
   statement: >-
     Let $T$ be the accelerated Collatz map, $T(n)=n/2$ for even $n$ and $T(n)=(3n+1)/2$ for odd $n$, and for $n\ge2$ whose orbit reaches $1$ let $\sigma_\infty(n)$ be the number of steps of $T$ from $n$ to $1$. For $k\ge1$ and $n$ in the dyadic block $[2^k,2^{k+1})$, let $a_{\mathrm t}(n)$ be the number of odd values among $T^{(k)}(n),\ldots,T^{(\sigma_\infty(n)-1)}(n)$ and $Z_{\mathrm t}(n)=\tfrac12\log3\,\bigl(2a_{\mathrm t}(n)-(\sigma_\infty(n)-k)\bigr)$, the centred parity sum over the steps after the first $k$. Put $\sigma^2=\tfrac14(\log3)^2$ and, with $n$ uniform on the block, define the additive variance deficit $D_{\mathrm v}(k)=\sigma^2\,\mathbb{E}(\sigma_\infty-k)-\operatorname{Var}Z_{\mathrm t}$. Problem: prove that $D_{\mathrm v}(k)$ is bounded in $k$, either assuming that every orbit reaches $1$, or unconditionally for the integers of each block whose orbits reach $1$ within a fixed multiple of $k$ steps; and explain the third cumulant: the skewness of $\sigma_\infty$ on the block is $0.67$ at $k=29$, against $0.96$ for the inverse Gaussian first passage law of the model.
 
-- id: arithmetic_sharpening_of_the_cycle_window   # Problem C1, chapter 21
+- id: arithmetic_sharpening_of_the_cycle_window   # Problem C1, chapter 22
   name: "Arithmetic sharpening of the window bound on the least element of a Collatz cycle"
   label: "prob:ch11:c1"
-  chapter: "21"
+  chapter: "22"
   origin: paper:polsonsokolov2026nexus
   status: open
   highlight: false
@@ -689,10 +755,10 @@
   statement: >-
     Let $T$ be the accelerated Collatz map, $T(n)=n/2$ for even $n$ and $T(n)=(3n+1)/2$ for odd $n$. For a cycle of $T$ on the positive integers with $m$ odd steps, $k$ steps in all and least element $x_{\min}$, put $\Lambda=k\log2-m\log3>0$. Every nontrivial cycle satisfies $x_{\min}<m/(3\Lambda)$ (the window lemma of the book). Problem: find a function $f$, derived from the arithmetic of the parity vector of the cycle rather than from the size of its elements, such that every nontrivial cycle satisfies $x_{\min}<m/(3\Lambda f(m))$. A function with $f(m)\ge\frac m3(1+\eta)$ for a fixed $\eta>0$ and all large $m$ would confine the least element of every nontrivial cycle with many odd steps below a constant, about $1/(2\eta)$ for small $\eta$, and so reduce the cycle half of the Collatz conjecture to a finite verification.
 
-- id: verification_ranges_for_later_rungs_under_hercher_accounting   # Problem C3, chapter 21
+- id: verification_ranges_for_later_rungs_under_hercher_accounting   # Problem C3, chapter 22
   name: "Verification ranges that exclude the later rungs under Hercher's sharper accounting"
   label: "prob:ch11:c3"
-  chapter: "21"
+  chapter: "22"
   origin: book
   status: open
   highlight: false
@@ -700,10 +766,10 @@
   statement: >-
     Let $\theta=\log_23$ and, for an integer $r\ge1$, $\delta(r)=\lceil r\theta\rceil-r\theta$; the rungs of the one sided ladder of $\theta$ are the $r$ with $\delta(r)<\delta(r')$ for every $1\le r'<r$, the best one sided approximations of $\theta$ from above. Let $T$ be the accelerated Collatz map, $T(n)=n/2$ for even $n$ and $T(n)=(3n+1)/2$ for odd $n$, and call $X$ a verification range if every positive integer below $X$ reaches $1$ under $T$. Hercher (2023, Theorem 27) shows that if $X$ is a verification range, a nontrivial cycle of $T$ with $r$ odd elements and $s$ elements in all satisfies $0<s/r-\theta<1/(4X\log2)$, so that the least cycle length it does not exclude is a rung, and his computer assisted Corollary 29 shows that the verification range $3\cdot2^{69}$ already excludes cycles whose length is the rung $72\,057\,431\,991$. Problem: extend that computation to the later rungs: for each rung from $137\,528\,045\,312$ on, find the least verification range at which Hercher's accounting excludes it.
 
-- id: bounded_form_of_tao_theorem   # Problem B1, chapter 21
+- id: bounded_form_of_tao_theorem   # Problem B1, chapter 22
   name: "Bounded form of Tao's theorem: orbit minimum at most 2^71 on a set of logarithmic density one"
   label: "prob:ch11:b1"
-  chapter: "21"
+  chapter: "22"
   origin: book
   status: open
   highlight: false
@@ -711,10 +777,10 @@
   statement: >-
     Let $T_0$ be the Collatz map on the positive integers, $T_0(n)=n/2$ for even $n$ and $T_0(n)=3n+1$ for odd $n$, and let $\mathrm{Col}_{\min}(n)=\min_{k\ge0}T_0^{(k)}(n)$ be the least value on the orbit of $n$. A set $A$ of positive integers has logarithmic density one if $(\log x)^{-1}\sum_{n\le x,\,n\in A}1/n\to1$ as $x\to\infty$. Tao proved that for every function $f$ with $f(n)\to\infty$ one has $\mathrm{Col}_{\min}(n)<f(n)$ for all $n$ in a set of logarithmic density one, and every positive integer up to $2^{71}$ is known to reach $1$ (verification of Bařina). Problem: show that $\mathrm{Col}_{\min}(n)\le2^{71}$ for all $n$ in a set of logarithmic density one. By the verification up to $2^{71}$, if the positive density theorems of Mazur and Lau are right, this implies the Collatz conjecture, and the conjecture implies it.
 
-- id: true_decay_rate_of_syracuse_fourier_coefficients   # Problem B2, chapter 21
+- id: true_decay_rate_of_syracuse_fourier_coefficients   # Problem B2, chapter 22
   name: "True decay rate of the Fourier coefficients of the Syracuse random variable modulo powers of 3"
   label: "prob:ch11:b2"
-  chapter: "21"
+  chapter: "22"
   origin: book
   status: open
   highlight: false
@@ -722,10 +788,10 @@
   statement: >-
     Let $a_1,a_2,\ldots$ be independent random variables with $\mathbb{P}(a_i=k)=2^{-k}$ for $k\ge1$, and let $\pi_d$ be the law on $\mathbb{Z}/3^d\mathbb{Z}$ of $\sum_{i=1}^{d}3^{i-1}2^{-(a_1+\cdots+a_i)}$, with $2$ inverted modulo $3^d$ (the law of Tao's Syracuse random variable modulo $3^d$). Its Fourier coefficient at the frequency $\xi$ is $\widehat\pi_d(\xi)=\sum_{y\bmod3^d}\pi_d(y)e^{-2\pi i\xi y/3^d}$. Tao proved that $\max_{3\nmid\xi}|\widehat\pi_d(\xi)|$ eventually decays faster than any power of $d$, and the exact computation of the book shows that through $d=18$ it stays between $3.6\,d^{-2}$ and $3.9\,d^{-2}$ from $d=7$ on and sits at $\xi=\pm2^k$ with $d\le k\le1.28\,d$. Problem: determine how fast $\max_{3\nmid\xi}|\widehat\pi_d(\xi)|$ tends to zero as $d\to\infty$. Is it $\exp(-c(\log d)^2)$, $\exp(-cd^{\gamma})$ for some $\gamma<1$, or eventually geometric?
 
-- id: sharpness_of_shaik_threshold_for_stopping_times   # Problem B3, chapter 21
+- id: sharpness_of_shaik_threshold_for_stopping_times   # Problem B3, chapter 22
   name: "Sharpness of Shaik's threshold 3/log(4/3) for total stopping times"
   label: "prob:ch11:b3"
-  chapter: "21"
+  chapter: "22"
   origin: book
   status: open
   highlight: false
@@ -733,10 +799,10 @@
   statement: >-
     Let $T_0$ be the Collatz map on the positive integers, $T_0(n)=n/2$ for even $n$ and $T_0(n)=3n+1$ for odd $n$, and let $\sigma_0(n)$ be the total stopping time of $n$, the least $k\ge0$ with $T_0^{(k)}(n)=1$ (infinite if there is none). Shaik's preprint (2026) obtains positive lower density for convergence within $c\log x$ steps of $T_0$, for the integers below $x$, for every $c>3/\log(4/3)\approx10.428$. Problem: show that for every $c<3/\log(4/3)$ the set of $n$ with $\sigma_0(n)\le c\log n$ has natural density zero, so that Shaik's threshold is sharp. A renewal calculation in the book predicts that below the threshold the share of $n$ meeting the bound tends to zero.
 
-- id: exact_function_gap_rate_of_switching_mm_for_small_condition_numbers   # Problem S1, chapter 21
+- id: exact_function_gap_rate_of_switching_mm_for_small_condition_numbers   # Problem S1, chapter 22
   name: "Exact worst case function gap rate of Switching MM for small condition numbers"
   label: "prob:ch11:s1"
-  chapter: "21"
+  chapter: "22"
   origin: book
   status: open
   highlight: false
@@ -744,10 +810,10 @@
   statement: >-
     Let $f:\mathbb{R}^d\to\mathbb{R}$ be $\mu$ strongly convex and $L$ smooth, with $\kappa=L/\mu$, let $0\le\beta<1$, and let $G=\nabla f$. Switching MM with deterministic parity injection and step $\alpha$, started at $x_{-1}=x_0$, takes the gradient step $x_{t+1}=x_t-\alpha G(x_t)$ at even $t$ and, at odd $t$, $y_t=x_t+\beta(x_t-x_{t-1})$ and $x_{t+1}=y_t-\alpha G(y_t)$, here with $\alpha=1/L$. Its even iterates contract the distance to the minimizer by $q=(1-1/\kappa)\max\bigl(1-(1+\beta)/\kappa,\beta\bigr)$ per period of two steps, which is the exact worst case over the class, and the function gap contracts by $q^2$ per period, which is exact for $\kappa\ge(1+\beta)/(1-\beta)$. Problem: for $\kappa<(1+\beta)/(1-\beta)$, where performance estimation gives a smaller worst case (for example $0.049$ against $q^2=0.086$ at $\beta=\log_23-1$ and $\kappa=2$), find the exact worst case contraction of the function gap per period in closed form and describe the function that attains it.
 
-- id: five_thirds_noise_bound_of_switching_mm_beyond_quadratics   # Problem S2, chapter 21
+- id: five_thirds_noise_bound_of_switching_mm_beyond_quadratics   # Problem S2, chapter 22
   name: "Five thirds noise bound of Switching MM beyond quadratics"
   label: "prob:ch11:s2"
-  chapter: "21"
+  chapter: "22"
   origin: book
   status: open
   highlight: false
@@ -755,10 +821,10 @@
   statement: >-
     Let $f:\mathbb{R}^d\to\mathbb{R}$ be $\mu$ strongly convex and $L$ smooth, accessed through a stochastic gradient oracle $G(x)=\nabla f(x)+\xi$ whose noise $\xi$ is fresh at every call, has mean zero and bounded variance, and let $0\le\beta<1$. Switching MM with deterministic parity injection and step $\alpha$, started at $x_{-1}=x_0$, takes the gradient step $x_{t+1}=x_t-\alpha G(x_t)$ at even $t$ and, at odd $t$, $y_t=x_t+\beta(x_t-x_{t-1})$ and $x_{t+1}=y_t-\alpha G(y_t)$. For quadratic objectives with additive noise of covariance $\sigma^2I$, the book proves that on every eigendirection with normalized step at most $1$ the stationary variance of this method is at most $\beta+2/(2+\beta)<\tfrac53$ times that of gradient descent with the same step. Problem: show that for every such $f$ and every $\beta<1$, the stationary mean square error of this method is at most $\tfrac53$ times that of gradient descent with the same step, up to terms that vanish with the step size.
 
-- id: adaptive_switching_rule_for_switching_mm   # Problem S4, chapter 21
+- id: adaptive_switching_rule_for_switching_mm   # Problem S4, chapter 22
   name: "A principled adaptive switching rule for Switching MM"
   label: "prob:ch11:s4"
-  chapter: "21"
+  chapter: "22"
   origin: book
   status: open
   highlight: false
@@ -1051,3 +1117,383 @@
   summary: "Find the state count at which a binary encoding changes the clock from quadratic to logarithmic per step, and decide whether the tail of the clock then becomes light."
   statement: >-
     A binary encoding of the value would make the clock $O(\log v)$ per step at the cost of many more states. Where is the state count at which the clock changes from quadratic to logarithmic, and does the tail of the clock then become light?
+
+- id: digit_bijection_of_coprime_conway_maps   # Theorem 20.4, page 0
+  name: "Digit bijection for coprime Conway maps"
+  label: "rrt:thm:bijection"
+  chapter: "20"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "For a coprime Conway map the first k digits of x modulo d^k are a bijection onto digit strings, so on a complete residue system they are independent and uniform."
+  statement: >-
+    Let $T$ be a coprime Conway map. For every $k\ge 1$ the map \[ x \bmod d^k \;\longmapsto\; (x_0,x_1,\dots,x_{k-1}) \] is a well defined bijection from $\mathbb{Z}/d^k\mathbb{Z}$ onto $\{0,\dots,d-1\}^k$. Hence if $x$ is uniform on a complete residue system modulo $d^k$, its first $k$ digits are independent and uniform on $\{0,\dots,d-1\}$.
+
+- id: lyapunov_and_martingale_structure_of_coprime_conway_maps   # Theorem 20.5, page 0
+  name: "Lyapunov and martingale structure of coprime Conway maps"
+  label: "rrt:thm:lyap"
+  chapter: "20"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "Under Haar measure the multiplier moments of a coprime Conway map give a family of martingales, drift negative exactly when the product of multipliers is below d^d, a maximal inequality with exponent theta star, and a uniform bound on the probability that the multiplier reaches 1."
+  statement: >-
+    Let $T$ be a coprime Conway map and let $x$ be Haar distributed on $\mathbb{Z}_d$, or uniform modulo $d^k$. \begin{enumerate} \item[(a)] $\mathbb{E}\,[M_k^\theta]=\rho(\theta)^k$ for every real $\theta$, and $M_k^\theta/\rho(\theta)^k$ is a martingale in $k$. \item[(b)] $\Lambda$ is convex with $\Lambda(0)=0$ and $\Lambda'(0)=\mu$. There is $\theta>0$ with $\rho(\theta)<1$ if and only if $\mu<0$, that is, if and only if $\prod_i m_i<d^{\,d}$. \item[(c)] If $\mu<0$ and some $m_i>d$, there is a unique $\theta^*>0$ with $\rho(\theta^*)=1$, the process $M_k^{\theta^*}$ is a martingale, and \[ \mathbb{P}\Big(\sup_{k\ge 0} M_k \ge u\Big)\le u^{-\theta^*}\qquad (u\ge 1). \] \item[(d)] For every $k$, $\;\mathbb{P}(M_k\ge 1)\le \rho_{\min}^{\,k}$, where $\rho_{\min}=\min_{\theta\ge 0}\rho(\theta)$. \end{enumerate}
+
+- id: density_one_descent_for_coprime_conway_maps   # Theorem 20.6, page 0
+  name: "Density one descent for coprime Conway maps of negative drift"
+  label: "rrt:thm:density"
+  chapter: "20"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "For a coprime Conway map with negative drift the integers with an iterate smaller than themselves within k steps have lower density at least one minus rho_min to the k, so almost every integer descends."
+  statement: >-
+    Let $T$ be a coprime Conway map with $\mu<0$. For each $k$, the set of positive integers $n$ with $|T^j(n)|<n$ for some $j\le k$ has lower density at least $1-\rho_{\min}^{\,k}$. In particular almost every positive integer, in the sense of natural density, has an iterate smaller than itself.
+
+- id: unprovable_descent_for_a_conway_map   # Proposition 20.7, page 0
+  name: "A Conway map whose descent no sound theory proves"
+  label: "rrt:prop:unprovable"
+  chapter: "20"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "For any sound recursively axiomatized theory there is a Conway map all of whose orbits reach 1 but for which the theory does not prove this, so it has no Lyapunov function provable in the theory."
+  statement: >-
+    Let $\mathcal{T}$ be any sound, recursively axiomatized theory, for example ZFC if it is sound. There is a Conway map $g$ all of whose orbits reach $1$ such that $\mathcal{T}$ does not prove this. In particular $g$ admits no Lyapunov function whose descent property is provable in $\mathcal{T}$.
+
+- id: entropy_and_lyapunov_duality   # Theorem 20.8, page 0
+  name: "Entropy and Lyapunov duality for coprime Conway maps"
+  label: "rrt:thm:duality"
+  chapter: "20"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "The minimal relative entropy of digit laws with nonnegative log drift equals minus log base 2 of rho_min, and counts the digit strings of length k with multiplier at least 1 as 2 to the k times (log_2 d minus eta) up to o(k)."
+  statement: >-
+    Let $T$ be a coprime Conway map with $\mu<0$ and let $u$ be the uniform law on digits. Then \[ \eta\;:=\;\min\Big\{D(q\,\|\,u)\;:\;\sum_i q_i\log\frac{m_i}{d}\ge 0\Big\}\;=\;-\log_2\rho_{\min} , \] where $D$ is relative entropy in bits. The number of digit strings of length $k$ with $M_k\ge 1$ is $2^{k(\log_2 d-\eta)+o(k)}$.
+
+- id: deterministic_parrondo_pair   # Theorem 20.9, page 0
+  name: "A deterministic Parrondo pair of Conway maps"
+  label: "rrt:thm:parrondo"
+  chapter: "20"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "Two modulus four Conway maps each of whose orbits reaches a cycle or fixed point have an alternation whose every orbit tends to infinity, with C(n)=9n+4 for even n."
+  statement: >-
+    Define two Conway maps with modulus four on the nonnegative integers by \[ A(n)=\begin{cases}3n+1 & n \text{ even}\\ \lfloor n/4\rfloor & n \text{ odd,}\end{cases} \qquad B(n)=\begin{cases}3n+1 & n \text{ odd}\\ \lfloor n/4\rfloor & n \text{ even.}\end{cases} \] \begin{enumerate} \item[(a)] Every orbit of $A$ enters the cycle $\{0,1\}$. \item[(b)] Every orbit of $B$ enters the fixed point $\{0\}$ or the cycle $\{1,4\}$. \item[(c)] Every orbit of the alternation $C=B\circ A$ tends to infinity, and $C(n)=9n+4$ for all even $n$. \end{enumerate}
+
+- id: no_ratchet_under_measure_preservation   # Theorem 20.10, page 0
+  name: "No ratchet under measure preservation"
+  label: "rrt:thm:noparrondo"
+  chapter: "20"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "Under Haar measure the expected logarithmic multiplier of any composition of p copies of one coprime Conway map and q of another is p mu_A plus q mu_B, so two maps of negative drift cannot be combined into one of positive drift."
+  statement: >-
+    Let $T_A$ and $T_B$ be coprime Conway maps with the same modulus $d$ and drifts $\mu_A,\mu_B$. Under Haar measure on $\mathbb{Z}_d$, the expected logarithmic multiplier of any composition of $p$ copies of $T_A$ and $q$ copies of $T_B$, in any order, equals $p\,\mu_A+q\,\mu_B$. In particular two maps with negative drift cannot be combined into one with positive drift.
+
+- id: collatz_as_game_a_resonant_pair   # Theorem 20.11, page 0
+  name: "Collatz as game A: a resonant pair with positive drift"
+  label: "rrt:thm:resonance"
+  chapter: "20"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "Both the Collatz map and a modulus three map lose, but their alternation has an invariant Haar measure, i.i.d. round multipliers and positive drift for every m at least 7, and almost every integer has a larger iterate."
+  statement: >-
+    Let $T$ be the Collatz map, let $B=B_m$ as above and let $C=B\circ T$. \begin{enumerate} \item[(a)] Both games lose: $\mu_T=\tfrac12\log\tfrac34<0$ and $\mu_B=\tfrac13\log\tfrac{m}{27}<0$, and by Theorem 20.6 almost every positive integer has a smaller iterate under $T$ and under $B$. \item[(b)] Haar measure on $\mathbb{Z}_2\times\mathbb{Z}_3$ is invariant under $C$. Under it the multipliers of successive rounds are independent and identically distributed, equal to \[ \frac{m}{2}\ \text{ w.p. } \tfrac12,\qquad \frac16\ \text{ w.p. } \tfrac13,\qquad \frac{m}{6}\ \text{ w.p. } \tfrac16 . \] \item[(c)] The drift of a round is \[ \mu_C=\mu_T+\tfrac12\log\frac{m}{3}+\tfrac12\mu_B=\frac16\log\frac{m^4}{1728}, \] which is positive for every $m\ge 7$. The naive value $\mu_T+\mu_B$ is negative. \item[(d)] The first $k$ rounds of $n$ depend only on $n \bmod 6^k$, and the set of positive integers $n$ with $|C^j(n)|>n$ for some $j\le k$ has lower density at least $1-\rho_C^{\,k}$, where $\rho_C=\min_{\theta\ge 0}\mathbb{E}\,[M^{-\theta}]<1$ and $M$ is the round multiplier of (b). In particular almost every positive integer has a larger iterate under $C$. \end{enumerate}
+
+- id: exact_minimum_bound_for_rational_cycles   # Theorem 20.12, page 0
+  name: "Exact bound on the smallest element of a rational cycle, attained by the Christoffel cycle"
+  label: "rrt:thm:exact"
+  chapter: "20"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "Every positive rational cycle satisfies 3M(2^delta minus 1) at most B prime r of delta, with equality exactly for the mechanical word, and at a rung the maximal minimum over cycles is attained by the Christoffel cycle alone. The maximal minimum and its attainment by the mechanical word are due to Halbeisen and Hungerbuhler (1997); the characterization of equality for every closing defect is stated here."
+  statement: >-
+    Every positive rational cycle with $r$ odd elements, closing defect $\delta_c$ and smallest element $M$ satisfies \[ 3M\,(2^{\delta_c}-1)\le B'_r(\delta_c), \] with equality if and only if the word read from $M$ is the mechanical word of intercept $\delta_c$. At a rung $r$ with $s=\lceil r\theta\rceil$ one has $B'_r(\delta(r))=B_r=\sum_{t<r}2^{-\{t\theta\}}$, the mechanical word is the lower Christoffel word of slope $s/r$, its first element is its smallest, and therefore \[ \max\{M\}=M_{\mathrm{Chr}}=\frac{B_r}{3\,(2^{\delta(r)}-1)}, \] the maximum being over all positive rational cycles with these $r$ and $s$, attained by the Christoffel cycle alone.
+
+- id: concatenation_of_rational_cycles   # Lemma 20.14, page 0
+  name: "Concatenation identity for the first elements of rational cycles"
+  label: "rrt:lem:concat"
+  chapter: "20"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "For words with positive closing defects the first element of the concatenated cycle is a weighted mean of the first elements with explicit positive weights, and Phi is additive with a twist. Halbeisen and Hungerbuhler (1997) give the same identity."
+  statement: >-
+    Let $w_1,w_2$ be words with closing defects $\delta_1,\delta_2>0$. Then $\Phi(w_1w_2)=\Phi(w_1)+2^{\delta_1}\Phi(w_2)$, and the first elements of the three rational cycles satisfy \[ x_0(w_1w_2)=\frac{(2^{\delta_1}-1)\,x_0(w_1)+2^{\delta_1}(2^{\delta_2}-1)\,x_0(w_2)}{2^{\delta_1+\delta_2}-1}, \] a weighted mean with positive weights. In particular $x_0(w^j)=x_0(w)$.
+
+- id: additivity_of_defects_below_the_next_rung   # Lemma 20.15, page 0
+  name: "Additivity of the closing defect below the next rung"
+  label: "rrt:lem:add"
+  chapter: "20"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "Between a rung q and the next rung the closing defect of r is the sum of those of q and r minus q, and partial sums of defects stay below 1."
+  statement: >-
+    Let $q$ be a rung, $q^+$ the next rung, and $q<r<q^+$. Put $u=r-q$. Then $\delta(r)=\delta(q)+\delta(u)$, and $\delta(v)+\delta(q)<1$ for every $1\le v\le u$.
+
+- id: records_of_the_exact_bound_occur_at_rungs   # Theorem 20.16, page 0
+  name: "Records of the exact bound occur only at rungs"
+  label: "rrt:thm:records"
+  chapter: "20"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "For r not a rung the mechanical word is that of u followed by that of q, the exact bound at r is a weighted mean of those at u and q, and so a new record of the bound can occur only at a rung."
+  statement: >-
+    Let $r$ be a positive integer that is not a rung, $q$ the largest rung below $r$ and $u=r-q$. Then the mechanical word of $r$ is the mechanical word of $u$ followed by the mechanical word of $q$, and \begin{align*} G^*(r)&=\frac{(2^{\delta(u)}-1)\,G^*(u)+2^{\delta(u)}(2^{\delta(q)}-1)\,G^*(q)}{2^{\delta(r)}-1}\\ &\le\max\{G^*(u),G^*(q)\}. \end{align*} Consequently $G^*(r)>\max_{r'<r}G^*(r')$ only if $r$ is a rung. Moreover $G^*(jq)=G^*(q)$ whenever $jq<q^+$.
+
+- id: statement_m1_as_stated_fails   # Proposition 20.17, page 0
+  name: "The record statement M1 as stated fails"
+  label: "rrt:prop:false"
+  chapter: "20"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "The ratio R(2q)/R(q) exceeds 1 for rungs q at least 2 with 2q below the next rung, so records of R occur at non rungs such as 10, 15, 82, 612 and 918."
+  statement: >-
+    Let $R(r)=B_r(\delta(r))/(3\log 2\,\delta(r))$ with the capped sum $B_r(\delta)$ of Theorem 18.3. If $q\ge 2$ is a rung with $2q<q^+$ then \[ \frac{R(2q)}{R(q)}=1+\frac{(2^{\delta(q)}-1)(B_q-1)}{2B_q}>1 . \] In particular $R(10)=25.692>R(5)=25.189=\max_{r<10}R(r)$, and $10$ is not a rung. Below $20000$ the records of $R$ that are not rungs are $10$, $15$, $82$, $612$ and $918$, all multiples of the rungs $5$, $41$ and $306$.
+
+- id: chernoff_upper_bound_at_every_rung   # Proposition 20.18, page 0
+  name: "Chernoff bound at every rung for words with large Phi"
+  label: "rrt:prop:chernoff"
+  chapter: "20"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "The count of admissible words with Phi at least c B_r is bounded by a minimum over lambda of a matrix product partition function, with explicit nonnegative matrices indexed by depth."
+  statement: >-
+    For $\lambda\ge0$ let $Z_r(\lambda)=\sum_w e^{\lambda\Phi(w)}$ over admissible words. Then \[ \frac1r\log_{10}N(c,r)\le\min_{\lambda\ge0}\frac{\log Z_r(\lambda)-\lambda\,c\,B_r}{r\log 10}, \] and $Z_r(\lambda)$ is the product of $r$ nonnegative matrices indexed by depth, with entries $e^{\lambda2^{-\{t\theta\}-j}}$ for $j'\le j+g_t-1$ and $0$ otherwise.
+
+- id: supermultiplicativity_of_the_word_counts   # Proposition 20.19, page 0
+  name: "Supermultiplicativity of the counts of words with large Phi"
+  label: "rrt:prop:super"
+  chapter: "20"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "Between rungs the count of words with large Phi satisfies N*(c,r) at least N*(c,u) N*(c,q), so the count at jq is at least the j th power of the count at q."
+  statement: >-
+    Let $N^*(c,r)$ count the words of length $r$ with $K_t\le\lfloor t\theta+\delta(r)\rfloor$, $K_r=\lceil r\theta\rceil$ and $\Phi(w)\ge c\,B'_r(\delta(r))$; at a rung $N^*=N$. If $r$ is not a rung, $q$ is the largest rung below it and $u=r-q$, then \[ N^*(c,r)\ge N^*(c,u)\,N^*(c,q), \] and in particular $N^*(c,jq)\ge N(c,q)^j$ for $jq<q^+$.
+
+- id: tail_criterion_for_the_collatz_conjecture   # Theorem 20.20, page 0
+  name: "Tail criterion: the conjecture is equivalent to a polynomial tail bound on the orbit minimum"
+  label: "rrt:thm:tail"
+  chapter: "20"
+  origin: book
+  status: conditional
+  conditions:
+    - >-
+      Lau's theorem (Theorem 13.1, from an unrefereed preprint), that for every t prime to 3 the integers whose orbit reaches t have lower natural density at least t^(-4)/D_A, which the book does not prove.
+  highlight: false
+  summary: "Granting Lau's theorem, a least counterexample m star forces the tail E(C) of the orbit minimum to be at least 1/(16 m_star^4 D_A), so the conjecture is equivalent to a tail bound of that form for C at least 2^71."
+  statement: >-
+    Assume Lau's theorem. If the Collatz conjecture fails, let $m_*$ be the least positive integer whose orbit does not reach $1$. Then \[ E(C)\ \ge\ \frac{1}{16\,m_*^{4}\,D_A}\qquad\text{for every } C<m_* . \] Consequently the conjecture is equivalent to the statement that \[ E(C)<\frac{1}{16\,(C+1)^{4}\,D_A}\qquad\text{for every } C\ge 2^{71}. \]
+
+- id: polynomial_tail_bounds_the_least_counterexample   # Corollary 20.21, page 0
+  name: "A polynomial tail bounds the least counterexample"
+  label: "rrt:cor:poly"
+  chapter: "20"
+  origin: book
+  status: conditional
+  conditions:
+    - >-
+      Lau's theorem (Theorem 13.1, from an unrefereed preprint), that for every t prime to 3 the integers whose orbit reaches t have lower natural density at least t^(-4)/D_A, which the book does not prove.
+  highlight: false
+  summary: "Granting Lau's theorem, a bound K C^(-4-epsilon) on the tail of the orbit minimum bounds any least counterexample explicitly, so the conjecture reduces to a finite computation."
+  statement: >-
+    Assume Lau's theorem and suppose $E(C)\le K\,C^{-4-\varepsilon}$ for all $C\ge C_1$, with $K,\varepsilon>0$. Then any least counterexample satisfies \[ m_*\le\max\bigl\{C_1+1,\ 1+(17\,K\,D_A)^{1/\varepsilon}\bigr\}, \] so the conjecture reduces to a finite computation.
+
+- id: cramer_regime_for_coprime_conway_maps   # Proposition 20.25, page 0
+  name: "Cramer regime for the logarithmic multiplier of coprime Conway maps"
+  label: "rrt:prop:cramer"
+  chapter: "20"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "For a coprime Conway map with unequal multipliers and n uniform modulo d^k, the upper tail of the logarithmic multiplier has the Gaussian asymptotic with the Mills ratio factor for deviations x_k tending to infinity with x_k=o(k^(1/6))."
+  statement: >-
+    Let $T$ be a coprime Conway map whose multipliers are not all equal, with drift $\mu$ and variance $\sigma^2$ of $\log(m_i/d)$ under the uniform law, and let $n$ be uniform on a complete residue system modulo $d^k$. If $x_k\to\infty$ with $x_k=o(k^{1/6})$, then \[ \mathbb{P}\bigl(\log M_k\ge k\mu+x_k\,\sigma\sqrt{k}\,\bigr)=\bigl(1+o(1)\bigr)\,\frac{e^{-x_k^2/2}}{x_k\sqrt{2\pi}} . \]
+
+- id: feynman_kac_recursion_for_fourier_coefficients   # Proposition 20.26, page 0
+  name: "Feynman and Kac recursion for the Fourier coefficients of the Syracuse variable"
+  label: "rrt:prop:fk"
+  chapter: "20"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "The Fourier coefficient u_n(B) of the Syracuse variable at the frequency 2^B satisfies an explicit recursion from level n-1 to level n, which with a truncated window of exponents computes the table to level n in O(n^2) operations."
+  statement: >-
+    $u_0\equiv1$ and, for $n\ge1$ and every integer $B$, \[ u_n(B)=\sum_{a\ge1}2^{-a}\exp\bigl(2\pi i\,2^{B-a}/3^n\bigr)\,u_{n-1}(B-a). \]
+
+- id: syracuse_variable_is_phi_of_the_reversed_word   # Proposition 20.28, page 0
+  name: "The Syracuse offset is Phi of the reversed word"
+  label: "rrt:prop:phi"
+  chapter: "20"
+  origin: book
+  status: proved
+  highlight: false
+  summary: "The offset of a word equals 3^(n-1) Phi of the reversed word over 2^(A_n), an integer over a power of two, so the Fourier phase at a power of two frequency is an ordinary real phase."
+  statement: >-
+    Let $w=(a_1,\dots,a_n)$ have partial sums $A_j$ and let $\tilde w=(a_n,\dots,a_1)$. Then \[ \mathrm{off}(w)=\sum_{j=1}^n3^{j-1}2^{-A_j}=\frac{3^{n-1}\,\Phi(\tilde w)}{2^{A_n}}, \] and $3^{n-1}\Phi(\tilde w)$ is an integer. Consequently, for every word with $A_n\le k$, \[ \exp\bigl(2\pi i\,2^k\,\mathrm{off}(w)/3^n\bigr)=\exp\bigl(2\pi i\,2^{\,k-A_n}\,\Phi(\tilde w)/3\bigr), \] where the right side is an ordinary real phase.
+
+- id: undecidability_in_the_coprime_class_problem   # Problem R1, page 0
+  name: "Problem R1: Is there an undecidable problem inside the coprime class?"
+  label: "rrt:op:undecidable"
+  chapter: "20"
+  origin: book
+  status: open
+  highlight: false
+  summary: "Decide whether the coprime class of Conway maps, which preserves Haar measure, contains an undecidable problem, equivalently whether measure preservation limits computational power."
+  statement: >-
+    Is there an undecidable problem inside the coprime class of Definition 20.3? Equivalently, does measure preservation limit computational power, or can a coprime Conway map simulate a universal machine on a set of measure zero?
+
+- id: almost_bounded_values_for_coprime_maps_problem   # Problem R2, page 0
+  name: "Problem R2: Almost bounded values for coprime maps"
+  label: "rrt:prob:r2"
+  chapter: "20"
+  origin: book
+  status: open
+  highlight: false
+  summary: "Extend density one descent to almost bounded values in logarithmic density for every coprime Conway map with negative drift, following Tao."
+  statement: >-
+    Extend Theorem 20.6 from descent below $n$ to descent to almost bounded values, in logarithmic density, for every coprime Conway map with $\mu<0$, following Tao (Tao 2022). The analogue of the Syracuse random variable lives modulo powers of the $m_i$.
+
+- id: martingale_family_problem   # Problem R3, page 0
+  name: "Problem R3: The martingale family"
+  label: "rrt:prob:r3"
+  chapter: "20"
+  origin: book
+  status: open
+  highlight: false
+  summary: "Decide whether the martingale family of coprime maps, whose idealized orbit is a martingale with Pareto index one, shares the backward tree structure and positive density results of the Collatz map."
+  statement: >-
+    For the martingale family $\sum_i m_i=d^2$ the idealized orbit is a martingale and excursions have Pareto index one. Does this family share finer features of the Collatz map, for instance the structure of the backward tree and the positive density results of Chapter 13?
+
+- id: divergence_of_the_alternation_problem   # Problem R4, page 0
+  name: "Problem R4: Divergence of the alternation"
+  label: "rrt:prob:r4"
+  chapter: "20"
+  origin: book
+  status: open
+  highlight: false
+  summary: "Prove the analogue of Tao's theorem for the alternation of the Collatz map with a modulus three map, namely almost unbounded values in logarithmic density, and the order of the density of captured integers."
+  statement: >-
+    Theorem 20.11(d) is the easy direction for the alternation $C=B_m\circ T$. Prove the analogue of Tao's theorem: for $m=19$, say, almost every positive integer, in logarithmic density, has an orbit under $C$ that attains almost unbounded values. Is the density of captured integers below $N$ of order $N^{-\theta^*_C}$?
+
+- id: resonant_pairs_problem   # Problem R5, page 0
+  name: "Problem R5: Resonant pairs"
+  label: "rrt:prob:r5"
+  chapter: "20"
+  origin: book
+  status: open
+  highlight: false
+  summary: "Classify resonant pairs of coprime Conway maps and find the invariant measure and drift of their alternation, expected to be self similar in general."
+  statement: >-
+    Classify resonant pairs. For coprime Conway maps with moduli $d_A,d_B$ and a resonant multiplier, find the invariant measure on $\mathbb{Z}_{d_A}\times\mathbb{Z}_{d_B}$ of the alternation and its drift. In Theorem 20.11 that measure is Haar; in general it should be a self similar measure of the kind that appears in Tao's work.
+
+- id: entropy_budget_problem   # Problem R6, page 0
+  name: "Problem R6: The entropy budget"
+  label: "rrt:prob:r6"
+  chapter: "20"
+  origin: book
+  status: open
+  highlight: false
+  summary: "Show with an explicit rate that the type of the first kappa log_2 N parity digits of a uniform integer up to N obeys the fair coin large deviation bound for kappa above 1, up to the full budget 4.82."
+  statement: >-
+    Close the entropy budget. Let $n$ be uniform on $\{1,\dots,N\}$ and fix $\kappa>1$. Show, with an explicit rate, that the type of the first $\kappa\log_2 N$ parity digits of $n$ obeys the same large deviation bound as for fair coin flips. For $\kappa\le 1$ this is Theorem 20.4. Any $\kappa>1$ is a pseudorandomness statement beyond the seed, and the full budget is $\kappa=4.82$.
+
+- id: amusical_permutation_problem   # Problem R7, page 0
+  name: "Problem R7: The amusical permutation"
+  label: "rrt:prob:r7"
+  chapter: "20"
+  origin: book
+  status: open
+  highlight: false
+  summary: "Decide whether the orbit of 8 under Conway's amusical permutation is infinite."
+  statement: >-
+    Decide whether the orbit of $8$ under Conway's amusical permutation is infinite. The map is not in the coprime class, and its parity chain, unlike that of Theorem 20.9, has not been shown to lock.
+
+- id: convergence_of_the_depth_cocycle_problem   # Problem R8, page 0
+  name: "Problem R8: Convergence of the depth cocycle"
+  label: "rrt:prob:r8"
+  chapter: "20"
+  origin: book
+  status: open
+  highlight: false
+  summary: "Prove that r^(-1) log Z_r(lambda) converges along the rungs and that the limit is differentiable in lambda."
+  statement: >-
+    Prove that $r^{-1}\log Z_r(\lambda)$ converges along the rungs for every $\lambda\ge0$, and that the limit $P(\lambda)$ is differentiable. The cocycle is piecewise constant in the phase with two breakpoints, and its matrices map the positive cone strictly inside itself after boundedly many steps, so uniform convergence over the phase is plausible.
+
+- id: rate_near_one_problem   # Problem R9, page 0
+  name: "Problem R9: The rate near one"
+  label: "rrt:prob:r9"
+  chapter: "20"
+  origin: book
+  status: open
+  highlight: false
+  summary: "Find the behaviour of the rate rho(c) as c tends to 1, conjectured of order (1-c) log(1/(1-c))."
+  statement: >-
+    Find the behaviour of $\rho(c)$ as $c\to1$. A word with $\Phi\ge c\,B_r$ can leave the Christoffel word on a fraction of indices of order $1-c$, which suggests $\rho(c)$ of order $(1-c)\log\frac{1}{1-c}$.
+
+- id: m3_restated_problem   # Problem R10, page 0
+  name: "Problem R10: M3 restated"
+  label: "rrt:prob:r10"
+  chapter: "20"
+  origin: book
+  status: open
+  highlight: false
+  summary: "Find an inequality for integer cycles that beats the bound B_r/(3(2^delta minus 1)), which a rational cycle attains, and so must use the denominator 2^s minus 3^r."
+  statement: >-
+    Restate M3 with Theorem 20.12: the target is an inequality for integer cycles that beats $M\le B_r/(3(2^{\delta}-1))$, a bound that a rational cycle attains exactly. Any such inequality must fail for the Christoffel cycle itself, so it must use the denominator $2^s-3^r$.
+
+- id: b2_restated_problem   # Problem R11, page 0
+  name: "Problem R11: B2 restated"
+  label: "rrt:prob:r11"
+  chapter: "20"
+  origin: book
+  status: open
+  highlight: false
+  summary: "Prove that the largest Fourier coefficient of the Syracuse variable at frequencies prime to 3 is 3^(-(eta+o(1))n) with eta=0.05004."
+  statement: >-
+    Prove that $\max_{3\nmid\xi}|\widehat\pi_n(\xi)|=3^{-(\eta+o(1))n}$ with $\eta=0.05004$. The lower bound should follow from the words of Table 20.6, by Proposition 20.28 and the finitely many low levels at which they leave the real range. For the upper bound, show that the maximum over all frequencies prime to $3$ is attained at a power of two below $3^n$ for every $n$, as it is for $n\le18$.
+
+- id: beyond_the_uniform_bound_problem   # Problem R12, page 0
+  name: "Problem R12: Beyond the uniform bound"
+  label: "rrt:prob:r12"
+  chapter: "20"
+  origin: book
+  status: open
+  highlight: false
+  summary: "Find the tail rate obtained by Tao's method when resonant frequencies are treated separately and the rest are bounded by their root mean square size."
+  statement: >-
+    Find the tail rate that the method of Tao gives when the resonant frequencies $2^k$ with $3^n/2^{c}<2^k<3^n$ are treated separately and the remaining frequencies are bounded by their root mean square size, of order $\sqrt n\,3^{-n/2}$.
+
+- id: effective_basin_bound_problem   # Problem R13, page 0
+  name: "Problem R13: An effective basin bound"
+  label: "rrt:prob:r13"
+  chapter: "20"
+  origin: book
+  status: open
+  highlight: false
+  summary: "Prove a lower bound c rho(t)/t for the density of the integers reaching t, which would give the tail criterion exponent 1 with no tower."
+  statement: >-
+    Prove a lower bound for the density of the integers reaching $t$ of the form $c\,\rho(t)\,t^{-1}$, with $\rho$ the density of the Syracuse offsets at $t$ and $c$ of ordinary size. With such a bound the criterion of Theorem 20.20 has exponent $1$ and no tower.
+
+- id: laboratory_of_basin_sizes_problem   # Problem R14, page 0
+  name: "Problem R14: The laboratory"
+  label: "rrt:prob:r14"
+  chapter: "20"
+  origin: book
+  status: open
+  highlight: false
+  summary: "For the 3x+d maps at the rungs, measure the law of basin sizes and test whether the basin of a cycle is proportional to the sum over its elements of the off cycle share of the offset density."
+  statement: >-
+    For the $3x+d$ maps with $d=2^s-3^r$ at the rungs, measure the law of basin sizes over cycles and test whether the basin of a cycle is proportional to the sum over its elements of the off cycle share of the offset density. This is a statement that can be checked exactly, and it is the $3x+d$ shadow of the effective basin bound.

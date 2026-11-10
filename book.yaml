@@ -17,12 +17,12 @@ authors:
 credit_names: ""                 # how a citation names the authors, e.g. "Polson and Sokolov"; empty: built from the family names
 year: 2026
 edition: "1"
-version: "1.3.0"                 # the release tag is v<version>
-date_released: "2026-11-02"      # YYYY-MM-DD, set at release
+version: "1.4.0"                 # the release tag is v<version>
+date_released: "2026-11-10"      # YYYY-MM-DD, set at release
 publisher: "Independently published"                    # "Independently published" (the imprint KDP shows for a free KDP ISBN)
 # no isbn: a free KDP ISBN may be used only on KDP, so it goes on the ISBN line of kdp.md (private) and is printed
 # only in the print edition (kdp.py interior); this file is published (references/publishing.md)
-doi: "10.5281/zenodo.23905381" # this edition's DOI; zenodo.py reserve writes it before the final build
+doi: "10.5281/zenodo.24113412" # this edition's DOI; zenodo.py reserve writes it before the final build
 license_text: CC-BY-4.0          # text, figures and PDF
 license_code: MIT
 repository: https://github.com/VadimSokolov/collatz   # the public repository; its name is the slug
@@ -49,11 +49,11 @@ short_description: "Why the Collatz (3x+1) conjecture resists proof: the map as 
 description: |
   The Collatz conjecture says that, from any positive integer, repeatedly halving an even number and sending an odd number n to 3n+1 always reaches 1. This book explains why the problem has resisted proof.
 
-  The conjecture splits into a divergence half, a law of large numbers along a single deterministic orbit, and a cycle half, a question about rational approximation of log2 3 that Diophantine information alone cannot finish. The book proves that no Lyapunov function increasing in the number certifies descent over any fixed number of steps, and that no finite residue sieve certifies descent for every integer. However far the computer verification is pushed, infinitely many cycle lengths survive the cycle inequality, a point Halbeisen and Hungerbühler made earlier in another form; a sharp minimum inequality for rational cycles, nearly attained by Christoffel cycles, measures what a property of integers must add to exclude them. A seventeen state Turing machine that beeps forever exactly when the conjecture holds shows what one more quantifier costs.
+  The conjecture splits into a divergence half, a law of large numbers along a single deterministic orbit, and a cycle half, a question about rational approximation of log2 3 that Diophantine information alone cannot finish. The book proves that no Lyapunov function increasing in the number certifies descent over any fixed number of steps, and that no finite residue sieve certifies descent for every integer. Infinitely many cycle lengths survive the cycle inequality, a point Halbeisen and Hungerbühler made earlier in another form; a sharp minimum inequality for rational cycles, nearly attained by Christoffel cycles, measures what a property of integers must add to exclude them. A seventeen state Turing machine that beeps forever exactly when the conjecture holds shows what one more quantifier costs. A tail criterion reduces the conjecture, given Lau's density theorem, to a polynomial bound.
 
-  The arithmetic of the map also yields an algorithm. Switching MM, a first order method that applies the momentum log2 3 minus 1 on alternate steps, has an explicit linear rate at step 1/L on smooth strongly convex functions, and on quadratics with additive gradient noise, at steps up to 1/L, its noise variance stays below 5/3 times that of gradient descent for every momentum coefficient below one. The gain weight theorem shows that on quadratics with small steps no stable linear periodic first order method has a lower slow mode noise floor than gradient descent at matched speed.
+  Switching MM, a method that applies the momentum log2 3 minus 1 on alternate steps, has an explicit linear rate at step 1/L on smooth strongly convex functions, and on quadratics with additive gradient noise, at steps up to 1/L, its noise variance stays below 5/3 times that of gradient descent for every momentum coefficient below one. By the gain weight theorem, on quadratics with small steps no stable linear periodic first order method has a lower slow mode noise floor than gradient descent at matched speed. Beyond quadratics, at small steps, it runs at a fixed multiple of gradient descent's temperature.
 
-  Every result is proved in full or marked as conditional, the open problems are collected in the closing chapter, and the Python scripts behind every computed number, figure and table are in the repository.
+  Every result is proved in full or marked as conditional, and the Python scripts behind every computed number, figure and table are in the repository.
 source:
   format: latex
   dir: book
@@ -132,11 +132,14 @@ chapters:
     title: "The Price of a Quantifier"
     stem: 19_the_price_of_a_quantifier
   - key: "20"
-    title: "Contributions and a Computational Road Map"
-    stem: 20_contributions_and_a_computational_road_map
+    title: "Ratchets, Records and Tails"
+    stem: 20_ratchets_records_and_tails
   - key: "21"
+    title: "Contributions and a Computational Road Map"
+    stem: 21_contributions_and_a_computational_road_map
+  - key: "22"
     title: "Open Problems and Computational Projects"
-    stem: 21_open_problems_and_computational_projects
+    stem: 22_open_problems_and_computational_projects
   - key: "A"
     title: "Numerical Constants"
     stem: A_numerical_constants

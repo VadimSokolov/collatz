@@ -826,6 +826,196 @@ on a larger range than every step Nesterov at the same $\beta$.}
 \label{fig:ch7:multiplicative}
 \end{figure}
 
+\section{Beyond quadratics: a law about temperature}\label{sec:ch7:beyond}
+
+Everything above is for quadratics. Problem~\ref{prob:ch11:s2} asks for the bound $\tfrac53$ on smooth strongly convex objectives. This section answers it in three parts. The bound holds over the class in the worst case when $(1+\beta)\alpha(L+\mu)\le2$ (\cref{thm:ch7:class}). It holds direction by direction for every objective with a Lipschitz Hessian when the fluctuations are small, in particular as the step tends to zero, which is the form in which the problem was posed (\cref{thm:ch7:local}). And it fails for a fixed step and large noise: there is a smooth strongly convex function of one variable on which the stationary mean square error of \smmdet\ is $1.717$ times that of gradient descent (\cref{ex:ch7:counter}). The reason for the failure is that, in the limit of small steps, the factor $V(\beta)$ multiplies the temperature of the stationary law and not its variance (\cref{thm:ch7:temperature}); the two agree only for quadratics. On quadratics, averaging the iterates removes most of the penalty (\cref{prop:ch7:averaging}).
+
+Throughout, $f:\R^d\to\R$ is $\mu$ strongly convex and $L$ smooth with minimizer $x^\ast$, the oracle is \eqref{eq:ch7:oracle} with independent, identically distributed shocks of mean zero and covariance $\sigma^2I$, and $0\le\beta<1$, $0<\alpha\le1/L$. Write $G_h(x)=x-h\nabla f(x)$ as in \cref{chap:smm}, and
+\[
+  c_1=1-\alpha\mu,\qquad c_2=\max\bigl\{1-(1+\beta)\alpha\mu,\ (1+\beta)\alpha L-1\bigr\},\qquad q=c_1c_2 .
+\]
+A gradient step $G_h$ with $h\le2/L$ is a contraction of $\R^d$ with factor $\max\{|1-h\mu|,|1-hL|\}$, so $G_\alpha$ contracts by $c_1$ and $G_{(1+\beta)\alpha}$ by $c_2\le\max\{c_1,\beta\}<1$.
+
+\begin{lemma}[The noisy two step map]\label{lem:ch7:twostepgen}
+For every even $t$ the iterates of \smmdet\ satisfy
+\begin{equation}\label{eq:ch7:twostepgen}
+  x_{t+2}=G_\alpha\bigl(G_{(1+\beta)\alpha}(x_t)-(1+\beta)\alpha\,\xi_t\bigr)-\alpha\,\xi_{t+1},
+  \qquad x_{t+1}=G_\alpha(x_t)-\alpha\,\xi_t .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+This is \cref{lem:ch6:ystep} with the noisy oracle: the extrapolated point is $x_t-(1+\beta)\alpha\,g(x_t)$, and the injection step evaluates a fresh noisy gradient there.
+\end{proof}
+
+So the even iterates form a Markov chain on $\R^d$, a random composition of two contractions with additive shocks, and the second state variable of momentum is absent for every $f$, not only for quadratics.
+
+\begin{proposition}[Synchronization and the stationary law]\label{prop:ch7:sync}
+Two copies of \smmdet\ driven by the same shocks satisfy $|x_{t+2}-x'_{t+2}|\le q\,|x_t-x'_t|$ for even $t$, for every realization of the noise. Consequently the even chain has a unique stationary law $\pi$, it has a finite second moment, and the law of $x_{2k}$ converges to $\pi$ in the Wasserstein distance of order two at the rate $q^k$ from any starting point.
+\end{proposition}
+
+\begin{proof}
+In \eqref{eq:ch7:twostepgen} the shocks are added inside and outside $G_\alpha$, so they cancel in the difference of two copies, which is $G_\alpha(u)-G_\alpha(u')$ with $u-u'=G_{(1+\beta)\alpha}(x_t)-G_{(1+\beta)\alpha}(x'_t)$. The rest is the standard argument for iterated random contractions~\cite{diaconis1999}.
+\end{proof}
+
+\begin{theorem}[The worst case over the class]\label{thm:ch7:class}
+Let $m_{\mathrm{even}}$ and $m_{\mathrm{odd}}$ be the stationary values of $\E|x_t-x^\ast|^2$ along even and odd $t$. Then
+\begin{equation}\label{eq:ch7:classbound}
+  m_{\mathrm{even}}\le\frac{\alpha^2\sigma^2d\,\bigl[(1+\beta)^2c_1^2+1\bigr]}{1-q^2},\qquad
+  m_{\mathrm{odd}}\le c_1^2\,m_{\mathrm{even}}+\alpha^2\sigma^2d .
+\end{equation}
+If $(1+\beta)\alpha(L+\mu)\le2$, which for $\alpha=1/L$ reads $\kappa\ge(1+\beta)/(1-\beta)$, the right sides are $d\,V_{\mathrm{even}}(\alpha\mu)$ and $d\,V_{\mathrm{odd}}(\alpha\mu)$ of \cref{thm:smmvar}, and they are attained by $f(x)=\tfrac\mu2|x-x^\ast|^2$. In that case the largest stationary mean square error over the class satisfies
+\begin{align*}
+  \sup_f\,\tfrac12\bigl(m_{\mathrm{even}}+m_{\mathrm{odd}}\bigr)&=d\,V_{\mathrm{SMM}}(\alpha\mu)\le V(\beta)\,d\,V_{\mathrm{GD}}(\alpha\mu)\\
+  &=V(\beta)\,\sup_f m_{\mathrm{GD}}<\tfrac53\,\sup_f m_{\mathrm{GD}} .
+\end{align*}
+\end{theorem}
+
+\begin{proof}
+Let $x_t\sim\pi$ and $u=G_{(1+\beta)\alpha}(x_t)-(1+\beta)\alpha\xi_t$. Since $\xi_t$ is independent of $x_t$ with mean zero, $\E|u-x^\ast|^2=\E|G_{(1+\beta)\alpha}(x_t)-x^\ast|^2+(1+\beta)^2\alpha^2\sigma^2d\le c_2^2\,m_{\mathrm{even}}+(1+\beta)^2\alpha^2\sigma^2d$, because $x^\ast$ is a fixed point of every $G_h$. In the same way $\E|x_{t+2}-x^\ast|^2\le c_1^2\,\E|u-x^\ast|^2+\alpha^2\sigma^2d$. Stationarity gives the first bound, and one descent step gives the second. Under the stated condition $c_2=1-(1+\beta)\alpha\mu$, so with $a=\alpha\mu$ we have $c_1=1-a$ and $q=\rho$, and the bounds are the formulas of \cref{thm:smmvar} summed over $d$ coordinates; for the isotropic quadratic every inequality above is an equality. The same argument with one step gives $m_{\mathrm{GD}}\le d\,V_{\mathrm{GD}}(\alpha\mu)$ with equality for the same quadratic, and \cref{prop:ch7:uniform} compares the two.
+\end{proof}
+
+This is a statement about the two worst cases, not about the ratio for a given $f$. For the ratio one needs to know where the stationary law sits.
+
+\begin{theorem}[Five thirds for small fluctuations]\label{thm:ch7:local}
+Assume in addition that $\nabla^2f$ is Lipschitz with constant $M$ and that $\E|\xi|^4\le K\sigma^4d^2$. Let $H=\nabla^2f(x^\ast)$ and
+\[
+  \varepsilon=\frac{\sqrt\alpha\,\sigma M}{\mu^{3/2}} .
+\]
+Let $\Sigma_{\mathrm{SMM}}$ be the stationary value of $\E(x_t-x^\ast)(x_t-x^\ast)^\top$ for \smmdet, averaged over the two phases, and $\Sigma_{\mathrm{GD}}$ the same matrix for gradient descent. There is a constant $C$ depending only on $\beta$, $d$ and $K$ such that
+\[
+  \Bigl\|\Sigma_{\mathrm{SMM}}-V_{\mathrm{SMM}}(\alpha H)\Bigr\|\le C\varepsilon\,\frac{\alpha\sigma^2}{\mu},\qquad
+  \Bigl\|\Sigma_{\mathrm{GD}}-V_{\mathrm{GD}}(\alpha H)\Bigr\|\le C\varepsilon\,\frac{\alpha\sigma^2}{\mu},
+\]
+where $V_{\mathrm{SMM}}(\alpha H)$ and $V_{\mathrm{GD}}(\alpha H)$ are the functions of \cref{thm:smmvar} and \eqref{eq:ch7:gd} applied to the matrix $\alpha H$. Consequently, for every eigenvector $v$ of $H$,
+\[
+  v^\top\Sigma_{\mathrm{SMM}}v\le V(\beta)\,v^\top\Sigma_{\mathrm{GD}}v+3C\varepsilon\,\frac{\alpha\sigma^2}{\mu},
+  \qquad
+  \frac{\operatorname{tr}\Sigma_{\mathrm{SMM}}}{\operatorname{tr}\Sigma_{\mathrm{GD}}}\le V(\beta)+8C\kappa\,\varepsilon ,
+\]
+the second for $6C\kappa\varepsilon\le1$. In particular the ratio of the stationary mean square errors is below $\tfrac53$ as soon as $\kappa\varepsilon$ is small, and it tends to a limit at most $V(\beta)$ as $\alpha\to0$ with $\sigma$ fixed, or as $\sigma\to0$ with $\alpha$ fixed.
+\end{theorem}
+
+\begin{proof}
+Write $D=x_t-x^\ast$ under $\pi$, $m_p=\E|D|^p$, $A_1=I-\alpha H$, $A_2=I-(1+\beta)\alpha H$ and $A=A_1A_2$; these are functions of $H$ and $\|A\|\le q\le1-\alpha\mu$. Constants $C$ below depend only on $\beta,d,K$.
+
+\emph{Moments.} By \cref{thm:ch7:class} and $1-q^2\ge\alpha\mu$, $m_2\le C\alpha\sigma^2/\mu$. If $|a|\le c|Y|$ and $N$ is independent of $Y$ with mean zero, expanding $|a+N|^4$ gives $\E|a+N|^4\le c^4\E|Y|^4+6c^2\E|Y|^2\E|N|^2+4c\,\E|Y|\,\E|N|^3+\E|N|^4$. Applying this at the two stages of \eqref{eq:ch7:twostepgen}, with $\E|N|^p\le C\alpha^p\sigma^p$, $m_1\le m_2^{1/2}$ and $\alpha\mu\le1$, gives $m_4\le q^4m_4+C\alpha^3\sigma^4/\mu$, so $m_4\le C\alpha^2\sigma^4/\mu^2$, and the same bound holds for $\E|u-x^\ast|^4$. (To have $m_4<\infty$ a priori, run the recursion from a fixed start, where every fourth moment is finite, and pass to the limit by Fatou's lemma.)
+
+\emph{Linearization.} Taylor's formula gives $G_h(x)-x^\ast=(I-hH)(x-x^\ast)+r_h(x)$ with $|r_h(x)|\le\tfrac12hM|x-x^\ast|^2$. Inserting this twice in \eqref{eq:ch7:twostepgen},
+\[
+  x_{t+2}-x^\ast=AD+N+R,\qquad N=-(1+\beta)\alpha A_1\xi_t-\alpha\xi_{t+1},
+\]
+with $|R|\le\alpha M\bigl(|D|^2+|u-x^\ast|^2\bigr)$, so $\|R\|_{L^2}\le C\alpha^2\sigma^2M/\mu$ by the moment bounds.
+
+\emph{The Lyapunov equation.} Let $\Sigma=\E DD^\top$. Since $N$ is independent of $D$ with mean zero, stationarity gives $\Sigma=A\Sigma A+Q+E$, where $Q=\alpha^2\sigma^2\bigl((1+\beta)^2A_1^2+I\bigr)$ and $\|E\|\le2\|AD+N\|_{L^2}\|R\|_{L^2}+\|R\|_{L^2}^2\le C\alpha^{5/2}\sigma^3M\mu^{-3/2}$. The solution of $S=ASA+Q$ is $S=Q(I-A^2)^{-1}=V_{\mathrm{even}}(\alpha H)$, and $\Sigma-S=\sum_{k\ge0}A^kEA^k$ has norm at most $\|E\|/(1-q^2)\le\|E\|/(\alpha\mu)=C\varepsilon\,\alpha\sigma^2/\mu$. For $\varepsilon\ge1$ the claim is trivial from $m_2\le C\alpha\sigma^2/\mu$, so take $\varepsilon\le1$; then $\|R\|_{L^2}^2$ is absorbed in the same bound. The odd phase follows from one descent step in the same way, and gradient descent is the same computation with one stage.
+
+\emph{Comparison.} On an eigenvector $v$ of $H$ with eigenvalue $\lambda$ and $a=\alpha\lambda\in(0,1]$, \cref{prop:ch7:uniform} gives $V_{\mathrm{SMM}}(a)\le V(\beta)V_{\mathrm{GD}}(a)$, and $V(\beta)<2$ gives the first inequality. For the trace, $V_{\mathrm{GD}}(a)\ge\alpha\sigma^2/(2\lambda)\ge\alpha\sigma^2/(2L)$, so the errors are at most $x=2C\kappa\varepsilon\le\tfrac13$ relative to each term, and $(V(\beta)+x)/(1-x)\le V(\beta)+4x$.
+\end{proof}
+
+\Cref{thm:ch7:local} proves Problem~\ref{prob:ch11:s2} as it was posed, with the bound holding up to terms that vanish with the step, under two assumptions beyond a bounded variance oracle: a Lipschitz Hessian and a fourth moment for additive shocks (the shocks are also taken isotropic, $\sigma^2I$, and independent of the state; the trace result extends to a constant anisotropic covariance, since only its diagonal in the eigenbasis of $H$ enters). The sharper constant $V(\beta)$ replaces $\tfrac53$, and the comparison holds in every eigendirection of the Hessian at the minimizer.
+
+\subsection{The ensemble picture}
+The two theorems came from asking what the method looks like as a system of particles in the sense of Kurtz and Xiong~\cite{kurtz1999}: many runs of \smmdet, each a particle, driven by a common stochastic gradient noise, whose weighted empirical measure solves a stochastic partial differential equation. In that picture \cref{prop:ch7:sync} says that under purely common noise the measure valued solution collapses to a random point mass at a geometric rate, and \cref{thm:ch7:local} is the discrete time counterpart of their fluctuation theorem~\cite{kurtz2004}: to leading order the fluctuations of a run about $x^\ast$ are those of the linear system with the Hessian frozen at the minimizer. The proofs above are direct and do not use that theory. What the picture adds is the right question for large noise, where linearization fails.
+
+\subsection{Temperature, and a counterexample}
+Over two steps \smmdet\ moves by $-(2+\beta)\alpha\nabla f$ and injects noise of variance $\bigl((1+\beta)^2+1\bigr)\alpha^2\sigma^2$, while gradient descent moves by $-2\alpha\nabla f$ and injects $2\alpha^2\sigma^2$. In the diffusion scaling, small steps with $\alpha\sigma^2$ held fixed, both are approximated by $dX=-\nabla f(X)\,ds+\sqrt{2T}\,dW$, whose stationary law is the Gibbs law with density proportional to $e^{-f/T}$, and the temperatures are
+\[
+  T_{\mathrm{GD}}=\frac{\alpha\sigma^2}{2},\qquad T_{\mathrm{SMM}}=\frac{(1+\beta)^2+1}{2+\beta}\cdot\frac{\alpha\sigma^2}{2}=V(\beta)\,T_{\mathrm{GD}} .
+\]
+So the factor $V(\beta)$ of \cref{cor:ch7:slow} is a ratio of temperatures. For a quadratic the variance of the Gibbs law is proportional to $T$, and the variance ratio is $V(\beta)$. For a potential that grows like $|x|^p$ the variance of the Gibbs law is proportional to $T^{2/p}$, and the ratio is $V(\beta)^{2/p}$. A smooth strongly convex function with a large condition number can look like $|x|$ over a wide range, flat curvature $\mu$ far out and curvature $L$ in a narrow kink, and there the ratio approaches $V(\beta)^2$, which is $1.846$ for $\beta=\lt-1$ and exceeds $\tfrac53$. The next theorem makes the diffusion limit precise.
+
+\begin{theorem}[The temperature law]\label{thm:ch7:temperature}
+Let $f$ be $\mu$ strongly convex and $L$ smooth, fix $T>0$ and $0\le\beta<1$, and let the shocks be $\xi=\sigma\zeta$ with $\zeta$ independent and identically distributed, of mean zero, covariance $I$ and finite fourth moment, where $\alpha\sigma^2=2T$. As $\alpha\to0$ the stationary laws of \smmdet, along even and along odd iterates, converge weakly and in second moment to the Gibbs law
+\[
+  G_{V(\beta)T}(dx)\ \propto\ \exp\Bigl(-\frac{f(x)}{V(\beta)\,T}\Bigr)dx ,
+\]
+and those of gradient descent converge to $G_T$. Consequently the ratio of the stationary mean square errors about $x^\ast$ converges to
+\[
+  R_f(T)=\frac{\int|x-x^\ast|^2\,dG_{V(\beta)T}}{\int|x-x^\ast|^2\,dG_T} .
+\]
+\end{theorem}
+
+\begin{proof}
+Let $\pi_\alpha$ be the stationary law of the even chain, $X\sim\pi_\alpha$, and $X^+$ the next even iterate. By \eqref{eq:ch7:twostepgen}, $X^+-X=-b-\nu$ with
+\[
+  \nu=(1+\beta)\alpha\,\xi_t+\alpha\,\xi_{t+1},\qquad b=(1+\beta)\alpha\nabla f(X)+\alpha\nabla f(u),
+\]
+and $u=X-(1+\beta)\alpha\nabla f(X)-(1+\beta)\alpha\xi_t$. The moment step in the proof of \cref{thm:ch7:local} uses only strong convexity, smoothness and the fourth moment, and with $\alpha\sigma^2=2T$ it gives $\E|X-x^\ast|^4\le C\,T^2/\mu^2$ uniformly in $\alpha$. Since $|\nabla f(x)|\le L|x-x^\ast|$ and $\alpha\xi$ has fourth moment of order $\alpha^2$, we get $\|\nu\|_{L^4}\le C\sqrt\alpha$ and $\|b\|_{L^4}\le C\alpha$, and also $\|\nabla f(u)-\nabla f(X)\|_{L^2}\le L\|u-X\|_{L^2}\le C\sqrt\alpha$.
+
+Let $\varphi$ be smooth with compact support. Stationarity gives $\E[\varphi(X^+)-\varphi(X)]=0$. Expand to second order with a third order remainder. The first order term is $-\E[\nabla\varphi(X)\cdot b]$, because $\nu$ has mean zero and is independent of $X$, and it equals $-(2+\beta)\alpha\,\E[\nabla\varphi\cdot\nabla f(X)]+O(\alpha^{3/2})$. In the second order term the part quadratic in $\nu$ is $\tfrac12\alpha^2\sigma^2\bigl((1+\beta)^2+1\bigr)\E[\Delta\varphi(X)]=T\alpha\bigl((1+\beta)^2+1\bigr)\E[\Delta\varphi(X)]$, and the parts containing $b$ are $O(\alpha^{3/2})$. The remainder is at most $C\,\E|X^+-X|^3=O(\alpha^{3/2})$. Dividing by $(2+\beta)\alpha$,
+\[
+  \int\mathcal L\varphi\,d\pi_\alpha=O(\sqrt\alpha),\qquad \mathcal L\varphi=-\nabla f\cdot\nabla\varphi+V(\beta)\,T\,\Delta\varphi ,
+\]
+since $\bigl((1+\beta)^2+1\bigr)/(2+\beta)=V(\beta)$. The family $(\pi_\alpha)$ is tight by the moment bound, and $\mathcal L\varphi$ is bounded and continuous, so every weak limit point $\pi$ satisfies $\int\mathcal L\varphi\,d\pi=0$ for all such $\varphi$. By the theorem of Echeverr\'ia~\cite[Theorem~4.9.17]{ethier1986}, $\pi$ is a stationary law of the diffusion $dX=-\nabla f(X)\,ds+\sqrt{2V(\beta)T}\,dW$. That diffusion has a Lipschitz drift, two solutions driven by the same Brownian motion approach each other at the rate $e^{-\mu s}$ by strong convexity, so its stationary law is unique, and the Gibbs law is stationary for it. Hence $\pi_\alpha\to G_{V(\beta)T}$. The odd iterates differ from the even ones by a step of size $O(\sqrt\alpha)$ in $L^2$, gradient descent is the same computation with one stage, and the uniform fourth moment turns weak convergence into convergence of second moments.
+\end{proof}
+
+When $f$ is twice differentiable at $x^\ast$ the ratio $R_f(T)$ tends to $V(\beta)$ as $T\to0$, in agreement with \cref{thm:ch7:local}, and equals $V(\beta)$ for every $T$ when $f$ is quadratic. In general it is neither bounded by $V(\beta)$ nor by $V(\beta)^2$.
+
+\begin{proposition}[Bounds in one dimension]\label{prop:ch7:onedim}
+Let $d=1$, let $f$ be convex with minimizer $x^\ast$ and such that the Gibbs laws exist, and let $m(T)=\int(x-x^\ast)^2dG_T$. Then $m(sT)\le s^3\,m(T)$ for every $s\ge1$, and $m(sT)\le s^2\,m(T)$ if $f$ is symmetric about $x^\ast$. Hence $R_f(T)\le V(\beta)^3$ always and $R_f(T)\le V(\beta)^2$ for symmetric $f$.
+\end{proposition}
+
+\begin{proof}
+Take $x^\ast=0$ and $f(0)=0$. On the half line $x>0$ let $Z_+(T)=\int_0^\infty e^{-f/T}dx$ and let $M_+(T)$ be the second moment of the law proportional to $e^{-f/T}$ there. The substitution $x=sy$ gives $M_+(sT)=s^2\E_{\nu_s}[y^2]$, where $\nu_s$ has density proportional to $e^{-f(sy)/(sT)}$. The ratio of the densities of $\nu_s$ and $\nu_1$ is $\exp(-\psi(y)/T)$ with $\psi(y)=f(sy)/s-f(y)$, and $\psi'(y)=f'(sy)-f'(y)\ge0$ because $f'$ is nondecreasing. So $\nu_s$ is below $\nu_1$ in the likelihood ratio order and $M_+(sT)\le s^2M_+(T)$. Convexity and $f(0)=0$ give $f(sy)/s\ge f(y)$, hence $Z_+(T)\le Z_+(sT)\le s\,Z_+(T)$. The same holds on the left. Writing $m$ as the average of $M_\pm$ with weights $Z_\pm/(Z_++Z_-)$, the weights at $sT$ are at most $s$ times the weights at $T$, which gives the factor $s^3$; for symmetric $f$ the weights are $\tfrac12$ and the factor is $s^2$.
+\end{proof}
+
+For the function of \cref{ex:ch7:counter} below, which is nearly symmetric about its kink, the Gibbs ratio $R_f(T)$ reaches $1.629$, $1.773$ and $1.825$, at the temperatures of \cref{tab:ch7:beyond}, for $\mu=0.05$, $0.005$ and $0.0005$, approaching $V(\beta)^2=1.846$. An asymmetric objective can exceed $V(\beta)^2$: with $f(x)=\tfrac L2x^2$ on the left of the minimizer and $f(x)=\tfrac\mu2x^2+(L-\mu)\log\cosh x$ on the right, $\mu=0.0005$, the ratio $R_f$ reaches $1.880$ (script \texttt{gibbs.py}). The largest value of $R_f$ over the class is therefore between $1.880$ and $V(\beta)^3=2.508$ for the Collatz coefficient in one dimension, and we do not know it.
+
+\begin{example}[The five thirds bound fails for a fixed step]\label{ex:ch7:counter}
+Let $d=1$, $L=1$, $\alpha=1/L$, $\beta=\lt-1$ and
+\[
+  f(x)=\tfrac\mu2x^2+(L-\mu)\log\cosh(x-\tfrac32),\qquad \mu\le f''\le L .
+\]
+The even chain \eqref{eq:ch7:twostepgen} with Gaussian shocks is a composition of two explicit kernels on the line, and its stationary law can be computed by quadrature on a grid, with no simulation. \Cref{tab:ch7:beyond} gives the ratio of the stationary mean square errors about $x^\ast$, phase averaged for \smmdet. For $\mu=0.005$ and $\sigma=3$ it is $1.7170$; the value is the same to six digits on grids of spacing $0.2$ and $0.3$, and three independent simulations give $1.715$, $1.716$ and $1.726$. Simulation at $\mu=0.002$ gives $1.75$. The step here is $1/L$, far from the diffusion limit, and yet the Gibbs ratio of \cref{thm:ch7:temperature} at the matching temperature $T=\alpha\sigma^2/2=4.5$ is $1.773$.
+\end{example}
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{rcccccc}
+\toprule
+ & $\sigma=0.05$ & $0.3$ & $1$ & $2$ & $3$ & $5$\\
+\midrule
+$\mu=0.05$ & 1.0003 & 1.0495 & 1.3668 & 1.5119 & 1.5103 & 1.4696\\
+$\mu=0.005$ & 1.0001 & 1.0517 & 1.4234 & 1.6688 & 1.7170 & 1.6952\\
+\bottomrule
+\end{tabular}
+\caption{Stationary mean square error of \smmdet\ divided by that of gradient descent for the function of \cref{ex:ch7:counter}, by quadrature. Here $\alpha f''(x^\ast)$ is $0.995$ and $0.9999$, so the small noise limit of \cref{thm:ch7:local} is $1.000$; the quadratic value for the far field is $1.34$ and $1.36$; $V(\beta)=1.3587$, $V(\beta)^2=1.8460$ and $\tfrac53=1.6667$. Scripts \texttt{exact\_ratio.py} and \texttt{table.py}.}
+\label{tab:ch7:beyond}
+\end{table}
+
+The table shows the three regimes. For small noise the law sits in the kink, where the normalized step is almost one and the two methods agree, as \cref{thm:ch7:local} predicts. For very large noise the law spreads into the quadratic far field and the ratio returns toward the quadratic value. In between the function is seen as $|x|$ and the ratio rises toward $V(\beta)^2$. The nonasymptotic form of Problem~\ref{prob:ch11:s2}, a bound of $\tfrac53$ for every smooth strongly convex objective at the step $1/L$ and every noise level, is therefore false. The practical reading is unchanged for small fluctuations and should be restated for large ones: in the limit of small steps Switching MM runs at $V(\beta)$ times the temperature of gradient descent, and what that costs in mean square error depends on the shape of the objective at the scale of the fluctuations.
+
+\subsection{Averaging}
+The temperature is a property of the last iterate. Averaging the iterates, in the manner of Polyak and Ruppert~\cite{ruppert1988,polyak1992}, removes most of the penalty, and on quadratics the remainder is explicit.
+
+\begin{proposition}[Ten ninths under averaging]\label{prop:ch7:averaging}
+In the quadratic model of \cref{sec:ch7:model}, fix an eigendirection with eigenvalue $\lambda$ and $a=\alpha\lambda\in(0,1]$, and let $\bar e_n=n^{-1}\sum_{t<n}e_t$. For gradient descent $n\Var(\bar e_n)\to\sigma^2/\lambda^2$, and for \smmdet\ with $0\le\beta<1$
+\[
+  n\Var(\bar e_n)\longrightarrow W(a,\beta)\,\frac{\sigma^2}{\lambda^2},\qquad
+  W(a,\beta)=1+\Bigl(\frac{\beta\,(1-a)}{2+\beta-(1+\beta)a}\Bigr)^{2} .
+\]
+The factor $W$ is constant at $\beta=0$ and, for $0<\beta<1$, decreases in $a$ from $1+\beta^2/(2+\beta)^2$ at $a=0$ to $1$ at $a=1$, so $1\le W<\tfrac{10}9$ for every $\beta<1$, and $W\le1.0512$ for $\beta=\lt-1$.
+\end{proposition}
+
+\begin{proof}
+For gradient descent, summing $e_{t+1}=(1-a)e_t-\alpha\xi_t$ gives $a\sum_{t<n}e_t=e_0-e_n-\alpha\sum_{t<n}\xi_t$, and $e_n$ is bounded in mean square. For \smmdet\ take $n=2m$ and let $\Xi_0$ and $\Xi_1$ be the sums of the shocks at even and at odd times. Summing \eqref{eq:ch7:twostep} gives $(1-\rho)\sum_ke_{2k}=e_0-e_{2m}-(1-a)(1+\beta)\alpha\,\Xi_0-\alpha\,\Xi_1$, and the descent step gives $\sum_ke_{2k+1}=(1-a)\sum_ke_{2k}-\alpha\,\Xi_0$. With $c=(2-a)/(1-\rho)$ the full sum is $-g_0\Xi_0-g_1\Xi_1$ plus a term bounded in mean square, where
+\[
+  g_0=\alpha\bigl(c\,(1-a)(1+\beta)+1\bigr),\qquad g_1=\alpha\,c .
+\]
+Since $1-\rho=a\bigl(2+\beta-(1+\beta)a\bigr)$, a short computation gives
+\[
+  g_0+g_1=\frac{2\alpha}{a},\qquad g_0-g_1=\frac{2\alpha}{a}\cdot\frac{\beta\,(1-a)}{2+\beta-(1+\beta)a} .
+\]
+The two sums of shocks are independent with variance $m\sigma^2$, so $n\Var(\bar e_n)\to\tfrac12\sigma^2(g_0^2+g_1^2)=\sigma^2\bigl[\bigl(\tfrac{g_0+g_1}2\bigr)^2+\bigl(\tfrac{g_0-g_1}2\bigr)^2\bigr]$, and $\alpha/a=1/\lambda$. The function $(1-a)/(2+\beta-(1+\beta)a)$ has derivative $-1/\bigl(2+\beta-(1+\beta)a\bigr)^2$.
+\end{proof}
+
+The mean gain $(g_0+g_1)/2=1/\lambda$ is that of gradient descent: a constant error in the gradient shifts both phases of \smmdet\ by exactly the amount it shifts gradient descent. What remains is the imbalance between the two phases, because the shock drawn at an even step is used twice. So the price of the injection is at most $\tfrac53$ on the last iterate, on quadratics, and at most $\tfrac{10}9$ on the averaged iterate, and for the Collatz coefficient it is $36$ percent and $5$ percent in the slow modes. A simulation with $150\,000$ runs agrees with $W$ to within half a percent at $a=0.05$, $0.3$ and $0.8$. For a general smooth strongly convex objective the same statement should hold to leading order in the small parameter of \cref{thm:ch7:local}; we have not written that proof.
+
+\begin{problem*}[S5. Beyond the temperature law]\designation{S5}\label{prob:ch7:temperature}
+\Cref{thm:ch7:temperature} gives the limit of small steps at a fixed temperature. Find the supremum over the class of the ratio of stationary mean square errors, first in the diffusion limit, where for $\beta=\lt-1$ it lies between $1.880$ and $V(\beta)^3=2.508$ in one dimension, and then at the step $1/L$. Extend \cref{prop:ch7:onedim} to several dimensions.
+\end{problem*}
+
 \section{The experiments}\label{sec:ch7:experiments}
 
 We now describe experiments with SMM and then reconcile them with the exact theory in \cref{sec:ch7:reconcile}. The experiments were designed before that theory was available. The numbers and figures below come from a rerun for this book: the script \texttt{ch7\_experiments.py} runs the experiments, and the scripts \texttt{ch7\_experiments\_fig.py} and \texttt{ch7\_noisefig.py} draw the figures.
@@ -1065,7 +1255,7 @@ If gradients are exact and $\mu$ is available, a tuned accelerated method is
 the right tool; SMM is not accelerated. If gradients are exact and $\mu$ is
 unknown, every step momentum\index{momentum} at a moderate fixed coefficient such as $0.585$ or
 $0.667$ is faster than SMM by a factor near $m_{\mathrm{NAG}}/m_{\mathrm{SMM}}$.
-If gradients are noisy at an unknown level, \smmdet\ is a safe default: its
+If gradients are noisy at an unknown level, \smmdet\ is a safe default: on quadratics, and for small fluctuations on smooth strongly convex objectives (\cref{sec:ch7:beyond}), its
 floor is within $5/3$ of that of gradient descent at the same step for every
 $\beta<1$ and on every eigendirection, it is stable at step $1/L$ for every
 $\beta<1$, and at the Collatz coefficient it is about $29$ percent faster than
@@ -1076,7 +1266,7 @@ these methods; our comparisons are for a constant step.
 
 The exact noise theory covers quadratics, with additive noise independent across iterations (\cref{thm:smmvar,thm:ch7:gainweight}) and, for \smmdet, multiplicative noise (\cref{prop:ch7:mult}).
 For nonquadratic objectives the noiseless theory is \cref{prop:ch6:defect} together with two results of \cref{chap:difference}, which follows this chapter: \smmdet\ decreases $f$ on alternate iterates for every $L$ smooth $f$ (\cref{prop:ch5b:monotone}), and it converges linearly, at an explicit rate in terms of $\mu$ and $L$, for every $\mu$ strongly convex and $L$ smooth $f$ (\cref{thm:ch5b:rate}).
-Under noise we have no theory beyond quadratics, and for minibatch noise only the qualitative agreement above.
+Under noise, beyond quadratics, \cref{sec:ch7:beyond} gives the local form of the $5/3$ bound for small fluctuations, its worst case over the class, and the temperature law in the limit of small steps; at a fixed step and large noise the bound can fail (\cref{ex:ch7:counter}), and for minibatch noise we have only the qualitative agreement above.
 The experiments are small, in dimensions $25$ and $30$.
 For \smmstate\ the only theory is the stability on quadratics of every switching rule, which \cref{cor:ch5b:anyswitch} proves conditionally on \cref{conj:ch5b:transient}.
 Nothing here bears on the Collatz conjecture\index{Collatz conjecture}: the arithmetic

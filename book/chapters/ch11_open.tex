@@ -130,11 +130,15 @@ Show that $\mathrm{Col}_{\min}(n)\le2^{71}$ for all $n$ in a set of logarithmic 
 
 By the verification up to $2^{71}$~\cite{barina2025} and \cref{prop:ch9b:bounded}, this implies the conjecture if the positive density theorems are right, and the conjecture implies it. \Cref{thm:ch1:tao} proves it with $2^{71}$ replaced by any $f(n)\to\infty$.
 
+\emph{Update.} \Cref{rrt:thm:tail} replaces the bounded form by a rate: granting the positive density theorem of Lau, the conjecture is equivalent to a polynomial bound, with exponent $4$ and the constant $1/(16D_A)$, on the density of the integers whose orbit stays above $C$, where the argument of Tao gives a power of $\log C$.
+
 \begin{problem*}[B2. The true mixing rate]\designation{B2}\label{prob:ch11:b2}
 Determine how fast $\max_{3\nmid\xi}|\widehat\pi_d(\xi)|$ tends to zero, where $\pi_d$ is the law of the Syracuse random variable modulo $3^d$. Is it $\exp(-c(\log d)^2)$, $\exp(-cd^{\gamma})$ for some $\gamma<1$, or eventually geometric?
 \end{problem*}
 
 Through $d=18$, with every frequency prime to $3$ scanned, the maximum stays between $3.6\,d^{-2}$ and $3.9\,d^{-2}$ from $d=7$ on and sits at $\xi=\pm2^k$ with $d\le k\le1.28\,d$ (\cref{sec:ch9b:offsets}); Tao proves that it eventually decays faster than any power of $d$~\cite[Proposition~1.17]{tao2022}. Any rate beyond a fixed power would lower the constants $C$ and $j_0$ on which the towers of \cref{thm:ch9b:lau} rest, and a first step is to bound the frequencies $\pm2^k$ separately. Levels $19$ and $20$, with $1.2\times10^9$ and $3.5\times10^9$ residues, remain to be computed.
+
+\emph{Update.} \Cref{rrt:prop:fk} computes a single coefficient at level $d$ in $O(d^2)$ operations, and \cref{rrt:tab:fk} continues the maximum over the powers of two to $d=2000$. The product $d^2\max$ is flat only up to $d\approx20$; beyond that the maximum decays geometrically, like $d^{-3/2}3^{-0.05004\,d}$, which is the third alternative of the problem. This is numerical and is stated as a conjecture in \cref{rrt:conj:fourier}; the scan beyond $d=18$ covers powers of two only.
 
 \begin{problem*}[B3. The sharp rate]\designation{B3}\label{prob:ch11:b3}
 Show that for every $c<3/\log(4/3)$ the set of $n$ with $\sigma_0(n)\le c\log n$ has natural density zero, so that Shaik's threshold~\cite{shaik2026} is sharp.
@@ -165,6 +169,8 @@ bound $5/3$ fails.
 \Cref{prop:ch16:correlated} removes the assumption of uncorrelated noise on
 quadratics, and \cref{sec:ch16:s2} tests the bound on a real stochastic problem,
 where it holds with room to spare.
+
+\emph{Update.} \Cref{thm:ch7:local} proves the statement as posed, with the sharper constant $V(\beta)$ and in every eigendirection of the Hessian at the minimizer, for additive shocks with a fourth moment and a Lipschitz Hessian, and \cref{thm:ch7:class} proves it for the worst case over the class when $(1+\beta)\alpha(L+\mu)\le2$. The stronger form, a bound of $\tfrac53$ at the step $1/L$ for every noise level, is false: \cref{ex:ch7:counter} computes the ratio $1.717$. What Switching MM multiplies by $V(\beta)$ is the temperature of the stationary law: in the limit of small steps at a fixed temperature the stationary law is the Gibbs law at $V(\beta)$ times the temperature of gradient descent (\cref{thm:ch7:temperature}). The largest resulting ratio of mean square errors is open (Problem~\ref{prob:ch7:temperature}). Under iterate averaging the factor falls from at most $\tfrac53$ to at most $\tfrac{10}9$ on quadratics (\cref{prop:ch7:averaging}).
 
 \begin{problem*}[S3. The best period two ratio]\designation{S3}\label{prob:ch11:s3}
 Settled for quadratics by \cref{prop:ch7:pareto}. Every period two ratio $r$ between $1$ and the Chebyshev ratio $r_{\mathrm{ch}}(\kappa)$,
